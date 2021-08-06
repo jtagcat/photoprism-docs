@@ -16,7 +16,7 @@
         <link rel="canonical" href="https://docs.photoprism.org/getting-started/">
       
       <link rel="icon" href="../img/favicon-16.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.1">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.2">
     
     
       
@@ -2334,6 +2334,11 @@ will be prioritized as well.</p>
 <p>We recommend hosting PhotoPrism on a server with <strong>at least 2 cores</strong> and <strong>4 GB of memory</strong>.
 Beyond these minimum requirements, the amount of RAM should match the number of cores.
 Indexing large photo and video collections significantly benefits from fast, local SSD storage.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>RAW file conversion and automatic image classification using TensorFlow
+will be disabled on servers with less than 2 GB of physical memory.</p>
+</div>
 <p>If you're running out of memory - or other system resources - while indexing, please reduce the
 <a href="https://docs.photoprism.org/getting-started/config-options/">number of workers</a>
 to a value less than the number of logical CPU cores.
@@ -2487,10 +2492,10 @@ may refuse to connect as well.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.53c85856.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.716f8af4.min.js"></script>
+      <script src="../assets/javascripts/bundle.2b46852b.min.js"></script>
       
     
   </body>
