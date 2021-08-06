@@ -2273,7 +2273,7 @@
 <tr>
 <td align="left"><code>PHOTOPRISM_CONFIG_PATH</code></td>
 <td align="left">--config-path PATH</td>
-<td align="left">folder containing application settings</td>
+<td align="left">config PATH containing application settings</td>
 </tr>
 <tr>
 <td align="left"><code>PHOTOPRISM_ORIGINALS_PATH</code></td>
@@ -2322,8 +2322,8 @@
 </tr>
 <tr>
 <td align="left"><code>PHOTOPRISM_WORKERS</code></td>
-<td align="left">--workers MAX, -w MAX</td>
-<td align="left">adjusts MAX number of indexing workers</td>
+<td align="left">--workers NUMBER, -w NUMBER</td>
+<td align="left">limits NUMBER of indexing workers (default: 3)</td>
 </tr>
 <tr>
 <td align="left"><code>PHOTOPRISM_WAKEUP_INTERVAL</code></td>
@@ -2343,7 +2343,7 @@
 <tr>
 <td align="left"><code>PHOTOPRISM_DISABLE_BACKUPS</code></td>
 <td align="left">--disable-backups</td>
-<td align="left">don't backup photo and album metadata to YAML files</td>
+<td align="left">disables creating YAML metadata backup sidecar files</td>
 </tr>
 <tr>
 <td align="left"><code>PHOTOPRISM_DISABLE_WEBDAV</code></td>
@@ -2353,7 +2353,7 @@
 <tr>
 <td align="left"><code>PHOTOPRISM_DISABLE_SETTINGS</code></td>
 <td align="left">--disable-settings</td>
-<td align="left">users can not view or change settings</td>
+<td align="left">disables settings UI and API</td>
 </tr>
 <tr>
 <td align="left"><code>PHOTOPRISM_DISABLE_PLACES</code></td>
@@ -2363,37 +2363,37 @@
 <tr>
 <td align="left"><code>PHOTOPRISM_DISABLE_EXIFTOOL</code></td>
 <td align="left">--disable-exiftool</td>
-<td align="left">don't create ExifTool JSON files for enhanced metadata extraction</td>
+<td align="left">disables metadata extraction with ExifTool</td>
 </tr>
 <tr>
 <td align="left"><code>PHOTOPRISM_DISABLE_TENSORFLOW</code></td>
 <td align="left">--disable-tensorflow</td>
-<td align="left">don't use TensorFlow for image classification</td>
+<td align="left">disables image classification with TensorFlow</td>
 </tr>
 <tr>
 <td align="left"><code>PHOTOPRISM_DISABLE_DARKTABLE</code></td>
 <td align="left">--disable-darktable</td>
-<td align="left">don't use Darktable to convert RAW files</td>
+<td align="left">disables RAW file conversion with Darktable</td>
 </tr>
 <tr>
 <td align="left"><code>PHOTOPRISM_DISABLE_RAWTHERAPEE</code></td>
 <td align="left">--disable-rawtherapee</td>
-<td align="left">don't use RawTherapee to convert RAW files</td>
+<td align="left">disables RAW file conversion with RawTherapee</td>
 </tr>
 <tr>
 <td align="left"><code>PHOTOPRISM_DISABLE_SIPS</code></td>
-<td align="left">--disable-sip</td>
-<td align="left">don't use Sips to convert RAW files on macOS</td>
+<td align="left">--disable-sips</td>
+<td align="left">disables RAW file conversion with Sips on macOS</td>
 </tr>
 <tr>
 <td align="left"><code>PHOTOPRISM_DISABLE_HEIFCONVERT</code></td>
 <td align="left">--disable-heifconvert</td>
-<td align="left">don't convert HEIC/HEIF files</td>
+<td align="left">disables HEIC/HEIF file conversion</td>
 </tr>
 <tr>
 <td align="left"><code>PHOTOPRISM_DISABLE_FFMPEG</code></td>
 <td align="left">--disable-ffmpeg</td>
-<td align="left">don't transcode videos with FFmpeg</td>
+<td align="left">disables video transcoding with FFmpeg</td>
 </tr>
 <tr>
 <td align="left"><code>PHOTOPRISM_DETECT_NSFW</code></td>
