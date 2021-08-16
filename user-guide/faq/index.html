@@ -16,7 +16,7 @@
         <link rel="canonical" href="https://docs.photoprism.org/user-guide/faq/">
       
       <link rel="icon" href="../../img/favicon-16.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.2">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.4">
     
     
       
@@ -24,10 +24,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.1118c9be.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f7f47774.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ba0d045b.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
         
           
           
@@ -95,8 +95,8 @@
     </div>
     <div data-md-component="announce">
       
-        <aside class="md-announce">
-          <div class="md-announce__inner md-grid md-typeset">
+        <aside class="md-banner md-announce">
+          <div class="md-banner__inner md-announce__inner md-grid md-typeset">
             
   <style>.md-announce a,.md-announce a:focus,.md-announce a:hover {color:currentColor} .md-announce strong {white-space:nowrap} .md-announce .twitter {margin-left:.2em;color:#00acee} .md-announce__inner {margin: .3rem auto;}</style>
   <a href="https://www.patreon.com/photoprism">
@@ -1568,6 +1568,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#why-do-i-get-an-error-when-trying-to-add-a-remote-server-for-syncing" class="md-nav__link">
+    Why do I get an error when trying to add a remote server for syncing?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#my-file-sync-app-fails-with-unable-to-parse-tls-packet-headers-when-trying-to-connect-via-webdav" class="md-nav__link">
     My file sync app fails with "unable to parse TLS packet headers" when trying to connect via WebDAV?
   </a>
@@ -2429,6 +2436,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#why-do-i-get-an-error-when-trying-to-add-a-remote-server-for-syncing" class="md-nav__link">
+    Why do I get an error when trying to add a remote server for syncing?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#my-file-sync-app-fails-with-unable-to-parse-tls-packet-headers-when-trying-to-connect-via-webdav" class="md-nav__link">
     My file sync app fails with "unable to parse TLS packet headers" when trying to connect via WebDAV?
   </a>
@@ -2525,6 +2539,25 @@ In the UI they are shown in the <em>Originals</em> section and added to its coun
 <h3 id="why-do-some-of-my-photos-without-geolocation-information-show-a-random-location">Why do some of my photos without geolocation information show a random location?<a class="headerlink" href="#why-do-some-of-my-photos-without-geolocation-information-show-a-random-location" title="Permanent link">&para;</a></h3>
 <p>PhotoPrism estimates the location of photos without geolocation from photos that have been taken on the same day.
 You can disable estimations in <a href="../settings/general/">Settings</a>.</p>
+<h3 id="why-do-i-get-an-error-when-trying-to-add-a-remote-server-for-syncing">Why do I get an error when trying to add a remote server for syncing?<a class="headerlink" href="#why-do-i-get-an-error-when-trying-to-add-a-remote-server-for-syncing" title="Permanent link">&para;</a></h3>
+<p>When adding a new remote server, PhotoPrism tests a number of 
+<a href="https://raw.githubusercontent.com/photoprism/photoprism/develop/internal/remote/heuristic.go">common endpoints</a>.
+Only when that fails, you'll see an error. There may be different reasons for this:</p>
+<ul>
+<li>You're using HTTPS with an invalid certificate (not signed, outdated, domain doesn't match,...).</li>
+<li>Your server has permission issues, or an otherwise bad configuration. For example, Nextcloud blocks requests
+  if the host doesn't match <code>trusted_domains</code> in its <code>config.php</code>.</li>
+<li>The IP is not reachable from your PhotoPrism instance due to network settings, or a firewall.</li>
+<li>The internal hostname can not be resolved to an IP address.</li>
+<li>It's the wrong host or port.</li>
+<li>Username or password are wrong.</li>
+</ul>
+<p>Advanced users should give <code>curl</code> a try for low level debugging, ideally in a terminal 
+from the same Docker container, virtual machine, or server environment PhotoPrism runs in:</p>
+<ul>
+<li><a href="https://www.qed42.com/blog/using-curl-commands-webdav">https://www.qed42.com/blog/using-curl-commands-webdav</a></li>
+<li><a href="https://code.blogs.iiidefix.net/posts/webdav-with-curl/">https://code.blogs.iiidefix.net/posts/webdav-with-curl/</a></li>
+</ul>
 <h3 id="my-file-sync-app-fails-with-unable-to-parse-tls-packet-headers-when-trying-to-connect-via-webdav">My file sync app fails with "unable to parse TLS packet headers" when trying to connect via WebDAV?<a class="headerlink" href="#my-file-sync-app-fails-with-unable-to-parse-tls-packet-headers-when-trying-to-connect-via-webdav" title="Permanent link">&para;</a></h3>
 <p>Because of security considerations, some backup tools and file sync apps like
 <a href="https://www.tacit.dk/foldersync/faq/#i-can-not-connect-to-a-non-https-webdav-server-why">FolderSync removed support for non-SSL HTTP communication</a>.</p>
@@ -2668,7 +2701,7 @@ by anyone in between including your provider, hackers, and governments.</p>
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.2b46852b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.febc23d1.min.js"></script>
       
     
   </body>
