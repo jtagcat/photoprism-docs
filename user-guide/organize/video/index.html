@@ -2323,10 +2323,18 @@
                   <h1>Videos</h1>
                 
                 <h3 id="videos">Videos<a class="headerlink" href="#videos" title="Permanent link">&para;</a></h3>
-<p>PhotoPrism currently supports all common video formats.</p>
+<p>Videos with the MPEG-4 AVC format can be played natively by most modern browsers.
+PhotoPrism uses <a href="https://www.ffmpeg.org/documentation.html"><em>ffmpeg</em></a> to transcode
+other common video formats to <a href="https://en.wikipedia.org/wiki/MPEG-4">MPEG-4 AVC</a>.
+All video formats, that can be transcoded by ffmpeg are supported.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>In case you have problems with a specific format, let us know!</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>By default PhotoPrism transcodes videos, when they are first played. This may lead to long loading times for very long or high resolution videos.
+You can use <code>docker-compose exec photoprism photoprism convert</code> to convert videos upfront.</p>
 </div>
 <p>In <em>Videos</em> you find all your videos. To play a video click <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 5.14v14l11-7-11-7z"/></svg></span>.</p>
 <p><img alt="Screenshot" src="../img/video-1.png" /></p>
