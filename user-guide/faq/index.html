@@ -2552,12 +2552,12 @@ Only when that fails, you'll see an error. There may be different reasons for th
 <li>It's the wrong host or port.</li>
 <li>Username or password are wrong.</li>
 </ul>
-<p>Advanced users are advised to use <code>curl</code> for low level debugging, ideally in a terminal 
-from the same Docker container, virtual machine, or server environment PhotoPrism runs in:</p>
-<ul>
-<li><a href="https://www.qed42.com/blog/using-curl-commands-webdav">https://www.qed42.com/blog/using-curl-commands-webdav</a></li>
-<li><a href="https://code.blogs.iiidefix.net/posts/webdav-with-curl/">https://code.blogs.iiidefix.net/posts/webdav-with-curl/</a></li>
-</ul>
+<p><a href="https://curl.se/">Curl</a> is an excellent tool for 
+<a href="https://code.blogs.iiidefix.net/posts/webdav-with-curl/">testing HTTP connections</a> if you don't mind using a terminal:</p>
+<div class="highlight"><pre><span></span><code>curl -X PROPFIND -H &quot;Depth: 1&quot; -u user:pass https://example.org/webdav/
+</code></pre></div>
+<p>To avoid overlooking issues, it's best to run it from the same Docker container, virtual machine, 
+or server environment where PhotoPrism is installed.</p>
 <h3 id="my-file-sync-app-fails-with-unable-to-parse-tls-packet-headers-when-trying-to-connect-via-webdav">My file sync app fails with "unable to parse TLS packet headers" when trying to connect via WebDAV?<a class="headerlink" href="#my-file-sync-app-fails-with-unable-to-parse-tls-packet-headers-when-trying-to-connect-via-webdav" title="Permanent link">&para;</a></h3>
 <p>Because of security considerations, some backup tools and file sync apps like
 <a href="https://www.tacit.dk/foldersync/faq/#i-can-not-connect-to-a-non-https-webdav-server-why">FolderSync removed support for non-SSL HTTP communication</a>.</p>
