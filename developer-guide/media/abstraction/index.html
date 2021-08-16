@@ -13,14 +13,14 @@
         <meta name="author" content="PhotoPrism.org">
       
       
-        <link rel="canonical" href="https://docs.photoprism.org/developer-guide/storage/encryption/">
+        <link rel="canonical" href="https://docs.photoprism.org/developer-guide/media/abstraction/">
       
       <link rel="icon" href="../../../img/favicon-16.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.4">
     
     
       
-        <title>Encryption - PhotoPrism</title>
+        <title>Abstraction - PhotoPrism</title>
       
     
     
@@ -57,14 +57,14 @@
     
   
   <meta property="og:type" content="website">
-  <meta property="og:title" content="PhotoPrism - Encryption">
+  <meta property="og:title" content="PhotoPrism - Abstraction">
   <meta property="og:description" content="User Guide">
-  <meta property="og:url" content="https://docs.photoprism.org/developer-guide/storage/encryption/">
+  <meta property="og:url" content="https://docs.photoprism.org/developer-guide/media/abstraction/">
   <meta property="og:image" content="https://dl.photoprism.org/assets/img/preview.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@photoprism_app">
   <meta name="twitter:creator" content="@photoprism_app">
-  <meta name="twitter:title" content="PhotoPrism - Encryption">
+  <meta name="twitter:title" content="PhotoPrism - Abstraction">
   <meta name="twitter:description" content="User Guide">
   <meta name="twitter:image" content="https://dl.photoprism.org/assets/img/preview.jpg">
   <script async defer data-domain="docs.photoprism.org" src="https://a.photoprism.app/js/plausible.js"></script>
@@ -88,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#encryption" class="md-skip">
+        <a href="#issues" class="md-skip">
           Skip to content
         </a>
       
@@ -129,7 +129,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Encryption
+              Abstraction
             
           </span>
         </div>
@@ -1727,13 +1727,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_12" type="checkbox" id="__nav_3_12" checked>
       
       <label class="md-nav__link" for="__nav_3_12">
-        Storage
+        Media Files
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Storage" data-md-level="2">
+      <nav class="md-nav" aria-label="Media Files" data-md-level="2">
         <label class="md-nav__title" for="__nav_3_12">
           <span class="md-nav__icon md-icon"></span>
-          Storage
+          Media Files
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1752,18 +1752,6 @@
             
   
   
-  
-    <li class="md-nav__item">
-      <a href="../abstraction/" class="md-nav__link">
-        Abstraction
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
     
   
   
@@ -1772,24 +1760,20 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Encryption
+          Abstraction
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Encryption
+        Abstraction
       </a>
       
         
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
@@ -1799,8 +1783,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#related-tickets" class="md-nav__link">
-    Related tickets
+  <a href="#issues" class="md-nav__link">
+    Issues
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
   </a>
   
 </li>
@@ -1818,8 +1809,20 @@
   
   
     <li class="md-nav__item">
-      <a href="../converting/" class="md-nav__link">
-        Converting RAW to JPEG
+      <a href="../encryption/" class="md-nav__link">
+        Encryption
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../raw/" class="md-nav__link">
+        RAW Images
       </a>
     </li>
   
@@ -1831,7 +1834,19 @@
   
     <li class="md-nav__item">
       <a href="../heif/" class="md-nav__link">
-        High Efficiency Image File Format
+        HEIF / HEIC
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../videos/" class="md-nav__link">
+        Videos
       </a>
     </li>
   
@@ -1878,101 +1893,11 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_13" type="checkbox" id="__nav_3_13" >
       
       <label class="md-nav__link" for="__nav_3_13">
-        Security
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Security" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_13">
-          <span class="md-nav__icon md-icon"></span>
-          Security
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../security/policy/" class="md-nav__link">
-        Policy
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../security/checklist/" class="md-nav__link">
-        Checklist
-      </a>
-    </li>
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_14" type="checkbox" id="__nav_3_14" >
-      
-      <label class="md-nav__link" for="__nav_3_14">
-        Clients
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Clients" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_14">
-          <span class="md-nav__icon md-icon"></span>
-          Clients
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../clients/go/" class="md-nav__link">
-        Go
-      </a>
-    </li>
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_15" type="checkbox" id="__nav_3_15" >
-      
-      <label class="md-nav__link" for="__nav_3_15">
         Metadata
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Metadata" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_15">
+        <label class="md-nav__title" for="__nav_3_13">
           <span class="md-nav__icon md-icon"></span>
           Metadata
         </label>
@@ -2057,6 +1982,96 @@
     <li class="md-nav__item">
       <a href="../../metadata/edit-exif/" class="md-nav__link">
         Edit EXIF
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_14" type="checkbox" id="__nav_3_14" >
+      
+      <label class="md-nav__link" for="__nav_3_14">
+        Security
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Security" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_14">
+          <span class="md-nav__icon md-icon"></span>
+          Security
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security/policy/" class="md-nav__link">
+        Policy
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security/checklist/" class="md-nav__link">
+        Checklist
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_15" type="checkbox" id="__nav_3_15" >
+      
+      <label class="md-nav__link" for="__nav_3_15">
+        Clients
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Clients" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_15">
+          <span class="md-nav__icon md-icon"></span>
+          Clients
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clients/go/" class="md-nav__link">
+        Go
       </a>
     </li>
   
@@ -2267,8 +2282,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2277,8 +2290,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#related-tickets" class="md-nav__link">
-    Related tickets
+  <a href="#issues" class="md-nav__link">
+    Issues
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
   </a>
   
 </li>
@@ -2295,14 +2315,34 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/photoprism/photoprism-docs/tree/master/docs/developer-guide/storage/encryption.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/photoprism/photoprism-docs/tree/master/docs/developer-guide/media/abstraction.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="encryption">Encryption<a class="headerlink" href="#encryption" title="Permanent link">&para;</a></h1>
-<h3 id="related-tickets">Related tickets<a class="headerlink" href="#related-tickets" title="Permanent link">&para;</a></h3>
-<p><a href="https://github.com/photoprism/photoprism/issues/93#">Support for cloud storage with encryption</a></p>
+                  <h1>Abstraction</h1>
+                
+                <p>We need to add file system abstraction, also to speed up testing. Afero seems to be the gold standard for this in the Go world:</p>
+<p><a href="https://github.com/spf13/afero">https://github.com/spf13/afero</a></p>
+<h2 id="issues">Issues<a class="headerlink" href="#issues" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/photoprism/photoprism/issues/55">Embedded Database + Bleve for search? #55</a></li>
+<li><a href="https://github.com/photoprism/photoprism/issues/47">Postgres support? #47</a></li>
+</ul>
+<h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/rclone/rclone">https://github.com/rclone/rclone</a> - rsync for cloud storage (Google Drive, AWS, One Drive, ...)</li>
+<li><a href="https://github.com/minio">https://github.com/minio</a> - Object Storage for AI</li>
+<li><a href="https://github.com/upper/db">upper.io/db.v3</a> - a productive data access layer for Go</li>
+<li><a href="https://github.com/google/leveldb">LevelDB</a> - fast key-value storage library written at Google (written in Go)</li>
+<li><a href="http://blevesearch.com/">Bleve</a> - full-text search and indexing for Go</li>
+<li><a href="https://pingcap.com">TiDB</a> - a distributed HTAP database compatible with the MySQL protocol (written in Go)</li>
+<li><a href="https://github.com/confluentinc/ksql">KSQL</a> - the Streaming SQL Engine for Apache Kafka</li>
+<li><a href="https://github.com/cockroachdb/cockroach/">CockroachDB</a> - ultra-resilient SQL for global business (written in Go)</li>
+<li><a href="http://ledisdb.com/">LedisDB</a> - a high performance NoSQL like Redis powered by Go</li>
+<li><a href="https://github.com/go-pg/pg">https://github.com/go-pg/pg</a> - Golang ORM with focus on PostgreSQL features and performance</li>
+<li><a href="https://github.com/go-redis/redis">https://github.com/go-redis/redis</a> - Type-safe Redis client for Golang</li>
+</ul>
                 
               
               
@@ -2322,7 +2362,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../abstraction/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Abstraction" rel="prev">
+        <a href="../import/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Import" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -2331,20 +2371,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Abstraction
+              Import
             </div>
           </div>
         </a>
       
       
         
-        <a href="../converting/" class="md-footer__link md-footer__link--next" aria-label="Next: Converting RAW to JPEG" rel="next">
+        <a href="../encryption/" class="md-footer__link md-footer__link--next" aria-label="Next: Encryption" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Converting RAW to JPEG
+              Encryption
             </div>
           </div>
           <div class="md-footer__button md-icon">

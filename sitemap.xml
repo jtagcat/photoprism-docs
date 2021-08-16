@@ -96,6 +96,46 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.photoprism.org/developer-guide/media/abstraction/</loc>
+         <lastmod>2021-08-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.photoprism.org/developer-guide/media/encryption/</loc>
+         <lastmod>2021-08-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.photoprism.org/developer-guide/media/heif/</loc>
+         <lastmod>2021-08-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.photoprism.org/developer-guide/media/import/</loc>
+         <lastmod>2021-08-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.photoprism.org/developer-guide/media/raw/</loc>
+         <lastmod>2021-08-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.photoprism.org/developer-guide/media/samples/</loc>
+         <lastmod>2021-08-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.photoprism.org/developer-guide/media/thumbnails/</loc>
+         <lastmod>2021-08-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.photoprism.org/developer-guide/media/videos/</loc>
+         <lastmod>2021-08-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.photoprism.org/developer-guide/metadata/classification/</loc>
          <lastmod>2021-08-16</lastmod>
          <changefreq>daily</changefreq>
@@ -137,41 +177,6 @@
     </url>
     <url>
          <loc>https://docs.photoprism.org/developer-guide/security/policy/</loc>
-         <lastmod>2021-08-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.photoprism.org/developer-guide/storage/abstraction/</loc>
-         <lastmod>2021-08-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.photoprism.org/developer-guide/storage/converting/</loc>
-         <lastmod>2021-08-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.photoprism.org/developer-guide/storage/encryption/</loc>
-         <lastmod>2021-08-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.photoprism.org/developer-guide/storage/heif/</loc>
-         <lastmod>2021-08-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.photoprism.org/developer-guide/storage/import/</loc>
-         <lastmod>2021-08-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.photoprism.org/developer-guide/storage/samples/</loc>
-         <lastmod>2021-08-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.photoprism.org/developer-guide/storage/thumbnails/</loc>
          <lastmod>2021-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
