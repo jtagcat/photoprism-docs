@@ -276,7 +276,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.photoprism.org/getting-started/advanced/backup/</loc>
+         <loc>https://docs.photoprism.org/getting-started/advanced/backups/</loc>
          <lastmod>2021-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -321,11 +321,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.photoprism.org/getting-started/proxies/SWAG/</loc>
-         <lastmod>2021-08-31</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://docs.photoprism.org/getting-started/proxies/apache-2/</loc>
          <lastmod>2021-08-31</lastmod>
          <changefreq>daily</changefreq>
@@ -342,6 +337,11 @@
     </url>
     <url>
          <loc>https://docs.photoprism.org/getting-started/proxies/nginx/</loc>
+         <lastmod>2021-08-31</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.photoprism.org/getting-started/proxies/swag/</loc>
          <lastmod>2021-08-31</lastmod>
          <changefreq>daily</changefreq>
     </url>
