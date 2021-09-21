@@ -968,22 +968,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#filters" class="md-nav__link">
-    Filters
+  <a href="#search-filter" class="md-nav__link">
+    Search Filter
   </a>
-  
-    <nav class="md-nav" aria-label="Filters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#search-filter-list" class="md-nav__link">
-    Search Filter List
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1004,6 +991,13 @@
         <li class="md-nav__item">
   <a href="#wildcard" class="md-nav__link">
     Wildcard
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-filter-overview" class="md-nav__link">
+    Search Filter Overview
   </a>
   
 </li>
@@ -2335,22 +2329,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#filters" class="md-nav__link">
-    Filters
+  <a href="#search-filter" class="md-nav__link">
+    Search Filter
   </a>
-  
-    <nav class="md-nav" aria-label="Filters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#search-filter-list" class="md-nav__link">
-    Search Filter List
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2371,6 +2352,13 @@
         <li class="md-nav__item">
   <a href="#wildcard" class="md-nav__link">
     Wildcard
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-filter-overview" class="md-nav__link">
+    Search Filter Overview
   </a>
   
 </li>
@@ -2396,6 +2384,7 @@
 <p>In all sections you can use the <em>search bar</em> to find certain photos, videos, albums or labels.</p>
 <p>You can search for all kind of things:</p>
 <ul>
+<li>People on the photo</li>
 <li>Objects that are displayed on the photo</li>
 <li>The main color of the photo</li>
 <li>The filename or foldername of a photo</li>
@@ -2404,34 +2393,61 @@
 </ul>
 <p>Just try it!</p>
 <p><img alt="Screenshot" src="../img/search-beach.png" /></p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>In case you want to search for multiple things at once, enter the terms separated by a space.</p>
-<p>A search for <code>cat blue berlin</code> will find all photos that either display a cat, have blue as main color or have been taken in Berlin.</p>
-</div>
-<h2 id="filters">Filters<a class="headerlink" href="#filters" title="Permanent link">&para;</a></h2>
-<p>Additionally to the search you can set filters for:</p>
+<h2 id="search-filter">Search Filter<a class="headerlink" href="#search-filter" title="Permanent link">&para;</a></h2>
+<p>Additionally to the search you can set the following filters using the filter bar:</p>
 <ul>
-<li>Country</li>
-<li>Year</li>
-<li>Order</li>
-<li>Camera</li>
-<li>Lens</li>
-<li>Color</li>
-<li>Category</li>
+<li>Country, Year, Order, Camera, Lens, Color, Category</li>
 </ul>
-<p>In case you set multiple filters only photos are shown in the search result that fulfill all filter criteria.</p>
+<p>In case you set multiple filters only photos, that fulfill all filter criteria, are shown in the search result.</p>
 <p><img alt="Screenshot" src="../img/color-red.png" /></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>You can use filters as well in the search bar like this:</p>
+<p>You can use filters in the search bar like this:</p>
 <p><code>label:cat</code>
 <code>color:green</code>
-<code>type: live</code></p>
+<code>type:live</code></p>
 <p>You find the full list of filters below.</p>
 </div>
 <p><img alt="Screenshot" src="../img/color-green.png" /></p>
-<h3 id="search-filter-list">Search Filter List<a class="headerlink" href="#search-filter-list" title="Permanent link">&para;</a></h3>
+<h2 id="and-search">AND Search<a class="headerlink" href="#and-search" title="Permanent link">&para;</a></h2>
+<p>To combine different filters use a space as separator:</p>
+<div class="highlight"><pre><span></span><code>mono:true review:false
+</code></pre></div>
+<p>The search result shows photos that are monochrome <strong>and</strong> not in review.</p>
+<p>Additionally some filters can be used with &amp;:</p>
+<div class="highlight"><pre><span></span><code>keywords:buffalo&amp;water
+</code></pre></div>
+<p>This query will show all photos that have the keywords water <strong>and</strong> buffalo.</p>
+<p>&amp; is supported by the following filters:</p>
+<ul>
+<li>albums, keywords, subject/person, subjects/people.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The label filter does not support &amp;. You can use the keywords filter instead, as all labels are keywords as well.</p>
+</div>
+<h2 id="or-search">OR Search<a class="headerlink" href="#or-search" title="Permanent link">&para;</a></h2>
+<p>An OR search is possible using <code>|</code>:</p>
+<div class="highlight"><pre><span></span><code>label:cat|dog
+</code></pre></div>
+<p>This will show all photos that have either the label cat <strong>or</strong> dog.</p>
+<p>The following filters work with |:</p>
+<ul>
+<li>albums, color, country, day, month, year, keywords, label, path, state, subject/person, subjects/people, title, type, name, filename, original, hash</li>
+</ul>
+<h2 id="wildcard">Wildcard<a class="headerlink" href="#wildcard" title="Permanent link">&para;</a></h2>
+<p>The <code>*</code> character will act as a wildcard:</p>
+<div class="highlight"><pre><span></span><code>name:&quot;IMG_23*&quot;
+</code></pre></div>
+<p>This will show all photos which name start with <code>IMG_23</code>.</p>
+<div class="highlight"><pre><span></span><code>name:&quot;*_23*&quot;
+</code></pre></div>
+<p>This will show all photos which name contain <code>_23</code>, like <code>IMG_2356.MOV</code> , <code>2021_02_23.jpg</code>, etc.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Wildcards cannot be combined with &amp; or |.</p>
+</div>
+<h2 id="search-filter-overview">Search Filter Overview<a class="headerlink" href="#search-filter-overview" title="Permanent link">&para;</a></h2>
 <p>PhotoPrism allows you to use multiple filters in its search.</p>
 <table>
 <thead>
@@ -2446,6 +2462,11 @@
 <td>after</td>
 <td>2015-06-30</td>
 <td></td>
+</tr>
+<tr>
+<td>albums</td>
+<td>"Holiday 2020"</td>
+<td>Album Name</td>
 </tr>
 <tr>
 <td>archived</td>
@@ -2469,13 +2490,18 @@
 </tr>
 <tr>
 <td>country</td>
-<td>"de"</td>
+<td>de</td>
 <td></td>
 </tr>
 <tr>
 <td>day</td>
 <td>23</td>
 <td></td>
+</tr>
+<tr>
+<td>dist</td>
+<td>5</td>
+<td>Distance to coordinates (radius in kilometre). Only applicable in combination with the lat/lng filters.</td>
 </tr>
 <tr>
 <td>month</td>
@@ -2503,6 +2529,11 @@
 <td></td>
 </tr>
 <tr>
+<td>filename</td>
+<td>2021/07/12345.jpg</td>
+<td></td>
+</tr>
+<tr>
 <td>fmax</td>
 <td>4.5</td>
 <td></td>
@@ -2525,6 +2556,11 @@
 <tr>
 <td>hidden</td>
 <td>yes, no</td>
+<td></td>
+</tr>
+<tr>
+<td>keywords</td>
+<td>love</td>
 <td></td>
 </tr>
 <tr>
@@ -2613,6 +2649,16 @@
 <td></td>
 </tr>
 <tr>
+<td>subject/person</td>
+<td>"Jane Doe"</td>
+<td>Subject Name &rarr; only exact matches are found</td>
+</tr>
+<tr>
+<td>subjects/people</td>
+<td>"Jane Doe"</td>
+<td>Subject Name</td>
+</tr>
+<tr>
 <td>title</td>
 <td>"Holiday*", "Holiday / 2012"</td>
 <td></td>
@@ -2634,24 +2680,6 @@
 </tr>
 </tbody>
 </table>
-<h2 id="and-search">AND Search<a class="headerlink" href="#and-search" title="Permanent link">&para;</a></h2>
-<p>Filters can be combined, use a space between filters:</p>
-<div class="highlight"><pre><span></span><code>mono:true review:false
-</code></pre></div>
-<p>It will show photos that are monochrome <strong>and</strong> unreviewed.</p>
-<h2 id="or-search">OR Search<a class="headerlink" href="#or-search" title="Permanent link">&para;</a></h2>
-<p>An OR search is possible using <code>|</code>:</p>
-<div class="highlight"><pre><span></span><code>label:cat|dog
-</code></pre></div>
-<p>This will show all photos that have either the label cat <strong>or</strong> dog.</p>
-<h2 id="wildcard">Wildcard<a class="headerlink" href="#wildcard" title="Permanent link">&para;</a></h2>
-<p>The <code>*</code> character will act as a wildcard:</p>
-<div class="highlight"><pre><span></span><code>name:&quot;IMG_23*&quot;
-</code></pre></div>
-<p>This will show all photos which name start with <code>IMG_23</code>.</p>
-<div class="highlight"><pre><span></span><code>name:&quot;*_23*&quot;
-</code></pre></div>
-<p>This will show all photos which name contain <code>_23</code>, like <code>IMG_2356.MOV</code> , <code>2021_02_23.jpg</code>, etc.</p>
                 
               
               
