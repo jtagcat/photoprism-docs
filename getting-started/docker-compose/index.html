@@ -431,6 +431,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#facial-recognition" class="md-nav__link">
+    Facial Recognition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#command-reference" class="md-nav__link">
     Command Reference
   </a>
@@ -2702,6 +2709,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#facial-recognition" class="md-nav__link">
+    Facial Recognition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#command-reference" class="md-nav__link">
     Command Reference
   </a>
@@ -2729,32 +2743,31 @@
 <p>Before you start, make sure you have <a href="https://store.docker.com/search?type=edition&amp;offering=community">Docker</a> installed on your system. 
 It is available for Mac, Linux and Windows.
 Developers may skip this and move on to the <a href="../../developer-guide/">Developer Guide</a>.</p>
-<p>We plan to provide a single binary.</p>
-<div class="admonition info">
+<p>We plan to provide downloadable installation packages for future releases.</p>
+<div class="admonition note">
 <p class="admonition-title">Windows</p>
 <p>Windows users may need to <a href="../img/docker-disable-wsl2.jpg">disable</a> the WSL 2 based engine in <em>Docker Settings &gt; General</em>
 to mount drives other than <code>C:</code>. Please use this <a href="https://dl.photoprism.org/docker/windows/docker-compose.yml">docker-compose.yml</a>
 example to get started and <a href="../img/docker-resources-advanced.jpg">increase</a> the Docker memory limit 
 to 4 GB or more, as the default of 2 GB may reduce indexing performance or cause restarts.</p>
 </div>
-<div class="admonition info">
+<div class="admonition note">
 <p class="admonition-title">macOS</p>
 <p>macOS users should <a href="../img/docker-resources-advanced.jpg">increase</a> the Docker memory limit to 4 GB or more,
 as the default of 2 GB may reduce indexing performance or cause restarts.
 Please use this <a href="https://dl.photoprism.org/docker/macos/docker-compose.yml">docker-compose.yml</a>
 example to get started.</p>
 </div>
-<div class="admonition info">
-<p class="admonition-title">Linux</p>
-<p>All commands may have to be prefixed with <code>sudo</code> when not running as root.
-Note that this will change the home directory <code>~</code> to <code>/root</code> in your configuration.
+<div class="admonition note">
+<p class="admonition-title">Linux &amp; Raspberry Pi</p>
+<p>Our latest release comes as a single <a href="https://hub.docker.com/r/photoprism/photoprism">multi-arch image</a>
+for AMD64, ARM64, and ARMv7. If your device meets the <a href="../raspberry-pi/">system requirements</a>,
+the same installation instructions as for regular Linux servers apply.
+All commands may have to be prefixed with <code>sudo</code> when not running as root.
+Note that this will point the home directory placeholder <code>~</code> to <code>/root</code> in your configuration.
 Kernel security modules such as SELinux have been reported to cause 
 <a href="https://docs.photoprism.org/getting-started/faq/#why-is-photoprism-getting-stuck-in-a-restart-loop">issues</a>.</p>
 </div>
-<div class="admonition info">
-<p class="admonition-title">Raspberry Pi</p>
-</div>
-<p>An image for the <a href="../raspberry-pi/">Raspberry Pi</a> is available as well.</p>
 <h3 id="step-1-configure">Step 1: Configure<a class="headerlink" href="#step-1-configure" title="Permanent link">&para;</a></h3>
 <p>Download our <a href="https://dl.photoprism.org/docker/docker-compose.yml">docker-compose.yml</a> file
 (right click and <em>Save Link As...</em> or use <code>wget</code>) to a folder of your choice,
@@ -2827,15 +2840,24 @@ You may continue using your favorite tools, like Photoshop or Lightroom,
 to edit, add and delete files in the <em>originals</em> folder.
 Run <code>photoprism index</code>, or go to <em>Library</em> and click <em>Start</em>, to update the index as needed.</p>
 <p>Easy, isn't it?</p>
-<div class="admonition tip">
+<div class="admonition info">
 <p class="admonition-title">Reducing Server Load</p>
 <p>If you're running out of memory - or other system resources - while indexing, please limit the 
 <a href="https://docs.photoprism.org/getting-started/config-options/">number of workers</a> by setting
 <code>PHOTOPRISM_WORKERS</code> to a value less than the number of logical CPU cores in <code>docker-compose.yml</code>.
-Also make sure your server has <a href="https://opensource.com/article/18/9/swap-space-linux-systems">swap</a> 
+Also make sure your server has at least 4 GB of <a href="https://opensource.com/article/18/9/swap-space-linux-systems">swap</a> 
 configured so that indexing doesn't cause restarts when there are memory usage spikes.
-As a measure of last resort, you may additionally disable image classification using TensorFlow.</p>
+Especially the conversion of RAW images and the transcoding of videos are quite demanding.
+As a measure of last resort, you may disable using TensorFlow for image classification and facial recognition.</p>
 </div>
+<h3 id="facial-recognition">Facial Recognition<a class="headerlink" href="#facial-recognition" title="Permanent link">&para;</a></h3>
+<p>Existing users may index faces in originals without performing a complete rescan:</p>
+<div class="highlight"><pre><span></span><code>docker-compose exec photoprism photoprism faces index
+</code></pre></div>
+<p>For a fresh start e.g. after upgrading from a development preview, remove
+known people and faces before re-indexing:</p>
+<div class="highlight"><pre><span></span><code>docker-compose exec photoprism photoprism faces reset -f
+</code></pre></div>
 <h3 id="command-reference">Command Reference<a class="headerlink" href="#command-reference" title="Permanent link">&para;</a></h3>
 <p>The help command shows a complete list of commands and config options.
 Use the <code>--help</code> flag to see a detailed command info 
@@ -2861,46 +2883,50 @@ like <code>docker-compose exec photoprism photoprism backup --help</code>.</p>
 <td><code>docker-compose pull</code></td>
 </tr>
 <tr>
-<td>View Logs</td>
+<td>Logs</td>
 <td><code>docker-compose logs --tail=25 -f</code></td>
 </tr>
 <tr>
-<td>Open Terminal</td>
+<td>Terminal</td>
 <td><code>docker-compose exec photoprism bash</code></td>
 </tr>
 <tr>
-<td>Show Help</td>
+<td>Help</td>
 <td><code>docker-compose exec photoprism photoprism help</code></td>
 </tr>
 <tr>
-<td>Show Config</td>
+<td>Config</td>
 <td><code>docker-compose exec photoprism photoprism config</code></td>
 </tr>
 <tr>
-<td>Reset Database</td>
+<td>Reset</td>
 <td><code>docker-compose exec photoprism photoprism reset</code></td>
 </tr>
 <tr>
-<td>Backup Database</td>
+<td>Backup</td>
 <td><code>docker-compose exec photoprism photoprism backup -a -i</code></td>
 </tr>
 <tr>
-<td>Restore Database</td>
+<td>Restore</td>
 <td><code>docker-compose exec photoprism photoprism restore -a -i</code></td>
 </tr>
 <tr>
-<td>Index Originals</td>
+<td>Index</td>
 <td><code>docker-compose exec photoprism photoprism index</code></td>
 </tr>
 <tr>
-<td>Import Files</td>
+<td>Re-index</td>
+<td><code>docker-compose exec photoprism photoprism index -f</code></td>
+</tr>
+<tr>
+<td>Import</td>
 <td><code>docker-compose exec photoprism photoprism import</code></td>
 </tr>
 </tbody>
 </table>
 <div class="admonition info">
 <p class="admonition-title">Complete Rescan</p>
-<p><code>photoprism index --all</code> will re-index all originals, including already indexed and unchanged files. This may be
+<p><code>photoprism index -f</code> will re-index all originals, including already indexed and unchanged files. This may be
 necessary after upgrading, especially to new major versions.</p>
 </div>
                 

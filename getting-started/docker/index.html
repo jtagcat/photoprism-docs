@@ -473,6 +473,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#facial-recognition" class="md-nav__link">
+    Facial Recognition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#command-reference" class="md-nav__link">
     Command Reference
   </a>
@@ -2702,6 +2709,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#facial-recognition" class="md-nav__link">
+    Facial Recognition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#command-reference" class="md-nav__link">
     Command Reference
   </a>
@@ -2731,7 +2745,7 @@ less command line parameters, and is generally easier to start with for beginner
 <div class="admonition info">
 <p class="admonition-title">Linux</p>
 <p>All commands may have to be prefixed with <code>sudo</code> when not running as root.
-Note that this will change the home directory <code>~</code> to <code>/root</code> in your configuration.
+Note that this will point the home directory placeholder <code>~</code> to <code>/root</code> in your configuration.
 Kernel security modules such as SELinux have been reported to cause
 <a href="https://docs.photoprism.org/getting-started/faq/#why-is-photoprism-getting-stuck-in-a-restart-loop">issues</a>.</p>
 </div>
@@ -2808,9 +2822,10 @@ Run <code>photoprism index</code>, or go to <em>Library</em> and click <em>Start
 <p>If you're running out of memory - or other system resources - while indexing, please limit the
 <a href="https://docs.photoprism.org/getting-started/config-options/">number of workers</a> by setting
 <code>PHOTOPRISM_WORKERS</code> to a value less than the number of logical CPU cores.
-Also make sure your server has <a href="https://opensource.com/article/18/9/swap-space-linux-systems">swap</a> 
+Also make sure your server has at least 4 GB of <a href="https://opensource.com/article/18/9/swap-space-linux-systems">swap</a>
 configured so that indexing doesn't cause restarts when there are memory usage spikes.
-As a measure of last resort, you may additionally disable image classification using TensorFlow.</p>
+Especially the conversion of RAW images and the transcoding of videos are quite demanding.
+As a measure of last resort, you may disable using TensorFlow for image classification and facial recognition.</p>
 </div>
 <h3 id="step-3-when-youre-done">Step 3: When you're done...<a class="headerlink" href="#step-3-when-youre-done" title="Permanent link">&para;</a></h3>
 <p>You can stop the server and start it again using the following commands:</p>
@@ -2819,6 +2834,14 @@ docker start photoprism
 </code></pre></div>
 <p>To remove the container completely:</p>
 <div class="highlight"><pre><span></span><code>docker rm -f photoprism
+</code></pre></div>
+<h3 id="facial-recognition">Facial Recognition<a class="headerlink" href="#facial-recognition" title="Permanent link">&para;</a></h3>
+<p>Existing users may index faces in originals without performing a complete rescan:</p>
+<div class="highlight"><pre><span></span><code>docker exec -ti photoprism photoprism photoprism faces index
+</code></pre></div>
+<p>For a fresh start e.g. after upgrading from a development preview, remove 
+known people and faces before re-indexing:</p>
+<div class="highlight"><pre><span></span><code>docker exec -ti photoprism photoprism faces reset -f`
 </code></pre></div>
 <h3 id="command-reference">Command Reference<a class="headerlink" href="#command-reference" title="Permanent link">&para;</a></h3>
 <p>The help command shows a complete list of commands and config options.
@@ -2834,53 +2857,57 @@ like <code>docker exec -ti photoprism photoprism backup --help</code>.</p>
 <tbody>
 <tr>
 <td>Update</td>
-<td><code>docker pull photoprism/photoprism:latest</code></td>
-</tr>
-<tr>
-<td>Remove Container</td>
 <td><code>docker rm -f photoprism</code></td>
 </tr>
 <tr>
-<td>View Logs</td>
+<td>Remove</td>
+<td><code>docker rm -f photoprism</code></td>
+</tr>
+<tr>
+<td>Logs</td>
 <td><code>docker logs --tail=25 -f photoprism</code></td>
 </tr>
 <tr>
-<td>Open Terminal</td>
+<td>Terminal</td>
 <td><code>docker exec -ti photoprism bash</code></td>
 </tr>
 <tr>
-<td>Show Help</td>
+<td>Help</td>
 <td><code>docker exec -ti photoprism photoprism help</code></td>
 </tr>
 <tr>
-<td>Show Config</td>
+<td>Config</td>
 <td><code>docker exec -ti photoprism photoprism config</code></td>
 </tr>
 <tr>
-<td>Reset Database</td>
+<td>Reset</td>
 <td><code>docker exec -ti photoprism photoprism reset</code></td>
 </tr>
 <tr>
-<td>Backup Database</td>
+<td>Backup</td>
 <td><code>docker exec -ti photoprism photoprism backup -a -i</code></td>
 </tr>
 <tr>
-<td>Restore Database</td>
+<td>Restore</td>
 <td><code>docker exec -ti photoprism photoprism restore -a -i</code></td>
 </tr>
 <tr>
-<td>Index Originals</td>
+<td>Index</td>
 <td><code>docker exec -ti photoprism photoprism index</code></td>
 </tr>
 <tr>
-<td>Import Files</td>
+<td>Re-index</td>
+<td><code>docker exec -ti photoprism photoprism index -f</code></td>
+</tr>
+<tr>
+<td>Import</td>
 <td><code>docker exec -ti photoprism photoprism import</code></td>
 </tr>
 </tbody>
 </table>
 <div class="admonition info">
 <p class="admonition-title">Complete Rescan</p>
-<p><code>photoprism index --all</code> will re-index all originals, including already indexed and unchanged files. This may be
+<p><code>photoprism index -f</code> will re-index all originals, including already indexed and unchanged files. This may be
 necessary after upgrading, especially to new major versions.</p>
 </div>
                 
