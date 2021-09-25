@@ -935,7 +935,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user-guide/library/import-vs-index/" class="md-nav__link">
+      <a href="../../../user-guide/library/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -949,8 +949,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../user-guide/library/indexing/" class="md-nav__link">
-        Index Originals
+      <a href="../../../user-guide/library/originals/" class="md-nav__link">
+        Originals
       </a>
     </li>
   
@@ -964,7 +964,7 @@
   
     <li class="md-nav__item">
       <a href="../../../user-guide/library/import/" class="md-nav__link">
-        Import Files
+        Importing Files
       </a>
     </li>
   
@@ -978,7 +978,7 @@
   
     <li class="md-nav__item">
       <a href="../../../user-guide/library/upload/" class="md-nav__link">
-        Upload via Web UI
+        Web Upload
       </a>
     </li>
   
@@ -992,7 +992,7 @@
   
     <li class="md-nav__item">
       <a href="../../../user-guide/library/webdav/" class="md-nav__link">
-        WebDAV Upload
+        WebDAV Sync
       </a>
     </li>
   
@@ -1006,7 +1006,7 @@
   
     <li class="md-nav__item">
       <a href="../../../user-guide/library/files/" class="md-nav__link">
-        Original Files
+        File Browser
       </a>
     </li>
   
@@ -2779,61 +2779,65 @@
 <li>Open Portainer by visiting http://[YOUR-LOCAL-IP]:9000/;</li>
 <li>Click <em>Stacks</em> in the left menu, then <em>Add stack</em>, give it a meaningful name (for eg. Photoprism) and in the Web Editor place the below code, which was based on <a href="https://dl.photoprism.org/docker/docker-compose.yml">Photoprism's default docker-compose yml file</a> but downgraded to compose version 2. <strong>BE SURE TO USE YOUR OWN [LOCAL-PORT], [YOUR-ADMIN-PASS], [YOUR-DB-PASS] and [YOUR-LOCAL-IP] BY CHANGING THE VALUES ACCORDINGLY, AND CHECK THE LOCAL VOLUMES PATHS TO MATCH THOSE DEFINED IN STEP 13</strong>.</li>
 </ol>
-<div class="highlight"><pre><span></span><code>version: &#39;2&#39;
-services:
-  photoprism:
-    image: photoprism/photoprism:latest
-    security_opt:
-      - seccomp:unconfined
-      - apparmor:unconfined
-    ports:
-      - [LOCAL-PORT]:2342
-    environment:
-      - PHOTOPRISM_HTTP_PORT=2342
-      - PHOTOPRISM_ADMIN_PASSWORD=[YOUR-ADMIN-PASS]
-      - PHOTOPRISM_DEBUG=false
-      - PHOTOPRISM_PUBLIC=false
-      - PHOTOPRISM_READONLY=false
-      - PHOTOPRISM_EXPERIMENTAL=true
-      - PHOTOPRISM_DISABLE_WEBDAV=false
-      - PHOTOPRISM_DISABLE_SETTINGS=false
-      - PHOTOPRISM_DISABLE_TENSORFLOW=false
-      - PHOTOPRISM_DETECT_NSFW=false
-      - PHOTOPRISM_UPLOAD_NSFW=true
-      - PHOTOPRISM_DATABASE_DRIVER=mysql
-      - PHOTOPRISM_DATABASE_SERVER=mariadb:3306
-      - PHOTOPRISM_DATABASE_NAME=photoprism
-      - PHOTOPRISM_DATABASE_USER=photoprism
-      - PHOTOPRISM_DATABASE_PASSWORD=[YOUR-DB-PASS]
-      - PHOTOPRISM_SITE_URL=http://[YOUR-LOCAL-IP]:[LOCAL-PORT]
-      - PHOTOPRISM_SITE_TITLE=PhotoPrism
-      - PHOTOPRISM_SITE_CAPTION=Browse Your Life
-      - PHOTOPRISM_SITE_DESCRIPTION=Photoprism
-      - PHOTOPRISM_SITE_AUTHOR=Photoprism
-    volumes:
-      - /volume1/docker/photoprism/originals:/photoprism/originals
-      - /volume1/docker/photoprism/storage:/photoprism/storage  
-  mariadb:
-    image: mariadb:10.5
-    restart: unless-stopped
-    security_opt:
-      - seccomp:unconfined
-      - apparmor:unconfined
-    command: mysqld --transaction-isolation=READ-COMMITTED --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --max-connections=512 --innodb-rollback-on-timeout=OFF --innodb-lock-wait-timeout=50
-    volumes:
-      - /volume1/docker/photoprism/database:/var/lib/mysql
-    environment:
-      - MYSQL_ROOT_PASSWORD=[YOUR-DB-PASS]
-      - MYSQL_DATABASE=photoprism
-      - MYSQL_USER=photoprism
-      - MYSQL_PASSWORD=[YOUR-DB-PASS]
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span> <span class="s">&#39;2&#39;</span>
+<span class="nt">services</span><span class="p">:</span>
+  <span class="nt">photoprism</span><span class="p">:</span>
+    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">photoprism/photoprism:latest</span>
+    <span class="nt">security_opt</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">seccomp:unconfined</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">apparmor:unconfined</span>
+    <span class="nt">ports</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">2342:2342</span> <span class="c1"># [server]:[container]</span>
+    <span class="nt">environment</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_HTTP_PORT=2342</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_ADMIN_PASSWORD=[YOUR-ADMIN-PASS]</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_DEBUG=false</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_PUBLIC=false</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_READONLY=false</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_EXPERIMENTAL=true</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_DISABLE_WEBDAV=false</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_DISABLE_SETTINGS=false</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_DISABLE_TENSORFLOW=false</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_DETECT_NSFW=false</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_UPLOAD_NSFW=true</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_DATABASE_DRIVER=mysql</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_DATABASE_SERVER=mariadb:3306</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_DATABASE_NAME=photoprism</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_DATABASE_USER=photoprism</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_DATABASE_PASSWORD=[YOUR-DB-PASS]</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_SITE_URL=http://[YOUR-LOCAL-IP]:[LOCAL-PORT]</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_SITE_TITLE=PhotoPrism</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_SITE_CAPTION=Browse Your Life</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_SITE_DESCRIPTION=Photoprism</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_SITE_AUTHOR=Photoprism</span>
+    <span class="nt">volumes</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/volume1/docker/photoprism/originals:/photoprism/originals</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/volume1/docker/photoprism/storage:/photoprism/storage</span>  
+  <span class="nt">mariadb</span><span class="p">:</span>
+    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mariadb:10.5</span>
+    <span class="nt">restart</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+    <span class="nt">security_opt</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">seccomp:unconfined</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">apparmor:unconfined</span>
+    <span class="nt">command</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mysqld --transaction-isolation=READ-COMMITTED --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --max-connections=512 --innodb-rollback-on-timeout=OFF --innodb-lock-wait-timeout=120</span>
+    <span class="nt">volumes</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/volume1/docker/photoprism/database:/var/lib/mysql</span>
+    <span class="nt">environment</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">MYSQL_ROOT_PASSWORD=[YOUR-DB-PASS]</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">MYSQL_DATABASE=photoprism</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">MYSQL_USER=photoprism</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">MYSQL_PASSWORD=[YOUR-DB-PASS]</span>
 </code></pre></div>
 <ol>
 <li>Click <em>Deploy the stack</em>. Give it a few minutes and PhotoPrism should be accessible in http://[YOUR-LOCAL-IP]:[LOCAL-PORT]/.</li>
 </ol>
-<p><strong>IMPORTANT: Synology automatically creates thumbnail files inside a special @eaDir directory when you upload media files such as images. To prevent Photoprism to index these files place a .ppignore file with the following content inside docker/photoprism/originals folder:</strong>
-<div class="highlight"><pre><span></span><code>@eaDir
-</code></pre></div></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Synology automatically creates thumbnail files inside a special <code>@eaDir</code> folder when uploading 
+media files such as images.
+PhotoPrism now ignores folders starting with <code>@</code> so that you don't need to manually exclude
+them in a <code>.ppignore</code> file anymore.</p>
+</div>
 <h3 id="step-4-configure-a-reverse-proxy-in-your-synology-nas-to-access-photoprism-over-https-custom-domain-name">Step 4: configure a reverse proxy in your Synology NAS to access PhotoPrism over https / custom domain name<a class="headerlink" href="#step-4-configure-a-reverse-proxy-in-your-synology-nas-to-access-photoprism-over-https-custom-domain-name" title="Permanent link">&para;</a></h3>
 <p>Synology allows you to configure a nginx reverse proxy to serve your applications over HTTPS. Configurations can be made in Diskstation manager <em>Control Panel</em>, <em>Application Portal</em>, <em>Reverse proxy</em>.:
 Click create. [Description] give it a meaningful name (for eg. Photoprism) [Protocol]=HTTPS [Hostname]=[YOUR-HOSTNAME] [Port]=[YOUR-PORT] (for eg. 2343) check Enable HSTS and HTTP/2 . under Destination [Protocol]=HTTP [Hostname]=[YOUR-LOCAL-IP][PORT]=[YOUR-PORT] (default is 2342)

@@ -893,8 +893,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#can-i-deploy-photoprism-on-a-shared-domain-like-httpsexamplecomphotoprism" class="md-nav__link">
-    Can I deploy PhotoPrism on a shared domain like https://example.com/photoprism?
+  <a href="#can-i-install-photoprism-in-a-sub-directory-on-a-shared-domain" class="md-nav__link">
+    Can I install PhotoPrism in a sub-directory on a shared domain?
   </a>
   
 </li>
@@ -1051,7 +1051,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/library/import-vs-index/" class="md-nav__link">
+      <a href="../../user-guide/library/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -1065,8 +1065,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/library/indexing/" class="md-nav__link">
-        Index Originals
+      <a href="../../user-guide/library/originals/" class="md-nav__link">
+        Originals
       </a>
     </li>
   
@@ -1080,7 +1080,7 @@
   
     <li class="md-nav__item">
       <a href="../../user-guide/library/import/" class="md-nav__link">
-        Import Files
+        Importing Files
       </a>
     </li>
   
@@ -1094,7 +1094,7 @@
   
     <li class="md-nav__item">
       <a href="../../user-guide/library/upload/" class="md-nav__link">
-        Upload via Web UI
+        Web Upload
       </a>
     </li>
   
@@ -1108,7 +1108,7 @@
   
     <li class="md-nav__item">
       <a href="../../user-guide/library/webdav/" class="md-nav__link">
-        WebDAV Upload
+        WebDAV Sync
       </a>
     </li>
   
@@ -1122,7 +1122,7 @@
   
     <li class="md-nav__item">
       <a href="../../user-guide/library/files/" class="md-nav__link">
-        Original Files
+        File Browser
       </a>
     </li>
   
@@ -2889,8 +2889,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#can-i-deploy-photoprism-on-a-shared-domain-like-httpsexamplecomphotoprism" class="md-nav__link">
-    Can I deploy PhotoPrism on a shared domain like https://example.com/photoprism?
+  <a href="#can-i-install-photoprism-in-a-sub-directory-on-a-shared-domain" class="md-nav__link">
+    Can I install PhotoPrism in a sub-directory on a shared domain?
   </a>
   
 </li>
@@ -3074,23 +3074,13 @@ that might rename, update or delete files in the <em>originals</em> folder.</p>
 We also maintain a complete list of <a href="../config-options/">config options</a> in these docs.</p>
 <p>Our Docker Compose <a href="https://dl.photoprism.org/docker/docker-compose.yml">examples</a> are continuously maintained and inline documentation 
 has been added to simplify installation.</p>
-<h3 id="can-i-deploy-photoprism-on-a-shared-domain-like-httpsexamplecomphotoprism">Can I deploy PhotoPrism on a shared domain like <code>https://example.com/photoprism</code>?<a class="headerlink" href="#can-i-deploy-photoprism-on-a-shared-domain-like-httpsexamplecomphotoprism" title="Permanent link">&para;</a></h3>
-<p>No. This is not recommended, and currently not supported for the following reasons:</p>
-<ol>
-<li>It's less effort, less complexity, and requires less testing on our side. We prefer
-   to invest our time in feature requests that provide more value to our users.</li>
-<li>Browser connections, routing, and related resources don't need to be shared
-   with other apps, so it's faster and easier to configure for you.</li>
-<li>Cloud photo apps typically use multiple sub domains for faster loading -
-   reducing the number of hosts and putting everything on a shared host
-   is the exact opposite of what you should do.</li>
-<li>It's easier for you to clear the browser cache, or change
-   PhotoPrism specific settings for ad blockers.</li>
-<li>The same origin policy generally works on the (sub-)domain level,
-   so it may be insecure to host multiple apps on the same domain - at least
-   without significant effort in additional security measures.</li>
-<li>Share URLs are shorter and easier to remember.</li>
-</ol>
+<h3 id="can-i-install-photoprism-in-a-sub-directory-on-a-shared-domain">Can I install PhotoPrism in a sub-directory on a shared domain?<a class="headerlink" href="#can-i-install-photoprism-in-a-sub-directory-on-a-shared-domain" title="Permanent link">&para;</a></h3>
+<p>This is possible with our latest release if you run it behind a proxy.
+Note that for progressive web apps to work as designed, the service worker should 
+be located in the root directory. Also keep in mind sharing a domain with
+other apps may negatively impact the performance and 
+<a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">security</a>
+of all apps installed.  Sharing links will be longer as well.</p>
 <h3 id="why-is-photoprism-getting-stuck-in-a-restart-loop">Why is PhotoPrism getting stuck in a restart loop?<a class="headerlink" href="#why-is-photoprism-getting-stuck-in-a-restart-loop" title="Permanent link">&para;</a></h3>
 <p>These restarts are triggered by Docker (based on your configuration)
 when PhotoPrism is unable to start.

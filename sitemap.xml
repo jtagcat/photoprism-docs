@@ -361,22 +361,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.photoprism.org/user-guide/metadata/</loc>
-         <lastmod>2021-09-25</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://docs.photoprism.org/user-guide/navigate/</loc>
-         <lastmod>2021-09-25</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.photoprism.org/user-guide/setup/</loc>
-         <lastmod>2021-09-25</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.photoprism.org/user-guide/share/</loc>
          <lastmod>2021-09-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -401,12 +386,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.photoprism.org/user-guide/library/files/</loc>
+         <loc>https://docs.photoprism.org/user-guide/library/</loc>
          <lastmod>2021-09-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.photoprism.org/user-guide/library/import-vs-index/</loc>
+         <loc>https://docs.photoprism.org/user-guide/library/files/</loc>
          <lastmod>2021-09-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -416,7 +401,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.photoprism.org/user-guide/library/indexing/</loc>
+         <loc>https://docs.photoprism.org/user-guide/library/originals/</loc>
          <lastmod>2021-09-25</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -547,11 +532,6 @@
     </url>
     <url>
          <loc>https://docs.photoprism.org/user-guide/settings/library/</loc>
-         <lastmod>2021-09-25</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.photoprism.org/user-guide/settings/places/</loc>
          <lastmod>2021-09-25</lastmod>
          <changefreq>daily</changefreq>
     </url>

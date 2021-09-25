@@ -20,7 +20,7 @@
     
     
       
-        <title>WebDAV Upload - PhotoPrism</title>
+        <title>WebDAV Sync - PhotoPrism</title>
       
     
     
@@ -57,14 +57,14 @@
     
   
   <meta property="og:type" content="website">
-  <meta property="og:title" content="PhotoPrism - WebDAV Upload">
+  <meta property="og:title" content="PhotoPrism - WebDAV Sync">
   <meta property="og:description" content="User Guide">
   <meta property="og:url" content="https://docs.photoprism.org/user-guide/library/webdav/">
   <meta property="og:image" content="https://dl.photoprism.org/assets/img/preview.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@photoprism_app">
   <meta name="twitter:creator" content="@photoprism_app">
-  <meta name="twitter:title" content="PhotoPrism - WebDAV Upload">
+  <meta name="twitter:title" content="PhotoPrism - WebDAV Sync">
   <meta name="twitter:description" content="User Guide">
   <meta name="twitter:image" content="https://dl.photoprism.org/assets/img/preview.jpg">
   <script async defer data-domain="docs.photoprism.org" src="https://a.photoprism.app/js/plausible.js"></script>
@@ -88,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#add-files-using-webdav" class="md-skip">
+        <a href="#webdav-upload-and-import" class="md-skip">
           Skip to content
         </a>
       
@@ -131,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              WebDAV Upload
+              WebDAV Sync
             
           </span>
         </div>
@@ -874,7 +874,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../import-vs-index/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -888,8 +888,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../indexing/" class="md-nav__link">
-        Index Originals
+      <a href="../originals/" class="md-nav__link">
+        Originals
       </a>
     </li>
   
@@ -903,7 +903,7 @@
   
     <li class="md-nav__item">
       <a href="../import/" class="md-nav__link">
-        Import Files
+        Importing Files
       </a>
     </li>
   
@@ -917,7 +917,7 @@
   
     <li class="md-nav__item">
       <a href="../upload/" class="md-nav__link">
-        Upload via Web UI
+        Web Upload
       </a>
     </li>
   
@@ -940,7 +940,7 @@
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        WebDAV Upload
+        WebDAV Sync
       </a>
       
     </li>
@@ -955,7 +955,7 @@
   
     <li class="md-nav__item">
       <a href="../files/" class="md-nav__link">
-        Original Files
+        File Browser
       </a>
     </li>
   
@@ -2640,10 +2640,11 @@
                   </a>
                 
                 
-                <h1 id="add-files-using-webdav">Add files using WebDAV<a class="headerlink" href="#add-files-using-webdav" title="Permanent link">&para;</a></h1>
-<p>In case you have PhotoPrism running on a server you can use WebDAV to add files to your <em>import</em> or <em>originals</em> folder.</p>
-<p>Just follow those <a href="../../sync/webdav/">instructions</a>.</p>
-<p>Once all files are added you can start <a href="../import-vs-index/">importing or indexing</a> your files.</p>
+                <h1 id="webdav-upload-and-import">WebDAV Upload and Import<a class="headerlink" href="#webdav-upload-and-import" title="Permanent link">&para;</a></h1>
+<p>If you have PhotoPrism running on a remote server, 
+you can use WebDAV to add files to your <em>originals</em> or <em>import</em> folder.</p>
+<p>Please follow these <a href="../../sync/webdav/">instructions</a>.</p>
+<p>Once all files are added, you can start <a href="../">importing or indexing</a> them.</p>
 <!--### Add photos via WebDAV on macOS ###
 1. On your computer, open the Finder.
 2. In the Finder menu click "Go" and then "Connect to Server". 
@@ -2671,7 +2672,8 @@
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>You can use WebDAV to download photos from the server as well. 
-Just connect to <a href="http://servername/originals/">http://servername/originals/</a> and copy the files to your preferred destination.</p>
+Just connect to <code>http://server-ip:2342/originals/</code> or <code>https://yourdomain/originals/</code> for public servers,
+and copy the files to your preferred destination.</p>
 </div>
 <!--### Add photos via WebDAV on Windows ###
 1. Open the windows explorer (e.g. by clicking [Windows] and [E]).
@@ -2723,7 +2725,7 @@ You can use WebDAV to add photos from your mobile phone or tablet as well.
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../upload/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Upload via Web UI" rel="prev">
+        <a href="../upload/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Web Upload" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -2732,20 +2734,20 @@ You can use WebDAV to add photos from your mobile phone or tablet as well.
               <span class="md-footer__direction">
                 Previous
               </span>
-              Upload via Web UI
+              Web Upload
             </div>
           </div>
         </a>
       
       
         
-        <a href="../files/" class="md-footer__link md-footer__link--next" aria-label="Next: Original Files" rel="next">
+        <a href="../files/" class="md-footer__link md-footer__link--next" aria-label="Next: File Browser" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Original Files
+              File Browser
             </div>
           </div>
           <div class="md-footer__button md-icon">
