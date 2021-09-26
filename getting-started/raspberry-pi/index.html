@@ -389,20 +389,6 @@
               
   
   
-  
-    <li class="md-nav__item">
-      <a href="../digitalocean-app/" class="md-nav__link">
-        DigitalOcean
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
     
   
   
@@ -461,6 +447,20 @@
     <li class="md-nav__item">
       <a href="../docker/" class="md-nav__link">
         Pure Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../digitalocean/" class="md-nav__link">
+        DigitalOcean
       </a>
     </li>
   
@@ -2698,7 +2698,8 @@ configured, so that indexing doesn't cause restarts when there are memory usage 
 <p>Indexing large photo and video collections significantly benefits from fast, local SSD storage,
 and lots of memory for caching. Especially the conversion of RAW images and the transcoding of
 videos are very demanding.</p>
-<p>To avoid permission issues, docker-compose.yml should include the following security options:</p>
+<p>To avoid permission issues, your <a href="https://dl.photoprism.org/docker/arm64/docker-compose.yml">docker-compose.yml</a> 
+should include the following security options:</p>
 <div class="highlight"><pre><span></span><code>  <span class="nt">photoprism</span><span class="p">:</span>
     <span class="nt">security_opt</span><span class="p">:</span>
       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">seccomp:unconfined</span>
@@ -2732,7 +2733,7 @@ As a measure of last resort, you may disable using TensorFlow for image classifi
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../digitalocean-app/" class="md-footer__link md-footer__link--prev" aria-label="Previous: DigitalOcean" rel="prev">
+        <a href="../docker-compose/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Docker Compose" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -2741,7 +2742,7 @@ As a measure of last resort, you may disable using TensorFlow for image classifi
               <span class="md-footer__direction">
                 Previous
               </span>
-              DigitalOcean
+              Docker Compose
             </div>
           </div>
         </a>
