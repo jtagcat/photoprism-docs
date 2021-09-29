@@ -424,6 +424,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#mariadb" class="md-nav__link">
+    MariaDB
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#system-requirements" class="md-nav__link">
     System Requirements
   </a>
@@ -2660,6 +2667,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#mariadb" class="md-nav__link">
+    MariaDB
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#system-requirements" class="md-nav__link">
     System Requirements
   </a>
@@ -2686,7 +2700,10 @@
                 <h1 id="running-photoprism-on-a-raspberry-pi">Running PhotoPrism on a Raspberry Pi<a class="headerlink" href="#running-photoprism-on-a-raspberry-pi" title="Permanent link">&para;</a></h1>
 <p>Our latest release comes as a single <a href="https://hub.docker.com/r/photoprism/photoprism">multi-arch image</a> 
 for AMD64, ARM64, and ARMv7. If your device meets the system requirements, 
-the same <a href="../docker-compose/">installation instructions</a> as for regular Linux servers apply.</p>
+mostly the same <a href="../docker-compose/">installation instructions</a> as for regular Linux servers apply.</p>
+<h3 id="mariadb">MariaDB<a class="headerlink" href="#mariadb" title="Permanent link">&para;</a></h3>
+<p>ARMv7 users need an <a href="https://hub.docker.com/r/linuxserver/mariadb">alternative MariaDB image</a>
+as the <a href="https://hub.docker.com/_/mariadb">official image</a> is available for AMD64 and ARM64 only.</p>
 <h3 id="system-requirements">System Requirements<a class="headerlink" href="#system-requirements" title="Permanent link">&para;</a></h3>
 <p>It's important to <a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md">boot</a>
 your Raspberry Pi 3 / 4 with the parameter <code>arm_64bit=1</code> in <code>config.txt</code> in order to use our Docker image.
