@@ -487,6 +487,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#facial-recognition" class="md-nav__link">
+    Facial Recognition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#watchtower" class="md-nav__link">
     Watchtower
   </a>
@@ -2681,6 +2688,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#facial-recognition" class="md-nav__link">
+    Facial Recognition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#watchtower" class="md-nav__link">
     Watchtower
   </a>
@@ -2732,6 +2746,14 @@ We recommend updating your existing <code>docker-compose.yml</code> config based
 <p>Update your <code>docker-compose.yml</code> to use <code>photoprism/photoprism:preview</code> instead of 
 <code>photoprism/photoprism:latest</code> for testing our latest development preview.</p>
 </div>
+<h3 id="facial-recognition">Facial Recognition<a class="headerlink" href="#facial-recognition" title="Permanent link">&para;</a></h3>
+<p>Existing users may index faces in originals without performing a complete rescan:</p>
+<div class="highlight"><pre><span></span><code>docker-compose exec photoprism photoprism faces index
+</code></pre></div>
+<p>For a fresh start e.g. after upgrading from a development preview, remove
+known people and faces before re-indexing:</p>
+<div class="highlight"><pre><span></span><code>docker-compose exec photoprism photoprism faces reset -f
+</code></pre></div>
 <h3 id="watchtower">Watchtower<a class="headerlink" href="#watchtower" title="Permanent link">&para;</a></h3>
 <p>Adding <a href="https://github.com/containrrr/watchtower">Watchtower</a> as a service to your <code>docker-compose.yml</code> will
 automatically keep images up-to-date:</p>
