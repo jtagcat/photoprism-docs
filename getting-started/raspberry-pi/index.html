@@ -2712,9 +2712,12 @@ It's a 64bit Ubuntu Server with Docker pre-installed.</p>
 <p>Your device should have at least 4 GB of memory. Also make sure it has at least
 4 GB of <a href="https://opensource.com/article/18/9/swap-space-linux-systems">swap</a>
 configured, so that indexing doesn't cause restarts when there are memory usage spikes.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>Indexing large photo and video collections significantly benefits from fast, local SSD storage,
-and lots of memory for caching. Especially the conversion of RAW images and the transcoding of
+and plenty of memory for caching. Especially the conversion of RAW images and the transcoding of
 videos are very demanding.</p>
+</div>
 <p>To avoid permission issues, your <a href="https://dl.photoprism.org/docker/arm64/docker-compose.yml">docker-compose.yml</a> 
 should include the following security options:</p>
 <div class="highlight"><pre><span></span><code>  <span class="nt">photoprism</span><span class="p">:</span>

@@ -2721,7 +2721,13 @@ docker-compose up -d photoprism
 <p>Pulling a new version can take several minutes, depending on your internet connection.</p>
 <p>Advanced users may put this into a <code>Makefile</code> so that they only need to type a single command.</p>
 <p>See <a href="../docker-compose/">Setup Using Docker Compose</a> for a full command reference.</p>
-<div class="admonition tip">
+<div class="admonition important">
+<p class="admonition-title">New Release</p>
+<p>Our <a href="../../release-notes/">latest release</a> comes as a single <a href="https://hub.docker.com/r/photoprism/photoprism">multi-arch image</a>
+for AMD64, ARM64, and ARMv7. That means you don't need to pull from different Docker repositories anymore.
+We recommend updating your existing <code>docker-compose.yml</code> config based on <a href="https://dl.photoprism.org/docker/">our examples</a>.</p>
+</div>
+<div class="admonition info">
 <p class="admonition-title">Preview Builds</p>
 <p>Update your <code>docker-compose.yml</code> to use <code>photoprism/photoprism:preview</code> instead of 
 <code>photoprism/photoprism:latest</code> for testing our latest development preview.</p>
@@ -2744,9 +2750,6 @@ Only enable Watchtower if you are comfortable with this.</p>
 <h3 id="pure-docker">Pure Docker<a class="headerlink" href="#pure-docker" title="Permanent link">&para;</a></h3>
 <p>Open a terminal on your server, and run the following command to pull the latest container image:</p>
 <div class="highlight"><pre><span></span><code>docker pull photoprism/photoprism:latest
-</code></pre></div>
-<p>For our Raspberry Pi / ARM64 version:</p>
-<div class="highlight"><pre><span></span><code>docker pull photoprism/photoprism-arm64:latest
 </code></pre></div>
 <p>See <a href="../docker/">Running PhotoPrism with Docker</a> for a full command reference.</p>
 <div class="admonition tip">
