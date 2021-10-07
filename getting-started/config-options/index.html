@@ -2713,7 +2713,7 @@
 <tr>
 <td align="left"><code>PHOTOPRISM_BACKUP_PATH</code></td>
 <td align="left">--backup-path PATH</td>
-<td align="left">optional custom backup file PATH</td>
+<td align="left">optional custom backup PATH for index backup files</td>
 </tr>
 <tr>
 <td align="left"><code>PHOTOPRISM_ASSETS_PATH</code></td>
@@ -2723,7 +2723,7 @@
 <tr>
 <td align="left"><code>PHOTOPRISM_WORKERS</code></td>
 <td align="left">--workers NUMBER, -w NUMBER</td>
-<td align="left">maximum NUMBER of indexing workers (default: depends on the number of physical cores)</td>
+<td align="left">maximum NUMBER of indexing workers, default and limit depend on the number of CPU cores</td>
 </tr>
 <tr>
 <td align="left"><code>PHOTOPRISM_WAKEUP_INTERVAL</code></td>
@@ -2766,14 +2766,14 @@
 <td align="left">disable creating JSON metadata sidecar files with ExifTool</td>
 </tr>
 <tr>
-<td align="left"><code>PHOTOPRISM_DISABLE_DARKTABLE</code></td>
-<td align="left">--disable-darktable</td>
-<td align="left">disable converting RAW files with Darktable</td>
-</tr>
-<tr>
 <td align="left"><code>PHOTOPRISM_DISABLE_FFMPEG</code></td>
 <td align="left">--disable-ffmpeg</td>
 <td align="left">disable video transcoding and still image extraction with FFmpeg</td>
+</tr>
+<tr>
+<td align="left"><code>PHOTOPRISM_DISABLE_DARKTABLE</code></td>
+<td align="left">--disable-darktable</td>
+<td align="left">disable converting RAW files with Darktable</td>
 </tr>
 <tr>
 <td align="left"><code>PHOTOPRISM_DISABLE_RAWTHERAPEE</code></td>
