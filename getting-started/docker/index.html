@@ -2763,15 +2763,25 @@ the folder containing your personal photo and video collection:</p>
   -v ~/Pictures:/photoprism/originals \
   photoprism/photoprism
 </code></pre></div>
-<div class="admonition attention">
-<p class="admonition-title">Change Password</p>
-<p>Please change <code>PHOTOPRISM_ADMIN_PASSWORD</code> so that PhotoPrism starts with a secure <strong>initial password</strong>.
+<div class="admonition danger">
+<p>Please change <code>PHOTOPRISM_ADMIN_PASSWORD</code> so that PhotoPrism starts with a <strong>secure initial password</strong>.
 Never use <code>photoprism</code>, or other easy-to-guess passwords, on a public server.
 A minimum length of 4 characters is required.</p>
 </div>
-<p>Now open <a href="http://localhost:2342/">http://localhost:2342/</a> in a Web browser to see the user interface
-and sign in using the password set in <code>PHOTOPRISM_ADMIN_PASSWORD</code>.
-You may change it in Settings, or using the <code>photoprism passwd</code> command in a terminal.</p>
+<div class="admonition attention">
+<p>Make sure there is enough disk space available and verify file system permissions before starting to index:
+The <em>originals</em> folder must be readable, while <em>storage</em> must be readable and writeable.</p>
+</div>
+<p>Now open <a href="http://localhost:2342/">http://localhost:2342/</a> in a Web browser to see the user interface.
+Sign in with the user <code>admin</code> and the initial password configured via <code>PHOTOPRISM_ADMIN_PASSWORD</code>.
+You may change it on the <a href="../../user-guide/settings/account/">account settings page</a>,
+or using the <code>photoprism passwd</code> command in a terminal.
+A minimum length of 4 characters is required.</p>
+<div class="admonition note">
+<p>It's not possible to <strong>change the initial password</strong> via <code>PHOTOPRISM_ADMIN_PASSWORD</code> after PhotoPrism
+has been started for the first time. You may run <code>docker exec -ti photoprism photoprism reset</code> in a terminal to
+reset your index database for a clean start.</p>
+</div>
 <p>This is a simplified configuration compared to our <a href="../docker-compose/">Docker Compose</a> example:</p>
 <ul>
 <li>The <code>/photoprism/import</code> folder is not <a href="https://docs.docker.com/storage/bind-mounts/">mounted</a> 
@@ -2795,11 +2805,6 @@ like importing, uploading, renaming, and deleting files.
 You may enable it by adding <code>-e PHOTOPRISM_READONLY="true"</code>.
 In addition, you may mount the <em>originals</em> folder with <code>:ro</code> flag so that Docker
 blocks write operations.</p>
-</div>
-<div class="admonition attention">
-<p class="admonition-title">Attention</p>
-<p>Make sure there is enough disk space available and verify file system permissions before starting to index:
-The <em>originals</em> folder must be readable, while <em>storage</em> must be readable and writeable.</p>
 </div>
 <h3 id="step-2-index-your-library">Step 2: Index your library<a class="headerlink" href="#step-2-index-your-library" title="Permanent link">&para;</a></h3>
 <p>Go to <em>Library</em> in our Web UI to start indexing or importing.
