@@ -87,6 +87,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#config-options" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -433,6 +438,8 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
+      
+        
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
@@ -2604,6 +2611,23 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
@@ -2614,9 +2638,13 @@
                   </a>
                 
                 
-                  <h1>Config Options</h1>
-                
-                <table>
+                <h1 id="config-options">Config Options<a class="headerlink" href="#config-options" title="Permanent link">&para;</a></h1>
+<div class="admonition attention">
+<p>Changing config values in your <code>docker-compose.yml</code> file (or on the <a href="../../user-guide/settings/advanced/">advanced settings</a> page)
+always requires a restart to take effect. Open a terminal, run <code>docker-compose stop photoprism</code> and then
+<code>docker-compose up -d photoprism</code> to restart your instance.</p>
+</div>
+<table>
 <thead>
 <tr>
 <th align="left">Variable</th>
