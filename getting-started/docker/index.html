@@ -2768,11 +2768,6 @@ the folder containing your personal photo and video collection:</p>
 Never use easy-to-guess passwords or default values like <code>insecure</code> on publicly accessible servers.
 A minimum length of 4 characters is required.</p>
 </div>
-<div class="admonition attention">
-<p>Ensure there is enough disk space available for creating thumbnails and verify file system permissions 
-before starting to index: Files in the <em>originals</em> folder must be readable, while the <em>storage</em> folder 
-including all subfolders must be readable and writeable.</p>
-</div>
 <p>Now open <a href="http://localhost:2342/">http://localhost:2342/</a> in a Web browser to see the user interface.
 Sign in with the user <code>admin</code> and the initial password configured via <code>PHOTOPRISM_ADMIN_PASSWORD</code>.
 You may change it on the <a href="../../user-guide/settings/account/">account settings page</a>,
@@ -2807,11 +2802,11 @@ blocks write operations.</p>
 <div class="admonition attention">
 <p>Ensure there is enough disk space available for creating thumbnails and verify file system permissions
 before starting to index: Files in the <em>originals</em> folder must be readable, while the <em>storage</em> folder
-including all subfolders must be readable and writeable.</p>
+including all subdirectories must be readable and writeable.</p>
 </div>
-<p>To start indexing existing pictures, go to <em>Library</em> using the sidebar navigation of the Web UI.
-Alternatively, you may run this command in a terminal to index files in the <em>originals</em> folder:</p>
-<div class="highlight"><pre><span></span><code>docker exec -ti photoprism photoprism index
+<p>Go to <em>Library</em> in the Web UI to start indexing your pictures.
+Advanced users may run this command in a terminal to index their <em>originals</em>:</p>
+<div class="highlight"><pre><span></span><code>docker exec -ti photoprism photoprism index [subfolder]
 </code></pre></div>
 <p>While indexing, a JPEG sidecar file may automatically be created for RAW, HEIF, TIFF, PNG, BMP,
 and GIF files. It is required for classification and resampling. By default, it will be created
