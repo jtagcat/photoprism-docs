@@ -2787,9 +2787,9 @@ reset your database for a clean start.</p>
 <p>No host folder has been <a href="https://docs.docker.com/storage/bind-mounts/">mounted</a> to <code>/photoprism/import</code>.
 Importing files via Web upload or <a href="../../user-guide/sync/webdav/">WebDAV</a> is still possible.</p>
 <p>Cache, session, thumbnail, and sidecar files will be created in <code>/photoprism/storage</code>, which is mounted as 
-an <a href="https://docs.docker.com/storage/bind-mounts/">anonymous volume</a>. You may mount a writable host directory 
-or use a named volume instead. Never remove the volume completely so that you don't lose your index and other 
-generated files after restarting or upgrading the container.</p>
+an <a href="https://docs.docker.com/storage/bind-mounts/">anonymous volume</a> in our example. You may want to 
+mount a specific host directory instead. Never remove the volume completely so that you don't lose your 
+index and other these files after restarting or upgrading the container.</p>
 <p>The default port 2342 and other configuration values may be changed as needed,
 see <a href="../config-options/">Config Options</a> for details.</p>
 <p>Multiple folders can be indexed by mounting them as subfolders of <code>/photoprism/originals</code>:</p>

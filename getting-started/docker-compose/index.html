@@ -2784,8 +2784,7 @@ A minimum length of 4 characters is required.</p>
 <p>Your pictures will be mounted from <code>~/Pictures</code> by default, where <code>~</code> is a placeholder 
 for your <a href="https://en.wikipedia.org/wiki/Home_directory">home directory</a>. Its absolute path depends on your
 operating system and username.
-We'll refer to <code>/photoprism/originals</code> as the <em>originals</em> folder as it points 
-to your original photo and video files.</p>
+We'll refer to <code>/photoprism/originals</code> as the <em>originals</em> folder as it points to your original photo and video files.</p>
 <p>You may connect it to any folder accessible from the host, including network drives.
 Since PhotoPrism is running inside a container, it won't be able to see folders that have not been mounted.
 That's an important security feature.</p>
@@ -2794,10 +2793,10 @@ That's an important security feature.</p>
   - &quot;~/friends:/photoprism/originals/friends&quot;
   - &quot;/media/photos:/photoprism/originals/media&quot;
 </code></pre></div>
-<p>Mounting an <em>import</em> folder for adding files to your library is optional. If you prefer a different workflow 
+<p>Mounting an <em>import</em> folder for adding new files to your library is optional. If you prefer a different workflow 
 or read-only mode is enabled, you can skip this.</p>
 <p>Cache, session, thumbnail, and sidecar files will be created in the <em>storage</em> folder. Never remove the volume from
-your <code>docker-compose.yml</code> file so that you don't lose generated files after restarting or upgrading the container.</p>
+your <code>docker-compose.yml</code> file so that you don't lose these files after restarting or upgrading the container.</p>
 <div class="admonition info">
 <p class="admonition-title">Read-Only Mode</p>
 <p>Running PhotoPrism in read-only mode disables all features that require write permissions,
