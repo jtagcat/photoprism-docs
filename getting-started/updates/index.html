@@ -2741,14 +2741,14 @@ and develop new features. Thank you very much! 💜</p>
 </div>
 <h3 id="docker-compose">Docker Compose<a class="headerlink" href="#docker-compose" title="Permanent link">&para;</a></h3>
 <p>Open a terminal and change to the directory where your <code>docker-compose.yml</code> is located.
-Now run the following commands to pull the latest Docker image and restart your instance in the background:</p>
+Now run the following commands to pull the most recent Docker image and restart your instance in the background:</p>
 <div class="highlight"><pre><span></span><code>docker-compose pull photoprism
 docker-compose stop photoprism
 docker-compose up -d photoprism
 </code></pre></div>
 <p>Pulling a new version can take several minutes, depending on your internet connection speed.</p>
 <p>Advanced users may put this into a <code>Makefile</code> so that they only need to type a single command.</p>
-<p>See <a href="../docker-compose/">Setup Using Docker Compose</a> for a full command reference.</p>
+<p>See <a href="../docker-compose/">Setup Using Docker Compose</a> for a command reference.</p>
 <div class="admonition info">
 <p>You can test our latest features and improvements by changing the image from <code>photoprism/photoprism:latest</code>
 to <code>photoprism/photoprism:preview</code> in your <a href="https://dl.photoprism.org/docker/"><code>docker-compose.yml</code></a>.
@@ -2778,10 +2778,10 @@ automatically keep images up-to-date:</p>
 Only enable Watchtower if you are comfortable with this.</p>
 </div>
 <h3 id="pure-docker">Pure Docker<a class="headerlink" href="#pure-docker" title="Permanent link">&para;</a></h3>
-<p>Open a terminal on your server, and run the following command to pull the latest container image:</p>
+<p>Open a terminal on your server, and run the following command to pull the most recent container image:</p>
 <div class="highlight"><pre><span></span><code>docker pull photoprism/photoprism:latest
 </code></pre></div>
-<p>See <a href="../docker/">Running PhotoPrism with Docker</a> for a full command reference.</p>
+<p>See <a href="../docker/">Running PhotoPrism with Docker</a> for a command reference.</p>
 <div class="admonition info">
 <p>You can test our latest features and improvements by using <code>photoprism/photoprism:preview</code> 
 instead of <code>photoprism/photoprism:latest</code>.</p>
