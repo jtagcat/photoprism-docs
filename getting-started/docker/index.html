@@ -2772,12 +2772,14 @@ A minimum length of 4 characters is required.</p>
 Sign in with the user <code>admin</code> and the initial password configured via <code>PHOTOPRISM_ADMIN_PASSWORD</code>.
 You may change it on the <a href="../../user-guide/settings/account/">account settings page</a>,
 or using the <code>photoprism passwd</code> command in a terminal.
-A minimum length of 4 characters is required.</p>
+Enabling <a href="../config-options/">public mode</a> will disable authentication.</p>
 <div class="admonition note">
 <p>It's not possible to <strong>change the initial password</strong> via <code>PHOTOPRISM_ADMIN_PASSWORD</code> after PhotoPrism
 has been started for the first time. You may run <code>docker exec -ti photoprism photoprism reset</code> in a terminal to
 reset your database for a clean start.</p>
 </div>
+<p>In case you can't connect, try starting the server without <code>-d</code> so that you see log messages for troubleshooting.
+PhotoPrism will report specific issues like bad folder permissions, or when it can't connect to the database.</p>
 <p>This is a simplified configuration compared to our <a href="../docker-compose/">Docker Compose</a> example:</p>
 <p>No host folder has been <a href="https://docs.docker.com/storage/bind-mounts/">mounted</a> to <code>/photoprism/import</code>.
 Importing files via Web upload or <a href="../../user-guide/sync/webdav/">WebDAV</a> is still possible.</p>
