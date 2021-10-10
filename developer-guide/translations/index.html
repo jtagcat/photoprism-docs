@@ -2791,16 +2791,17 @@ Its source code can be obtained on <a href="https://github.com/vslavik/poedit">G
 <p>Localizations can be found in <code>/frontend/src/locales</code>. The POT file, only containing message ids, 
 is <code>translations.pot</code>.</p>
 <p><code>*.po</code> files contain localized messages for each 
-<a href="https://www.gnu.org/software/gettext/manual/html_node/Usual-Language-Codes.html#Usual-Language-Codes">language</a>,
+<a href="https://www.gnu.org/software/gettext/manual/html_node/Usual-Language-Codes.html">language</a>
 identified by their <a href="https://www.gnu.org/software/gettext/manual/html_node/Locale-Names.html">locale</a>, 
-like <code>de.po</code> for German or <code>pt_BR.po</code> for Brazilian Portuguese.
+for example <code>de.po</code> for German and <code>pt_BR.po</code> for Brazilian Portuguese.
 You can open, edit and save them with Poedit to update existing translations.</p>
 <h3 id="add-new-translation">Add new translation<a class="headerlink" href="#add-new-translation" title="Permanent link">&para;</a></h3>
 <ul>
 <li>In /frontend run <code>npm run gettext-extract</code></li>
 <li>Install a translation tool e.g. Poedit</li>
 <li>Open the <code>/frontend/src/locales/translations.pot</code> file with Poedit</li>
-<li>In Poedit click on "Create New Translation" at the bottom, select the language, and start translating</li>
+<li>In Poedit click on "Create New Translation" at the bottom and select the language</li>
+<li>Now you can start translating</li>
 <li>When done, save your translation as <code>*.po</code> file using the language locale (e.g. <code>de.po</code>) as name</li>
 <li>Add the new language to the <code>Languages</code> function in  <code>/frontend/src/options/options.js</code></li>
 <li>Run <code>npm run gettext-compile</code> to compile existing translations into a single <code>translations.json</code> file</li>
@@ -2830,16 +2831,17 @@ consistent user experience.
 Technical log messages should be in English to avoid ambiguities and (even slightly) wrong translations. </p>
 <p>Localizations are kept in <code>/assets/locales</code>. The POT file, only containing message ids, is <code>messages.pot</code>.</p>
 <p><code>default.po</code> files in sub directories contain localized messages for each 
-<a href="https://www.gnu.org/software/gettext/manual/html_node/Usual-Language-Codes.html#Usual-Language-Codes">language</a>,
+<a href="https://www.gnu.org/software/gettext/manual/html_node/Usual-Language-Codes.html">language</a>
 identified by their <a href="https://www.gnu.org/software/gettext/manual/html_node/Locale-Names.html">locale</a>, 
-like <code>de/default.po</code> for German or <code>pt_BR/default.po</code> for Brazilian Portuguese. 
+for example <code>de/default.po</code> for German and <code>pt_BR/default.po</code> for Brazilian Portuguese. 
 You can open, edit and save them with Poedit. Please also add and commit binary <code>*.mo</code> files, 
 which will be automatically created by Poedit.</p>
 <h3 id="add-new-translation_1">Add new translation<a class="headerlink" href="#add-new-translation_1" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Run <code>make generate</code> to update <code>/assets/locales/messages.pot</code></li>
 <li>Open the <code>/assets/locales/messages.pot</code> file with Poedit</li>
-<li>In Poedit click on "Create New Translation" at the bottom, select the language, and start translating</li>
+<li>In Poedit click on "Create New Translation" at the bottom and select the language</li>
+<li>Now you can start translating</li>
 <li>When done, create a new directory (using the locale as name) and save your translation there as <code>default.po</code></li>
 </ul>
 <h3 id="update-existing-translation_1">Update existing translation<a class="headerlink" href="#update-existing-translation_1" title="Permanent link">&para;</a></h3>
