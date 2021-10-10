@@ -2780,7 +2780,7 @@
                 <h1 id="translations">Translations<a class="headerlink" href="#translations" title="Permanent link">&para;</a></h1>
 <p>PhotoPrism uses <a href="https://en.wikipedia.org/wiki/Gettext">gettext</a> for localizing frontend and backend.
 It's one of the most widely adopted standards for translating user interfaces.</p>
-<p>Human readable messages like <code>File not found</code> are used as ids for finding matching translations, 
+<p>Human-readable messages like <code>File not found</code> are used as ids for finding matching translations, 
 and used as defaults whenever there is no translation available.</p>
 <p>Messages may optionally contain placeholders, like <code>Found %{n} files</code>, for numbers and 
 other variables.</p>
@@ -2792,8 +2792,8 @@ Its source code can be obtained on <a href="https://github.com/vslavik/poedit">G
 is <code>translations.pot</code>.</p>
 <p><code>*.po</code> files contain localized messages for each 
 <a href="https://www.gnu.org/software/gettext/manual/html_node/Usual-Language-Codes.html#Usual-Language-Codes">language</a>,
-identified by their <a href="https://www.gnu.org/software/gettext/manual/html_node/Locale-Names.html">two-letter locale</a>, 
-like <code>de.po</code> for German or <code>pt_BR</code> for Brazilian Portuguese.
+identified by their <a href="https://www.gnu.org/software/gettext/manual/html_node/Locale-Names.html">locale</a>, 
+like <code>de.po</code> for German or <code>pt_BR.po</code> for Brazilian Portuguese.
 You can open, edit and save them with Poedit to update existing translations.</p>
 <h3 id="add-new-translation">Add new translation<a class="headerlink" href="#add-new-translation" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2801,7 +2801,7 @@ You can open, edit and save them with Poedit to update existing translations.</p
 <li>Install a translation tool e.g. Poedit</li>
 <li>Open the <code>/frontend/src/locales/translations.pot</code> file with Poedit</li>
 <li>In Poedit click on "Create New Translation" at the bottom, select the language, and start translating</li>
-<li>When done, save your translation as <code>*.po</code> file using the two-letter language locale (e.g. <code>de.po</code>) as name</li>
+<li>When done, save your translation as <code>*.po</code> file using the language locale (e.g. <code>de.po</code>) as name</li>
 <li>Add the new language to the <code>Languages</code> function in  <code>/frontend/src/options/options.js</code></li>
 <li>Run <code>npm run gettext-compile</code> to compile existing translations into a single <code>translations.json</code> file</li>
 <li>To test your translations you need to build the frontend again using <code>npm run build</code> or <code>npm run watch</code></li>
@@ -2831,9 +2831,10 @@ Technical log messages should be in English to avoid ambiguities and (even sligh
 <p>Localizations are kept in <code>/assets/locales</code>. The POT file, only containing message ids, is <code>messages.pot</code>.</p>
 <p><code>default.po</code> files in sub directories contain localized messages for each 
 <a href="https://www.gnu.org/software/gettext/manual/html_node/Usual-Language-Codes.html#Usual-Language-Codes">language</a>,
-identified by their <a href="https://www.gnu.org/software/gettext/manual/html_node/Locale-Names.html">two-letter locale</a>, 
-like <code>de/default.po</code> for German. You can open, edit and save them with Poedit. Please
-also add and commit binary <code>*.mo</code> files, which will be automatically created by Poedit.</p>
+identified by their <a href="https://www.gnu.org/software/gettext/manual/html_node/Locale-Names.html">locale</a>, 
+like <code>de/default.po</code> for German or <code>pt_BR/default.po</code> for Brazilian Portuguese. 
+You can open, edit and save them with Poedit. Please also add and commit binary <code>*.mo</code> files, 
+which will be automatically created by Poedit.</p>
 <h3 id="add-new-translation_1">Add new translation<a class="headerlink" href="#add-new-translation_1" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Run <code>make generate</code> to update <code>/assets/locales/messages.pot</code></li>
@@ -2847,7 +2848,7 @@ also add and commit binary <code>*.mo</code> files, which will be automatically 
 <li>Open the <code>/assets/locales/fr/default.po</code> file with Poedit</li>
 <li>In the Poedit menu click "Catalogue" &rarr; "Update from POT File" &rarr; select the messages.pot file from /assets/locales/</li>
 <li>Now you can start proofreading and adding the missing translations</li>
-<li>Once your done, save the changes in the default.po file</li>
+<li>Once you're done, save the changes in the default.po file</li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
