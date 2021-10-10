@@ -2780,9 +2780,9 @@ reset your database for a clean start.</p>
 </div>
 <p>In case you can't connect, try starting the server without <code>-d</code> so that you see log messages for troubleshooting.
 PhotoPrism will report specific issues like bad folder permissions, or when it can't connect to the database.</p>
-<p>This is a simplified configuration compared to our <a href="../docker-compose/">Docker Compose</a> example:</p>
-<p>No host folder has been <a href="https://docs.docker.com/storage/bind-mounts/">mounted</a> to <code>/photoprism/import</code>.
-Importing files via Web upload or <a href="../../user-guide/sync/webdav/">WebDAV</a> is still possible.</p>
+<p><a href="https://docs.docker.com/storage/bind-mounts/">Mounting</a> an <em>import</em> folder to <code>/photoprism/import</code> for adding new 
+files is optional. If you prefer a different workflow, you can skip this. Importing files via Web upload 
+or <a href="../../user-guide/sync/webdav/">WebDAV</a> is still possible, unless <a href="../config-options/">read-only mode</a> is enabled.</p>
 <p>Cache, session, thumbnail, and sidecar files will be created in <code>/photoprism/storage</code>, which is mounted as 
 an <a href="https://docs.docker.com/storage/bind-mounts/">anonymous volume</a> in our example. You may want to 
 mount a specific host directory instead. Never remove the volume completely so that you don't lose your 
