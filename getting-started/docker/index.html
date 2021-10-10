@@ -2764,12 +2764,12 @@ the folder containing your personal photo and video collection:</p>
   photoprism/photoprism
 </code></pre></div>
 <div class="admonition danger">
-<p>Please change <code>PHOTOPRISM_ADMIN_PASSWORD</code> so that PhotoPrism starts with a <strong>secure initial password</strong>.
-Never use <code>photoprism</code>, or other easy-to-guess passwords, on a public server.
+<p>Always change <code>PHOTOPRISM_ADMIN_PASSWORD</code> so that PhotoPrism starts with a <strong>secure initial password</strong>.
+Never use easy-to-guess passwords or default values like <code>insecure</code> on publicly accessible servers.
 A minimum length of 4 characters is required.</p>
 </div>
 <div class="admonition attention">
-<p>Make sure there is enough disk space available for creating thumbnails and verify file system permissions 
+<p>Ensure there is enough disk space available for creating thumbnails and verify file system permissions 
 before starting to index: Files in the <em>originals</em> folder must be readable, while the <em>storage</em> folder 
 including all subfolders must be readable and writeable.</p>
 </div>
@@ -2784,19 +2784,15 @@ has been started for the first time. You may run <code>docker exec -ti photopris
 reset your database for a clean start.</p>
 </div>
 <p>This is a simplified configuration compared to our <a href="../docker-compose/">Docker Compose</a> example:</p>
-<ul>
-<li>The <code>/photoprism/import</code> folder is not <a href="https://docs.docker.com/storage/bind-mounts/">mounted</a> 
-  so that you can't easily access it from your host machine. 
-  Uploading files or mounting it via <a href="../../user-guide/sync/webdav/">WebDAV</a> 
-  is still possible.</li>
-<li>Settings, index, sidecar files, and thumbnails will be put 
-  in <code>/photoprism/storage</code>. 
-  You may also <a href="https://docs.docker.com/storage/bind-mounts/">mount</a>
-  this path to a local folder instead of an anonymous volume.</li>
-</ul>
+<p>No host folder has been <a href="https://docs.docker.com/storage/bind-mounts/">mounted</a> to <code>/photoprism/import</code>.
+Importing files via Web upload or <a href="../../user-guide/sync/webdav/">WebDAV</a> is still possible.</p>
+<p>Cache, session, thumbnail, and sidecar files will be created in <code>/photoprism/storage</code>, which is mounted as 
+an <a href="https://docs.docker.com/storage/bind-mounts/">anonymous volume</a>. You may mount a writable host directory 
+or use a named volume instead. Never remove the volume completely so that you don't lose your index and other 
+generated files after restarting or upgrading the container.</p>
 <p>The default port 2342 and other configuration values may be changed as needed,
 see <a href="../config-options/">Config Options</a> for details.</p>
-<p>Multiple folders can be indexed by mounting them as sub-folders of <code>/photoprism/originals</code>:</p>
+<p>Multiple folders can be indexed by mounting them as subfolders of <code>/photoprism/originals</code>:</p>
 <div class="highlight"><pre><span></span><code>-v ~/Example:/photoprism/originals/Example
 </code></pre></div>
 <div class="admonition info">
@@ -2808,8 +2804,13 @@ In addition, you may mount the <em>originals</em> folder with <code>:ro</code> f
 blocks write operations.</p>
 </div>
 <h3 id="step-2-index-your-library">Step 2: Index your library<a class="headerlink" href="#step-2-index-your-library" title="Permanent link">&para;</a></h3>
-<p>Go to <em>Library</em> in our Web UI to start indexing or importing.
-Alternatively, you can run this command in a terminal to index all files in your <em>originals</em> folder:</p>
+<div class="admonition attention">
+<p>Ensure there is enough disk space available for creating thumbnails and verify file system permissions
+before starting to index: Files in the <em>originals</em> folder must be readable, while the <em>storage</em> folder
+including all subfolders must be readable and writeable.</p>
+</div>
+<p>To start indexing existing pictures, go to <em>Library</em> using the sidebar navigation of the Web UI.
+Alternatively, you may run this command in a terminal to index files in the <em>originals</em> folder:</p>
 <div class="highlight"><pre><span></span><code>docker exec -ti photoprism photoprism index
 </code></pre></div>
 <p>While indexing, a JPEG sidecar file may automatically be created for RAW, HEIF, TIFF, PNG, BMP,
