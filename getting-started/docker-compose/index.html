@@ -2788,7 +2788,7 @@ We'll refer to <code>/photoprism/originals</code> as the <em>originals</em> fold
 <p>You may connect it to any folder accessible from the host, including network drives.
 Since PhotoPrism is running inside a container, it won't be able to see folders that have not been mounted.
 That's an important security feature.</p>
-<p>Multiple folders can be made accessible by simply mounting them as subfolders:</p>
+<p>Multiple folders can be made accessible by mounting them as subfolders like this:</p>
 <div class="highlight"><pre><span></span><code>volumes:
   - &quot;~/friends:/photoprism/originals/friends&quot;
   - &quot;/media/photos:/photoprism/originals/media&quot;
@@ -2837,11 +2837,12 @@ including all subdirectories must be readable and writeable.</p>
 <p>Go to <em>Library</em> in the Web UI to start indexing your pictures.</p>
 <p>While indexing, JPEG sidecar files may be created for originals in other formats such as RAW and HEIF. 
 This is required for image classification, facial recognition, and for displaying them in a Web browser. 
-Sidecar and thumbnail files will be added to the <em>storage</em> folder.</p>
-<p>Pictures will become visible one after another. Open the <em>Logs</em> tab in <em>Library</em> to watch the indexer working.</p>
-<p>Of course, you can continue using your favorite tools for processing RAW files, importing new files, 
-or creating backups. Go to <em>Library</em> and click <em>Start</em> to update the index after files have been 
-changed, added, or removed. This can also be automated.</p>
+Sidecar and thumbnail files will be added to the <em>storage</em> folder, so that your <em>originals</em> folder won't be modified.</p>
+<p>Pictures will become visible one after another. Open the <em>Logs</em> tab in <em>Library</em> 
+to watch the indexer working.</p>
+<p>Of course, you can continue using your favorite tools for processing RAW files, editing metadata, 
+or importing new shots. Go to <em>Library</em> and click <em>Start</em> to update the index after files have been 
+changed, added, or removed. This can also be automated using a scheduler and PhotoPrism's CLI commands.</p>
 <p>Easy, isn't it?</p>
 <div class="admonition example">
 <p><strong>This open-source project is made possible <a href="https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md">thanks to our sponsors</a>.</strong>
