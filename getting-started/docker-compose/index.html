@@ -2788,7 +2788,7 @@ We'll refer to <code>/photoprism/originals</code> as the <em>originals</em> fold
 <p>All folders accessible from the host may be mounted, including network drives.
 Since PhotoPrism is running inside a container, it won't be able to see folders that have not been mounted.
 That's an important security feature.</p>
-<p>Multiple folders can be made accessible by mounting them as subfolders like this:</p>
+<p>Multiple folders can be made accessible by mounting them as subfolders:</p>
 <div class="highlight"><pre><span></span><code>volumes:
   - &quot;~/friends:/photoprism/originals/friends&quot;
   - &quot;/media/photos:/photoprism/originals/media&quot;
