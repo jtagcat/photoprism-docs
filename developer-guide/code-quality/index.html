@@ -2826,8 +2826,10 @@ details ahead. Learn enough to get started and build only what you need.</p>
 <p>We strive for complete test coverage. Code that cannot be tested is flawed.</p>
 <h3 id="codecov">Codecov<a class="headerlink" href="#codecov" title="Permanent link">&para;</a></h3>
 <p>A coverage log file created by the Go test runner is automatically sent to <a href="https://codecov.io/gh/photoprism/photoprism">Codecov</a> every time our <code>develop</code> branch was successfully built and tested on <a href="https://travis-ci.org/photoprism/photoprism">Travis CI</a>. Codecov provides a beautiful UI for displaying coverage reports and renders a badge showing the current test coverage. Custom settings for our report are located in <a href="https://github.com/photoprism/photoprism/blob/develop/codecov.yml">codecov.yml</a>. For example, <code>range: 50..90</code> means the badge will be green if coverage is &gt;= 90% and red if it is &lt;= 50%.</p>
-<h2 id="quality-reports">Quality Reports <a href="https://goreportcard.com/report/github.com/photoprism/photoprism"><img alt="Code Quality" src="https://goreportcard.com/badge/github.com/photoprism/photoprism" /></a> <a href="https://www.codacy.com/project/lastzero/photoprism/dashboard"><img alt="Codacy Badge" src="https://api.codacy.com/project/badge/Grade/ea5b6b16814540469f384b8ff35ba511" /></a><a class="headerlink" href="#quality-reports" title="Permanent link">&para;</a></h2>
-<p><a href="https://goreportcard.com/report/github.com/photoprism/photoprism">Go Report Card</a> finds typical issues in Go code while <a href="https://www.codacy.com/project/lastzero/photoprism/dashboard">Codacy</a> is a more general service that also reports issues found in Dockerfiles and other programming languages.</p>
+<h2 id="quality-reports">Quality Reports <a href="https://goreportcard.com/report/github.com/photoprism/photoprism"><img alt="Code Quality" src="https://goreportcard.com/badge/github.com/photoprism/photoprism" /></a><a class="headerlink" href="#quality-reports" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://goreportcard.com/report/github.com/photoprism/photoprism">goreportcard.com</a> finds typical issues in Go source code</li>
+</ul>
 <div class="admonition tip">
 <p>Not every issue reported by tools is really important and needs to be fixed instantly. Use reports for inspiration when you need some.</p>
 </div>
