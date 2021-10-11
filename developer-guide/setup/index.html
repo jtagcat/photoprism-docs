@@ -2726,7 +2726,7 @@
                 <h1 id="development-environment">Development Environment<a class="headerlink" href="#development-environment" title="Permanent link">&para;</a></h1>
 <p>Before you start, make sure you have <a href="https://git-scm.com/downloads">Git</a> and <a href="https://store.docker.com/search?q=docker&amp;type=edition&amp;offering=community">Docker</a> installed on your system.
 Instead of using Docker, you can create your own development environment
-based on our <a href="https://github.com/photoprism/photoprism/blob/develop/docker/development/Dockerfile">Dockerfile</a> (not recommended). You'll need <a href="https://golang.org/dl/">Go</a> &gt;= 1.11, <a href="https://www.tensorflow.org/install/lang_c">TensorFlow for C</a>, <a href="http://www.gnu.org/software/make//make.html">Make</a>, <a href="https://nodejs.org/en/download/">NPM</a> and <a href="https://dev.mysql.com/downloads/mysql/">MySQL</a>. Without Docker, test results will be less reliable and you also won't be able to use our other Dockerfiles (e.g. for TensorFlow).</p>
+based on our <a href="https://github.com/photoprism/photoprism/blob/develop/docker/development/Dockerfile">Dockerfile</a> (not recommended). You'll need <a href="https://golang.org/dl/">Go</a> &gt;= 1.17, <a href="https://www.tensorflow.org/install/lang_c">TensorFlow for C</a>, <a href="http://www.gnu.org/software/make//make.html">Make</a>, <a href="https://nodejs.org/en/download/">NPM</a>, and MariaDB or <a href="https://dev.mysql.com/downloads/mysql/">MySQL</a>. Without Docker, test results will be less reliable and you also won't be able to use our other Dockerfiles (e.g. for TensorFlow).</p>
 <p><strong>Step 1:</strong> Run <a href="https://git-scm.com/downloads">Git</a> to clone this project:</p>
 <div class="highlight"><pre><span></span><code>git clone git@github.com:photoprism/photoprism.git
 </code></pre></div>
@@ -2743,8 +2743,7 @@ docker-compose up
 <div class="highlight"><pre><span></span><code>docker-compose exec photoprism bash
 </code></pre></div>
 <p>Now you can run commands inside this terminal. To run the Go webserver, run:</p>
-<div class="highlight"><pre><span></span><code>make dep-tensorflow dep-go generate
-make build-go
+<div class="highlight"><pre><span></span><code>make all
 ./photoprism start
 </code></pre></div>
 <p>You can see a list of all <code>make</code> targets in our <a href="https://github.com/photoprism/photoprism/blob/develop/Makefile">Makefile</a>. For example, <code>make test</code> will run the tests and <code>make install</code> will build a <code>photoprism</code> production binary without debug information and install it in the user's directory including all assets.</p>

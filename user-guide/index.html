@@ -2639,15 +2639,24 @@
                 
                 
                 <h1 id="user-guide">User Guide<a class="headerlink" href="#user-guide" title="Permanent link">&para;</a></h1>
-<p>Step-by-step installation instructions can be found in <a href="../getting-started/">Getting Started</a> - 
-all you need is a Web browser and Docker to run the server. It is available for Mac, Linux and Windows.</p>
-<p>Next, you'll have to <a href="library/">index or import</a> 
-existing files. Please be patient, this will take a while depending on the size of your library.</p>
-<p>Already indexed photos and videos can be browsed in <a href="organize/browse/">Search</a>.
-Counts are continuously updated in the navigation.</p>
+<p>Step-by-step installation instructions can be found in <a href="../getting-started/">Getting Started</a>.
+All you need to have installed on your system is a Web browser
+and <a href="https://store.docker.com/search?type=edition&amp;offering=community">Docker</a>.
+It is available for Mac, Linux, and Windows.</p>
+<p>When setup is complete, you can start <a href="library/">indexing your pictures</a>.
+Be patient, this may will take a while depending on your server hardware and how many pictures you have.</p>
+<p>Already indexed photos can be browsed in <a href="organize/browse/">Photos</a>
+while videos show up in <a href="organize/video/">Videos</a>.
+Counts in the navigation are constantly updated, so you can follow the progress.</p>
 <p>If photos are missing, they might be in <a href="organize/review/">review</a> due to low quality or missing metadata.
 You can turn this and other features off in <a href="settings/general/">Settings</a>, depending on
 your specific use case.</p>
+<div class="admonition note">
+<p>The <a href="../release-notes/">stable version</a> and development preview now come as a single
+<a href="https://hub.docker.com/r/photoprism/photoprism">multi-arch image</a> for <strong>AMD64, ARM64, and ARMv7</strong>.
+That means you don't need to pull from different Docker repositories anymore. We recommend updating your existing
+<code>docker-compose.yml</code> config based on <a href="https://dl.photoprism.org/docker/">our examples</a>.</p>
+</div>
 <div class="admonition example">
 <p><strong>This open-source project is made possible <a href="https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md">thanks to our sponsors</a>.</strong>
 If you enjoy using PhotoPrism, please consider backing us on <a href="https://www.patreon.com/photoprism">Patreon</a>

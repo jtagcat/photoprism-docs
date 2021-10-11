@@ -2698,13 +2698,15 @@
                 
                 
                 <h1 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h1>
-<p>To simplify running PhotoPrism on a server, we strongly recommend using <a href="docker-compose/">Docker Compose</a>.
-It is available for Mac, Linux and Windows.</p>
-<p>Next, you'll have to <a href="../user-guide/library/">index</a> 
-your library. Please be patient, this will take a while depending on the size of your photo collection.</p>
+<p>We recommend running PhotoPrism with <a href="docker-compose/">Docker Compose</a>.
+All you need to have installed on your system is a Web browser 
+and <a href="https://store.docker.com/search?type=edition&amp;offering=community">Docker</a>. 
+It is available for Mac, Linux, and Windows.</p>
+<p>When setup is complete, you can start <a href="../user-guide/library/">indexing your pictures</a>.
+Be patient, this may will take a while depending on your server hardware and how many pictures you have.</p>
 <p>Already indexed photos can be browsed in <a href="../user-guide/organize/browse/">Photos</a> 
 while videos show up in <a href="../user-guide/organize/video/">Videos</a>.
-Counts are getting continuously updated in the navigation.</p>
+Counts in the navigation are constantly updated, so you can follow the progress.</p>
 <p>If files are missing, they might be in <a href="../user-guide/organize/review/">Review</a> due to low quality
 or incomplete metadata. You can turn this and other features off in <a href="../user-guide/settings/general/">Settings</a>, 
 depending on your specific use case.</p>
@@ -2713,6 +2715,10 @@ depending on your specific use case.</p>
 <a href="https://hub.docker.com/r/photoprism/photoprism">multi-arch image</a> for <strong>AMD64, ARM64, and ARMv7</strong>.
 That means you don't need to pull from different Docker repositories anymore. We recommend updating your existing
 <code>docker-compose.yml</code> config based on <a href="https://dl.photoprism.org/docker/">our examples</a>.</p>
+</div>
+<div class="admonition info">
+<p>Downloadable installation packages are planned for a later release. Developers can build PhotoPrism from source
+by following the instructions in our <a href="../developer-guide/setup/">Developer Guide</a>.</p>
 </div>
 <h2 id="roadmap">Roadmap<a class="headerlink" href="#roadmap" title="Permanent link">&para;</a></h2>
 <p>Our vision is to provide the most user-friendly solution for browsing, organizing, and sharing your photo collection.
