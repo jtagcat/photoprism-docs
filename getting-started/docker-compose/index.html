@@ -2938,9 +2938,8 @@ ad blocker or firewall settings.</p>
 </div>
 <div class="admonition note">
 <p>For security reasons, it is <strong>not possible to change the password</strong> via <code>PHOTOPRISM_ADMIN_PASSWORD</code> after 
-the app has been started for the first time. You may run <code>docker-compose exec photoprism photoprism reset</code> 
-in a terminal to reset your database for a clean start. Alternatively, you can drop and recreate the 
-database or manually delete all files from the database storage folder before restarting your instance.</p>
+the app has been started for the first time. You may run <code>docker-compose exec photoprism photoprism passwd</code> 
+in a terminal to change an existing password or reset your database for a clean start.</p>
 </div>
 <p>The server port and <a href="../config-options/">config options</a> may be changed in <code>docker-compose.yml</code> at any time.
 Remember to restart the app container for changes to take effect:</p>
