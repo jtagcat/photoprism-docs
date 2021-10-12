@@ -3082,27 +3082,29 @@ other apps may negatively impact the performance and
 <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">security</a>
 of all apps installed.  Sharing links will be longer as well.</p>
 <h3 id="why-is-photoprism-getting-stuck-in-a-restart-loop">Why is PhotoPrism getting stuck in a restart loop?<a class="headerlink" href="#why-is-photoprism-getting-stuck-in-a-restart-loop" title="Permanent link">&para;</a></h3>
-<p>This typically happens when Docker was configured to automatically restart 
-PhotoPrism after failures, which may be caused by the following conditions:</p>
+<p>This typically happens when Docker was configured to automatically restart the app 
+after failures. Fatal errors are typically caused by one of the following conditions:</p>
 <ol>
 <li>Your (virtual) server disk is full</li>
 <li>There is disk space left, but the <a href="https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain">inode limit</a> has been reached</li>
-<li>The storage folder is not writable</li>
+<li>The storage folder is not writable or there are other filesystem permission issues</li>
 <li>You have accidentally mounted the wrong folders</li>
-<li>The database server is unavailable, incompatible or configured incorrectly </li>
-<li>There are connection issues caused by a proxy or firewall</li>
+<li>The server is low on memory</li>
+<li>The database server is not available, incompatible or incorrectly configured</li>
+<li>There are network problems caused by a proxy, firewall or unstable connection</li>
 <li>Kernel security modules such as <a href="https://wiki.ubuntu.com/AppArmor">AppArmor</a> and
    <a href="https://en.wikipedia.org/wiki/Security-Enhanced_Linux">SELinux</a> may be blocking permissions</li>
 </ol>
-<p>Please check your operating system and Docker logs for messages like <em>disk full</em>, <em>wrong permissions</em>, 
-and <em>connection timeout</em>. If using Docker Compose, run this command to see the last 100 log messages:</p>
+<p>Please search your operating system and server logs for messages like <em>disk full</em>, <em>wrong permissions</em>, 
+and <em>connection timeout</em> before reporting a bug. If you are using Docker Compose, run this command 
+to display the last 100 log messages:</p>
 <div class="highlight"><pre><span></span><code>docker-compose logs --tail=100
 </code></pre></div>
-<p>Linux kernel security may be disabled on private servers, especially if you have no experience
-with configuration. Use the commands <code>chmod</code> and <code>chown</code> to fix file system permissions
-on Linux and macOS.
+<p>Linux kernel security can be disabled on private servers, especially if you do not have experience
+with the configuration. Use a file manager, or the commands <code>chmod</code> and <code>chown</code> on Unix-like operating systems, 
+to verify and fix filesystem permissions.
 Available disk space can be displayed with <code>df -h</code>. The size of virtual disks and memory can be
-increased in Docker settings.</p>
+increased in Docker and/or VM settings.</p>
 <h3 id="how-can-i-uninstall-photoprism">How can I uninstall PhotoPrism?<a class="headerlink" href="#how-can-i-uninstall-photoprism" title="Permanent link">&para;</a></h3>
 <p>This depends on how you installed it. If you're running PhotoPrism with Docker Compose, 
 this command will stop and remove the Docker container:</p>
