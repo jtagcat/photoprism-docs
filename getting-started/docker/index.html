@@ -2861,8 +2861,12 @@ Never use easy-to-guess passwords or default values like <code>insecure</code> o
 For security reasons, there also is no default in case no password was provided.
 A minimum length of 4 characters is required.</p>
 </div>
-<p>When the app container has been started, open the Web UI by navigating 
-to <a href="http://localhost:2342/">http://localhost:2342/</a>. You should see a login screen.</p>
+<p>When the app container has been started, open the Web UI by navigating to <a href="http://localhost:2342/">http://localhost:2342/</a>. 
+You should see a login screen.</p>
+<p>Sign in with the user <code>admin</code> and the password configured via <code>PHOTOPRISM_ADMIN_PASSWORD</code>.
+You may change it on the <a href="../../user-guide/settings/account/">account settings page</a>,
+or using the <code>photoprism passwd</code> command in a terminal.
+Enabling <a href="../config-options/">public mode</a> will disable authentication.</p>
 <div class="admonition hint">
 <p>If you can't connect, try starting the server without <code>-d</code>. This keeps it in the foreground
 and shows log messages for troubleshooting. You're welcome to ask for help in our <a href="https://gitter.im/browseyourlife/community">community chat</a>.
@@ -2870,17 +2874,13 @@ Should the server already be running, or you see no errors, you may have started
 on a different host and/or port. There could also be an issue with your browser, 
 ad blocker or firewall settings.</p>
 </div>
-<p>Sign in with the user <code>admin</code> and the password configured via <code>PHOTOPRISM_ADMIN_PASSWORD</code>.
-You may change it on the <a href="../../user-guide/settings/account/">account settings page</a>,
-or using the <code>photoprism passwd</code> command in a terminal.
-Enabling <a href="../config-options/">public mode</a> will disable authentication.</p>
 <div class="admonition note">
 <p>For security reasons, it is <strong>not possible to change the password</strong> via <code>PHOTOPRISM_ADMIN_PASSWORD</code> 
 after the app has been started for the first time. You may run <code>docker exec -ti photoprism photoprism reset</code> 
 in a terminal to reset your database for a clean start.</p>
 </div>
-<p>The default port 2342 and other configuration values may be changed as needed, 
-see <a href="../config-options/">Config Options</a> for details.</p>
+<p>The server port and <a href="../config-options/">config options</a> may be changed as needed. Remember to restart 
+the app container for changes to take effect.</p>
 <h4 id="volumes">Volumes<a class="headerlink" href="#volumes" title="Permanent link">&para;</a></h4>
 <h5 id="photoprismoriginals">/photoprism/originals<a class="headerlink" href="#photoprismoriginals" title="Permanent link">&para;</a></h5>
 <p>The <em>originals</em> folder contains your original photo and video files.</p>
