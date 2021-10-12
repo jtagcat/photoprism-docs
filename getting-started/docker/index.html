@@ -2849,14 +2849,13 @@ the folder containing your pictures:</p>
   -v ~/Pictures:/photoprism/originals \
   photoprism/photoprism
 </code></pre></div>
+<p>The server port and <a href="../config-options/">config options</a> may be changed as needed.</p>
 <p>The command may have to be prefixed with <code>sudo</code> when not running as root.
 Note that this will point the home directory placeholder <code>~</code> to <code>/root</code> in volume mounts.
 Kernel security modules such as AppArmor and SELinux have been reported to cause
 <a href="https://docs.photoprism.org/getting-started/faq/#why-is-photoprism-getting-stuck-in-a-restart-loop">issues</a>.</p>
 </div>
 </div>
-<p>The server port and <a href="../config-options/">config options</a> may be changed as needed. Remember to restart
-the app for changes to take effect.</p>
 <div class="admonition danger">
 <p>Always change <code>PHOTOPRISM_ADMIN_PASSWORD</code> so that the app starts with a <strong>secure initial password</strong>.
 Never use easy-to-guess passwords or default values like <code>insecure</code> on publicly accessible servers.
