@@ -2879,13 +2879,13 @@ in a terminal to change an existing password. You can also reset your database f
 <p>The server port and <a href="../config-options/">config options</a> may be changed as needed. Remember to restart 
 the app for changes to take effect.</p>
 <h4 id="volumes">Volumes<a class="headerlink" href="#volumes" title="Permanent link">&para;</a></h4>
+<p>Since the app is running inside a container, you have to explicitly mount the folders you want to use.
+PhotoPrism won't be able to see folders that have not been mounted. That's an important security feature.</p>
 <h5 id="photoprismoriginals">/photoprism/originals<a class="headerlink" href="#photoprismoriginals" title="Permanent link">&para;</a></h5>
 <p>The <em>originals</em> folder contains your original photo and video files.</p>
 <p>They are mounted from <code>~/Pictures</code> in the example above, where <code>~</code> is a placeholder for 
-your <a href="https://en.wikipedia.org/wiki/Home_directory">home directory</a>.</p>
-<p>All folders accessible from the host <a href="https://docs.docker.com/storage/bind-mounts/">may be mounted</a>, 
-including network drives. Since PhotoPrism is running inside a container, it won't be able to see 
-folders that have not been mounted. That's an important security feature.</p>
+your <a href="https://en.wikipedia.org/wiki/Home_directory">home directory</a>. All folders accessible from 
+the host <a href="https://docs.docker.com/storage/bind-mounts/">may be mounted</a>, including network drives. </p>
 <p>Multiple folders can be made accessible by mounting them as subfolders:</p>
 <div class="highlight"><pre><span></span><code>-v ~/Example:/photoprism/originals/Example
 </code></pre></div>

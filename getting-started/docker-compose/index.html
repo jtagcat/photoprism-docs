@@ -2886,13 +2886,14 @@ Never use easy-to-guess passwords or default values like <code>insecure</code> o
 There is no default in case no password was provided. A minimum length of 4 characters is required.</p>
 </div>
 <h4 id="volumes">Volumes<a class="headerlink" href="#volumes" title="Permanent link">&para;</a></h4>
+<p>Since the app is running inside a container, you have to explicitly mount the folders you want to use.
+PhotoPrism won't be able to see folders that have not been mounted. That's an important security feature.</p>
 <h5 id="photoprismoriginals">/photoprism/originals<a class="headerlink" href="#photoprismoriginals" title="Permanent link">&para;</a></h5>
 <p>The <em>originals</em> folder contains your original photo and video files.</p>
 <p>They will be mounted from <code>~/Pictures</code> by default, where <code>~</code> is a placeholder for 
-your <a href="https://en.wikipedia.org/wiki/Home_directory">home directory</a>. </p>
-<p>All folders accessible from the host <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes">may be mounted</a>, 
-including network drives. Since PhotoPrism is running inside a container, it won't be able to see 
-folders that have not been mounted. That's an important security feature.</p>
+your <a href="https://en.wikipedia.org/wiki/Home_directory">home directory</a>. All folders accessible from 
+the host <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes">may be mounted</a>, 
+including network drives. </p>
 <p>Multiple folders can be made accessible by mounting them as subfolders:</p>
 <div class="highlight"><pre><span></span><code>volumes:
   - &quot;~/friends:/photoprism/originals/friends&quot;
