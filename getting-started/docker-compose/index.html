@@ -2921,16 +2921,16 @@ blocks write operations.</p>
 </div>
 <h3 id="step-2-start-the-server">Step 2: Start the server<a class="headerlink" href="#step-2-start-the-server" title="Permanent link">&para;</a></h3>
 <p>Open a terminal and change to the folder in which the <code>docker-compose.yml</code> file has been saved.
-Run this command to start PhotoPrism in the background and keep it running:</p>
+Run this command to start the app container in the background and keep it running:</p>
 <div class="highlight"><pre><span></span><code>docker-compose up -d
 </code></pre></div>
-<p>Navigate to <a href="http://localhost:2342/">http://localhost:2342/</a> to open the Web UI. You should see a login screen.</p>
+<p>Now open the Web UI by navigating to <a href="http://localhost:2342/">http://localhost:2342/</a>. You should see a login screen.</p>
 <div class="admonition hint">
 <p>If you can't connect, try starting the server without <code>-d</code>. This keeps it in the foreground
-and shows log messages for troubleshooting. Many issues are easy to fix.
-You're welcome to ask for help in our <a href="https://gitter.im/browseyourlife/community">community chat</a>.
-Should the server already be running, or you see no errors, there may be an issue with your browser,
-desktop firewall security settings, or the server is running on a different host and/or port.</p>
+and shows log messages for troubleshooting. You're welcome to ask for help in our <a href="https://gitter.im/browseyourlife/community">community chat</a>.
+Should the server already be running, or you see no errors, you may have started it
+on a different host and/or port. There could also be an issue with your browser,
+ad blocker or firewall settings.</p>
 </div>
 <p>Sign in with the user <code>admin</code> and the initial password configured via <code>PHOTOPRISM_ADMIN_PASSWORD</code>.
 You may change it on the <a href="../../user-guide/settings/account/">account settings page</a>, 
@@ -3067,7 +3067,7 @@ file has been saved.</p>
 <div class="admonition info">
 <p class="admonition-title">Complete Rescan</p>
 <p><code>docker-compose exec photoprism photoprism index -f</code> rescans all originals, including already indexed and unchanged files. 
-This may be necessary after major upgrades or when issues that affected you have been resolved.</p>
+This may be necessary after major upgrades.</p>
 </div>
                 
               
