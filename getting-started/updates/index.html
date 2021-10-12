@@ -2755,10 +2755,11 @@ to <code>photoprism/photoprism:preview</code> in your <a href="https://dl.photop
 Then pull the most recent image and restart your instance.</p>
 </div>
 <h3 id="facial-recognition">Facial Recognition<a class="headerlink" href="#facial-recognition" title="Permanent link">&para;</a></h3>
-<p>Existing users may index faces without performing a complete rescan by running this command in a terminal:</p>
+<p>Existing users may index faces without performing a complete rescan:</p>
 <div class="highlight"><pre><span></span><code>docker-compose exec photoprism photoprism faces index
 </code></pre></div>
-<p>For a fresh start e.g. after upgrading from a development preview, remove known people and faces before re-indexing:</p>
+<p>Remove existing people and faces for a clean start e.g. after upgrading from our 
+<a href="https://docs.photoprism.org/release-notes/#development-preview">development preview</a>:</p>
 <div class="highlight"><pre><span></span><code>docker-compose exec photoprism photoprism faces reset -f
 </code></pre></div>
 <h3 id="watchtower">Watchtower<a class="headerlink" href="#watchtower" title="Permanent link">&para;</a></h3>
