@@ -3013,28 +3013,20 @@ file has been saved.</p>
 <td><code>docker-compose stop</code></td>
 </tr>
 <tr>
-<td><em>Remove App &amp; Database</em></td>
-<td><code>docker-compose down</code></td>
-</tr>
-<tr>
 <td><em>Update App &amp; Database Images</em></td>
 <td><code>docker-compose pull</code></td>
 </tr>
 <tr>
+<td><em>Uninstall</em></td>
+<td><code>docker-compose rm -s -v</code></td>
+</tr>
+<tr>
 <td><em>Show Server Logs</em></td>
-<td><code>docker-compose logs --tail=25 -f</code></td>
+<td><code>docker-compose logs --tail=100 -f</code></td>
 </tr>
 <tr>
 <td><em>Show Config Values</em></td>
 <td><code>docker-compose exec photoprism photoprism config</code></td>
-</tr>
-<tr>
-<td><em>Show Facial Recognition Commands</em></td>
-<td><code>docker-compose exec photoprism photoprism faces help</code></td>
-</tr>
-<tr>
-<td><em>Show User Management Commands</em></td>
-<td><code>docker-compose exec photoprism photoprism users help</code></td>
 </tr>
 <tr>
 <td><em>Reset Database</em></td>
@@ -3049,8 +3041,20 @@ file has been saved.</p>
 <td><code>docker-compose exec photoprism photoprism restore -a -i</code></td>
 </tr>
 <tr>
+<td><em>Show Facial Recognition Commands</em></td>
+<td><code>docker-compose exec photoprism photoprism faces help</code></td>
+</tr>
+<tr>
+<td><em>Show User Management Commands</em></td>
+<td><code>docker-compose exec photoprism photoprism users help</code></td>
+</tr>
+<tr>
+<td><em>Transcode RAW Images &amp; Videos</em></td>
+<td><code>docker-compose exec photoprism photoprism convert</code></td>
+</tr>
+<tr>
 <td><em>Update Index</em></td>
-<td><code>docker-compose exec photoprism photoprism index</code></td>
+<td><code>docker-compose exec photoprism photoprism index --cleanup</code></td>
 </tr>
 <tr>
 <td><em>Import Files</em></td>

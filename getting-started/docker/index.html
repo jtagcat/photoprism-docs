@@ -2849,18 +2849,18 @@ the folder containing your pictures:</p>
   -v ~/Pictures:/photoprism/originals \
   photoprism/photoprism
 </code></pre></div>
+</div>
+</div>
 <p>The server port and <a href="../config-options/">config options</a> may be changed as needed.</p>
-<p>The command may have to be prefixed with <code>sudo</code> when not running as root.
-Note that this will point the home directory placeholder <code>~</code> to <code>/root</code> in volume mounts.
-Kernel security modules such as AppArmor and SELinux have been reported to cause
-<a href="https://docs.photoprism.org/getting-started/faq/#why-is-photoprism-getting-stuck-in-a-restart-loop">issues</a>.</p>
-</div>
-</div>
 <div class="admonition danger">
 <p>Always change <code>PHOTOPRISM_ADMIN_PASSWORD</code> so that the app starts with a <strong>secure initial password</strong>.
 Never use easy-to-guess passwords or default values like <code>insecure</code> on publicly accessible servers.
 There is no default in case no password was provided. A minimum length of 4 characters is required.</p>
 </div>
+<p>Commands on Linux may have to be prefixed with <code>sudo</code> when not running as root.
+Note that this will point the home directory placeholder <code>~</code> to <code>/root</code> in volume mounts.
+Kernel security modules such as AppArmor and SELinux have been reported to cause
+<a href="https://docs.photoprism.org/getting-started/faq/#why-is-photoprism-getting-stuck-in-a-restart-loop">issues</a>.</p>
 <p>When the app has been started, open the Web UI by navigating to <a href="http://localhost:2342/">http://localhost:2342/</a>. You should see a login screen.
 Sign in with the user <code>admin</code> and the password configured via <code>PHOTOPRISM_ADMIN_PASSWORD</code>.
 You may change it on the <a href="../../user-guide/settings/account/">account settings page</a>.
@@ -2984,28 +2984,20 @@ its container has the same name.</p>
 <td><code>docker stop photoprism</code></td>
 </tr>
 <tr>
-<td><em>Remove App</em></td>
-<td><code>docker rm -f photoprism</code></td>
-</tr>
-<tr>
 <td><em>Update App Image</em></td>
 <td><code>docker pull photoprism/photoprism:latest</code></td>
 </tr>
 <tr>
+<td><em>Uninstall</em></td>
+<td><code>docker rm -f photoprism</code></td>
+</tr>
+<tr>
 <td><em>Show Server Logs</em></td>
-<td><code>docker logs --tail=25 -f photoprism</code></td>
+<td><code>docker logs --tail=100 -f photoprism</code></td>
 </tr>
 <tr>
 <td><em>Show Config Values</em></td>
 <td><code>docker exec -ti photoprism photoprism config</code></td>
-</tr>
-<tr>
-<td><em>Show Facial Recognition Commands</em></td>
-<td><code>docker exec -ti photoprism photoprism faces help</code></td>
-</tr>
-<tr>
-<td><em>Show User Management Commands</em></td>
-<td><code>docker exec -ti photoprism photoprism users help</code></td>
 </tr>
 <tr>
 <td><em>Reset Database</em></td>
@@ -3020,8 +3012,20 @@ its container has the same name.</p>
 <td><code>docker exec -ti photoprism photoprism restore -a -i</code></td>
 </tr>
 <tr>
+<td><em>Show Facial Recognition Commands</em></td>
+<td><code>docker exec -ti photoprism photoprism faces help</code></td>
+</tr>
+<tr>
+<td><em>Show User Management Commands</em></td>
+<td><code>docker exec -ti photoprism photoprism users help</code></td>
+</tr>
+<tr>
+<td><em>Transcode RAW Images &amp; Videos</em></td>
+<td><code>docker exec -ti photoprism photoprism convert</code></td>
+</tr>
+<tr>
 <td><em>Update Index</em></td>
-<td><code>docker exec -ti photoprism photoprism index</code></td>
+<td><code>docker exec -ti photoprism photoprism index --cleanup</code></td>
 </tr>
 <tr>
 <td><em>Import Files</em></td>
