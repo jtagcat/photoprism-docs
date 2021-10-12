@@ -2836,7 +2836,7 @@
 and provides more comfort than the pure Docker command-line interface.</p>
 <h3 id="step-1-start-the-server">Step 1: Start the server<a class="headerlink" href="#step-1-start-the-server" title="Permanent link">&para;</a></h3>
 <div class="tabbed-set" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Linux</label><div class="tabbed-content">
-<p>Open a terminal and run this command after replacing <code>~/Pictures</code> with
+<p>Open a terminal and run this command to start the app after replacing <code>~/Pictures</code> with
 the folder containing your pictures:</p>
 <div class="highlight"><pre><span></span><code>docker run -d \
   --name photoprism \
@@ -2860,13 +2860,13 @@ Kernel security modules such as AppArmor and SELinux have been reported to cause
 Never use easy-to-guess passwords or default values like <code>insecure</code> on publicly accessible servers.
 There is no default in case no password was provided. A minimum length of 4 characters is required.</p>
 </div>
-<p>When the app container has been started, open the Web UI by navigating to <a href="http://localhost:2342/">http://localhost:2342/</a>. 
+<p>When the app has been started, open the Web UI by navigating to <a href="http://localhost:2342/">http://localhost:2342/</a>. 
 You should see a login screen.</p>
 <p>Sign in with the user <code>admin</code> and the password configured via <code>PHOTOPRISM_ADMIN_PASSWORD</code>.
 You may change it on the <a href="../../user-guide/settings/account/">account settings page</a>.
 Enabling <a href="../config-options/">public mode</a> will disable authentication.</p>
 <div class="admonition hint">
-<p>If you can't connect, try starting the app container without <code>-d</code>. This keeps it in the foreground
+<p>If you can't connect, try starting the app without <code>-d</code>. This keeps it in the foreground
 and shows log messages for troubleshooting. You're welcome to ask for help in our <a href="https://gitter.im/browseyourlife/community">community chat</a>.
 Should the server already be running, or you see no errors, you may have started it 
 on a different host and/or port. There could also be an issue with your browser, 
@@ -2878,7 +2878,7 @@ after the app has been started for the first time. You may run <code>docker exec
 in a terminal to change an existing password. You can also reset your database for a clean start. </p>
 </div>
 <p>The server port and <a href="../config-options/">config options</a> may be changed as needed. Remember to restart 
-the app container for changes to take effect.</p>
+the app for changes to take effect.</p>
 <h4 id="volumes">Volumes<a class="headerlink" href="#volumes" title="Permanent link">&para;</a></h4>
 <h5 id="photoprismoriginals">/photoprism/originals<a class="headerlink" href="#photoprismoriginals" title="Permanent link">&para;</a></h5>
 <p>The <em>originals</em> folder contains your original photo and video files.</p>
@@ -2978,11 +2978,11 @@ its container has the same name.</p>
 </thead>
 <tbody>
 <tr>
-<td><em>Start App Server</em></td>
+<td><em>Start App</em></td>
 <td><code>docker start photoprism</code></td>
 </tr>
 <tr>
-<td><em>Stop App Server</em></td>
+<td><em>Stop App</em></td>
 <td><code>docker stop photoprism</code></td>
 </tr>
 <tr>
