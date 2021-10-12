@@ -2855,6 +2855,8 @@ Kernel security modules such as AppArmor and SELinux have been reported to cause
 <a href="https://docs.photoprism.org/getting-started/faq/#why-is-photoprism-getting-stuck-in-a-restart-loop">issues</a>.</p>
 </div>
 </div>
+<p>The server port and <a href="../config-options/">config options</a> may be changed as needed. Remember to restart
+the app for changes to take effect.</p>
 <div class="admonition danger">
 <p>Always change <code>PHOTOPRISM_ADMIN_PASSWORD</code> so that the app starts with a <strong>secure initial password</strong>.
 Never use easy-to-guess passwords or default values like <code>insecure</code> on publicly accessible servers.
@@ -2876,8 +2878,6 @@ ad blocker, or firewall settings.</p>
 after the app has been started for the first time. You may run <code>docker exec -ti photoprism photoprism passwd</code>
 in a terminal to change an existing password. You can also reset your database for a clean start. </p>
 </div>
-<p>The server port and <a href="../config-options/">config options</a> may be changed as needed. Remember to restart 
-the app for changes to take effect.</p>
 <h4 id="volumes">Volumes<a class="headerlink" href="#volumes" title="Permanent link">&para;</a></h4>
 <p>Since the app is running inside a container, you have to explicitly mount the folders you want to use.
 PhotoPrism won't be able to see folders that have not been mounted. That's an important security feature.</p>
