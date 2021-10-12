@@ -2866,7 +2866,7 @@ You should see a login screen.</p>
 You may change it on the <a href="../../user-guide/settings/account/">account settings page</a>.
 Enabling <a href="../config-options/">public mode</a> will disable authentication.</p>
 <div class="admonition hint">
-<p>If you can't connect, try starting the server without <code>-d</code>. This keeps it in the foreground
+<p>If you can't connect, try starting the app container without <code>-d</code>. This keeps it in the foreground
 and shows log messages for troubleshooting. You're welcome to ask for help in our <a href="https://gitter.im/browseyourlife/community">community chat</a>.
 Should the server already be running, or you see no errors, you may have started it 
 on a different host and/or port. There could also be an issue with your browser, 
@@ -2978,11 +2978,11 @@ its container has the same name.</p>
 </thead>
 <tbody>
 <tr>
-<td><em>Start App</em></td>
+<td><em>Start App Server</em></td>
 <td><code>docker start photoprism</code></td>
 </tr>
 <tr>
-<td><em>Stop App</em></td>
+<td><em>Stop App Server</em></td>
 <td><code>docker stop photoprism</code></td>
 </tr>
 <tr>
@@ -2990,27 +2990,23 @@ its container has the same name.</p>
 <td><code>docker rm -f photoprism</code></td>
 </tr>
 <tr>
-<td><em>Download App Image</em></td>
+<td><em>Update App Image</em></td>
 <td><code>docker pull photoprism/photoprism:latest</code></td>
 </tr>
 <tr>
-<td><em>Show App Logs</em></td>
+<td><em>Show Server Logs</em></td>
 <td><code>docker logs --tail=25 -f photoprism</code></td>
-</tr>
-<tr>
-<td><em>Open Terminal</em></td>
-<td><code>docker exec -ti photoprism bash</code></td>
 </tr>
 <tr>
 <td><em>Show Config Values</em></td>
 <td><code>docker exec -ti photoprism photoprism config</code></td>
 </tr>
 <tr>
-<td><em>Show Facial Recognition Subcommands</em></td>
+<td><em>Show Facial Recognition Commands</em></td>
 <td><code>docker exec -ti photoprism photoprism faces help</code></td>
 </tr>
 <tr>
-<td><em>Show User Management Subcommands</em></td>
+<td><em>Show User Management Commands</em></td>
 <td><code>docker exec -ti photoprism photoprism users help</code></td>
 </tr>
 <tr>
