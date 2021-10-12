@@ -3029,10 +3029,6 @@ file has been saved.</p>
 <td><code>docker-compose exec photoprism photoprism config</code></td>
 </tr>
 <tr>
-<td><em>Change Admin Password</em></td>
-<td><code>docker-compose exec photoprism photoprism passwd</code></td>
-</tr>
-<tr>
 <td><em>Reset Database</em></td>
 <td><code>docker-compose exec photoprism photoprism reset</code></td>
 </tr>
@@ -3045,12 +3041,24 @@ file has been saved.</p>
 <td><code>docker-compose exec photoprism photoprism restore -a -i</code></td>
 </tr>
 <tr>
-<td><em>Show Facial Recognition Commands</em></td>
-<td><code>docker-compose exec photoprism photoprism faces help</code></td>
+<td><em>Change Admin Password</em></td>
+<td><code>docker-compose exec photoprism photoprism passwd</code></td>
 </tr>
 <tr>
 <td><em>Show User Management Commands</em></td>
 <td><code>docker-compose exec photoprism photoprism users help</code></td>
+</tr>
+<tr>
+<td><em>Show Facial Recognition Commands</em></td>
+<td><code>docker-compose exec photoprism photoprism faces help</code></td>
+</tr>
+<tr>
+<td><em>Index Faces</em></td>
+<td><code>docker-compose exec photoprism photoprism faces index</code></td>
+</tr>
+<tr>
+<td><em>Remove People &amp; Faces</em></td>
+<td><code>docker-compose exec photoprism photoprism faces reset -f</code></td>
 </tr>
 <tr>
 <td><em>Transcode Videos &amp; RAW Images</em></td>
