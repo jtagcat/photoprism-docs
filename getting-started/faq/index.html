@@ -447,6 +447,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        Troubleshooting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../updates/" class="md-nav__link">
         Getting Updates
       </a>
@@ -464,18 +478,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_9" type="checkbox" id="__nav_1_9" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_10" type="checkbox" id="__nav_1_10" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_1_9">
+        <label class="md-nav__link" for="__nav_1_10">
           Portainer
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Portainer" data-md-level="2">
-        <label class="md-nav__title" for="__nav_1_9">
+        <label class="md-nav__title" for="__nav_1_10">
           <span class="md-nav__icon md-icon"></span>
           Portainer
         </label>
@@ -511,18 +525,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_10" type="checkbox" id="__nav_1_10" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_11" type="checkbox" id="__nav_1_11" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_1_10">
+        <label class="md-nav__link" for="__nav_1_11">
           Reverse Proxies
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Reverse Proxies" data-md-level="2">
-        <label class="md-nav__title" for="__nav_1_10">
+        <label class="md-nav__title" for="__nav_1_11">
           <span class="md-nav__icon md-icon"></span>
           Reverse Proxies
         </label>
@@ -628,18 +642,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_11" type="checkbox" id="__nav_1_11" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_12" type="checkbox" id="__nav_1_12" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_1_11">
+        <label class="md-nav__link" for="__nav_1_12">
           Advanced
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Advanced" data-md-level="2">
-        <label class="md-nav__title" for="__nav_1_11">
+        <label class="md-nav__title" for="__nav_1_12">
           <span class="md-nav__icon md-icon"></span>
           Advanced
         </label>
@@ -3097,7 +3111,7 @@ Fatal errors are often caused by one of the following conditions:</p>
    <a href="https://en.wikipedia.org/wiki/Security-Enhanced_Linux">SELinux</a> may be blocking permissions</li>
 </ol>
 <p>Please search your operating system and server logs for messages like <em>disk full</em>, <em>wrong permissions</em>, 
-and <em>connection timeout</em> before reporting a bug. If you are using Docker Compose, run this command 
+and <em>database connection failed</em> before reporting a bug. If you are using Docker Compose, run this command 
 to display the last 100 log messages:</p>
 <div class="highlight"><pre><span></span><code>docker-compose logs --tail=100
 </code></pre></div>
@@ -3105,7 +3119,7 @@ to display the last 100 log messages:</p>
 with the configuration. Use a file manager, or the commands <code>chmod</code> and <code>chown</code> on Unix-like operating systems, 
 to verify and fix filesystem permissions.
 Available disk space can be displayed with <code>df -h</code>. The size of virtual disks and memory can be
-increased in Docker and/or VM settings.</p>
+increased in Docker and VM settings if needed. Please refer to the documentation.</p>
 <h3 id="how-can-i-uninstall-photoprism">How can I uninstall PhotoPrism?<a class="headerlink" href="#how-can-i-uninstall-photoprism" title="Permanent link">&para;</a></h3>
 <p>This depends on how you installed it. If you're running PhotoPrism with Docker Compose, 
 this command will stop and remove the Docker container:</p>
