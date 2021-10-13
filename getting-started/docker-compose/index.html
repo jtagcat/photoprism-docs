@@ -2968,7 +2968,7 @@ Remember to restart the app for changes to take effect:</p>
 docker-compose up -d photoprism
 </code></pre></div>
 <h3 id="step-3-index-your-library">Step 3: Index your library<a class="headerlink" href="#step-3-index-your-library" title="Permanent link">&para;</a></h3>
-<div class="admonition help">
+<div class="admonition check">
 <p>Ensure there is enough disk space available for creating thumbnails and verify file system permissions
 before starting to index: Files in the <em>originals</em> folder must be readable, while the <em>storage</em> folder
 including all subdirectories must be readable and writeable.</p>
@@ -2984,8 +2984,7 @@ Open the <em>Logs</em> tab in <em>Library</em> to watch the indexer working.</p>
 or importing new shots. Go to <em>Library</em> and click <em>Start</em> to update the index after files have been 
 changed, added, or removed. This can also be automated using <abbr title="Command-Line Interface">CLI</abbr> commands and a <a href="https://dl.photoprism.org/docker/scheduler/">scheduler</a>.</p>
 <p>Easy, isn't it?</p>
-<div class="admonition info">
-<p class="admonition-title">Reducing Server Load</p>
+<div class="admonition tldr">
 <p>If you're running out of memory - or other system resources - while indexing, try limiting the 
 <a href="https://docs.photoprism.org/getting-started/config-options/">number of workers</a> by setting
 <code>PHOTOPRISM_WORKERS</code> to a reasonably small value in <code>docker-compose.yml</code> (depending on your hardware).
