@@ -2856,7 +2856,7 @@ and change the <a href="../config-options/">configuration</a> as needed:</p>
 <div class="highlight"><pre><span></span><code>wget https://dl.photoprism.org/docker/docker-compose.yml
 </code></pre></div>
 <p>Commands on Linux may have to be prefixed with <code>sudo</code> when not running as root.
-Note that this will point the home directory placeholder <code>~</code> to <code>/root</code> in volume mounts.
+Note that this will point the <abbr title="\user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux">home directory</abbr> placeholder <code>~</code> to <code>/root</code> in volume mounts.
 Kernel security modules such as AppArmor and SELinux have been reported to cause
 <a href="https://docs.photoprism.org/getting-started/faq/#why-is-photoprism-getting-stuck-in-a-restart-loop">issues</a>.</p>
 </div>
@@ -2912,12 +2912,13 @@ to other apps and hosts.</p>
 <p>Since the app is running inside a container, you have to explicitly mount the folders you want to use.
 PhotoPrism won't be able to see folders that have not been mounted. That's an important security feature.</p>
 <h5 id="photoprismoriginals">/photoprism/originals<a class="headerlink" href="#photoprismoriginals" title="Permanent link">&para;</a></h5>
-<p>The <em>originals</em> folder contains your original photo and video files.
-They will be mounted from <code>~/Pictures</code> by default, where <code>~</code> is a placeholder for 
-your <a href="https://en.wikipedia.org/wiki/Home_directory">home directory</a>. All folders accessible from 
-the host <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes">may be mounted</a>, 
-including network drives. </p>
-<p>Multiple folders can be made accessible by mounting them as subfolders:</p>
+<p>The <em>originals</em> folder contains your original photo and video files. </p>
+<p><code>~/Pictures</code> will be mounted by default, where <code>~</code> is a placeholder for your <abbr title="\user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux">home directory</abbr>:</p>
+<div class="highlight"><pre><span></span><code>volumes:
+  - &quot;~/Pictures:/photoprism/originals&quot;
+</code></pre></div>
+<p>Other folders accessible from the <abbr title="A physical computer, cloud server, or virtual machine that runs Docker">host</abbr> <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes">may be mounted</a> instead, 
+including network drives. Multiple folders can be made accessible by mounting them as subfolders:</p>
 <div class="highlight"><pre><span></span><code>volumes:
   - &quot;~/friends:/photoprism/originals/friends&quot;
   - &quot;/media/photos:/photoprism/originals/media&quot;
@@ -2944,7 +2945,7 @@ is enabled or the <a href="../../user-guide/settings/general/">features have bee
 Run this command to start the app and database in the background:</p>
 <div class="highlight"><pre><span></span><code>docker-compose up -d
 </code></pre></div>
-<p>Now open the <abbr title="PhotoPrism is a Progressive Web App that provides a native app-like experience">Web UI</abbr> by navigating to <a href="http://localhost:2342/">http://localhost:2342/</a>. You should see a login screen.
+<p>Now open the <abbr title="Progressive Web App that can be installed on your home screen and provides a native app-like experience">Web UI</abbr> by navigating to <a href="http://localhost:2342/">http://localhost:2342/</a>. You should see a login screen.
 Sign in with the user <code>admin</code> and the initial password configured via <code>PHOTOPRISM_ADMIN_PASSWORD</code>.
 You may change it on the <a href="../../user-guide/settings/account/">account settings page</a>.
 Enabling <a href="../config-options/">public mode</a> will disable authentication.</p>
@@ -2953,7 +2954,7 @@ Enabling <a href="../config-options/">public mode</a> will disable authenticatio
 This keeps it in the foreground and shows log messages for troubleshooting. You're welcome to ask 
 for help in our <a href="https://gitter.im/browseyourlife/community">community chat</a>.
 Should the server already be running, or you see no errors, you may have started it
-on a different host and/or port. There could also be an issue with your browser,
+on a different <abbr title="A physical computer, cloud server, or virtual machine that runs Docker">host</abbr> and/or port. There could also be an issue with your browser,
 ad blocker, or firewall settings.</p>
 </div>
 <div class="admonition tldr">
@@ -2972,7 +2973,7 @@ docker-compose up -d photoprism
 before starting to index: Files in the <em>originals</em> folder must be readable, while the <em>storage</em> folder
 including all subdirectories must be readable and writeable.</p>
 </div>
-<p>Open the <abbr title="PhotoPrism is a Progressive Web App that provides a native app-like experience">Web UI</abbr>, go to <em>Library</em> and click <em>Start</em> to start indexing your pictures.</p>
+<p>Open the <abbr title="Progressive Web App that can be installed on your home screen and provides a native app-like experience">Web UI</abbr>, go to <em>Library</em> and click <em>Start</em> to start indexing your pictures.</p>
 <p>While indexing, JPEG sidecar files may be created for originals in other formats such as <abbr title="RAW files contain image data captured during exposure in an unprocessed format">RAW</abbr> and <abbr title="High Efficiency Image File Format">HEIF</abbr>. 
 This is required for image classification, facial recognition, and for displaying them in a Web browser. 
 Sidecar and thumbnail files will be added to the <em>storage</em> folder, so that your <em>originals</em> folder won't be modified.</p>
