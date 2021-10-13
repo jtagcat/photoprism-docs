@@ -2901,8 +2901,8 @@ There is no default in case no password was provided. A minimum length of 4 char
 </div>
 <h4 id="database">Database<a class="headerlink" href="#database" title="Permanent link">&para;</a></h4>
 <p>Our example includes a pre-configured <a href="https://mariadb.com/">MariaDB</a> database server. If you remove it 
-and provide no other database server credentials, a file-based SQLite database will be created in the 
-<em>storage</em> folder.</p>
+and provide no other database server credentials, a SQLite database file will be created in the 
+<em>storage</em> folder. Local SSD storage is best for databases of any kind.</p>
 <div class="admonition tldr">
 <p>It is not possible to change the password via <code>MYSQL_PASSWORD</code> after the database has been started 
 for the first time. Choosing a secure password is not essential if you don't expose the database 
@@ -2931,7 +2931,8 @@ write operations as well.</p>
 </div>
 <h5 id="photoprismstorage">/photoprism/storage<a class="headerlink" href="#photoprismstorage" title="Permanent link">&para;</a></h5>
 <p>Cache, session, thumbnail, and sidecar files will be created in the <em>storage</em> folder. Never remove the volume from
-your <code>docker-compose.yml</code> file so that you don't lose these files after restarting or upgrading the container.</p>
+your <code>docker-compose.yml</code> file so that you don't lose these files after restarting or upgrading the container.
+We recommend placing the <em>storage</em> folder on a local SSD drive for best performance.</p>
 <h5 id="photoprismimport">/photoprism/import<a class="headerlink" href="#photoprismimport" title="Permanent link">&para;</a></h5>
 <p>You may optionally mount an <em>import</em> folder from which files can be transferred to the <em>originals</em> folder
 in a structured way that avoids duplicates. Imported files receive a canonical filename and will be
