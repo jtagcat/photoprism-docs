@@ -2923,14 +2923,15 @@ including network drives. Multiple folders can be made accessible by mounting th
   - &quot;~/friends:/photoprism/originals/friends&quot;
   - &quot;/media/photos:/photoprism/originals/media&quot;
 </code></pre></div>
+<div class="admonition tldr">
+<p>When you enable <em>read-only mode</em>, all features that require write permission to the <em>originals</em> folder 
+are disabled, in particular import, upload, and delete. Set <code>PHOTOPRISM_READONLY</code> to <code>"true"</code>
+in <code>docker-compose.yml</code> for this. You can mount a folder with the <code>:ro</code> flag to make Docker block 
+write operations as well.</p>
+</div>
 <h5 id="photoprismstorage">/photoprism/storage<a class="headerlink" href="#photoprismstorage" title="Permanent link">&para;</a></h5>
 <p>Cache, session, thumbnail, and sidecar files will be created in the <em>storage</em> folder. Never remove the volume from
 your <code>docker-compose.yml</code> file so that you don't lose these files after restarting or upgrading the container.</p>
-<div class="admonition info">
-<p>Enabling <em>read-only mode</em> by setting <code>PHOTOPRISM_READONLY</code> to <code>"true"</code> disables all features that
-require write permissions for the <em>originals</em> folder, in particular import, upload, and delete.
-In addition, you may mount the <em>originals</em> folder with <code>:ro</code> flag so that Docker blocks write operations.</p>
-</div>
 <h5 id="photoprismimport">/photoprism/import<a class="headerlink" href="#photoprismimport" title="Permanent link">&para;</a></h5>
 <p>You may optionally mount an <em>import</em> folder from which files can be transferred to the <em>originals</em> folder
 in a structured way that avoids duplicates. Imported files receive a canonical filename and will be

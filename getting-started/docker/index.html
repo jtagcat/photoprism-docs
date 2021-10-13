@@ -2890,16 +2890,16 @@ your <abbr title="\user\username on Windows, /Users/username on macOS, and /root
 <p>Multiple folders can be made accessible by mounting them as subfolders:</p>
 <div class="highlight"><pre><span></span><code>-v ~/Example:/photoprism/originals/Example
 </code></pre></div>
+<div class="admonition tldr">
+<p>When you enable <em>read-only mode</em>, all features that require write permission to the <em>originals</em> folder
+are disabled, in particular import, upload, and delete. Run the app with <code>-e PHOTOPRISM_READONLY="true"</code> 
+for this. You can mount a folder with the <code>:ro</code> flag to make Docker block write operations as well.</p>
+</div>
 <h5 id="photoprismstorage">/photoprism/storage<a class="headerlink" href="#photoprismstorage" title="Permanent link">&para;</a></h5>
 <p>Cache, session, thumbnail, and sidecar files will be created the <em>storage</em> folder, which is mounted as 
 an <a href="https://docs.docker.com/storage/bind-mounts/">anonymous volume</a> in our example. You may want to 
 mount a specific <abbr title="A physical computer, cloud server, or virtual machine that runs Docker">host</abbr> folder instead. Never remove the volume completely so that you don't lose 
 these files after restarting or upgrading the container.</p>
-<div class="admonition info">
-<p>Enabling <em>read-only mode</em> via <code>-e PHOTOPRISM_READONLY="true"</code> disables all features that 
-require write permissions for the <em>originals</em> folder, in particular import, upload, and delete.
-In addition, you may mount the <em>originals</em> folder with <code>:ro</code> flag so that Docker blocks write operations.</p>
-</div>
 <h5 id="photoprismimport">/photoprism/import<a class="headerlink" href="#photoprismimport" title="Permanent link">&para;</a></h5>
 <p>You may optionally mount an <em>import</em> folder from which files can be transferred to the <em>originals</em> folder
 in a structured way that avoids duplicates. Imported files receive a canonical filename and will be

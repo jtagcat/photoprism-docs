@@ -3066,9 +3066,10 @@ Most users with existing collections will want to index their <em>originals</em>
 so that existing file and directory names don't change. On the other hand, importing may be more efficient when
 adding files as you don't need to re-index <em>originals</em>.</p>
 <h3 id="what-exactly-does-the-read-only-mode">What exactly does the read-only mode?<a class="headerlink" href="#what-exactly-does-the-read-only-mode" title="Permanent link">&para;</a></h3>
-<p>There are users who don't want us to modify their original files and folders in any way, so we've added
-a configuration option for this use case. It will disable uploads, import and future features
-that might rename, update or delete files in the <em>originals</em> folder.</p>
+<p>When you enable <em>read-only mode</em>, all features that require write permission to the <em>originals</em> folder
+are disabled, in particular import, upload, and delete. Set <code>PHOTOPRISM_READONLY</code> to <code>"true"</code>
+in <code>docker-compose.yml</code> for this. You can mount a folder with the <code>:ro</code> flag to make Docker block
+write operations as well.</p>
 <h3 id="i-could-not-find-a-documentation-of-config-parameters">I could not find a documentation of config parameters?<a class="headerlink" href="#i-could-not-find-a-documentation-of-config-parameters" title="Permanent link">&para;</a></h3>
 <p>You may run <code>photoprism help</code> in a terminal to see all options and commands. 
 We also maintain a complete list of <a href="../config-options/">config options</a> in these docs.</p>
