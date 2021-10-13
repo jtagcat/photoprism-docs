@@ -2880,7 +2880,7 @@ started for the first time. You may run <code>docker exec -ti photoprism photopr
 in a terminal to change an existing password. You can also reset your database for a clean start. </p>
 </div>
 <h4 id="volumes">Volumes<a class="headerlink" href="#volumes" title="Permanent link">&para;</a></h4>
-<p>Since the app is running inside a container, you have to explicitly mount the folders you want to use.
+<p>Since the app is running inside a container, you have to explicitly mount the <abbr title="A physical computer, cloud server, or virtual machine that runs Docker">host</abbr> folders you want to use.
 PhotoPrism won't be able to see folders that have not been mounted. That's an important security feature.</p>
 <h5 id="photoprismoriginals">/photoprism/originals<a class="headerlink" href="#photoprismoriginals" title="Permanent link">&para;</a></h5>
 <p>The <em>originals</em> folder contains your original photo and video files.
@@ -2893,7 +2893,7 @@ your <abbr title="\user\username on Windows, /Users/username on macOS, and /root
 <h5 id="photoprismstorage">/photoprism/storage<a class="headerlink" href="#photoprismstorage" title="Permanent link">&para;</a></h5>
 <p>Cache, session, thumbnail, and sidecar files will be created the <em>storage</em> folder, which is mounted as 
 an <a href="https://docs.docker.com/storage/bind-mounts/">anonymous volume</a> in our example. You may want to 
-mount a specific <abbr title="A physical computer, cloud server, or virtual machine that runs Docker">host</abbr> directory instead. Never remove the volume completely so that you don't lose 
+mount a specific <abbr title="A physical computer, cloud server, or virtual machine that runs Docker">host</abbr> folder instead. Never remove the volume completely so that you don't lose 
 these files after restarting or upgrading the container.</p>
 <div class="admonition info">
 <p>Enabling <em>read-only mode</em> via <code>-e PHOTOPRISM_READONLY="true"</code> disables all features that 
