@@ -1127,6 +1127,19 @@
     People Section
   </a>
   
+    <nav class="md-nav" aria-label="People Section">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-a-face-was-not-detected" class="md-nav__link">
+    When a face was not detected...
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2751,6 +2764,19 @@
     People Section
   </a>
   
+    <nav class="md-nav" aria-label="People Section">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-a-face-was-not-detected" class="md-nav__link">
+    When a face was not detected...
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2849,8 +2875,12 @@
                 
                   <h1>People</h1>
                 
-                <p>PhotoPrism automatically detects faces and clusters them.</p>
-<p>Each time you assign a name to a face or change an existing assignment, PhotoPrism improves face clusters intelligently.</p>
+                <p>PhotoPrism detects faces while indexing and then groups them by similarity.
+This may take a while, depending on how many pictures you have.</p>
+<div class="admonition tldr">
+<p>Face clusters are automatically optimized in the background, for example after new faces have 
+been identified, you've reported a conflict, or new files have been added to your library.</p>
+</div>
 <h2 id="people-section">People Section<a class="headerlink" href="#people-section" title="Permanent link">&para;</a></h2>
 <p>The people section shows you recognized people as well as new face clusters.</p>
 <p>To star a person click <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.45 4.73L5.82 21 12 17.27z"/></svg></span>. Stared persons appear first.</p>
@@ -2859,7 +2889,23 @@
 <div class="admonition info">
 <p>As not all faces belong to a cluster, there might be more faces than visible in the New section.
 You find all photos with faces that are not assigned to a person using the search filter <code>face:new</code>.
-The photo <a href="../edit/"><em>edit dialogue</em></a> shows all faces of a photo independent from whether they are clustered or not.</p>
+The photo <a href="../edit/">edit dialog</a> shows all faces of a photo independent of whether they are clustered or not.</p>
+</div>
+<h3 id="when-a-face-was-not-detected">When a face was not detected...<a class="headerlink" href="#when-a-face-was-not-detected" title="Permanent link">&para;</a></h3>
+<p>There can be several reasons why a face was not detected:</p>
+<ul>
+<li>Only the primary file in stacks will be searched for faces</li>
+<li>Faces can be smaller than the minimum size configured</li>
+<li>Our face detection did not scan the image thoroughly enough</li>
+<li>Reducing the resolution or quality of generated <a href="../../settings/advanced/">thumbnails</a>
+  negatively impacts face detection and recognition results</li>
+<li>In very rare cases an actual face may match a blacklist of false
+  positives, like background noise and food that looks like a face</li>
+</ul>
+<div class="admonition info">
+<p>Recognition compares the similarity of detected faces. The standard similarity threshold 
+is reduced when you report conflicts with faces of other people, for example by pressing the
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5 5.33 15h13.34M5 17h14v2H5v-2z"/></svg></span> button to remove a name from a face.</p>
 </div>
 <h2 id="assign-names-to-faces">Assign Names to Faces<a class="headerlink" href="#assign-names-to-faces" title="Permanent link">&para;</a></h2>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">From People</label><div class="tabbed-content">
