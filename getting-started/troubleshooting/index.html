@@ -2765,8 +2765,8 @@ before reporting a bug.</p>
 <p>If you see no errors or no logs at all, you may have started the server on a different <abbr title="A physical computer, cloud server, or virtual machine that runs Docker">host</abbr>
 and/or port. There could also be an issue with your browser, ad blocker, or firewall settings.</p>
 </div>
-<p>You can also try restarting the app without the <code>-d</code> command-line parameter. This keeps 
-it running in the foreground and shows log messages for troubleshooting:</p>
+<p>You can also try (re-)starting the app and database without <code>-d</code>. This keeps their containers running 
+in the foreground and shows log messages for troubleshooting:</p>
 <div class="highlight"><pre><span></span><code>docker-compose stop
 docker-compose up 
 </code></pre></div>
