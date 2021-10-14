@@ -2785,63 +2785,15 @@
 <li>Click <em>Endpoint</em> in the left menu, then <em>local</em> and under <em>Public IP</em> place your local NAS IP (it should be the same [YOUR-LOCAL-IP] of step 6.</li>
 </ol>
 <h3 id="step-3-install-photoprism-in-your-synology-nas-using-portainer-accessible-over-http-direct-ip">Step 3: install Photoprism in your Synology NAS using Portainer, accessible over http / direct IP<a class="headerlink" href="#step-3-install-photoprism-in-your-synology-nas-using-portainer-accessible-over-http-direct-ip" title="Permanent link">&para;</a></h3>
-<p>With Portainer installed we can use a docker-compose file to deploy a stack composed by Photoprism and MariaDB to quickly get Photoprism running in our NAS. We can use <a href="https://dl.photoprism.org/docker/docker-compose.yml">Photoprism's default docker-compose yml file</a> but we need to make a few cosmetic changes since Portainer only understands docker-compose version 2 syntax in standalone docker hosts.</p>
+<p>With Portainer installed we can use a docker-compose file to deploy a stack composed by Photoprism and MariaDB to quickly get Photoprism running in our NAS. We can use <a href="https://dl.photoprism.org/docker/docker-compose.yml">Photoprism's default docker-compose yml file</a>.</p>
 <ol>
 <li>open Synology's File Station app and browse to the <em>docker</em> shared folder;</li>
 <li>create a folder named <em>photoprism</em> inside <em>docker</em>, which will persist relevant Photoprism's data in our local filesystem;</li>
 <li>inside <em>photoprism</em> folder, create three more folders: <em>storage</em>, <em>originals</em> and <em>database</em>.</li>
 <li>Open Portainer by visiting http://[YOUR-LOCAL-IP]:9000/;</li>
-<li>Click <em>Stacks</em> in the left menu, then <em>Add stack</em>, give it a meaningful name (for eg. Photoprism) and in the Web Editor place the below code, which was based on <a href="https://dl.photoprism.org/docker/docker-compose.yml">Photoprism's default docker-compose yml file</a> but downgraded to compose version 2. <strong>BE SURE TO USE YOUR OWN [LOCAL-PORT], [YOUR-ADMIN-PASS], [YOUR-DB-PASS] and [YOUR-LOCAL-IP] BY CHANGING THE VALUES ACCORDINGLY, AND CHECK THE LOCAL VOLUMES PATHS TO MATCH THOSE DEFINED IN STEP 13</strong>.</li>
+<li>Click <em>Stacks</em> in the left menu, then <em>Add stack</em>, give it a meaningful name (for eg. Photoprism) and in the Web Editor place the content of <a href="https://dl.photoprism.org/docker/docker-compose.yml">Photoprism's default docker-compose yml file</a>.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span> <span class="s">&#39;2&#39;</span>
-<span class="nt">services</span><span class="p">:</span>
-  <span class="nt">photoprism</span><span class="p">:</span>
-    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">photoprism/photoprism:latest</span>
-    <span class="nt">security_opt</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">seccomp:unconfined</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">apparmor:unconfined</span>
-    <span class="nt">ports</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">2342:2342</span> <span class="c1"># [server]:[container]</span>
-    <span class="nt">environment</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_HTTP_PORT=2342</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_ADMIN_PASSWORD=[YOUR-ADMIN-PASS]</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_DEBUG=false</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_PUBLIC=false</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_READONLY=false</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_EXPERIMENTAL=true</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_DISABLE_WEBDAV=false</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_DISABLE_SETTINGS=false</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_DISABLE_TENSORFLOW=false</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_DETECT_NSFW=false</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_UPLOAD_NSFW=true</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_DATABASE_DRIVER=mysql</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_DATABASE_SERVER=mariadb:3306</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_DATABASE_NAME=photoprism</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_DATABASE_USER=photoprism</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_DATABASE_PASSWORD=[YOUR-DB-PASS]</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_SITE_URL=http://[YOUR-LOCAL-IP]:[LOCAL-PORT]</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_SITE_TITLE=PhotoPrism</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_SITE_CAPTION=Browse Your Life</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_SITE_DESCRIPTION=Photoprism</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">PHOTOPRISM_SITE_AUTHOR=Photoprism</span>
-    <span class="nt">volumes</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/volume1/docker/photoprism/originals:/photoprism/originals</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/volume1/docker/photoprism/storage:/photoprism/storage</span>  
-  <span class="nt">mariadb</span><span class="p">:</span>
-    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mariadb:10.5</span>
-    <span class="nt">restart</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
-    <span class="nt">security_opt</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">seccomp:unconfined</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">apparmor:unconfined</span>
-    <span class="nt">command</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mysqld --transaction-isolation=READ-COMMITTED --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --max-connections=512 --innodb-rollback-on-timeout=OFF --innodb-lock-wait-timeout=120</span>
-    <span class="nt">volumes</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/volume1/docker/photoprism/database:/var/lib/mysql</span>
-    <span class="nt">environment</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">MYSQL_ROOT_PASSWORD=[YOUR-DB-PASS]</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">MYSQL_DATABASE=photoprism</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">MYSQL_USER=photoprism</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">MYSQL_PASSWORD=[YOUR-DB-PASS]</span>
-</code></pre></div>
+<p><strong>BE SURE TO USE YOUR OWN PHOTOPRISM_ADMIN_PASSWORD, PHOTOPRISM_DATABASE_PASSWORD, MYSQL_ROOT_PASSWORD, AND MYSQL_PASSWORD BY CHANGING THE VALUES ACCORDINGLY, AND CHECK THE LOCAL VOLUMES PATHS TO MATCH THOSE DEFINED IN STEP 13</strong>.</p>
 <ol>
 <li>Click <em>Deploy the stack</em>. Give it a few minutes and PhotoPrism should be accessible in http://[YOUR-LOCAL-IP]:[LOCAL-PORT]/.</li>
 </ol>

@@ -2862,6 +2862,10 @@
                 <h1 id="setup-using-docker-compose">Setup Using Docker Compose<a class="headerlink" href="#setup-using-docker-compose" title="Permanent link">&para;</a></h1>
 <p>Before you start, make sure you have <a href="https://store.docker.com/search?type=edition&amp;offering=community">Docker</a> 
 installed on your system. It is available for Mac, Linux, and Windows.</p>
+<div class="admonition info">
+<p>You're welcome to ask for help in our <a href="https://gitter.im/browseyourlife/community">community chat</a>.
+<a href="https://www.patreon.com/photoprism">Sponsors</a> may contact us <a href="mailto:hello@photoprism.app">directly via email</a>.</p>
+</div>
 <h3 id="step-1-configure">Step 1: Configure<a class="headerlink" href="#step-1-configure" title="Permanent link">&para;</a></h3>
 <div class="tabbed-set" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Linux</label><div class="tabbed-content">
 <p>Download our <a href="https://dl.photoprism.org/docker/docker-compose.yml">docker-compose.yml</a> example
@@ -2967,8 +2971,7 @@ You may change it on the <a href="../../user-guide/settings/account/">account se
 Enabling <a href="../config-options/">public mode</a> will disable authentication.</p>
 <div class="admonition info">
 <p>If you can't connect, try starting the app without <code>-d</code>: <code>docker-compose up photoprism</code>. 
-This keeps it in the foreground and shows log messages for troubleshooting. You're welcome to ask 
-for help in our <a href="https://gitter.im/browseyourlife/community">community chat</a>.
+This keeps it in the foreground and shows log messages for <a href="../troubleshooting/">troubleshooting</a>.
 Should the server already be running, or you see no errors, you may have started it
 on a different <abbr title="A physical computer, cloud server, or virtual machine that runs Docker">host</abbr> and/or port. There could also be an issue with your browser,
 ad blocker, or firewall settings.</p>
@@ -3097,7 +3100,7 @@ file has been saved.</p>
 <td><code>docker-compose exec photoprism photoprism faces reset -f</code></td>
 </tr>
 <tr>
-<td><em>Pre-transcode Videos to <abbr title="MPEG-4 AVC video compression standard, also known as H.264">AVC</abbr></em></td>
+<td><em>Transcode Videos to <abbr title="MPEG-4 AVC video compression standard, also known as H.264">AVC</abbr></em></td>
 <td><code>docker-compose exec photoprism photoprism convert</code></td>
 </tr>
 <tr>

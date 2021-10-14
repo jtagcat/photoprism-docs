@@ -2848,6 +2848,10 @@
                 <h1 id="running-photoprism-with-docker">Running PhotoPrism with Docker<a class="headerlink" href="#running-photoprism-with-docker" title="Permanent link">&para;</a></h1>
 <p>We recommend using <a href="../docker-compose/">Docker Compose</a> as it is easier to start with for beginners
 and provides more comfort than the pure Docker command-line interface.</p>
+<div class="admonition info">
+<p>You're welcome to ask for help in our <a href="https://gitter.im/browseyourlife/community">community chat</a>.
+<a href="https://www.patreon.com/photoprism">Sponsors</a> may contact us <a href="mailto:hello@photoprism.app">directly via email</a>.</p>
+</div>
 <h3 id="step-1-start-the-server">Step 1: Start the server<a class="headerlink" href="#step-1-start-the-server" title="Permanent link">&para;</a></h3>
 <div class="tabbed-set" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Linux</label><div class="tabbed-content">
 <p>Open a terminal and run this command to start the app after replacing <code>~/Pictures</code> with
@@ -2883,7 +2887,7 @@ You may change it on the <a href="../../user-guide/settings/account/">account se
 Enabling <a href="../config-options/">public mode</a> will disable authentication.</p>
 <div class="admonition info">
 <p>If you can't connect, try starting the app without <code>-d</code>. This keeps it in the foreground
-and shows log messages for troubleshooting. You're welcome to ask for help in our <a href="https://gitter.im/browseyourlife/community">community chat</a>.
+and shows log messages for <a href="../troubleshooting/">troubleshooting</a>.
 Should the server already be running, or you see no errors, you may have started it 
 on a different <abbr title="A physical computer, cloud server, or virtual machine that runs Docker">host</abbr> and/or port. There could also be an issue with your browser, 
 ad blocker, or firewall settings.</p>
@@ -3045,7 +3049,7 @@ its container has the same name.</p>
 <td><code>docker exec -ti photoprism photoprism faces reset -f</code></td>
 </tr>
 <tr>
-<td><em>Pre-transcode Videos to <abbr title="MPEG-4 AVC video compression standard, also known as H.264">AVC</abbr></em></td>
+<td><em>Transcode Videos to <abbr title="MPEG-4 AVC video compression standard, also known as H.264">AVC</abbr></em></td>
 <td><code>docker exec -ti photoprism photoprism convert</code></td>
 </tr>
 <tr>
