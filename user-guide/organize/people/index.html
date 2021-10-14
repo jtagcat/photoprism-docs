@@ -2882,14 +2882,17 @@ This may take a while, depending on how many pictures you have.</p>
 been identified, you've reported a conflict, or new files have been added to your library.</p>
 </div>
 <h2 id="people-section">People Section<a class="headerlink" href="#people-section" title="Permanent link">&para;</a></h2>
-<p>The people section shows you recognized people as well as new face clusters.</p>
+<p>The people section shows you recognized people as well as new <abbr title="A cluster is a group of faces expected to belong to the same person based on the similarity">face clusters</abbr>.</p>
 <p>To star a person click <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.45 4.73L5.82 21 12 17.27z"/></svg></span>. Stared persons appear first.</p>
 <p><img alt="Screenshot" src="../img/recognized.png" />
 <img alt="Screenshot" src="../img/new.png" /></p>
 <div class="admonition info">
-<p>As not all faces belong to a cluster, there might be more faces than visible in the New section.
-You find all photos with faces that are not assigned to a person using the search filter <code>face:new</code>.
-The photo <a href="../edit/">edit dialog</a> shows all faces of a photo independent of whether they are clustered or not.</p>
+<p><strong>The new faces page shows automatically recognized <abbr title="A cluster is a group of faces expected to belong to the same person based on the similarity">face clusters</abbr> only.</strong> There may be thousands of 
+unidentified faces in your library including random people such as news speakers or faces on shampoo bottles.
+You can use the search filter <code>face:new</code> to find pictures containing unknown people.
+We recommend combining it with other filters, like year or location, when looking for specific people.
+The <em>People</em> tab in the photo <a href="../edit/">edit dialog</a> displays all detected faces, so you can name them
+or report a bad match by pressing the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5 5.33 15h13.34M5 17h14v2H5v-2z"/></svg></span> button.</p>
 </div>
 <h3 id="when-a-face-was-not-detected">When a face was not detected...<a class="headerlink" href="#when-a-face-was-not-detected" title="Permanent link">&para;</a></h3>
 <p>There can be several reasons why a face was not detected:</p>
@@ -2904,8 +2907,7 @@ The photo <a href="../edit/">edit dialog</a> shows all faces of a photo independ
 </ul>
 <div class="admonition info">
 <p>Recognition compares the similarity of detected faces. The standard similarity threshold 
-is reduced when you report conflicts with faces of other people, for example by pressing the
-<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5 5.33 15h13.34M5 17h14v2H5v-2z"/></svg></span> button to remove a name from a face.</p>
+is reduced when you report a bad match.</p>
 </div>
 <h2 id="assign-names-to-faces">Assign Names to Faces<a class="headerlink" href="#assign-names-to-faces" title="Permanent link">&para;</a></h2>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">From People</label><div class="tabbed-content">
@@ -2920,9 +2922,9 @@ is reduced when you report conflicts with faces of other people, for example by 
 </li>
 </ol>
 </div>
-<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">From Photo Edit Dialogue</label><div class="tabbed-content">
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">From Photo Edit dialog</label><div class="tabbed-content">
 <ol>
-<li>Open the photo <a href="../edit/"><em>edit dialogue</em></a></li>
+<li>Open the photo <a href="../edit/"><em>edit dialog</em></a></li>
 <li>Go to the <em>People</em> tab</li>
 <li>Click on the input field</li>
 <li>Start typing a name</li>
@@ -2951,7 +2953,7 @@ and develop new features. Thank you very much! 💜</p>
 <p>Hidden people can be recovered by clicking <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.83 9 15 12.16V12a3 3 0 0 0-3-3h-.17m-4.3.8 1.55 1.55c-.05.21-.08.42-.08.65a3 3 0 0 0 3 3c.22 0 .44-.03.65-.08l1.55 1.55c-.67.33-1.41.53-2.2.53a5 5 0 0 1-5-5c0-.79.2-1.53.53-2.2M2 4.27l2.28 2.28.45.45C3.08 8.3 1.78 10 1 12c1.73 4.39 6 7.5 11 7.5 1.55 0 3.03-.3 4.38-.84l.43.42L19.73 22 21 20.73 3.27 3M12 7a5 5 0 0 1 5 5c0 .64-.13 1.26-.36 1.82l2.93 2.93c1.5-1.25 2.7-2.89 3.43-4.75-1.73-4.39-6-7.5-11-7.5-1.4 0-2.74.25-4 .7l2.17 2.15C10.74 7.13 11.35 7 12 7z"/></svg></span></p>
 <p><img alt="Screenshot" src="../img/person-recover.png" /></p>
 <h2 id="hiding-faces">Hiding Faces<a class="headerlink" href="#hiding-faces" title="Permanent link">&para;</a></h2>
-<p>You can hide face clusters from the <em>New</em> section, in the same way you <a href="#hiding-people">hide people</a> from the <em>Recognized</em> section.</p>
+<p>You can hide <abbr title="A cluster is a group of faces expected to belong to the same person based on the similarity">face clusters</abbr> from the <em>New</em> section, in the same way you <a href="#hiding-people">hide people</a> from the <em>Recognized</em> section.</p>
 <h2 id="view-all-photos-of-a-person">View all Photos of a Person<a class="headerlink" href="#view-all-photos-of-a-person" title="Permanent link">&para;</a></h2>
 <div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">From People</label><div class="tabbed-content">
 <ol>
@@ -2985,12 +2987,14 @@ and develop new features. Thank you very much! 💜</p>
 <p><img alt="Screenshot" src="../img/rename-recognized-0.png" /></p>
 <p><img alt="Screenshot" src="../img/rename-recognized.png" /></p>
 <h2 id="change-people-assignments">Change People Assignments<a class="headerlink" href="#change-people-assignments" title="Permanent link">&para;</a></h2>
-<p>In case the wrong person is assigned to a photo you can easily reject this. </p>
+<p>You may report bad matches by pressing the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5 5.33 15h13.34M5 17h14v2H5v-2z"/></svg></span> button underneath a face in the <em>People</em> tab.
+This will remove the name. You can either leave it blank or enter the name of a different person.</p>
 <div class="admonition attention">
-<p>Each time you reject a face, the face clusters are updated in the background.</p>
+<p>When you reject a match, the corresponding face cluster will be updated in the background so that similar 
+issues can be resolved automatically.</p>
 </div>
 <ol>
-<li>Open the photo <a href="../edit/"><em>edit dialogue</em></a></li>
+<li>Open the photo <a href="../edit/"><em>edit dialog</em></a></li>
 <li>Go to the <em>People</em> tab</li>
 <li>Click <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5 5.33 15h13.34M5 17h14v2H5v-2z"/></svg></span></li>
 <li>Then enter a new name or leave it empty</li>
