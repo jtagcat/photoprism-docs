@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#shall-i-import-or-index-my-originals" class="md-skip">
+        <a href="#managing-your-photo-library" class="md-skip">
           Skip to content
         </a>
       
@@ -859,14 +859,14 @@
       
       
         <label class="md-nav__link" for="__nav_2_2">
-          Index
+          Library
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Index" data-md-level="2">
+      <nav class="md-nav" aria-label="Library" data-md-level="2">
         <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
-          Index
+          Library
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -909,6 +909,14 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#should-i-import-or-index-my-files" class="md-nav__link">
+    Should I import or index my files?
+  </a>
+  
+    <nav class="md-nav" aria-label="Should I import or index my files?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#index" class="md-nav__link">
     Index
   </a>
@@ -927,8 +935,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#import" class="md-nav__link">
     Import
   </a>
@@ -947,11 +955,16 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#conclusion" class="md-nav__link">
     Conclusion
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -971,7 +984,7 @@
   
     <li class="md-nav__item">
       <a href="originals/" class="md-nav__link">
-        Originals
+        Index Originals
       </a>
     </li>
   
@@ -985,7 +998,7 @@
   
     <li class="md-nav__item">
       <a href="import/" class="md-nav__link">
-        Importing Files
+        Import Files
       </a>
     </li>
   
@@ -2718,6 +2731,14 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#should-i-import-or-index-my-files" class="md-nav__link">
+    Should I import or index my files?
+  </a>
+  
+    <nav class="md-nav" aria-label="Should I import or index my files?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#index" class="md-nav__link">
     Index
   </a>
@@ -2736,8 +2757,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#import" class="md-nav__link">
     Import
   </a>
@@ -2756,11 +2777,16 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#conclusion" class="md-nav__link">
     Conclusion
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2781,18 +2807,23 @@
                   </a>
                 
                 
-                <h1 id="shall-i-import-or-index-my-originals">Shall I import or index my originals?<a class="headerlink" href="#shall-i-import-or-index-my-originals" title="Permanent link">&para;</a></h1>
-<p><em>Import</em> is a temporary folder from which you can move or copy files to <em>originals</em> in a structured way that avoids duplicates. 
-Most users with existing collections will want to index their originals directly without importing them, 
-so that existing file and directory names stay the same. On the other hand, 
-importing is more efficient when adding files as you don't need to re-index all originals to find new photos and videos.</p>
+                <h1 id="managing-your-photo-library">Managing Your Photo Library<a class="headerlink" href="#managing-your-photo-library" title="Permanent link">&para;</a></h1>
+<h2 id="should-i-import-or-index-my-files">Should I import or index my files?<a class="headerlink" href="#should-i-import-or-index-my-files" title="Permanent link">&para;</a></h2>
+<p><em>Import</em> is a temporary folder from which files can be transferred to the <em>originals</em> folder
+in a structured way that avoids duplicates. Imported files receive a canonical filename and will be
+organized by year and month.</p>
+<p>Most users with existing photo libraries will want to index their <em>originals</em> folder directly
+without importing files, leaving the existing file and folder names unchanged. On the other hand
+importing is an efficient way to add files, since PhotoPrism doesn't have to search your <em>originals</em>
+folder to find added files.</p>
+<div class="admonition info">
+<p>Hidden files and folders that start with a <code>.</code> or <code>@</code> are automatically ignored. Other names to be
+ignored can be added to a <code>.ppignore</code> file in the <em>originals</em> or <em>import</em> folder it should affect.
+You can put it either in the main folder or in a subfolder to limit the scope.</p>
+</div>
 <h3 id="index">Index<a class="headerlink" href="#index" title="Permanent link">&para;</a></h3>
 <p>Use <em>index</em> when you want to index your photos and videos directly in the <em>originals</em> folder without copying,
 moving or renaming them in any way.</p>
-<div class="admonition tip">
-<p>You may <a href="originals/#ignoring-directories-and-files">configure ignore list</a>
-before starting the index.</p>
-</div>
 <p>Your folder structure in <em>originals</em> might look like this:</p>
 <p><img alt="Screenshot" src="img/originals-before-after.png" /></p>
 <p><strong>During indexing:</strong></p>
@@ -2874,13 +2905,13 @@ In case you import and index or only index a directory with the path "Vacation/A
       
       
         
-        <a href="originals/" class="md-footer__link md-footer__link--next" aria-label="Next: Originals" rel="next">
+        <a href="originals/" class="md-footer__link md-footer__link--next" aria-label="Next: Index Originals" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Originals
+              Index Originals
             </div>
           </div>
           <div class="md-footer__button md-icon">
