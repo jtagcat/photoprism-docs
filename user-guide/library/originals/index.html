@@ -2751,13 +2751,14 @@ When starting with an empty folder, you need to add or upload files first.</p>
 </li>
 </ol>
 <p><img alt="Screenshot" src="../img/index.png" /></p>
-<div class="admonition tip">
-<p>You may use <a href="../webdav/">WebDAV</a> for adding files to the <em>originals</em> folder.
-This is especially helpful if PhotoPrism is running on a remote server.</p>
+<div class="admonition info">
+<p>You can use <a href="../webdav/">WebDAV</a>-compatible apps, including Microsoft's Windows Explorer and Apple's Finder, 
+to add files to your <em>originals</em> folders from a remote computer or mobile device.</p>
 </div>
 <div class="admonition tip">
-<p>A NSFW detector can be enabled to automatically flag pictures as private which 
-may have offensive content. Note that this is only somewhat reliable. </p>
+<p class="admonition-title">NSFW</p>
+<p>An NSFW detector can be enabled to automatically mark images with potentially objectionable content as 
+private. Note that this feature is only partially reliable.</p>
 </div>
 <h4 id="ignoring-files-and-folders">Ignoring Files and Folders<a class="headerlink" href="#ignoring-files-and-folders" title="Permanent link">&para;</a></h4>
 <p>Hidden files and folders that start with a <code>.</code> or <code>@</code> are automatically ignored. Other names to be 
@@ -2775,10 +2776,12 @@ MVI_*.MOV
 # or
 MVI_*.*
 </code></pre></div>
-<p>Names will be ignored in the same directory and all subdirectories. You may use <code>*</code> as a wildcard.</p>
-<p>Note that already indexed files and folders won't be removed from index retroactively. In this case, adding them to a <code>.ppignore</code> file will not result in a file or folder to be removed from PhotoPrism.</p>
-<p>If you are a new user and files or folders have already been indexed, you generally easiest 
-to reset the database and start with a fresh index by running <code>photoprism reset</code> in a terminal.</p>
+<p>Names in the same directory and in all subdirectories are ignored. You can use <code>*</code> as a wildcard.</p>
+<p>Files and folders that have already been indexed cannot be retroactively removed from the index
+using a <code>.ppignore</code> file. Adding their name won't remove them from PhotoPrism.</p>
+<div class="admonition tldr">
+<p>If you are a new user and files or folders have already been indexed, it is generally easiest to reset the database and start with a new index by running <code>photoprism reset</code> in a <a href="../../../getting-started/docker-compose/#command-line-interface">terminal</a>.</p>
+</div>
 <h4 id="when-should-complete-rescan-be-selected">When should "Complete Rescan" be selected?<a class="headerlink" href="#when-should-complete-rescan-be-selected" title="Permanent link">&para;</a></h4>
 <p>If selected, all files in the <em>originals</em> folder will be re-indexed, including already indexed and unchanged files. 
 This may be necessary after upgrading, especially to new major versions.</p>
