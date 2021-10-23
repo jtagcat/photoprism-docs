@@ -2701,13 +2701,15 @@
                 
                 <h1 id="running-photoprism-on-a-raspberry-pi">Running PhotoPrism on a Raspberry Pi<a class="headerlink" href="#running-photoprism-on-a-raspberry-pi" title="Permanent link">&para;</a></h1>
 <p>Our <a href="../../release-notes/">stable version</a> and development preview now come as a single
-<a href="https://hub.docker.com/r/photoprism/photoprism">multi-arch image</a> for AMD64, ARM64, and ARMv7.</p>
-<p>Existing users don't need to pull from a different Docker repository anymore. We recommend updating your
-<code>docker-compose.yml</code> config based on <a href="https://dl.photoprism.org/docker/">our examples</a>.</p>
-<p>If your device meets the system requirements, mostly the same <a href="../docker-compose/">installation instructions</a> 
+<a href="https://hub.docker.com/r/photoprism/photoprism">multi-arch image</a> for AMD64, ARM64, and ARMv7. If your device meets the system requirements, mostly the same <a href="../docker-compose/">installation instructions</a>
 as for regular Linux servers apply.</p>
+<div class="admonition info">
+<p>Use <code>photoprism/photoprism:latest</code>for the stable release or <code>photoprism/photoprism:preview</code> for testing 
+preview builds. Make sure to <a href="../updates/">pull the most recent image</a> from Docker Hub. Existing users are advised to 
+update their <code>docker-compose.yml</code> config based on <a href="https://dl.photoprism.org/docker/">our examples</a>.</p>
+</div>
 <div class="admonition missing">
-<p>Owners of <a href="https://dl.photoprism.org/docker/armv7/docker-compose.yml">ARMv7</a>-based devices have to revert 
+<p>Owners of <a href="https://dl.photoprism.org/docker/armv7/docker-compose.yml">ARMv7-based devices</a> have to revert 
 to an <a href="https://hub.docker.com/r/linuxserver/mariadb">alternative image</a> if they want to use MariaDB.
 The <a href="https://hub.docker.com/_/mariadb">official image</a> is available for AMD64 and ARM64 only.
 Pay close attention to changed directory and environment variable names.</p>
