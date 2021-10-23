@@ -3104,10 +3104,13 @@ are disabled, in particular import, upload, and delete. Set <code>PHOTOPRISM_REA
 in <code>docker-compose.yml</code> for this. You can mount a folder with the <code>:ro</code> flag to make Docker block
 write operations as well.</p>
 <h3 id="i-could-not-find-a-documentation-of-config-parameters">I could not find a documentation of config parameters?<a class="headerlink" href="#i-could-not-find-a-documentation-of-config-parameters" title="Permanent link">&para;</a></h3>
-<p>You may run <code>photoprism help</code> in a terminal to see all options and commands. 
-We also maintain a complete list of <a href="../config-options/">config options</a> in these docs.</p>
-<p>Our Docker Compose <a href="https://dl.photoprism.org/docker/docker-compose.yml">examples</a> are continuously maintained and inline documentation 
-has been added to simplify installation.</p>
+<p>We maintain a complete list of <a href="../config-options/">config options</a> in <em>Getting Started</em>.
+Running <code>photoprism help</code> in a terminal lists all commands and <a href="../config-options/">config options</a> 
+available your currently installed version:</p>
+<div class="highlight"><pre><span></span><code>docker-compose exec photoprism photoprism help
+</code></pre></div>
+<p>Our <a href="../docker-compose/">Docker Compose</a> <a href="https://dl.photoprism.org/docker/">examples</a> are continuously 
+updated and inline documentation has been added to simplify installation.</p>
 <h3 id="should-i-use-sqlite-mariadb-or-mysql">Should I use SQLite, MariaDB, or MySQL?<a class="headerlink" href="#should-i-use-sqlite-mariadb-or-mysql" title="Permanent link">&para;</a></h3>
 <p>If you have few pictures, concurrent users, and CPU cores, <a href="https://www.sqlite.org/">SQLite</a> 
 may seem faster compared to full-featured database servers like <a href="https://mariadb.com/">MariaDB</a>.</p>
