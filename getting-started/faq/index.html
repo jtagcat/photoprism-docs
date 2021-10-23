@@ -3087,9 +3087,14 @@ after changing <a href="../config-options/">config values</a>.</p>
 However, storage is typically affordable enough for most users to go for better quality and 
 performance instead.</p>
 <h3 id="can-i-skip-creating-thumbnails-completely">Can I skip creating thumbnails completely?<a class="headerlink" href="#can-i-skip-creating-thumbnails-completely" title="Permanent link">&para;</a></h3>
-<p>The smallest <a href="../../user-guide/settings/advanced/">configurable</a> limit is 720px for consumption 
-by the indexer and TensorFlow during image classification. Recreating and keeping them in memory
-is too demanding, even for the most powerful servers.</p>
+<p>The smallest <a href="../../user-guide/settings/advanced/">configurable</a> size is 720px for consumption by 
+the indexer to perform color detection, face detection, and image classification. Recreating them 
+every time they are needed is too demanding for even the most powerful servers. Unless you only 
+have a few small images, it would render the app unusable.</p>
+<div class="admonition danger">
+<p>Reducing the <em>Static Size Limit</em> of thumbnails has a <strong>significant impact on  <a href="../../user-guide/organize/people/">facial recognition</a>
+and image classification</strong> results. Simply put, it means that the indexer can no longer see properly.</p>
+</div>
 <h3 id="im-having-issues-understanding-the-difference-between-the-import-and-originals-folders">I'm having issues understanding the difference between the import and originals folders?<a class="headerlink" href="#im-having-issues-understanding-the-difference-between-the-import-and-originals-folders" title="Permanent link">&para;</a></h3>
 <p>You may optionally mount an <em>import</em> folder from which files can be transferred to the <em>originals</em> folder
 in a structured way that avoids duplicates. Imported files receive a canonical filename and will be
