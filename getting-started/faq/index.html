@@ -3112,15 +3112,14 @@ has been added to simplify installation.</p>
 <p>Compared to full-featured relational database management systems (RDBMS) 
 like MariaDB, SQLite may seem faster if you have only few pictures, 
 concurrent users, and CPU cores.</p>
-<p>As the database grows and the number of concurrent accesses increases, it will suffer. 
+<p>This changes as the index grows and the number of concurrent accesses increases.
 The way MariaDB and MySQL handle multiple queries is completely different, much more 
 complex, and optimized for high concurrency. SQLite, for example, locks the entire table 
 when an update occurs and queues the requests. Its main advantage is that you don't need 
 to run a separate database server. This can be very useful for testing and also works 
 great if you only have a few thousand files to index.</p>
 <p>MariaDB lacks some features that MySQL Enterprise Edition offers.
-On the other hand, MariaDB has many optimizations like an improved thread 
-pool that improve performance. It is also completely open-source.</p>
+On the other hand, MariaDB has many optimizations. It is also completely open-source.</p>
 <h3 id="can-i-install-photoprism-in-a-sub-directory-on-a-shared-domain">Can I install PhotoPrism in a sub-directory on a shared domain?<a class="headerlink" href="#can-i-install-photoprism-in-a-sub-directory-on-a-shared-domain" title="Permanent link">&para;</a></h3>
 <p>This is possible with our latest release if you run it behind a proxy.
 Note that for a Progressive Web App (PWA) to work as designed, the service worker should 
