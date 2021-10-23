@@ -874,13 +874,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#should-i-use-sqlite-mariadb-or-mysql" class="md-nav__link">
-    Should I use SQLite, MariaDB, or MySQL?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#why-is-my-storage-folder-so-large-what-is-in-it" class="md-nav__link">
     Why is my storage folder so large? What is in it?
   </a>
@@ -902,15 +895,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-exactly-does-the-read-only-mode" class="md-nav__link">
-    What exactly does the read-only mode?
+  <a href="#should-i-use-sqlite-mariadb-or-mysql" class="md-nav__link">
+    Should I use SQLite, MariaDB, or MySQL?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#i-could-not-find-a-documentation-of-config-parameters" class="md-nav__link">
-    I could not find a documentation of config parameters?
+  <a href="#why-is-photoprism-getting-stuck-in-a-restart-loop" class="md-nav__link">
+    Why is PhotoPrism getting stuck in a restart loop?
   </a>
   
 </li>
@@ -923,8 +916,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-is-photoprism-getting-stuck-in-a-restart-loop" class="md-nav__link">
-    Why is PhotoPrism getting stuck in a restart loop?
+  <a href="#i-could-not-find-a-documentation-of-config-parameters" class="md-nav__link">
+    I could not find a documentation of config parameters?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-exactly-does-the-read-only-mode" class="md-nav__link">
+    What exactly does the read-only mode?
   </a>
   
 </li>
@@ -2877,13 +2877,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#should-i-use-sqlite-mariadb-or-mysql" class="md-nav__link">
-    Should I use SQLite, MariaDB, or MySQL?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#why-is-my-storage-folder-so-large-what-is-in-it" class="md-nav__link">
     Why is my storage folder so large? What is in it?
   </a>
@@ -2905,15 +2898,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-exactly-does-the-read-only-mode" class="md-nav__link">
-    What exactly does the read-only mode?
+  <a href="#should-i-use-sqlite-mariadb-or-mysql" class="md-nav__link">
+    Should I use SQLite, MariaDB, or MySQL?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#i-could-not-find-a-documentation-of-config-parameters" class="md-nav__link">
-    I could not find a documentation of config parameters?
+  <a href="#why-is-photoprism-getting-stuck-in-a-restart-loop" class="md-nav__link">
+    Why is PhotoPrism getting stuck in a restart loop?
   </a>
   
 </li>
@@ -2926,8 +2919,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#why-is-photoprism-getting-stuck-in-a-restart-loop" class="md-nav__link">
-    Why is PhotoPrism getting stuck in a restart loop?
+  <a href="#i-could-not-find-a-documentation-of-config-parameters" class="md-nav__link">
+    I could not find a documentation of config parameters?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-exactly-does-the-read-only-mode" class="md-nav__link">
+    What exactly does the read-only mode?
   </a>
   
 </li>
@@ -3072,18 +3072,6 @@ video metadata like location and duration can be indexed.</p>
 using <code>ffmpeg</code>. That's also what Twitter does when you post a GIF. They will then be shown as 
 "live photos" and start playing on mouse over while also consuming less storage and bandwidth 
 compared to your original GIF files.</p>
-<h3 id="should-i-use-sqlite-mariadb-or-mysql">Should I use SQLite, MariaDB, or MySQL?<a class="headerlink" href="#should-i-use-sqlite-mariadb-or-mysql" title="Permanent link">&para;</a></h3>
-<p>If you have few pictures, concurrent users, and CPU cores, <a href="https://www.sqlite.org/">SQLite</a>
-may seem faster compared to full-featured database servers like <a href="https://mariadb.com/">MariaDB</a>.</p>
-<p>This changes as the index grows and the number of concurrent accesses increases.
-The way MariaDB and MySQL handle multiple queries is completely different and optimized
-for high concurrency. SQLite, for example, locks the index on updates so that other
-operations have to wait. In the worst case, this can lead to timeout errors.
-Its main advantage is that you don't need to run a separate database server.
-This can be very useful for testing and also works great if you only have a few
-thousand files to index.</p>
-<p>MariaDB lacks some features that <a href="https://www.mysql.com/products/enterprise/">MySQL Enterprise Edition</a> offers.
-On the other hand, MariaDB has many optimizations. It is also completely open-source.</p>
 <h3 id="why-is-my-storage-folder-so-large-what-is-in-it">Why is my storage folder so large? What is in it?<a class="headerlink" href="#why-is-my-storage-folder-so-large-what-is-in-it" title="Permanent link">&para;</a></h3>
 <p>The storage folder contains sidecar, thumbnail, and configuration files.
 It may also contain index database files if you're using SQLite.
@@ -3110,29 +3098,20 @@ organized by year and month.</p>
 without importing files, leaving the existing file and folder names unchanged. On the other hand
 importing is an efficient way to add files, since PhotoPrism doesn't have to search your <em>originals</em>
 folder to find new files.</p>
-<h3 id="what-exactly-does-the-read-only-mode">What exactly does the read-only mode?<a class="headerlink" href="#what-exactly-does-the-read-only-mode" title="Permanent link">&para;</a></h3>
-<p>When you enable <em>read-only mode</em>, all features that require write permission to the <em>originals</em> folder
-are disabled, in particular import, upload, and delete. Set <code>PHOTOPRISM_READONLY</code> to <code>"true"</code>
-in <code>docker-compose.yml</code> for this. You can mount a folder with the <code>:ro</code> flag to make Docker block
-write operations as well.</p>
-<h3 id="i-could-not-find-a-documentation-of-config-parameters">I could not find a documentation of config parameters?<a class="headerlink" href="#i-could-not-find-a-documentation-of-config-parameters" title="Permanent link">&para;</a></h3>
-<p>We maintain a complete list of <a href="../config-options/">config options</a> in <em>Getting Started</em>.
-When you run <code>photoprism help</code> in a <a href="../docker-compose/#command-line-interface">terminal</a>, 
-all commands and parameters available in your currently installed <a href="https://docs.photoprism.org/release-notes/">version</a> 
-are listed:</p>
-<div class="highlight"><pre><span></span><code>docker-compose exec photoprism photoprism help
-</code></pre></div>
-<p>Our <a href="../docker-compose/">Docker Compose</a> <a href="https://dl.photoprism.org/docker/">examples</a> are continuously 
-updated and inline documentation has been added to simplify installation.</p>
-<h3 id="can-i-install-photoprism-in-a-sub-directory-on-a-shared-domain">Can I install PhotoPrism in a sub-directory on a shared domain?<a class="headerlink" href="#can-i-install-photoprism-in-a-sub-directory-on-a-shared-domain" title="Permanent link">&para;</a></h3>
-<p>This is possible with our latest release if you run it behind a proxy.
-Note that for a Progressive Web App (PWA) to work as designed, the service worker should 
-be located in the root directory. Also keep in mind sharing a domain with
-other apps may negatively impact the performance and 
-<a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">security</a>
-of all apps installed. The length of share links increases as well.</p>
+<h3 id="should-i-use-sqlite-mariadb-or-mysql">Should I use SQLite, MariaDB, or MySQL?<a class="headerlink" href="#should-i-use-sqlite-mariadb-or-mysql" title="Permanent link">&para;</a></h3>
+<p>If you have few pictures, concurrent users, and CPU cores, <a href="https://www.sqlite.org/">SQLite</a>
+may seem faster compared to full-featured database servers like <a href="https://mariadb.com/">MariaDB</a>.</p>
+<p>This changes as the index grows and the number of concurrent accesses increases.
+The way MariaDB and MySQL handle multiple queries is completely different and optimized
+for high concurrency. SQLite, for example, locks the index on updates so that other
+operations have to wait. In the worst case, this can lead to timeout errors.
+Its main advantage is that you don't need to run a separate database server.
+This can be very useful for testing and also works great if you only have a few
+thousand files to index.</p>
+<p>MariaDB lacks some features that <a href="https://www.mysql.com/products/enterprise/">MySQL Enterprise Edition</a> offers.
+On the other hand, MariaDB has many optimizations. It is also completely open-source.</p>
 <h3 id="why-is-photoprism-getting-stuck-in-a-restart-loop">Why is PhotoPrism getting stuck in a restart loop?<a class="headerlink" href="#why-is-photoprism-getting-stuck-in-a-restart-loop" title="Permanent link">&para;</a></h3>
-<p>This happens when Docker was configured to automatically restart the app after failures. 
+<p>This happens when Docker was configured to automatically restart the app after failures.
 Fatal errors are often caused by one of the following conditions:</p>
 <ol>
 <li>Your (virtual) server disk is full</li>
@@ -3145,16 +3124,37 @@ Fatal errors are often caused by one of the following conditions:</p>
 <li>Kernel security modules such as <a href="https://wiki.ubuntu.com/AppArmor">AppArmor</a> and
    <a href="https://en.wikipedia.org/wiki/Security-Enhanced_Linux">SELinux</a> may be blocking permissions</li>
 </ol>
-<p>Please search your operating system and server logs for messages like <em>disk full</em>, <em>wrong permissions</em>, 
-and <em>database connection failed</em> before reporting a bug. If you are using Docker Compose, run this command 
+<p>Please search your operating system and server logs for messages like <em>disk full</em>, <em>wrong permissions</em>,
+and <em>database connection failed</em> before reporting a bug. If you are using Docker Compose, run this command
 to display the last 100 log messages:</p>
 <div class="highlight"><pre><span></span><code>docker-compose logs --tail=100
 </code></pre></div>
 <p>Linux kernel security can be disabled on private servers, especially if you do not have experience
-with the configuration. Use a file manager, or the commands <code>chmod</code> and <code>chown</code> on Unix-like operating systems, 
+with the configuration. Use a file manager, or the commands <code>chmod</code> and <code>chown</code> on Unix-like operating systems,
 to verify and fix filesystem permissions.
 Available disk space can be displayed with <code>df -h</code>. The size of virtual disks and memory can be
 increased in Docker and VM settings if needed. Please refer to the documentation.</p>
+<h3 id="can-i-install-photoprism-in-a-sub-directory-on-a-shared-domain">Can I install PhotoPrism in a sub-directory on a shared domain?<a class="headerlink" href="#can-i-install-photoprism-in-a-sub-directory-on-a-shared-domain" title="Permanent link">&para;</a></h3>
+<p>This is possible with our latest release if you run it behind a proxy.
+Note that for a Progressive Web App (PWA) to work as designed, the service worker should
+be located in the root directory. Also keep in mind sharing a domain with
+other apps may negatively impact the performance and
+<a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">security</a>
+of all apps installed. The length of share links increases as well.</p>
+<h3 id="i-could-not-find-a-documentation-of-config-parameters">I could not find a documentation of config parameters?<a class="headerlink" href="#i-could-not-find-a-documentation-of-config-parameters" title="Permanent link">&para;</a></h3>
+<p>We maintain a complete list of <a href="../config-options/">config options</a> in <em>Getting Started</em>.
+When you run <code>photoprism help</code> in a <a href="../docker-compose/#command-line-interface">terminal</a>, 
+all commands and parameters available in your currently installed <a href="https://docs.photoprism.org/release-notes/">version</a> 
+are listed:</p>
+<div class="highlight"><pre><span></span><code>docker-compose exec photoprism photoprism help
+</code></pre></div>
+<p>Our <a href="../docker-compose/">Docker Compose</a> <a href="https://dl.photoprism.org/docker/">examples</a> are continuously 
+updated and inline documentation has been added to simplify installation.</p>
+<h3 id="what-exactly-does-the-read-only-mode">What exactly does the read-only mode?<a class="headerlink" href="#what-exactly-does-the-read-only-mode" title="Permanent link">&para;</a></h3>
+<p>When you enable <em>read-only mode</em>, all features that require write permission to the <em>originals</em> folder
+are disabled, in particular import, upload, and delete. Set <code>PHOTOPRISM_READONLY</code> to <code>"true"</code>
+in <code>docker-compose.yml</code> for this. You can mount a folder with the <code>:ro</code> flag to make Docker block
+write operations as well.</p>
 <h3 id="how-can-i-uninstall-photoprism">How can I uninstall PhotoPrism?<a class="headerlink" href="#how-can-i-uninstall-photoprism" title="Permanent link">&para;</a></h3>
 <p>This depends on how you installed it. If you're running PhotoPrism with Docker Compose, 
 this command will stop and remove the Docker container:</p>
