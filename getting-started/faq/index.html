@@ -3105,8 +3105,9 @@ in <code>docker-compose.yml</code> for this. You can mount a folder with the <co
 write operations as well.</p>
 <h3 id="i-could-not-find-a-documentation-of-config-parameters">I could not find a documentation of config parameters?<a class="headerlink" href="#i-could-not-find-a-documentation-of-config-parameters" title="Permanent link">&para;</a></h3>
 <p>We maintain a complete list of <a href="../config-options/">config options</a> in <em>Getting Started</em>.
-Running <code>photoprism help</code> in a terminal lists all commands and <a href="../config-options/">config options</a> 
-available your currently installed version:</p>
+When you run <code>photoprism help</code> in a <a href="../docker-compose/#command-line-interface">terminal</a>, 
+all commands and parameters available in your currently installed <a href="https://docs.photoprism.org/release-notes/">version</a> 
+are listed:</p>
 <div class="highlight"><pre><span></span><code>docker-compose exec photoprism photoprism help
 </code></pre></div>
 <p>Our <a href="../docker-compose/">Docker Compose</a> <a href="https://dl.photoprism.org/docker/">examples</a> are continuously 
@@ -3121,8 +3122,8 @@ operations have to wait. In the worst case, this can lead to timeout errors.
 Its main advantage is that you don't need to run a separate database server. 
 This can be very useful for testing and also works great if you only have a few 
 thousand files to index.</p>
-<p>MariaDB lacks some features that MySQL Enterprise Edition offers. On the other hand,
-MariaDB has many optimizations. It is also completely open-source.</p>
+<p>MariaDB lacks some features that <a href="https://www.mysql.com/products/enterprise/">MySQL Enterprise Edition</a> offers. 
+On the other hand, MariaDB has many optimizations. It is also completely open-source.</p>
 <h3 id="can-i-install-photoprism-in-a-sub-directory-on-a-shared-domain">Can I install PhotoPrism in a sub-directory on a shared domain?<a class="headerlink" href="#can-i-install-photoprism-in-a-sub-directory-on-a-shared-domain" title="Permanent link">&para;</a></h3>
 <p>This is possible with our latest release if you run it behind a proxy.
 Note that for a Progressive Web App (PWA) to work as designed, the service worker should 
