@@ -13,14 +13,14 @@
         <meta name="author" content="PhotoPrism.org">
       
       
-        <link rel="canonical" href="https://docs.photoprism.org/getting-started/advanced/freebsd/">
+        <link rel="canonical" href="https://docs.photoprism.org/getting-started/nas/synology/">
       
       <link rel="icon" href="../../../img/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
-        <title>FreeBSD - PhotoPrism</title>
+        <title>Synology NAS - PhotoPrism</title>
       
     
     
@@ -59,16 +59,16 @@
     
   
   <meta property="og:type" content="website">
-  <meta property="og:title" content="PhotoPrism - FreeBSD">
+  <meta property="og:title" content="PhotoPrism - Synology NAS">
   <meta property="og:description" content="User Guide">
-  <meta property="og:url" content="https://docs.photoprism.org/getting-started/advanced/freebsd/">
-  <meta property="og:image" content="https://i.photoprism.app/docs?title=FreeBSD&description=User%20Guide">
+  <meta property="og:url" content="https://docs.photoprism.org/getting-started/nas/synology/">
+  <meta property="og:image" content="https://i.photoprism.app/docs?title=Synology%20NAS&description=User%20Guide">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@photoprism_app">
   <meta name="twitter:creator" content="@photoprism_app">
-  <meta name="twitter:title" content="PhotoPrism - FreeBSD">
+  <meta name="twitter:title" content="PhotoPrism - Synology NAS">
   <meta name="twitter:description" content="User Guide">
-  <meta name="twitter:image" content="https://i.photoprism.app/docs?title=FreeBSD&description=User%20Guide">
+  <meta name="twitter:image" content="https://i.photoprism.app/docs?title=Synology%20NAS&description=User%20Guide">
   <link rel="shortcut icon" sizes="512x512" type="image/png" href="/img/favicon-512.png">
   <link rel="shortcut icon" sizes="256x256" type="image/png" href="/img/favicon-256.png">
   <link rel="shortcut icon" sizes="196x196" type="image/png" href="/img/favicon-196.png">
@@ -101,7 +101,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#running-photoprism-on-freebsd" class="md-skip">
+        <a href="#setup-using-synology-nas-and-portainer" class="md-skip">
           Skip to content
         </a>
       
@@ -144,7 +144,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              FreeBSD
+              Synology NAS
             
           </span>
         </div>
@@ -404,20 +404,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../raspberry-pi/" class="md-nav__link">
-        Raspberry Pi
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../docker/" class="md-nav__link">
         Pure Docker
       </a>
@@ -432,9 +418,196 @@
   
   
     <li class="md-nav__item">
-      <a href="../../digitalocean/" class="md-nav__link">
-        DigitalOcean App
+      <a href="../../raspberry-pi/" class="md-nav__link">
+        Raspberry Pi
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../freebsd/" class="md-nav__link">
+        FreeBSD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_7" type="checkbox" id="__nav_1_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_7">
+          Hosted
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Hosted" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_7">
+          <span class="md-nav__icon md-icon"></span>
+          Hosted
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hosted/digitalocean/" class="md-nav__link">
+        DigitalOcean
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_8" type="checkbox" id="__nav_1_8" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_8">
+          NAS Devices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="NAS Devices" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_8">
+          <span class="md-nav__icon md-icon"></span>
+          NAS Devices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Synology NAS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Synology NAS
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-install-portainer-in-your-synology-nas-using-task-manager" class="md-nav__link">
+    Step 1: install Portainer in your Synology NAS using Task Manager
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-configure-portainer-to-use-your-synologys-docker-endpoint" class="md-nav__link">
+    Step 2: configure Portainer to use your Synology's docker endpoint
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-install-photoprism-in-your-synology-nas-using-portainer-accessible-over-http-direct-ip" class="md-nav__link">
+    Step 3: install Photoprism in your Synology NAS using Portainer, accessible over http / direct IP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-configure-a-reverse-proxy-in-your-synology-nas-to-access-photoprism-over-https-custom-domain-name" class="md-nav__link">
+    Step 4: configure a reverse proxy in your Synology NAS to access PhotoPrism over https / custom domain name
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unraid/" class="md-nav__link">
+        Unraid
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -491,65 +664,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_10" type="checkbox" id="__nav_1_10" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_12" type="checkbox" id="__nav_1_12" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_1_10">
-          Portainer
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Portainer" data-md-level="2">
-        <label class="md-nav__title" for="__nav_1_10">
-          <span class="md-nav__icon md-icon"></span>
-          Portainer
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../portainer/synology/" class="md-nav__link">
-        Synology
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_11" type="checkbox" id="__nav_1_11" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_1_11">
+        <label class="md-nav__link" for="__nav_1_12">
           Reverse Proxies
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Reverse Proxies" data-md-level="2">
-        <label class="md-nav__title" for="__nav_1_11">
+        <label class="md-nav__title" for="__nav_1_12">
           <span class="md-nav__icon md-icon"></span>
           Reverse Proxies
         </label>
@@ -650,25 +776,23 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_12" type="checkbox" id="__nav_1_12" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_13" type="checkbox" id="__nav_1_13" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_1_12">
+        <label class="md-nav__link" for="__nav_1_13">
           Advanced
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Advanced" data-md-level="2">
-        <label class="md-nav__title" for="__nav_1_12">
+        <label class="md-nav__title" for="__nav_1_13">
           <span class="md-nav__icon md-icon"></span>
           Advanced
         </label>
@@ -680,7 +804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../transcoding/" class="md-nav__link">
+      <a href="../../advanced/transcoding/" class="md-nav__link">
         Transcoding
       </a>
     </li>
@@ -694,7 +818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../kubernetes/" class="md-nav__link">
+      <a href="../../advanced/kubernetes/" class="md-nav__link">
         Kubernetes
       </a>
     </li>
@@ -706,33 +830,9 @@
               
   
   
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        FreeBSD
-      </a>
-      
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
   
     <li class="md-nav__item">
-      <a href="../backups/" class="md-nav__link">
+      <a href="../../advanced/backups/" class="md-nav__link">
         Backups
       </a>
     </li>
@@ -746,7 +846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../databases/" class="md-nav__link">
+      <a href="../../advanced/databases/" class="md-nav__link">
         Databases
       </a>
     </li>
@@ -760,7 +860,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../caching/" class="md-nav__link">
+      <a href="../../advanced/caching/" class="md-nav__link">
         Caching
       </a>
     </li>
@@ -774,7 +874,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nginx-proxy-setup/" class="md-nav__link">
+      <a href="../../advanced/nginx-proxy-setup/" class="md-nav__link">
         NGINX
       </a>
     </li>
@@ -788,7 +888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../scalability/" class="md-nav__link">
+      <a href="../../advanced/scalability/" class="md-nav__link">
         Scalability
       </a>
     </li>
@@ -2654,6 +2754,42 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-install-portainer-in-your-synology-nas-using-task-manager" class="md-nav__link">
+    Step 1: install Portainer in your Synology NAS using Task Manager
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-configure-portainer-to-use-your-synologys-docker-endpoint" class="md-nav__link">
+    Step 2: configure Portainer to use your Synology's docker endpoint
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-install-photoprism-in-your-synology-nas-using-portainer-accessible-over-http-direct-ip" class="md-nav__link">
+    Step 3: install Photoprism in your Synology NAS using Portainer, accessible over http / direct IP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-configure-a-reverse-proxy-in-your-synology-nas-to-access-photoprism-over-https-custom-domain-name" class="md-nav__link">
+    Step 4: configure a reverse proxy in your Synology NAS to access PhotoPrism over https / custom domain name
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2664,36 +2800,80 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/photoprism/photoprism-docs/tree/master/docs/getting-started/advanced/freebsd.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/photoprism/photoprism-docs/tree/master/docs/getting-started/nas/synology.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="running-photoprism-on-freebsd">Running PhotoPrism On FreeBSD<a class="headerlink" href="#running-photoprism-on-freebsd" title="Permanent link">&para;</a></h1>
-<p><em>Note: This is contributed content. Click the edit link to perform changes and send a pull request.</em></p>
-<p>For FreeBSD / FreeNAS users, an unofficial <a href="https://github.com/huo-ju/photoprism-freebsd-port">PhotoPrism port</a> 
-is available.</p>
-<p>The port will compile and install libtensorflow 1.15.2 and build <code>photoprism</code> from source on FreeBSD.</p>
-<p><strong>1. Clone or download the port:</strong></p>
-<div class="highlight"><pre><span></span><code>git clone https://github.com/huo-ju/photoprism-freebsd-port
-</code></pre></div>
-<p><strong>2. Build TensorFlow and PhotoPrism from source, then install:</strong></p>
-<div class="highlight"><pre><span></span><code>cd photoprism-freebsd-port
-make config
-make &amp;&amp; make install
-</code></pre></div>
-<p>When running the make config command, a CPU feature options dialog will be presented, and the default option is NONE.</p>
-<p><strong>3. Add entries to rc.conf:</strong></p>
-<div class="highlight"><pre><span></span><code>photoprism_enable=&quot;YES&quot;
-photoprism_assetspath=&quot;/var/photoprism/assets&quot;
-photoprism_storagepath=&quot;/var/photoprism/storage&quot;
-</code></pre></div>
-<p>You can add more command line parameters into photoprism_flags="" in the rc.conf</p>
-<p><code>photoprism config</code> shows all config parameters. </p>
-<p><strong>4. Start the service:</strong></p>
-<div class="highlight"><pre><span></span><code>service photoprism start
-</code></pre></div>
-<p>Done!</p>
+                <h1 id="setup-using-synology-nas-and-portainer">Setup Using Synology NAS and Portainer<a class="headerlink" href="#setup-using-synology-nas-and-portainer" title="Permanent link">&para;</a></h1>
+<p><em>Note: This is contributed content and work in progress. Click the edit link to perform changes and send a pull request.</em></p>
+<p>This guide will help you install PhotoPrism in your Synology NAS using <a href="https://www.portainer.io/">Portainer</a>, an open-source container manager system. The guide will cover the following steps:</p>
+<ul>
+<li>install Portainer in your Synology NAS using Task Manager;</li>
+<li>configure Portainer to use your Synology's docker endpoint;</li>
+<li>install PhotoPrism in your Synology NAS using Portainer, accessible over http / direct IP;</li>
+<li>(TO-DO) configure a reverse proxy in your Synology NAS to access Photoprism over https / custom domain name.</li>
+</ul>
+<h3 id="step-1-install-portainer-in-your-synology-nas-using-task-manager">Step 1: install Portainer in your Synology NAS using Task Manager<a class="headerlink" href="#step-1-install-portainer-in-your-synology-nas-using-task-manager" title="Permanent link">&para;</a></h3>
+<p>Synology's official docker app is quite limited in terms of functionality and that is the reason why we will install Portainer first. It will make managing docker containers inside Synology much more easier and functional while sharing the same local docker endpoint (i.e. the same docker images / containers / volumes / etc. will be manageable in both Synology's app and Portainer). We could install it using the terminal / SSH connection to the NAS but in this way everything can be done using Synology's Diskstation Manager UI.</p>
+<p>To install Portainer:</p>
+<ol>
+<li>install Synology's Docker app from the official package center;</li>
+<li>open Synology's File Station app and browse to the newly created <em>docker</em> shared folder;</li>
+<li>create a folder named <em>portainer</em> inside <em>docker</em>, which will persist relevant Portainer's data in our local filesystem.</li>
+<li>
+<p>open Synology's Control Panel &gt; Task Scheduler and create a new Scheduled Task &gt; User-defined script; you'll then need to fill in some details in the <em>General</em>, <em>Schedule</em> and <em>Task Settings</em> sections.</p>
+<p>4.1. in <em>General</em> fill in:</p>
+<p>4.1.1. Task: use a meaningful name, for e.g. <em>Install Portainer</em>;</p>
+<p>4.1.2. User: keep this as <em>root</em>.</p>
+<p>4.2. in <em>Schedule</em> fill in:</p>
+<p>4.2.1. Date: set the task to run on a specific date (for eg. today) and choose <em>Do not repeat</em>. This task will be used just once to install Portainer, we don't want to run it afterwards;</p>
+<p>4.2.2. Time: leave the default settings, they have no relevance;</p>
+<p>4.3. in <em>Task Settings</em> fill in:</p>
+<p>4.3.1. Run command: copy/paste the user defined script below. Check if the ports are available on your NAS and that the path to the volume is correct (it should point to the folder created in step 3 above):
+  <div class="highlight"><pre><span></span><code>docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /volume1/docker/portainer:/data portainer/portainer-ce
+</code></pre></div></p>
+</li>
+<li>
+<p>click <em>OK</em>; then, on the list of scheduled tasks, select the newly created task and hit <em>Run</em>; follow the prompts to install Portainer; in the end you can delete the task or keep it – just uncheck the <em>enabled</em> checkbox to disable the task.</p>
+</li>
+<li>
+<p>Portainer should now be acessible in your local network in http://[YOUR-LOCAL-IP]:9000/.</p>
+</li>
+</ol>
+<h3 id="step-2-configure-portainer-to-use-your-synologys-docker-endpoint">Step 2: configure Portainer to use your Synology's docker endpoint<a class="headerlink" href="#step-2-configure-portainer-to-use-your-synologys-docker-endpoint" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Open Portainer by visiting http://[YOUR-LOCAL-IP]:9000/;</li>
+<li>Choose and confirm a strong password; you will manage Portainer using this password and the <em>admin</em> username;</li>
+<li>Select <em>Docker - Manage the local Docker environment</em> to link Portainer to your Synology's local docker endpoint and hit <em>Connect</em>; Portainer's admin page should open;</li>
+<li>Click <em>Endpoint</em> in the left menu, then <em>local</em> and under <em>Public IP</em> place your local NAS IP (it should be the same [YOUR-LOCAL-IP] of step 6.</li>
+</ol>
+<h3 id="step-3-install-photoprism-in-your-synology-nas-using-portainer-accessible-over-http-direct-ip">Step 3: install Photoprism in your Synology NAS using Portainer, accessible over http / direct IP<a class="headerlink" href="#step-3-install-photoprism-in-your-synology-nas-using-portainer-accessible-over-http-direct-ip" title="Permanent link">&para;</a></h3>
+<p>With Portainer installed we can use a docker-compose file to deploy a stack composed by Photoprism and MariaDB to quickly get Photoprism running in our NAS. We can use <a href="https://dl.photoprism.org/docker/docker-compose.yml">Photoprism's default docker-compose yml file</a>.</p>
+<ol>
+<li>open Synology's File Station app and browse to the <em>docker</em> shared folder;</li>
+<li>create a folder named <em>photoprism</em> inside <em>docker</em>, which will persist relevant Photoprism's data in our local filesystem;</li>
+<li>inside <em>photoprism</em> folder, create three more folders: <em>storage</em>, <em>originals</em> and <em>database</em>.</li>
+<li>Open Portainer by visiting http://[YOUR-LOCAL-IP]:9000/;</li>
+<li>Click <em>Stacks</em> in the left menu, then <em>Add stack</em>, give it a meaningful name (for eg. Photoprism) and in the Web Editor place the content of <a href="https://dl.photoprism.org/docker/docker-compose.yml">Photoprism's default docker-compose yml file</a>.</li>
+</ol>
+<p><strong>BE SURE TO USE YOUR OWN PHOTOPRISM_ADMIN_PASSWORD, PHOTOPRISM_DATABASE_PASSWORD, MYSQL_ROOT_PASSWORD, AND MYSQL_PASSWORD BY CHANGING THE VALUES ACCORDINGLY, AND CHECK THE LOCAL VOLUMES PATHS TO MATCH THOSE DEFINED IN STEP 13</strong>.</p>
+<ol>
+<li>Click <em>Deploy the stack</em>. Give it a few minutes and PhotoPrism should be accessible in http://[YOUR-LOCAL-IP]:[LOCAL-PORT]/.</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Synology automatically creates thumbnail files inside a special <code>@eaDir</code> folder when uploading 
+media files such as images.
+PhotoPrism now ignores folders starting with <code>@</code> so that you don't need to manually exclude
+them in a <code>.ppignore</code> file anymore.</p>
+</div>
+<h3 id="step-4-configure-a-reverse-proxy-in-your-synology-nas-to-access-photoprism-over-https-custom-domain-name">Step 4: configure a reverse proxy in your Synology NAS to access PhotoPrism over https / custom domain name<a class="headerlink" href="#step-4-configure-a-reverse-proxy-in-your-synology-nas-to-access-photoprism-over-https-custom-domain-name" title="Permanent link">&para;</a></h3>
+<p>Synology allows you to configure a nginx reverse proxy to serve your applications over HTTPS. Configurations can be made in Diskstation manager <em>Control Panel</em>, <em>Application Portal</em>, <em>Reverse proxy</em>.:
+Click create. [Description] give it a meaningful name (for eg. Photoprism) [Protocol]=HTTPS [Hostname]=[YOUR-HOSTNAME] [Port]=[YOUR-PORT] (for eg. 2343) check Enable HSTS and HTTP/2 . under Destination [Protocol]=HTTP [Hostname]=[YOUR-LOCAL-IP][PORT]=[YOUR-PORT] (default is 2342)
+Last step under <em>Custom Header</em>.:
+Click create [Websocket] and hit OK (this step makes that your browser receive photo counts, log messages, or metadata updates).</p>
+<p><strong>IMPORTANT: make sure that you have forwarded the selected port (for eg. 2343) in your router:</strong></p>
                 
               
               
@@ -2713,7 +2893,7 @@ photoprism_storagepath=&quot;/var/photoprism/storage&quot;
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../kubernetes/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Kubernetes" rel="prev">
+        <a href="../../hosted/digitalocean/" class="md-footer__link md-footer__link--prev" aria-label="Previous: DigitalOcean" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -2722,20 +2902,20 @@ photoprism_storagepath=&quot;/var/photoprism/storage&quot;
               <span class="md-footer__direction">
                 Previous
               </span>
-              Kubernetes
+              DigitalOcean
             </div>
           </div>
         </a>
       
       
         
-        <a href="../backups/" class="md-footer__link md-footer__link--next" aria-label="Next: Backups" rel="next">
+        <a href="../unraid/" class="md-footer__link md-footer__link--next" aria-label="Next: Unraid" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Backups
+              Unraid
             </div>
           </div>
           <div class="md-footer__button md-icon">

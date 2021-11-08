@@ -13,14 +13,14 @@
         <meta name="author" content="PhotoPrism.org">
       
       
-        <link rel="canonical" href="https://docs.photoprism.org/getting-started/digitalocean/">
+        <link rel="canonical" href="https://docs.photoprism.org/getting-started/freebsd/">
       
       <link rel="icon" href="../../img/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
-        <title>DigitalOcean App - PhotoPrism</title>
+        <title>FreeBSD - PhotoPrism</title>
       
     
     
@@ -59,16 +59,16 @@
     
   
   <meta property="og:type" content="website">
-  <meta property="og:title" content="PhotoPrism - DigitalOcean App">
+  <meta property="og:title" content="PhotoPrism - FreeBSD">
   <meta property="og:description" content="User Guide">
-  <meta property="og:url" content="https://docs.photoprism.org/getting-started/digitalocean/">
-  <meta property="og:image" content="https://i.photoprism.app/docs?title=DigitalOcean%20App&description=User%20Guide">
+  <meta property="og:url" content="https://docs.photoprism.org/getting-started/freebsd/">
+  <meta property="og:image" content="https://i.photoprism.app/docs?title=FreeBSD&description=User%20Guide">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@photoprism_app">
   <meta name="twitter:creator" content="@photoprism_app">
-  <meta name="twitter:title" content="PhotoPrism - DigitalOcean App">
+  <meta name="twitter:title" content="PhotoPrism - FreeBSD">
   <meta name="twitter:description" content="User Guide">
-  <meta name="twitter:image" content="https://i.photoprism.app/docs?title=DigitalOcean%20App&description=User%20Guide">
+  <meta name="twitter:image" content="https://i.photoprism.app/docs?title=FreeBSD&description=User%20Guide">
   <link rel="shortcut icon" sizes="512x512" type="image/png" href="/img/favicon-512.png">
   <link rel="shortcut icon" sizes="256x256" type="image/png" href="/img/favicon-256.png">
   <link rel="shortcut icon" sizes="196x196" type="image/png" href="/img/favicon-196.png">
@@ -101,7 +101,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#using-our-digitalocean-1-click-app" class="md-skip">
+        <a href="#running-photoprism-on-freebsd" class="md-skip">
           Skip to content
         </a>
       
@@ -144,7 +144,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              DigitalOcean App
+              FreeBSD
             
           </span>
         </div>
@@ -404,8 +404,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../raspberry-pi/" class="md-nav__link">
-        Raspberry Pi
+      <a href="../docker/" class="md-nav__link">
+        Pure Docker
       </a>
     </li>
   
@@ -418,8 +418,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/" class="md-nav__link">
-        Pure Docker
+      <a href="../raspberry-pi/" class="md-nav__link">
+        Raspberry Pi
       </a>
     </li>
   
@@ -441,117 +441,118 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          DigitalOcean App
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
-        DigitalOcean App
+        FreeBSD
       </a>
       
-        
+    </li>
+  
 
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+            
+          
+            
+              
   
   
   
     
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    <li class="md-nav__item md-nav__item--nested">
       
-        <li class="md-nav__item">
-  <a href="#install-photoprism" class="md-nav__link">
-    Install PhotoPrism
-  </a>
-  
-    <nav class="md-nav" aria-label="Install PhotoPrism">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configure-your-droplet" class="md-nav__link">
-    Configure Your Droplet
-  </a>
-  
-    <nav class="md-nav" aria-label="Configure Your Droplet">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#choose-an-image" class="md-nav__link">
-    Choose an image
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#choose-a-plan" class="md-nav__link">
-    Choose a plan
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#choose-a-datacenter-region" class="md-nav__link">
-    Choose a datacenter region
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#choose-an-authentication-mode" class="md-nav__link">
-    Choose an authentication mode
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#finalize-your-droplet" class="md-nav__link">
-    Finalize your droplet
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
-        <li class="md-nav__item">
-  <a href="#admin-password" class="md-nav__link">
-    Admin Password
-  </a>
-  
-</li>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_7" type="checkbox" id="__nav_1_7" >
       
-        <li class="md-nav__item">
-  <a href="#open-photoprism" class="md-nav__link">
-    Open PhotoPrism
-  </a>
-  
-</li>
       
-        <li class="md-nav__item">
-  <a href="#adding-files" class="md-nav__link">
-    Adding Files
-  </a>
-  
-</li>
       
-    </ul>
-  
-</nav>
       
+        <label class="md-nav__link" for="__nav_1_7">
+          Hosted
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Hosted" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_7">
+          <span class="md-nav__icon md-icon"></span>
+          Hosted
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hosted/digitalocean/" class="md-nav__link">
+        DigitalOcean
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_8" type="checkbox" id="__nav_1_8" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_8">
+          NAS Devices
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="NAS Devices" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_8">
+          <span class="md-nav__icon md-icon"></span>
+          NAS Devices
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nas/synology/" class="md-nav__link">
+        Synology NAS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nas/unraid/" class="md-nav__link">
+        Unraid
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -608,65 +609,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_10" type="checkbox" id="__nav_1_10" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_12" type="checkbox" id="__nav_1_12" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_1_10">
-          Portainer
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Portainer" data-md-level="2">
-        <label class="md-nav__title" for="__nav_1_10">
-          <span class="md-nav__icon md-icon"></span>
-          Portainer
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../portainer/synology/" class="md-nav__link">
-        Synology
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_11" type="checkbox" id="__nav_1_11" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_1_11">
+        <label class="md-nav__link" for="__nav_1_12">
           Reverse Proxies
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Reverse Proxies" data-md-level="2">
-        <label class="md-nav__title" for="__nav_1_11">
+        <label class="md-nav__title" for="__nav_1_12">
           <span class="md-nav__icon md-icon"></span>
           Reverse Proxies
         </label>
@@ -772,18 +726,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_12" type="checkbox" id="__nav_1_12" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_13" type="checkbox" id="__nav_1_13" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_1_12">
+        <label class="md-nav__link" for="__nav_1_13">
           Advanced
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Advanced" data-md-level="2">
-        <label class="md-nav__title" for="__nav_1_12">
+        <label class="md-nav__title" for="__nav_1_13">
           <span class="md-nav__icon md-icon"></span>
           Advanced
         </label>
@@ -811,20 +765,6 @@
     <li class="md-nav__item">
       <a href="../advanced/kubernetes/" class="md-nav__link">
         Kubernetes
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../advanced/freebsd/" class="md-nav__link">
-        FreeBSD
       </a>
     </li>
   
@@ -2759,96 +2699,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#install-photoprism" class="md-nav__link">
-    Install PhotoPrism
-  </a>
-  
-    <nav class="md-nav" aria-label="Install PhotoPrism">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configure-your-droplet" class="md-nav__link">
-    Configure Your Droplet
-  </a>
-  
-    <nav class="md-nav" aria-label="Configure Your Droplet">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#choose-an-image" class="md-nav__link">
-    Choose an image
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#choose-a-plan" class="md-nav__link">
-    Choose a plan
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#choose-a-datacenter-region" class="md-nav__link">
-    Choose a datacenter region
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#choose-an-authentication-mode" class="md-nav__link">
-    Choose an authentication mode
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#finalize-your-droplet" class="md-nav__link">
-    Finalize your droplet
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#admin-password" class="md-nav__link">
-    Admin Password
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#open-photoprism" class="md-nav__link">
-    Open PhotoPrism
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#adding-files" class="md-nav__link">
-    Adding Files
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -2859,84 +2709,36 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/photoprism/photoprism-docs/tree/master/docs/getting-started/digitalocean.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/photoprism/photoprism-docs/tree/master/docs/getting-started/freebsd.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="using-our-digitalocean-1-click-app">Using our DigitalOcean 1-Click App<a class="headerlink" href="#using-our-digitalocean-1-click-app" title="Permanent link">&para;</a></h1>
-<p>PhotoPrism can be deployed at DigitalOcean with just a few clicks.
-If you have no DigitalOcean account yet, you may use this sign-up link to receive a $100, 60-day account credit:</p>
-<p style="text-align: center; padding: 10px 4px 5px 4px;">
-<a class="md-button" style="background-color: #0052ff; font-size: 0.66rem; font-weight: normal; color: white" href="https://m.do.co/c/f9725a28bb6b">Sign up at DigitalOcean</a>
-</p>
-
-<h2 id="install-photoprism">Install PhotoPrism<a class="headerlink" href="#install-photoprism" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://m.do.co/c/f9725a28bb6b">Sign Up</a> or <a href="https://cloud.digitalocean.com/login">Log In</a> at DigitalOcean</li>
-<li>Open the <a href="https://marketplace.digitalocean.com/apps/photoprism">PhotoPrism listing</a> in the marketplace</li>
-<li>Click <em>Create PhotoPrism Droplet</em></li>
-</ul>
-<p><img alt="Screenshot" src="../img/create-photoprism-droplet.png" /></p>
-<h3 id="configure-your-droplet">Configure Your Droplet<a class="headerlink" href="#configure-your-droplet" title="Permanent link">&para;</a></h3>
-<h4 id="choose-an-image">Choose an image<a class="headerlink" href="#choose-an-image" title="Permanent link">&para;</a></h4>
-<p>The PhotoPrism image will be pre-selected</p>
-<p><img alt="Screenshot" src="../img/1-do-setup.png" /></p>
-<h4 id="choose-a-plan">Choose a plan<a class="headerlink" href="#choose-a-plan" title="Permanent link">&para;</a></h4>
-<p>We recommend hosting PhotoPrism on a server with at least 2 cores and 4 GB of memory. 
-Indexing and searching may be slow on smaller Droplets, depending on how many and what types of files you upload.</p>
-<p><img alt="Screenshot" src="../img/2-do-setup.png" /></p>
-<h4 id="choose-a-datacenter-region">Choose a datacenter region<a class="headerlink" href="#choose-a-datacenter-region" title="Permanent link">&para;</a></h4>
-<p><img alt="Screenshot" src="../img/3-do-setup.png" /></p>
-<p><img alt="Screenshot" src="../img/4-do-setup.png" /></p>
-<h4 id="choose-an-authentication-mode">Choose an authentication mode<a class="headerlink" href="#choose-an-authentication-mode" title="Permanent link">&para;</a></h4>
-<p><img alt="Screenshot" src="../img/5-do-setup.png" /></p>
-<h4 id="finalize-your-droplet">Finalize your droplet<a class="headerlink" href="#finalize-your-droplet" title="Permanent link">&para;</a></h4>
-<p>Finalize your droplet and click <em>Create Droplet</em>
-<img alt="Screenshot" src="../img/6-do-setup-edited.png" /></p>
-<p><img alt="Screenshot" src="../img/7-do-setup.png" /></p>
-<p>Your droplet is now being created.</p>
-<h2 id="admin-password">Admin Password<a class="headerlink" href="#admin-password" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Click <em>More</em></li>
-</ul>
-<p><img alt="Screenshot" src="../img/do-more-options-edited.png" /></p>
-<ul>
-<li>Click <em>Access console</em></li>
-</ul>
-<p><img alt="Screenshot" src="../img/do-access-console-edited.png" /></p>
-<ul>
-<li>Launch the console as root</li>
-</ul>
-<p><img alt="Screenshot" src="../img/do-launch-droplet-console.png" /></p>
-<ul>
-<li>Within the console type <code>cat /root/.initial-password.txt</code> and click enter</li>
-<li>Copy your initial password</li>
-</ul>
-<h2 id="open-photoprism">Open PhotoPrism<a class="headerlink" href="#open-photoprism" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Click <em>Get started</em></li>
-</ul>
-<p><img alt="Screenshot" src="../img/do-get-started-edited.png" /></p>
-<ul>
-<li>Click <em>Quick access</em></li>
-</ul>
-<p><img alt="Screenshot" src="../img/do-quick-access.png" /></p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>In case you have no domain and let's encrypt set up you will see the notice "Your connection is not private". 
-Click <em>Advanced</em> and click <em>Open page</em>.</p>
-</div>
-<ul>
-<li>Use username "admin" and your initial password to sign in</li>
-<li>You may <a href="../../user-guide/settings/account/">change your password</a> using the Web UI</li>
-</ul>
-<h2 id="adding-files">Adding Files<a class="headerlink" href="#adding-files" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Decide whether you want to <a href="../../user-guide/library/">index or import your files</a></li>
-<li><a href="../../user-guide/library/webdav/">Add files to your import or originals folder via WebDAV</a>, or upload via <a href="../../user-guide/library/upload/">Web UI</a></li>
-<li>Set up <a href="../../user-guide/sync/mobile-devices/">syncing automatically</a> from mobile devices</li>
-</ul>
+                <h1 id="running-photoprism-on-freebsd">Running PhotoPrism On FreeBSD<a class="headerlink" href="#running-photoprism-on-freebsd" title="Permanent link">&para;</a></h1>
+<p><em>Note: This is contributed content. Click the edit link to perform changes and send a pull request.</em></p>
+<p>For FreeBSD / FreeNAS users, an unofficial <a href="https://github.com/huo-ju/photoprism-freebsd-port">PhotoPrism port</a> 
+is available.</p>
+<p>The port will compile and install libtensorflow 1.15.2 and build <code>photoprism</code> from source on FreeBSD.</p>
+<p><strong>1. Clone or download the port:</strong></p>
+<div class="highlight"><pre><span></span><code>git clone https://github.com/huo-ju/photoprism-freebsd-port
+</code></pre></div>
+<p><strong>2. Build TensorFlow and PhotoPrism from source, then install:</strong></p>
+<div class="highlight"><pre><span></span><code>cd photoprism-freebsd-port
+make config
+make &amp;&amp; make install
+</code></pre></div>
+<p>When running the make config command, a CPU feature options dialog will be presented, and the default option is NONE.</p>
+<p><strong>3. Add entries to rc.conf:</strong></p>
+<div class="highlight"><pre><span></span><code>photoprism_enable=&quot;YES&quot;
+photoprism_assetspath=&quot;/var/photoprism/assets&quot;
+photoprism_storagepath=&quot;/var/photoprism/storage&quot;
+</code></pre></div>
+<p>You can add more command line parameters into photoprism_flags="" in the rc.conf</p>
+<p><code>photoprism config</code> shows all config parameters. </p>
+<p><strong>4. Start the service:</strong></p>
+<div class="highlight"><pre><span></span><code>service photoprism start
+</code></pre></div>
+<p>Done!</p>
                 
               
               
@@ -2956,7 +2758,7 @@ Click <em>Advanced</em> and click <em>Open page</em>.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../docker/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Pure Docker" rel="prev">
+        <a href="../raspberry-pi/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Raspberry Pi" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -2965,20 +2767,20 @@ Click <em>Advanced</em> and click <em>Open page</em>.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Pure Docker
+              Raspberry Pi
             </div>
           </div>
         </a>
       
       
         
-        <a href="../config-options/" class="md-footer__link md-footer__link--next" aria-label="Next: Config Options" rel="next">
+        <a href="../hosted/digitalocean/" class="md-footer__link md-footer__link--next" aria-label="Next: DigitalOcean" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Config Options
+              DigitalOcean
             </div>
           </div>
           <div class="md-footer__button md-icon">
