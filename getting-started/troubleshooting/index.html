@@ -603,22 +603,83 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#docker-compose" class="md-nav__link">
-    Docker Compose
+  <a href="#check-your-logs" class="md-nav__link">
+    Check Your Logs
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#common-issues" class="md-nav__link">
-    Common Issues
+  <a href="#installing-and-using-docker" class="md-nav__link">
+    Installing and Using Docker
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#kernel-security" class="md-nav__link">
-    Kernel Security
+  <a href="#checklists" class="md-nav__link">
+    Checklists
+  </a>
+  
+    <nav class="md-nav" aria-label="Checklists">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#missing-pictures" class="md-nav__link">
+    Missing Pictures
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fatal-errors" class="md-nav__link">
+    Fatal Errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-swap" class="md-nav__link">
+    Adding Swap
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding Swap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    Linux
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos" class="md-nav__link">
+    macOS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux-kernel-security" class="md-nav__link">
+    Linux Kernel Security
   </a>
   
 </li>
@@ -2766,22 +2827,83 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#docker-compose" class="md-nav__link">
-    Docker Compose
+  <a href="#check-your-logs" class="md-nav__link">
+    Check Your Logs
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#common-issues" class="md-nav__link">
-    Common Issues
+  <a href="#installing-and-using-docker" class="md-nav__link">
+    Installing and Using Docker
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#kernel-security" class="md-nav__link">
-    Kernel Security
+  <a href="#checklists" class="md-nav__link">
+    Checklists
+  </a>
+  
+    <nav class="md-nav" aria-label="Checklists">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#missing-pictures" class="md-nav__link">
+    Missing Pictures
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fatal-errors" class="md-nav__link">
+    Fatal Errors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-swap" class="md-nav__link">
+    Adding Swap
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding Swap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    Linux
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos" class="md-nav__link">
+    macOS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux-kernel-security" class="md-nav__link">
+    Linux Kernel Security
   </a>
   
 </li>
@@ -2818,7 +2940,11 @@
                 
                 
                 <h1 id="troubleshooting-installation-problems">Troubleshooting Installation Problems<a class="headerlink" href="#troubleshooting-installation-problems" title="Permanent link">&para;</a></h1>
-<h3 id="docker-compose">Docker Compose<a class="headerlink" href="#docker-compose" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p>You're welcome to ask for help in our <a href="https://gitter.im/browseyourlife/community">community chat</a>.
+<a href="../../funding/">Sponsors</a> receive direct <a href="https://photoprism.app/contact">technical support</a> via email.</p>
+</div>
+<h3 id="check-your-logs">Check Your Logs<a class="headerlink" href="#check-your-logs" title="Permanent link">&para;</a></h3>
 <p>If you cannot connect to the Web UI even after waiting for a while, run this command to display 
 the last 100 log messages:</p>
 <div class="highlight"><pre><span></span><code>docker-compose logs --tail=100
@@ -2834,41 +2960,89 @@ in the foreground and shows log messages for troubleshooting:</p>
 <div class="highlight"><pre><span></span><code>docker-compose stop
 docker-compose up 
 </code></pre></div>
-<p>If you can't use <code>docker</code> or <code>docker-compose</code> at all, make sure <a href="https://docs.docker.com/config/daemon/#start-the-daemon-manually">Docker</a>
-is running on the <abbr title="A physical computer, cloud server, or virtual machine that runs Docker">host</abbr> and your current user has the permission to use it. 
-Many Linux distributions require you to install <code>docker-compose</code> separately, for example by
-running <code>sudo apt install docker-compose</code> in a terminal or using a graphical software package manager.</p>
-<p>Commands on Linux may have to be prefixed with <code>sudo</code> when not running as root. Note that this will 
-point the <abbr title="\user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux">home directory</abbr> placeholder <code>~</code> to <code>/root</code> in volume mounts.</p>
-<p>To enable <a href="../config-options/">debug mode</a> in your <code>docker-compose.yml</code> file:</p>
+<p>To enable <a href="../config-options/">debug mode</a>, add this to the environment variables of the <code>photoprism</code> 
+service in your <code>docker-compose.yml</code> and restart for changes to take effect:</p>
 <div class="highlight"><pre><span></span><code>PHOTOPRISM_DEBUG: &quot;true&quot;
 </code></pre></div>
-<div class="admonition info">
-<p>You're welcome to ask for help in our <a href="https://gitter.im/browseyourlife/community">community chat</a>.
-<a href="../../funding/">Sponsors</a> receive direct <a href="https://photoprism.app/contact">technical support</a> via email.</p>
-</div>
-<h3 id="common-issues">Common Issues<a class="headerlink" href="#common-issues" title="Permanent link">&para;</a></h3>
+<h3 id="installing-and-using-docker">Installing and Using Docker<a class="headerlink" href="#installing-and-using-docker" title="Permanent link">&para;</a></h3>
+<p>If you can't use the <code>docker</code> and <code>docker-compose</code> commands at all, make sure <a href="https://docs.docker.com/config/daemon/#start-the-daemon-manually">Docker</a>
+is running on the <abbr title="A physical computer, cloud server, or virtual machine that runs Docker">host</abbr> you are connected to and your current user has the permission to use it. The following guides explain how to install Docker:</p>
+<ul>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04">Ubuntu 20.04</a>, <a href="https://www.linode.com/docs/guides/installing-and-using-docker-on-ubuntu-and-debian/">Debian</a>, and <a href="https://docs.docker.com/engine/install/fedora/">Fedora Linux</a></li>
+<li><a href="https://hub.docker.com/editions/community/docker-ce-desktop-windows">Microsoft Windows</a></li>
+<li><a href="https://hub.docker.com/editions/community/docker-ce-desktop-mac">Apple macOS</a></li>
+</ul>
+<p>Many Linux distributions require you to install <code>docker-compose</code> separately, for example by
+running <code>sudo apt install docker-compose</code> in a terminal or using a graphical software package manager.</p>
+<p>Commands on Linux may have to be prefixed with <code>sudo</code> when not running as root. Note that this will
+point the <abbr title="\user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux">home directory</abbr> placeholder <code>~</code> to <code>/root</code> in volume mounts.</p>
+<h3 id="checklists">Checklists<a class="headerlink" href="#checklists" title="Permanent link">&para;</a></h3>
+<h4 id="missing-pictures">Missing Pictures<a class="headerlink" href="#missing-pictures" title="Permanent link">&para;</a></h4>
+<p>If you have indexed your library and some pictures are missing:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Check <em>Library &gt; Errors</em> for errors and warnings</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> They might be in <a href="../../user-guide/organize/review/">Review</a> due to low quality or incomplete metadata</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> They might have been stacked based on their metadata or file names</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> The indexer may have skipped them because they are exact duplicates</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> You have bad filesystem permissions, so they can't be opened by the indexer</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> The indexer may have crashed because you didn't configure 4 GB of swap</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Their file types may be unsupported</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> They may be in <em>Library &gt; Hidden</em> because a JPEG could not be created</li>
+</ul>
+<h4 id="fatal-errors">Fatal Errors<a class="headerlink" href="#fatal-errors" title="Permanent link">&para;</a></h4>
 <p>Fatal errors are often caused by one of the following conditions:</p>
-<ol>
-<li>Your (virtual) server disk is full</li>
-<li>There is disk space left, but the <a href="https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain">inode limit</a> has been reached</li>
-<li>The storage folder is not writable or there are other filesystem permission issues</li>
-<li>You have accidentally mounted the wrong folders</li>
-<li>The server is low on memory</li>
-<li>The database server is not available, incompatible or incorrectly configured</li>
-<li>There are network problems caused by a proxy, firewall or unstable connection</li>
-<li>Kernel security modules such as <a href="https://wiki.ubuntu.com/AppArmor">AppArmor</a> and
-   <a href="https://en.wikipedia.org/wiki/Security-Enhanced_Linux">SELinux</a> are blocking permissions</li>
-</ol>
-<h3 id="kernel-security">Kernel Security<a class="headerlink" href="#kernel-security" title="Permanent link">&para;</a></h3>
-<p>Linux kernel security can be disabled on private servers, especially if you do not have experience
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Your (virtual) server disk is full</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> There is disk space left, but the <a href="https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain">inode limit</a> has been reached</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> The storage folder is not writable or there are other filesystem permission issues</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> You have accidentally mounted the wrong folders</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> The server is low on memory or swap</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> The database server is not available, incompatible or incorrectly configured</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> There are network problems caused by a proxy, firewall or unstable connection</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Kernel security modules such as <a href="https://wiki.ubuntu.com/AppArmor">AppArmor</a> and <a href="https://en.wikipedia.org/wiki/Security-Enhanced_Linux">SELinux</a> are blocking permissions</li>
+</ul>
+<h3 id="adding-swap">Adding Swap<a class="headerlink" href="#adding-swap" title="Permanent link">&para;</a></h3>
+<h4 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h4>
+<p>Open a terminal and run this command to check if your server has swap configured.</p>
+<div class="highlight"><pre><span></span><code>swapon --show
+</code></pre></div>
+<p>Example output:</p>
+<div class="highlight"><pre><span></span><code>NAME      TYPE SIZE USED PRIO
+/swapfile file  64G  88M   -2
+</code></pre></div>
+<p>This means you have 64 GB of swap and don't need to add more. <a href="https://opensource.com/article/18/9/swap-space-linux-systems">Learn how much you need.</a></p>
+<p>Otherwise, run these commands to permanently add 4 GB of swap (or more depending on how much physical memory you have):</p>
+<div class="highlight"><pre><span></span><code>sudo -i
+fallocate -l 4G /swapfile
+chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+echo &#39;/swapfile none swap sw 0 0&#39; | tee -a /etc/fstab
+</code></pre></div>
+<div class="admonition note">
+<p>You can skip <code>sudo -i</code> if you are already logged in as root. </p>
+</div>
+<h4 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h4>
+<p>Windows Pro users should <a href="../img/docker-disable-wsl2.jpg">disable</a> the <em>WSL 2</em> based engine in <em>Docker Settings &gt; General</em>
+so that they can mount drives other than <code>C:</code>. This will enable <em>Hyper-V</em>, which
+<a href="https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements">Microsoft doesn't offer</a>
+to its Windows Home customers. Docker Desktop uses dynamic memory allocation with <em>WSL 2</em>.</p>
+<p>It's important to explicitly <a href="../img/docker-resources-advanced.jpg">increase the Docker memory limit</a> to 4 GB or more 
+when using <em>Hyper-V</em>. The default of 2 GB may reduce indexing performance and cause unexpected restarts. 
+Also make sure to configure at least 4 GB of swap.</p>
+<h4 id="macos">macOS<a class="headerlink" href="#macos" title="Permanent link">&para;</a></h4>
+<p>It's important to <a href="../img/docker-resources-advanced.jpg">increase the Docker memory limit</a> to 4 GB or more,
+as the default of 2 GB may reduce indexing performance and cause unexpected restarts. Also make sure to
+configure at least 4 GB of swap.</p>
+<h3 id="linux-kernel-security">Linux Kernel Security<a class="headerlink" href="#linux-kernel-security" title="Permanent link">&para;</a></h3>
+<p>We recommend disabling kernel security on private servers, especially if you do not have experience
 with the configuration.</p>
 <h3 id="filesystem-permissions">Filesystem Permissions<a class="headerlink" href="#filesystem-permissions" title="Permanent link">&para;</a></h3>
 <p>Use a file manager, or the commands <code>chmod</code> and <code>chown</code> on Unix-like operating systems,
 to verify and fix filesystem permissions.</p>
 <h3 id="disk-space">Disk Space<a class="headerlink" href="#disk-space" title="Permanent link">&para;</a></h3>
-<p>Available disk space can be displayed with <code>df -h</code>. The size of virtual disks and memory can be
-increased in Docker and VM settings if needed. Please refer to the documentation.</p>
+<p>Available disk space can be displayed with <code>df -h</code> on Linux and other Unix-like operating systems. 
+The size of virtual disks and memory can be increased in Docker and VM settings if needed. Please refer to the documentation.</p>
                 
               
               
