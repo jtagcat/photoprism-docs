@@ -46,7 +46,7 @@
     
     
     
-      <link rel="stylesheet" href="../css/photoprism.css">
+      <link rel="stylesheet" href="../css/custom.css">
     
     
       
@@ -2795,6 +2795,7 @@
 <ul>
 <li><a href="https://golang.org/">Go</a>, <a href="https://github.com/gin-gonic/gin">Gin</a> and <a href="https://vuetifyjs.com/en/">Vuetify</a></li>
 <li><a href="https://developers.google.com/">Google</a> <a href="https://www.tensorflow.org/">TensorFlow</a> and <a href="https://material.io/">Material Design</a></li>
+<li><a href="https://www.mkdocs.org/">MkDocs</a> and <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a></li>
 <li><a href="https://raw.githubusercontent.com/photoprism/photoprism/develop/NOTICE">Complete list of 3<sup>rd</sup>-party software packages</a></li>
 </ul>
 <h2 id="infrastructure">Infrastructure<a class="headerlink" href="#infrastructure" title="Permanent link">&para;</a></h2>
@@ -2802,8 +2803,7 @@
 <li><a href="https://www.keycdn.com/">KeyCDN</a> provides CDN services for our site and demo</li>
 <li><a href="https://www.docker.com/">Docker</a> hosts our app images and approved us for their Open Source Program</li>
 <li><a href="https://pages.github.com/">GitHub</a> hosts all code repositories</li>
-<li><a href="https://travis-ci.org/photoprism/photoprism">Travis-CI</a> builds and tests our code multiple times a day</li>
-<li><a href="https://issuehunt.io/repos/119160553">IssueHunt</a> is a new service for funding Open Source development</li>
+<li><a href="https://www.drone.io/">Drone CI</a> builds and tests our app</li>
 <li><a href="https://www.digitalocean.com/">DigitalOcean</a> hosts our documentation and website</li>
 </ul>
 <h2 id="artwork">Artwork<a class="headerlink" href="#artwork" title="Permanent link">&para;</a></h2>
@@ -2828,60 +2828,86 @@
       </main>
       
         
+
+
+<!-- Footer -->
 <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
+
+    <!-- Link to previous and/or next page -->
+    
+    <nav
+            class="md-footer__inner md-grid"
+            aria-label="Footer"
+    >
+
+        <!-- Link to previous page -->
         
-        <a href="../funding/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Funding" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
+        
+        <a
+                href="../funding/"
+                class="md-footer__link md-footer__link--prev"
+                aria-label="Previous: Funding"
+                rel="prev"
+        >
+            <div class="md-footer__button md-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer__title">
+                <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Previous
               </span>
-              Funding
+                    Funding
+                </div>
             </div>
-          </div>
         </a>
-      
-      
         
-        <a href="../license/" class="md-footer__link md-footer__link--next" aria-label="Next: License" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
+
+        <!-- Link to next page -->
+        
+        
+        <a
+                href="../license/"
+                class="md-footer__link md-footer__link--next"
+                aria-label="Next: License"
+                rel="next"
+        >
+            <div class="md-footer__title">
+                <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              License
+                    License
+                </div>
             </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
+            <div class="md-footer__button md-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
         </a>
-      
+        
     </nav>
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-          <div class="md-footer-copyright__highlight">
-            Made with ❤ in Berlin
-          </div>
-        
-        
-          Made with
-          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-            Material for MkDocs
-          </a>
-        
-        
-      </div>
-      
+    
+
+    <!-- Further information -->
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <div class="md-footer-info">
+                PhotoPrism® is a registered trademark of Michael Mayer.
+                Docs are available under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+                License; additional terms may apply.
+                By using this site, you agree to our <a href="https://photoprism.app/terms" target="_blank">terms &amp; conditions</a>.
+            </div>
+            <!-- Copyright and theme information -->
+            <div class="md-footer-copyright">
+                
+                <div class="md-footer-copyright__highlight">
+                    Made with ❤ in Berlin
+                </div>
+                
+            </div>
+
+            <!-- Social links -->
+            
   <div class="md-footer-social">
     
       
@@ -2940,8 +2966,8 @@
     
   </div>
 
+        </div>
     </div>
-  </div>
 </footer>
       
     </div>
