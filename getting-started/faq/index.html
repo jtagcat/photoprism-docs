@@ -3144,16 +3144,24 @@ without Docker (developers only).</p>
   - &quot;~/Friends:/photoprism/originals/Friends&quot;
 </code></pre></div>
 <h3 id="which-file-types-are-supported">Which file types are supported?<a class="headerlink" href="#which-file-types-are-supported" title="Permanent link">&para;</a></h3>
-<p>PhotoPrism's primary image file format is JPEG.
-While indexing, a JPEG sidecar file may automatically be created for RAW, HEIF, TIFF, PNG, BMP, 
-and GIF files. It is required for classification and resampling.</p>
-<p>Support for specific RAW formats depends on the runtime environment and configuration. PhotoPrism may use 
-<a href="https://www.darktable.org/">Darktable</a> and <a href="https://rawtherapee.com/">RawTherapee</a> for RAW to JPEG conversion. 
-On Mac OS, <a href="https://ss64.com/osx/sips.html">Sips</a> can be used as well.</p>
-<p>We support <a href="../../developer-guide/media/videos/">all common video types</a>.
-You should configure PhotoPrism to automatically create JSON sidecar files so that
-video metadata like location and duration can be indexed.</p>
-<p>You're welcome to open an issue if you experience issues with a specific file format.</p>
+<p>The primary image format is JPEG. Support for JPEG XL is planned but not available yet. 
+When indexing, a JPEG sidecar file may be created automatically for RAW, HEIF, TIFF, PNG, BMP, GIF, and video files. 
+It is needed for generating thumbnails, image classification, and facial recognition.</p>
+<p>Due to the patent situation and its complexity, <a href="https://github.com/golang/go/issues?q=is%3Aissue+image%2Ftiff+">TIFF is only partially supported</a> at the moment.</p>
+<p>The following RAW converters can be used to generate JPEGs (included in our Docker image,
+otherwise you may need to install them on your system):</p>
+<ul>
+<li><a href="https://www.darktable.org/">Darktable</a> (<a href="https://www.darktable.org/resources/camera-support/">supported cameras</a>)</li>
+<li><a href="https://rawtherapee.com/">RawTherapee</a> (<a href="https://www.libraw.org/supported-cameras">supported cameras</a>)</li>
+</ul>
+<p>If you're running PhotoPrism directly on a Mac, RAW files will be converted with <a href="https://ss64.com/osx/sips.html">Sips</a> (<a href="https://support.apple.com/en-us/HT211241">supported cameras</a>) by default.
+Our goal is to provide top-notch support for all RAW formats, regardless of camera make and model.
+Please let us know when there are any issues with a particular camera or file format.</p>
+<p>Video formats supported by <a href="https://en.wikipedia.org/wiki/FFmpeg#Supported_codecs_and_formats">FFmpeg</a> can be transcoded to
+<a href="https://en.wikipedia.org/wiki/Advanced_Video_Coding">MPEG-4 AVC</a>. Still images for generating thumbnails can be extracted from 
+most videos as well. </p>
+<p>If you have videos, always enable JSON sidecar files so that video metadata such as date, location, codec, 
+and duration can be indexed and searched.</p>
 <h3 id="why-dont-you-display-animated-gifs-natively">Why don't you display animated GIFs natively?<a class="headerlink" href="#why-dont-you-display-animated-gifs-natively" title="Permanent link">&para;</a></h3>
 <p>PhotoPrism focuses on photographic images and short videos. You may
 <a href="https://unix.stackexchange.com/questions/40638/how-to-do-i-convert-an-animated-gif-to-an-mp4-or-mv4-on-the-command-line">convert your GIF files to  H.264 / MPEG-4 AVC</a> 
