@@ -2902,9 +2902,10 @@ of related files based on their file names. You may disable this in <a href="../
 </ul>
 <p>It is also possible that multiple .jpg files are stacked because they are related to each other.</p>
 </details>
-<details class="question"><summary>Why is the count for <em>Originals</em> higher than the number of files physically existing in my originals directory?</summary><p>During indexing your files, PhotoPrism creates a .jpg Version for all other file types than .jpg (e.g. RAWS, Videos, PNGs etc).
-These files are stored in /storage/sidecar (unless configured otherwise).
-In the UI they are shown in the <em>Originals</em> section and added to its count.</p>
+<details class="question"><summary>Why is the count for <em>Originals</em> higher than the number of files physically existing in my originals directory?</summary><p>When indexing, an additional JPEG sidecar file may be created automatically for RAW, HEIF, TIFF, PNG, BMP, GIF, and video files.
+It is needed for generating thumbnails, image classification, and facial recognition.
+You can find it in <code>/storage/sidecar</code> by default, so your originals folder remains untouched. The file browser 
+in <em>Library &gt; Originals</em> always displays it next to the orignal, idependent of the physical storage location.</p>
 </details>
 <h2 id="metadata">Metadata<a class="headerlink" href="#metadata" title="Permanent link">&para;</a></h2>
 <details class="question"><summary>Why do some of my photos without geolocation information show a random location?</summary><p>PhotoPrism estimates the location of photos without geolocation from photos that have been taken on the same day.
