@@ -1978,30 +1978,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#to-submit-new-code" class="md-nav__link">
+    To submit new code...
+  </a>
+  
+    <nav class="md-nav" aria-label="To submit new code...">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#fork-our-repository" class="md-nav__link">
     Fork our repository
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#make-your-changes" class="md-nav__link">
     Make your changes
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#when-you-are-ready" class="md-nav__link">
     When you are ready...
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#please-be-patient" class="md-nav__link">
-    Please be patient
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2798,30 +2804,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#to-submit-new-code" class="md-nav__link">
+    To submit new code...
+  </a>
+  
+    <nav class="md-nav" aria-label="To submit new code...">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#fork-our-repository" class="md-nav__link">
     Fork our repository
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#make-your-changes" class="md-nav__link">
     Make your changes
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#when-you-are-ready" class="md-nav__link">
     When you are ready...
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#please-be-patient" class="md-nav__link">
-    Please be patient
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2843,10 +2855,20 @@
                 
                 
                 <h1 id="creating-a-pull-request">Creating a Pull Request<a class="headerlink" href="#creating-a-pull-request" title="Permanent link">&para;</a></h1>
-<p>Because we want to create the best possible product for our users, we have a set of <a href="#please-be-patient">guidelines which</a> ensure that all source code contributions are acceptable. 
-They are not intended as a filter or barrier to participation. If you are unfamiliar with open source development on GitHub, <a href="https://gitter.im/browseyourlife/community">we will help you</a>.</p>
-<p>To submit new code, follow these steps:</p>
-<h3 id="fork-our-repository">Fork our repository<a class="headerlink" href="#fork-our-repository" title="Permanent link">&para;</a></h3>
+<p>Because we want to create the best possible product for our users, we have a set of 
+guidelines to ensure that all submissions are acceptable:</p>
+<ul>
+<li>Features must be fully implemented so that they can be released at any time without additional work</li>
+<li>Including automated tests is mandatory to ensure the feature works as expected and to reduce repetitive, manual work</li>
+<li>In case you submit database-related changes, they must be tested and compatible with SQLite, MariaDB, and MySQL</li>
+<li>Front-end changes and additions must be fully responsive to work and look properly on phones, tablets, and desktop computers</li>
+<li>You should have tested your changes on all supported browsers and devices</li>
+<li>If needed, your contribution should include updated documentation in a separate pull request</li>
+</ul>
+<p>They are not intended as a filter or barrier to participation. If you are unfamiliar with
+Open Source development on GitHub, we will <a href="https://gitter.im/browseyourlife/community">help you</a>.</p>
+<h3 id="to-submit-new-code">To submit new code...<a class="headerlink" href="#to-submit-new-code" title="Permanent link">&para;</a></h3>
+<h4 id="fork-our-repository">Fork our repository<a class="headerlink" href="#fork-our-repository" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Click the <a href="https://help.github.com/articles/working-with-forks/">Fork button</a> in the header of our <a href="https://github.com/photoprism/photoprism">main repository</a></li>
 <li>Clone the forked repository on your local computer: <ul>
@@ -2863,7 +2885,7 @@ They are not intended as a filter or barrier to participation. If you are unfami
 </li>
 <li>See also <a href="https://guides.github.com/activities/forking/">https://guides.github.com/activities/forking/</a></li>
 </ul>
-<h3 id="make-your-changes">Make your changes<a class="headerlink" href="#make-your-changes" title="Permanent link">&para;</a></h3>
+<h4 id="make-your-changes">Make your changes<a class="headerlink" href="#make-your-changes" title="Permanent link">&para;</a></h4>
 <ul>
 <li>While you are working on it and your pull request is not merged yet, pull in changes from "upstream" often so that you stay up to date and there is a lower risk for <a href="https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/">merge conflicts</a>:<ul>
 <li><code>git fetch upstream</code></li>
@@ -2883,7 +2905,7 @@ They are not intended as a filter or barrier to participation. If you are unfami
 </ul>
 </li>
 </ul>
-<h3 id="when-you-are-ready">When you are ready...<a class="headerlink" href="#when-you-are-ready" title="Permanent link">&para;</a></h3>
+<h4 id="when-you-are-ready">When you are ready...<a class="headerlink" href="#when-you-are-ready" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Sign the <a href="https://cla-assistant.io/photoprism/photoprism">Contributor License Agreement (CLA)</a>.</li>
 <li>Verify you didn't forget to add / commit files (output should be empty): <ul>
@@ -2898,19 +2920,11 @@ They are not intended as a filter or barrier to participation. If you are unfami
 <li>Wait for our code review and fix remaining issues, if any.</li>
 <li>Write <a href="https://docs.photoprism.org/developer-guide/documentation/">documentation</a> if you are adding new features or changing functionality. It is hosted on <a href="https://docs.photoprism.org/">docs.photoprism.org</a> and automatically updates whenever changes are pushed to the repository.</li>
 </ul>
-<p><em>Note: You can also create a pull request if your changes are not complete / working yet. Simply let us know that it is in progress, so that we don't try to merge it. We can help you with a code review or other feedback, if needed.</em></p>
-<h3 id="please-be-patient">Please be patient<a class="headerlink" href="#please-be-patient" title="Permanent link">&para;</a></h3>
-<p>We have a set of guidelines which ensure that all source code contributions are acceptable:</p>
-<ul>
-<li>The feature must be fully implemented</li>
-<li>Unit and acceptance tests have to be written</li>
-<li>The feature must work with sqlite and mysql</li>
-<li>The UI must be fully responsive</li>
-<li>It needs to be tested on multiple browsers and devices</li>
-<li>Translations need to be created for all languages</li>
-<li>Docs need to be updated</li>
-</ul>
-<p>Reviewing, testing and finally merging pull requests consumes significant resources on our side. Unless it's just a small fix, it may take several months.</p>
+<p>You can also create a pull request if your changes are not yet complete or working. Just let us know 
+it's in progress, so we don't try to merge them. We can help you with a code review or other feedback 
+if needed. Please be patient with us.</p>
+<p><strong>Reviewing, testing and finally merging pull requests requires significant resources on our side.
+If it's not just a small fix, it can take several months.</strong></p>
                 
               
               
