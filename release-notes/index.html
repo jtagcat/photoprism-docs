@@ -3190,9 +3190,11 @@ We recommend updating your existing <code>docker-compose.yml</code> config based
 to <code>photoprism/photoprism:preview</code> in your <a href="https://dl.photoprism.org/docker/"><code>docker-compose.yml</code></a>. 
 Then <a href="../getting-started/updates/">pull the most recent image</a> and restart your instance.</p>
 </div>
-<p>With this update, official support for MySQL will be discontinued as it is not economically feasible 
-to run all tests for MySQL 8 before each release. Since important features have still not been 
-implemented after more than 10 years, it doesn't look like Oracle is actively supporting it either.</p>
+<p><span class="build">Build 211128-7e8974fd</span></p>
+<p>With this update, official support for MySQL is discontinued as it is not feasible to 
+perform a complete test with MySQL 8 before each release. Since important <a href="https://stackoverflow.com/questions/2480148/how-can-i-employ-if-exists-for-creating-or-dropping-an-index-in-mysql">features</a>
+still haven't been implemented after more than 10 years, it doesn't look like Oracle is actively 
+supporting it either.</p>
 <ul>
 <li>CLI: <a href="https://github.com/photoprism/photoprism/commit/7e8974fd20fcbf3ec403541125599deaeb1ee353"><code>photoprism migrate --failed</code> will re-run previously failed migrations</a></li>
 </ul>
