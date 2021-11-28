@@ -3190,12 +3190,18 @@ We recommend updating your existing <code>docker-compose.yml</code> config based
 to <code>photoprism/photoprism:preview</code> in your <a href="https://dl.photoprism.org/docker/"><code>docker-compose.yml</code></a>. 
 Then <a href="../getting-started/updates/">pull the most recent image</a> and restart your instance.</p>
 </div>
+<p>With this update, official support for MySQL will be discontinued as it is not economically feasible 
+to run all tests for MySQL 8 before each release. Since important features have still not been 
+implemented after more than 10 years, it doesn't look like Oracle is actively supporting it either.</p>
+<ul>
+<li>CLI: <a href="https://github.com/photoprism/photoprism/commit/7e8974fd20fcbf3ec403541125599deaeb1ee353"><code>photoprism migrate --failed</code> will re-run previously failed migrations</a></li>
+</ul>
 <h3 id="november-27-2021">November 27, 2021<a class="headerlink" href="#november-27-2021" title="Permanent link">&para;</a></h3>
 <p><span class="build">Build 211127-86c43159</span></p>
-<p>This update brings you many exciting improvements: When possible, location estimates now include a 
-latitude and longitude. Photos load faster when you open them in <em>Places</em>, and the viewer sorts them 
-by distance. Time zone handling has been completely reworked, in particular for UTC. The Docker base 
-image has been upgraded to Ubuntu 21.10, which ships with Darktable 3.6 among other updated dependencies. </p>
+<p>When possible, location estimates now include a latitude and longitude. Photos load faster when you open 
+them in <em>Places</em>, and the viewer sorts them by distance. Time zone handling has been completely reworked, 
+in particular for UTC. The Docker base image has been upgraded to Ubuntu 21.10, which ships with 
+Darktable 3.6 among other updated dependencies. </p>
 <ul>
 <li>UX: Redesigned <a href="https://github.com/photoprism/photoprism/commit/293fa0ca784ae19998cc8ff3459883a137fff4c2">splash screen</a> based on theme colors</li>
 <li>Places: <a href="https://demo.photoprism.org/places">Viewer loads faster and sorts photos by distance instead of date</a></li>
