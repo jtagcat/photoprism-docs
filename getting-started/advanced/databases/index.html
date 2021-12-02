@@ -2857,9 +2857,8 @@
                 
                 
                 <h1 id="advanced-database-setup">Advanced Database Setup<a class="headerlink" href="#advanced-database-setup" title="Permanent link">&para;</a></h1>
-<p>PhotoPrism is compatible with <a href="https://mariadb.org/">MariaDB 10.5.10+</a> (earlier versions 
-see <a href="https://jira.mariadb.org/browse/MDEV-25362">MDEV-25362</a>), <a href="https://www.mysql.com/">MySQL 8</a>, 
-and <a href="https://www.sqlite.org/">SQLite 3</a>.</p>
+<p>PhotoPrism is compatible with <a href="https://www.sqlite.org/">SQLite 3</a> and <a href="https://mariadb.org/">MariaDB 10.5.12+</a>.
+Older databases using the same dialect, such as MySQL 8, may work but are not officially supported.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Our <a href="https://dl.photoprism.org/docker/">docker-compose.yml</a> examples include
@@ -2924,7 +2923,7 @@ example without modifications.</p>
 </ul>
 <p>Attachment 1:</p>
 <div class="highlight"><pre><span></span><code>mariadb:
-    image: mariadb:10.5
+    image: mariadb:10.6
     container_name: mariadb
     restart: unless-stopped
     ports:
@@ -2932,9 +2931,9 @@ example without modifications.</p>
     security_opt:
       - seccomp:unconfined
       - apparmor:unconfined
-    command: mysqld --transaction-isolation=READ-COMMITTED --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --max-connections=512 --innodb-rollback-on-timeout=OFF --innodb-lock-wait-timeout=50
-    volumes: # Don&#39;t remove permanent storage for index database files!
-      - &quot;./database:/var/lib/mysql&quot;
+    command: mysqld --transaction-isolation=READ-COMMITTED --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --max-connections=512 --innodb-rollback-on-timeout=OFF --innodb-lock-wait-timeout=120
+    volumes:
+      - &quot;./database:/var/lib/mysql&quot; # never remove
     environment:
       MYSQL_ROOT_PASSWORD: insecure
       MYSQL_DATABASE: photoprism
