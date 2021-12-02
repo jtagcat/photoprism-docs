@@ -642,9 +642,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#upgrading-mariadb" class="md-nav__link">
-    Upgrading MariaDB
+  <a href="#mariadb" class="md-nav__link">
+    MariaDB
   </a>
+  
+    <nav class="md-nav" aria-label="MariaDB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version-upgrade" class="md-nav__link">
+    Version Upgrade
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lost-root-password" class="md-nav__link">
+    Lost Root Password
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2894,9 +2914,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#upgrading-mariadb" class="md-nav__link">
-    Upgrading MariaDB
+  <a href="#mariadb" class="md-nav__link">
+    MariaDB
   </a>
+  
+    <nav class="md-nav" aria-label="MariaDB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version-upgrade" class="md-nav__link">
+    Version Upgrade
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lost-root-password" class="md-nav__link">
+    Lost Root Password
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3043,7 +3083,8 @@ is running on the <abbr title="A physical computer, cloud server, or virtual mac
 running <code>sudo apt install docker-compose</code> in a terminal or using a graphical software package manager.</p>
 <p>Commands on Linux may have to be prefixed with <code>sudo</code> when not running as root. Note that this will
 point the <abbr title="\user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux">home directory</abbr> placeholder <code>~</code> to <code>/root</code> in volume mounts.</p>
-<h3 id="upgrading-mariadb">Upgrading MariaDB<a class="headerlink" href="#upgrading-mariadb" title="Permanent link">&para;</a></h3>
+<h3 id="mariadb">MariaDB<a class="headerlink" href="#mariadb" title="Permanent link">&para;</a></h3>
+<h4 id="version-upgrade">Version Upgrade<a class="headerlink" href="#version-upgrade" title="Permanent link">&para;</a></h4>
 <p>If the database doesn't start properly after upgrading from an earlier MySQL or MariaDB version, 
 you may need to run this command in a terminal:</p>
 <div class="highlight"><pre><span></span><code>docker-compose exec mariadb mariadb-upgrade -uroot -p
@@ -3052,6 +3093,32 @@ you may need to run this command in a terminal:</p>
 <p>Alternatively, you can downgrade to the previous version, create a database backup using the <code>photoprism backup</code>
 command, start a new database instance based on the latest version, and then restore your index with 
 the <code>photoprism restore</code> command.</p>
+<h4 id="lost-root-password">Lost Root Password<a class="headerlink" href="#lost-root-password" title="Permanent link">&para;</a></h4>
+<p>In case you forgot the MariaDB "root" password and the one specified in your configuration does not work, 
+you can start the server with the <a href="https://mariadb.com/docs/reference/mdb/cli/mariadbd/skip-grant-tables/"><code>--skip-grant-tables</code></a> 
+parameter added to the <code>mysqld</code> command in your <code>docker-compose.yml</code>. This will temporarily give full access
+to all users after a restart:</p>
+<div class="highlight"><pre><span></span><code>services:
+  mariadb:
+    command: mysqld --skip-grant-tables
+</code></pre></div>
+<p>Restart the <code>mariadb</code> service for changes to take effect:</p>
+<div class="highlight"><pre><span></span><code>docker-compose stop mariadb
+docker-compose up -d mariadb
+</code></pre></div>
+<p>Now open a database console:</p>
+<div class="highlight"><pre><span></span><code>docker-compose exec mariadb mysql -uroot
+</code></pre></div>
+<p>Enter the following commands to change the password for "root":</p>
+<div class="highlight"><pre><span></span><code>FLUSH PRIVILEGES;
+ALTER USER &#39;root&#39;@&#39;%&#39; IDENTIFIED BY &#39;new_password&#39;;
+ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;new_password&#39;;
+UPDATE mysql.user SET authentication_string = &#39;&#39; WHERE user = &#39;root&#39;;
+UPDATE mysql.user SET plugin = &#39;&#39; WHERE user = &#39;root&#39;;
+exit
+</code></pre></div>
+<p>When you are done, remove the <code>--skip-grant-tables</code> parameter again to restore the original 
+command and restart the database service as described above.</p>
 <h3 id="checklists">Checklists<a class="headerlink" href="#checklists" title="Permanent link">&para;</a></h3>
 <h4 id="missing-pictures">Missing Pictures<a class="headerlink" href="#missing-pictures" title="Permanent link">&para;</a></h4>
 <p>If you have indexed your library and some pictures are missing:</p>
