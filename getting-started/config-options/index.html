@@ -588,9 +588,111 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Config Options
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Config Options
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#storage-folders" class="md-nav__link">
+    Storage Folders
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#index-workers" class="md-nav__link">
+    Index Workers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-flags" class="md-nav__link">
+    Feature Flags
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-app" class="md-nav__link">
+    Web App
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#site-information" class="md-nav__link">
+    Site Information
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-server" class="md-nav__link">
+    Web Server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-connection" class="md-nav__link">
+    Database Connection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#external-tools" class="md-nav__link">
+    External Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thumbnail-images" class="md-nav__link">
+    Thumbnail Images
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#facial-recognition" class="md-nav__link">
+    Facial Recognition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#daemon-mode" class="md-nav__link">
+    Daemon Mode
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2738,6 +2840,91 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#storage-folders" class="md-nav__link">
+    Storage Folders
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#index-workers" class="md-nav__link">
+    Index Workers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-flags" class="md-nav__link">
+    Feature Flags
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-app" class="md-nav__link">
+    Web App
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#site-information" class="md-nav__link">
+    Site Information
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-server" class="md-nav__link">
+    Web Server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-connection" class="md-nav__link">
+    Database Connection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#external-tools" class="md-nav__link">
+    External Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thumbnail-images" class="md-nav__link">
+    Thumbnail Images
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#facial-recognition" class="md-nav__link">
+    Facial Recognition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#daemon-mode" class="md-nav__link">
+    Daemon Mode
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2779,16 +2966,6 @@ page always requires a restart to take effect. Open a terminal, run <code>docker
 <td align="left">trace, debug, info, warning, error, fatal, or panic (default: "info")</td>
 </tr>
 <tr>
-<td align="left"><code>PHOTOPRISM_LOG_FILENAME</code></td>
-<td align="left">--log-filename FILENAME</td>
-<td align="left">optional server log FILENAME</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_PID_FILENAME</code></td>
-<td align="left">--pid-filename FILENAME</td>
-<td align="left">process id FILENAME when running in daemon mode</td>
-</tr>
-<tr>
 <td align="left"><code>PHOTOPRISM_PUBLIC</code></td>
 <td align="left">--public, -p</td>
 <td align="left">disable password authentication</td>
@@ -2818,6 +2995,18 @@ page always requires a restart to take effect. Open a terminal, run <code>docker
 <td align="left">--config-path PATH</td>
 <td align="left">config PATH to be searched for additional configuration and settings files</td>
 </tr>
+</tbody>
+</table>
+<h3 id="storage-folders">Storage Folders<a class="headerlink" href="#storage-folders" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="left">Variable</th>
+<th align="left">Parameter</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td align="left"><code>PHOTOPRISM_ORIGINALS_PATH</code></td>
 <td align="left">--originals-path PATH</td>
@@ -2863,6 +3052,18 @@ page always requires a restart to take effect. Open a terminal, run <code>docker
 <td align="left">--assets-path PATH</td>
 <td align="left">assets PATH containing static resources like icons, models, and translations</td>
 </tr>
+</tbody>
+</table>
+<h3 id="index-workers">Index Workers<a class="headerlink" href="#index-workers" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="left">Variable</th>
+<th align="left">Parameter</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td align="left"><code>PHOTOPRISM_WORKERS</code></td>
 <td align="left">--workers NUMBER, -w NUMBER</td>
@@ -2883,6 +3084,18 @@ page always requires a restart to take effect. Open a terminal, run <code>docker
 <td align="left">--auto-import SECONDS</td>
 <td align="left">WebDAV auto import safety delay in SECONDS, disable with -1 (default: 180)</td>
 </tr>
+</tbody>
+</table>
+<h3 id="feature-flags">Feature Flags<a class="headerlink" href="#feature-flags" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="left">Variable</th>
+<th align="left">Parameter</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td align="left"><code>PHOTOPRISM_DISABLE_WEBDAV</code></td>
 <td align="left">--disable-webdav</td>
@@ -2958,6 +3171,18 @@ page always requires a restart to take effect. Open a terminal, run <code>docker
 <td align="left">--upload-nsfw</td>
 <td align="left">allow uploads that may be offensive</td>
 </tr>
+</tbody>
+</table>
+<h3 id="web-app">Web App<a class="headerlink" href="#web-app" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="left">Variable</th>
+<th align="left">Parameter</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td align="left"><code>PHOTOPRISM_APP_ICON</code></td>
 <td align="left">--app-icon ICON</td>
@@ -2973,6 +3198,18 @@ page always requires a restart to take effect. Open a terminal, run <code>docker
 <td align="left">--app-mode MODE</td>
 <td align="left">application MODE (fullscreen, standalone, minimal-ui, browser) (default: "standalone")</td>
 </tr>
+</tbody>
+</table>
+<h3 id="site-information">Site Information<a class="headerlink" href="#site-information" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="left">Variable</th>
+<th align="left">Parameter</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td align="left"><code>PHOTOPRISM_CDN_URL</code></td>
 <td align="left">--cdn-url URL</td>
@@ -3008,6 +3245,18 @@ page always requires a restart to take effect. Open a terminal, run <code>docker
 <td align="left">--site-preview URL</td>
 <td align="left">optional preview image URL</td>
 </tr>
+</tbody>
+</table>
+<h3 id="web-server">Web Server<a class="headerlink" href="#web-server" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="left">Variable</th>
+<th align="left">Parameter</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td align="left"><code>PHOTOPRISM_HTTP_PORT</code></td>
 <td align="left">--http-port NUMBER</td>
@@ -3028,6 +3277,18 @@ page always requires a restart to take effect. Open a terminal, run <code>docker
 <td align="left">--http-compression METHOD, -z METHOD</td>
 <td align="left">http server compression METHOD (none or gzip)</td>
 </tr>
+</tbody>
+</table>
+<h3 id="database-connection">Database Connection<a class="headerlink" href="#database-connection" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="left">Variable</th>
+<th align="left">Parameter</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td align="left"><code>PHOTOPRISM_DATABASE_DRIVER</code></td>
 <td align="left">--database-driver NAME</td>
@@ -3068,6 +3329,18 @@ page always requires a restart to take effect. Open a terminal, run <code>docker
 <td align="left">--database-conns-idle NUMBER</td>
 <td align="left">maximum NUMBER of idle database connections</td>
 </tr>
+</tbody>
+</table>
+<h3 id="external-tools">External Tools<a class="headerlink" href="#external-tools" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="left">Variable</th>
+<th align="left">Parameter</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td align="left"><code>PHOTOPRISM_RAW_PRESETS</code></td>
 <td align="left">--raw-presets</td>
@@ -3128,6 +3401,18 @@ page always requires a restart to take effect. Open a terminal, run <code>docker
 <td align="left">--exiftool-bin COMMAND</td>
 <td align="left">ExifTool COMMAND for extracting metadata (default: "exiftool")</td>
 </tr>
+</tbody>
+</table>
+<h3 id="thumbnail-images">Thumbnail Images<a class="headerlink" href="#thumbnail-images" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="left">Variable</th>
+<th align="left">Parameter</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td align="left"><code>PHOTOPRISM_DOWNLOAD_TOKEN</code></td>
 <td align="left">--download-token TOKEN</td>
@@ -3168,6 +3453,18 @@ page always requires a restart to take effect. Open a terminal, run <code>docker
 <td align="left">--jpeg-quality QUALITY, -q QUALITY</td>
 <td align="left">QUALITY of generated JPEG images, a higher value reduces compression (25-100) (default: 92)</td>
 </tr>
+</tbody>
+</table>
+<h3 id="facial-recognition">Facial Recognition<a class="headerlink" href="#facial-recognition" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="left">Variable</th>
+<th align="left">Parameter</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td align="left"><code>PHOTOPRISM_FACE_SIZE</code></td>
 <td align="left">--face-size PIXELS</td>
@@ -3207,6 +3504,29 @@ page always requires a restart to take effect. Open a terminal, run <code>docker
 <td align="left"><code>PHOTOPRISM_FACE_MATCH_DIST</code></td>
 <td align="left">--face-match-dist OFFSET</td>
 <td align="left">similarity OFFSET for matching faces with existing clusters (default: 0.46)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="daemon-mode">Daemon Mode<a class="headerlink" href="#daemon-mode" title="Permanent link">&para;</a></h3>
+<p>If you start the server in the background (daemon mode), you can additionally specify a log and process id filename:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Variable</th>
+<th align="left">Parameter</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>PHOTOPRISM_PID_FILENAME</code></td>
+<td align="left">--pid-filename FILENAME</td>
+<td align="left">daemon mode process id FILENAME</td>
+</tr>
+<tr>
+<td align="left"><code>PHOTOPRISM_LOG_FILENAME</code></td>
+<td align="left">--log-filename FILENAME</td>
+<td align="left">daemon mode server log FILENAME</td>
 </tr>
 </tbody>
 </table>
