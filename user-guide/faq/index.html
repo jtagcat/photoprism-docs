@@ -2953,11 +2953,10 @@ or server environment where PhotoPrism is installed.</p>
 </details>
 <details class="question"><summary>My file sync app fails with "unable to parse TLS packet headers" when trying to connect via WebDAV?</summary><p>Because of security considerations, some backup tools and file sync apps like
 <a href="https://www.tacit.dk/foldersync/faq/#i-can-not-connect-to-a-non-https-webdav-server-why">FolderSync removed support for non-SSL HTTP communication</a>.</p>
-<p>When installing PhotoPrism on a public server outside your home network, please <strong>always run it
-behind a secure HTTPS reverse proxy</strong> like <a href="../../getting-started/proxies/traefik/">Traefik</a>,
-<a href="../../getting-started/proxies/caddy-2/">Caddy</a>, or <a href="../../getting-started/proxies/nginx/">NGINX</a>.
-Your files and passwords will be transmitted in clear text otherwise, and can be intercepted
-by anyone in between including your provider, hackers, and governments.</p>
+<p>If you install PhotoPrism on a public server outside your home network, please always run it behind a secure
+HTTPS reverse proxy. Your files and passwords will otherwise be transmitted in clear text and can be intercepted 
+by anyone, including your provider, hackers, and governments. Backup tools and file sync apps may refuse to 
+connect as well.</p>
 </details>
                 
               

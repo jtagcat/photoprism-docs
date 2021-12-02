@@ -2817,33 +2817,43 @@ The <a href="https://hub.docker.com/_/mariadb">official image</a> is available f
 Pay close attention to changed directory and environment variable names.</p>
 </div>
 <h3 id="system-requirements">System Requirements<a class="headerlink" href="#system-requirements" title="Permanent link">&para;</a></h3>
-<p>It's important that you <a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md">boot</a> 
-your Raspberry Pi 3 / 4 with the parameter <code>arm_64bit=1</code> in <code>config.txt</code> to use our ARM64 image.
-Alternatively, you may run it on <a href="https://github.com/guysoft/UbuntuDockerPi">UbuntuDockerPi</a>.
-It's a 64bit Ubuntu Server with Docker pre-installed.</p>
-<p>Your device should have at least 4 GB of memory. Also make sure it has at least
-4 GB of <a href="https://opensource.com/article/18/9/swap-space-linux-systems">swap</a>
-configured, so that indexing doesn't cause restarts when there are memory usage spikes.</p>
+<ul>
+<li>Your device should have at least 4 GB of memory. Running PhotoPrism on a server with <a href="../troubleshooting/#adding-swap">less than 4 GB of swap</a>, 
+  or setting a Docker memory / swap limit, can cause unexpected restarts ("crashes"), especially when it
+  temporarily needs more memory to process large files.</li>
+<li>It's important to <a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md">boot</a> your 
+  Raspberry Pi 3 / 4 with the parameter <code>arm_64bit=1</code> in <code>config.txt</code> to use our ARM64 image.
+  Alternatively, you may run it on <a href="https://github.com/guysoft/UbuntuDockerPi">UbuntuDockerPi</a>.
+  It's a 64bit Ubuntu Server with Docker pre-installed.</li>
+<li>If you see errors related to "cgroups", it may help to add the following to <code>/boot/firmware/cmdline.txt</code>:
+  <div class="highlight"><pre><span></span><code>cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1
+</code></pre></div></li>
+<li>We <a href="../troubleshooting/#linux-kernel-security">recommend</a> disabling Linux kernel security in your 
+  <a href="https://dl.photoprism.org/docker/arm64/docker-compose.yml">docker-compose.yml</a>, especially if you do 
+  not have experience with the configuration:
+  <div class="highlight"><pre><span></span><code><span class="nt">photoprism</span><span class="p">:</span>
+  <span class="nt">security_opt</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">seccomp:unconfined</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">apparmor:unconfined</span>
+</code></pre></div></li>
+<li>If you install PhotoPrism on a public server outside your home network, please always run it behind a secure
+  HTTPS reverse proxy such as <a href="../proxies/traefik/">Traefik</a>, <a href="../proxies/caddy-2/">Caddy</a>, or <a href="../proxies/nginx/">NGINX</a>.
+  Your files and passwords will otherwise be transmitted in clear text and can be intercepted by anyone, 
+  including your provider, hackers, and governments.</li>
+</ul>
 <div class="admonition note">
 <p>Indexing large photo and video collections significantly benefits from fast, local SSD storage,
 and plenty of memory for caching. Especially the conversion of RAW images and the transcoding of
 videos are very demanding.</p>
 </div>
-<p>To avoid permission issues, your <a href="https://dl.photoprism.org/docker/arm64/docker-compose.yml">docker-compose.yml</a> 
-should include the following security options:</p>
-<div class="highlight"><pre><span></span><code>  <span class="nt">photoprism</span><span class="p">:</span>
-    <span class="nt">security_opt</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">seccomp:unconfined</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">apparmor:unconfined</span>
-</code></pre></div>
-<p>Big thank you to <a href="https://github.com/guysoft">Guy Sheffer</a> for
-<a href="https://github.com/photoprism/photoprism/issues/109">building</a> this!</p>
 <div class="admonition info">
 <p>If you're running out of memory - or other system resources - while indexing, try reducing the
 <a href="https://docs.photoprism.org/getting-started/config-options/">number of workers</a> by setting
 <code>PHOTOPRISM_WORKERS</code> to a reasonably small value in <code>docker-compose.yml</code> (depending on the performance of the server).
 As a measure of last resort, you may disable using TensorFlow for image classification and facial recognition.</p>
 </div>
+<p>Big thank you to <a href="https://github.com/guysoft">Guy Sheffer</a> for
+<a href="https://github.com/photoprism/photoprism/issues/109">building</a> this!</p>
                 
               
               

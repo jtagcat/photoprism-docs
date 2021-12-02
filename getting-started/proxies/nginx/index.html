@@ -2788,11 +2788,11 @@
 </code></pre></div>
 </div>
 <p>At the very least you will need to adapt <code>server_name</code> and the <code>ssl_certificate</code>/<code>ssl_certificate_key</code> paths to match your setup. Please refer to their <a href="https://nginx.org/en/docs/">official documentation</a> for further details.</p>
-<div class="admonition important">
-<p>When installing PhotoPrism on a public server outside your home network, please <strong>always run it
-behind a secure HTTPS reverse proxy</strong>.
-Your files and passwords will be transmitted in clear text otherwise, and can be intercepted
-by anyone in between including your provider, hackers, and governments.</p>
+<div class="admonition tldr">
+<p>If you install PhotoPrism on a public server outside your home network, please always run it behind a secure
+HTTPS reverse proxy. Your files and passwords will otherwise be transmitted in clear text and can be intercepted
+by anyone, including your provider, hackers, and governments. Backup tools and file sync apps may refuse to
+connect as well.</p>
 </div>
                 
               
