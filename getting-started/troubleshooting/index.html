@@ -642,6 +642,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#upgrading-mariadb" class="md-nav__link">
+    Upgrading MariaDB
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#checklists" class="md-nav__link">
     Checklists
   </a>
@@ -2887,6 +2894,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#upgrading-mariadb" class="md-nav__link">
+    Upgrading MariaDB
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#checklists" class="md-nav__link">
     Checklists
   </a>
@@ -3029,6 +3043,15 @@ is running on the <abbr title="A physical computer, cloud server, or virtual mac
 running <code>sudo apt install docker-compose</code> in a terminal or using a graphical software package manager.</p>
 <p>Commands on Linux may have to be prefixed with <code>sudo</code> when not running as root. Note that this will
 point the <abbr title="\user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux">home directory</abbr> placeholder <code>~</code> to <code>/root</code> in volume mounts.</p>
+<h3 id="upgrading-mariadb">Upgrading MariaDB<a class="headerlink" href="#upgrading-mariadb" title="Permanent link">&para;</a></h3>
+<p>If the database doesn't start properly after upgrading from an earlier MySQL or MariaDB version, 
+you may need to run this command in a terminal:</p>
+<div class="highlight"><pre><span></span><code>docker-compose exec mariadb mariadb-upgrade -uroot -p
+</code></pre></div>
+<p>Enter the MariaDB "root" password specified in your <code>docker-compose.yml</code> when prompted.</p>
+<p>Alternatively, you can downgrade to the previous version, create a database backup using the <code>photoprism backup</code>
+command, start a new database instance based on the latest version, and then restore your index with 
+the <code>photoprism restore</code> command.</p>
 <h3 id="checklists">Checklists<a class="headerlink" href="#checklists" title="Permanent link">&para;</a></h3>
 <h4 id="missing-pictures">Missing Pictures<a class="headerlink" href="#missing-pictures" title="Permanent link">&para;</a></h4>
 <p>If you have indexed your library and some pictures are missing:</p>
@@ -3067,8 +3090,10 @@ point the <abbr title="\user\username on Windows, /Users/username on macOS, and 
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> You have accidentally mounted the wrong folders</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> The server is low on memory or swap</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> The database server is not available, incompatible or incorrectly configured</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> You've upgraded the MySQL or MariaDB server, but didn't run <code>mysql_upgrade</code></li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> There are network problems caused by a proxy, firewall or unstable connection</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Kernel security modules such as <a href="https://wiki.ubuntu.com/AppArmor">AppArmor</a> and <a href="https://en.wikipedia.org/wiki/Security-Enhanced_Linux">SELinux</a> are blocking permissions</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Your Raspberry Pi has not been configured according to our <a href="../raspberry-pi/#system-requirements">recommendations</a></li>
 </ul>
 <h3 id="adding-swap">Adding Swap<a class="headerlink" href="#adding-swap" title="Permanent link">&para;</a></h3>
 <h4 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h4>
