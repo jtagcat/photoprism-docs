@@ -3498,9 +3498,9 @@ page <strong>always requires a restart</strong> to take effect. Open a terminal,
 </table>
 <h3 id="facial-recognition">Facial Recognition<a class="headerlink" href="#facial-recognition" title="Permanent link">&para;</a></h3>
 <div class="admonition info">
-<p>To recognize faces, PhotoPrism first extracts crops from your images using a <a href="https://github.com/esimov/pigo">library</a>
-based on <a href="https://arxiv.org/pdf/1305.4537.pdf">pixel intensity comparisons</a>. These are then fed into TensorFlow to 
-compute <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Schroff_FaceNet_A_Unified_2015_CVPR_paper.pdf">512-dimensional vectors</a>
+<p>To <a href="../../user-guide/organize/people/">recognize faces</a>, PhotoPrism first extracts crops from your images using a 
+<a href="https://github.com/esimov/pigo">library</a> based on <a href="https://arxiv.org/pdf/1305.4537.pdf">pixel intensity comparisons</a>.
+These are then fed into TensorFlow to compute <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Schroff_FaceNet_A_Unified_2015_CVPR_paper.pdf">512-dimensional vectors</a>
 for characterization. In the final step, the <a href="https://en.wikipedia.org/wiki/DBSCAN">DBSCAN algorithm</a> 
 attempts to cluster these so-called face embeddings, so they can be matched to persons with just a few clicks.
 A reasonable range for the similarity distance between face embeddings is between 0.60 and 0.70, with a higher 
