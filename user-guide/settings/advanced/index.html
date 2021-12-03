@@ -3227,19 +3227,19 @@
                 
                 
                 <h1 id="advanced-settings">Advanced Settings<a class="headerlink" href="#advanced-settings" title="Permanent link">&para;</a></h1>
-<p>Basic system <a href="../../../getting-started/config-options/">config options</a> such as the thumbnail image quality can be changed 
+<p>System <a href="../../../getting-started/config-options/">config options</a> such as the image quality can be changed 
 on the advanced settings page. You can also disable specific features and enable the debug or read-only mode.</p>
-<p>For security reasons, the advanced settings page is disabled and hidden when the 
-<a href="../../../getting-started/config-options/">public mode</a> is enabled.</p>
+<p>For security reasons, the advanced settings page is disabled and hidden when <a href="../../../getting-started/config-options/">public mode</a> 
+is enabled.</p>
 <div class="admonition tldr">
 <p>Changing advanced settings <strong>always requires a restart</strong> to take effect. Selecting a different thumbnail
 quality or size won't replace existing thumbnails. You may regenerate them using the 
 <a href="https://docs.photoprism.org/getting-started/docker-compose/#command-line-interface">command-line interface</a>.</p>
 </div>
 <p><img alt="" src="../img/advanced-settings.jpg" /></p>
-<p>The same options can all be set using their corresponding
-<a href="/getting-started/config-options/">config options</a> instead.
-Settings are saved in the <code>storage/config</code> directory.</p>
+<p>All <a href="../../../getting-started/config-options/">config options</a> can be set in your <code>docker-compose.yml</code> or
+via command-line parameters as well. Manually changed values are stored in a config file. It is stored in
+the <code>storage/config</code> folder by default.</p>
 <h2 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h2>
 <h3 id="debug-logs">Debug Logs<a class="headerlink" href="#debug-logs" title="Permanent link">&para;</a></h3>
 <p>When enabled, debug logs are shown in <em>Library&gt;Logs</em>.
