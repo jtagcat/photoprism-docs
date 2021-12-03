@@ -614,6 +614,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#basic-settings" class="md-nav__link">
+    Basic Settings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#storage-folders" class="md-nav__link">
     Storage Folders
   </a>
@@ -2854,6 +2861,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#basic-settings" class="md-nav__link">
+    Basic Settings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#storage-folders" class="md-nav__link">
     Storage Folders
   </a>
@@ -2955,11 +2969,12 @@
                 
                 
                 <h1 id="config-options">Config Options<a class="headerlink" href="#config-options" title="Permanent link">&para;</a></h1>
-<div class="admonition attention">
-<p>Changing basic system config options in <code>docker-compose.yml</code> or on the <a href="../../user-guide/settings/advanced/">advanced settings</a> 
-page always requires a restart to take effect. Open a terminal, run <code>docker-compose stop photoprism</code> and then
+<div class="admonition tldr">
+<p>Changing values in <code>docker-compose.yml</code> or on the <a href="../../user-guide/settings/advanced/">advanced settings</a> 
+page <strong>always requires a restart</strong> to take effect. Open a terminal, run <code>docker-compose stop photoprism</code> and then
 <code>docker-compose up -d photoprism</code> to restart the app container.</p>
 </div>
+<h3 id="basic-settings">Basic Settings<a class="headerlink" href="#basic-settings" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -3482,6 +3497,17 @@ page always requires a restart to take effect. Open a terminal, run <code>docker
 </tbody>
 </table>
 <h3 id="facial-recognition">Facial Recognition<a class="headerlink" href="#facial-recognition" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p>To recognize faces, PhotoPrism first extracts crops from your images using a <a href="https://github.com/esimov/pigo">library</a>
+based on <a href="https://arxiv.org/pdf/1305.4537.pdf">pixel intensity comparisons</a>. These are then fed into TensorFlow to 
+compute <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Schroff_FaceNet_A_Unified_2015_CVPR_paper.pdf">512-dimensional vectors</a>
+for characterization. In the final step, the <a href="https://en.wikipedia.org/wiki/DBSCAN">DBSCAN algorithm</a> 
+attempts to cluster these so-called face embeddings, so they can be matched to persons with just a few clicks.
+A reasonable range for the similarity distance between face embeddings is between 0.60 and 0.70, with a higher 
+value being more aggressive and leading to larger clusters with more false positives.
+To cluster a smaller number of faces, you can reduce the core to 3 or 2 similar faces.</p>
+</div>
+<p>We recommend that only advanced users change these parameters:</p>
 <table>
 <thead>
 <tr>
