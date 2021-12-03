@@ -2805,7 +2805,7 @@
 <a href="https://hub.docker.com/r/photoprism/photoprism">multi-arch image</a> for AMD64, ARM64, and ARMv7. If your device meets the system requirements, mostly the same <a href="../docker-compose/">installation instructions</a>
 as for regular Linux servers apply.</p>
 <div class="admonition info">
-<p>Use <code>photoprism/photoprism:latest</code>for the stable release or <code>photoprism/photoprism:preview</code> for testing 
+<p>Use <code>photoprism/photoprism:latest</code> for the stable release or <code>photoprism/photoprism:preview</code> for testing 
 preview builds. Make sure to <a href="../updates/">pull the most recent image</a> from Docker Hub. Existing users are advised to 
 update their <code>docker-compose.yml</code> config based on our examples for <a href="https://dl.photoprism.org/docker/arm64/docker-compose.yml">ARM64</a>
 and <a href="https://dl.photoprism.org/docker/armv7/docker-compose.yml">ARMv7</a>-based devices.</p>
@@ -2818,11 +2818,11 @@ Pay close attention to changed directory and environment variable names.</p>
 </div>
 <h3 id="system-requirements">System Requirements<a class="headerlink" href="#system-requirements" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Your device should have at least 4 GB of memory. Running PhotoPrism on a server with <a href="../troubleshooting/#adding-swap">less than 4 GB of swap</a>, 
-  or setting a Docker memory / swap limit, can cause unexpected restarts ("crashes"), especially when it
-  temporarily needs more memory to process large files.</li>
+<li>Your device should have at least 4 GB of memory. Running PhotoPrism on a server with <a href="../troubleshooting/#adding-swap">less than 4 GB of swap space</a>
+  or setting a memory/swap limit can cause unexpected restarts ("crashes"), especially when the indexer temporarily
+  needs more memory to process large files.</li>
 <li>It's important to <a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md">boot</a> your 
-  Raspberry Pi 3 / 4 with the parameter <code>arm_64bit=1</code> in <code>config.txt</code> to use our ARM64 image.
+  Raspberry Pi &frac34; with the parameter <code>arm_64bit=1</code> in <code>config.txt</code> to use our ARM64 image.
   Alternatively, you may run it on <a href="https://github.com/guysoft/UbuntuDockerPi">UbuntuDockerPi</a>.
   It's a 64bit Ubuntu Server with Docker pre-installed.</li>
 <li>If you see Docker errors related to "cgroups", it may help to add the following to <code>/boot/firmware/cmdline.txt</code>:
