@@ -3244,38 +3244,38 @@ the <code>storage/config</code> folder by default.</p>
 <h3 id="debug-logs">Debug Logs<a class="headerlink" href="#debug-logs" title="Permanent link">&para;</a></h3>
 <p>When enabled, debug logs are shown in <em>Library&gt;Logs</em>.
 Requires restart.</p>
-<p>The equivalent <a href="/getting-started/config-options/">config toggle</a> is <code>PHOTOPRISM_DEBUG</code>.</p>
+<p>The equivalent <a href="../../../getting-started/config-options/">config toggle</a> is <code>PHOTOPRISM_DEBUG</code>.</p>
 <h3 id="read-only-mode">Read-only Mode<a class="headerlink" href="#read-only-mode" title="Permanent link">&para;</a></h3>
 <p>When enabled, importing, uploading and deleting files is not possible.</p>
-<p>The equivalent <a href="/getting-started/config-options/">config toggle</a> is <code>PHOTOPRISM_READONLY</code>.</p>
+<p>The equivalent <a href="../../../getting-started/config-options/">config toggle</a> is <code>PHOTOPRISM_READONLY</code>.</p>
 <h3 id="experimental-features">Experimental Features<a class="headerlink" href="#experimental-features" title="Permanent link">&para;</a></h3>
 <p>When enabled, your instance will be updated with experimental features.</p>
-<p>The equivalent <a href="/getting-started/config-options/">config toggle</a> is <code>PHOTOPRISM_EXPERIMENTAL</code>.</p>
+<p>The equivalent <a href="../../../getting-started/config-options/">config toggle</a> is <code>PHOTOPRISM_EXPERIMENTAL</code>.</p>
 <h3 id="disable-backups">Disable Backups<a class="headerlink" href="#disable-backups" title="Permanent link">&para;</a></h3>
 <p>This option prevents creating the following <code>yml</code> backups:</p>
 <ul>
 <li>For photos in <code>storage/sidecar</code></li>
 <li>For albums, months, states and folders in <code>storage/albums</code></li>
 </ul>
-<p>The equivalent <a href="/getting-started/config-options/">config toggle</a> is <code>PHOTOPRISM_DISABLE_BACKUPS</code>.</p>
+<p>The equivalent <a href="../../getting-started/config-options.md/">config toggle</a> is <code>PHOTOPRISM_DISABLE_BACKUPS</code>.</p>
 <h3 id="disable-webdav">Disable WebDAV<a class="headerlink" href="#disable-webdav" title="Permanent link">&para;</a></h3>
 <p>This option prevents building WebDav connections.
 Requires restart for changes to be applied.</p>
-<p>The equivalent <a href="/getting-started/config-options/">config toggle</a> is <code>PHOTOPRISM_DISABLE_WEBDAV</code>.</p>
+<p>The equivalent <a href="../../../getting-started/config-options/">config toggle</a> is <code>PHOTOPRISM_DISABLE_WEBDAV</code>.</p>
 <h3 id="disable-places">Disable Places<a class="headerlink" href="#disable-places" title="Permanent link">&para;</a></h3>
 <p>When selected, geo-information (latitude, longitude) will still be read (and indexed)
 from your files metadata, however PhotoPrism will not use reverse lookup to
 determine place names using those coordinates as it normally would.</p>
 <p>The Places section will not be visible.</p>
-<p>The equivalent <a href="/getting-started/config-options/">config toggle</a> is <code>PHOTOPRISM_DISABLE_PLACES</code>.</p>
+<p>The equivalent <a href="../../../getting-started/config-options/">config toggle</a> is <code>PHOTOPRISM_DISABLE_PLACES</code>.</p>
 <h3 id="disable-exiftool">Disable ExifTool<a class="headerlink" href="#disable-exiftool" title="Permanent link">&para;</a></h3>
 <p>This option prevents the creation of <code>json</code> files with Exif data in <code>storage/sidecar</code>.</p>
-<p>The equivalent <a href="/getting-started/config-options/">config toggle</a> is <code>PHOTOPRISM_DISABLE_EXIFTOOL</code>.</p>
+<p>The equivalent <a href="../../../getting-started/config-options/">config toggle</a> is <code>PHOTOPRISM_DISABLE_EXIFTOOL</code>.</p>
 <h3 id="disable-tensorflow">Disable TensorFlow<a class="headerlink" href="#disable-tensorflow" title="Permanent link">&para;</a></h3>
 <p>When selected, image classification / object detection
 (using <a href="https://www.tensorflow.org/">TensorFlow</a>) is disabled,
 so no labels are created for your files.</p>
-<p>The equivalent <a href="/getting-started/config-options/">config toggle</a> is <code>PHOTOPRISM_DISABLE_TENSORFLOW</code>.</p>
+<p>The equivalent <a href="../../../getting-started/config-options/">config toggle</a> is <code>PHOTOPRISM_DISABLE_TENSORFLOW</code>.</p>
 <h2 id="images">Images<a class="headerlink" href="#images" title="Permanent link">&para;</a></h2>
 <p>This section controls how original files are converted to
 JPEG for use as thumbnails and image previews.</p>
@@ -3287,13 +3287,13 @@ which is slow to process (during thumbnail generation)
 but generates higher quality thumbnails.
 By comparison, the <em>cubic</em> filter may be 30% faster.
 See <a href="/user-guide/settings/advanced/#downscaling-filters">section below</a> for detailed description of available filters.</p>
-<p>The equivalent <a href="/getting-started/config-options/">config option</a> is <code>PHOTOPRISM_THUMB_FILTER</code>.</p>
+<p>The equivalent <a href="../../../getting-started/config-options/">config option</a> is <code>PHOTOPRISM_THUMB_FILTER</code>.</p>
 <h3 id="dynamic-previews">Dynamic Previews<a class="headerlink" href="#dynamic-previews" title="Permanent link">&para;</a></h3>
 <p>Enable generating thumbnails on-the-fly as they're required
 (either for viewing or analysing with TensorFlow).
 This saves disk space, but is more processor-intensive and so not recommended
 when hosting on less powerful devices (such as Raspberry Pi).</p>
-<p>The equivalent <a href="/getting-started/config-options/">config toggle</a> is <code>PHOTOPRISM_THUMB_UNCACHED</code>.</p>
+<p>The equivalent <a href="../../../getting-started/config-options/">config toggle</a> is <code>PHOTOPRISM_THUMB_UNCACHED</code>.</p>
 <h3 id="jpeg-quality">JPEG Quality<a class="headerlink" href="#jpeg-quality" title="Permanent link">&para;</a></h3>
 <p>Choose a value above 90 to display your images in the best possible quality. Note that higher values 
 require more space in the <em>storage</em> folder for less compressed thumbnail files, which may also take longer to create.</p>
@@ -3307,7 +3307,7 @@ and require less space in the <em>storage</em> folder and in the browser cache.<
 <p>Anything below 70% is generally of <a href="https://fotoforensics.com/tutorial-estq.php">very low quality</a>.</p>
 <p>Example: If a quality of 95 results in a thumbnail file size of 500kB, then reducing the quality 
 to 80 reduces the file size to about 100kB.</p>
-<p>The equivalent <a href="/getting-started/config-options/">config option</a> is <code>PHOTOPRISM_JPEG_QUALITY</code>.</p>
+<p>The equivalent <a href="../../../getting-started/config-options/">config option</a> is <code>PHOTOPRISM_JPEG_QUALITY</code>.</p>
 <div class="admonition tldr">
 <p><strong>The actual impression depends on how much information an image contains.</strong> Empty areas and skies,
 for example, are easier to compress. Images with a lot of details suffer the most.
@@ -3317,10 +3317,10 @@ and image classification results. Simply put, this means that the indexer sees f
 <h3 id="dynamic-and-static-size-limits">Dynamic and Static Size Limits<a class="headerlink" href="#dynamic-and-static-size-limits" title="Permanent link">&para;</a></h3>
 <p><strong>Dynamic Size Limit</strong>: During dynamic (on-demand) thumbnail generation,
 no thumbnails will be created above this size.
-The equivalent <a href="/getting-started/config-options/">config option</a> is <code>PHOTOPRISM_THUMB_SIZE_UNCACHED</code>.</p>
+The equivalent <a href="../../../getting-started/config-options/">config option</a> is <code>PHOTOPRISM_THUMB_SIZE_UNCACHED</code>.</p>
 <p><strong>Static Size Limit</strong>: During initial indexing or import (as thumbnails are generated),
 no thumbnails will be created above this size.
-The equivalent <a href="/getting-started/config-options/">config option</a> is <code>PHOTOPRISM_THUMB_SIZE</code>.</p>
+The equivalent <a href="../../../getting-started/config-options/">config option</a> is <code>PHOTOPRISM_THUMB_SIZE</code>.</p>
 <div class="admonition danger">
 <p>Reducing the <em>Static Size Limit</em> of thumbnails has a <strong>significant impact on <a href="../../organize/people/">facial recognition</a> 
 and image classification</strong> results. Simply put, it means that the indexer can no longer see properly.</p>
@@ -3538,19 +3538,19 @@ RAW to JPEG conversion also works in read-only mode.</p>
 <h3 id="jpeg-size-limit">JPEG Size Limit<a class="headerlink" href="#jpeg-size-limit" title="Permanent link">&para;</a></h3>
 <p>This controls the maximum size of downsampled JPEG preview files to create
 when converting original RAW images.</p>
-<p>The equivalent <a href="/getting-started/config-options/">config toggle</a> is <code>PHOTOPRISM_JPEG_SIZE</code>.</p>
+<p>The equivalent <a href="../../../getting-started/config-options/">config toggle</a> is <code>PHOTOPRISM_JPEG_SIZE</code>.</p>
 <h3 id="use-presets">Use Presets<a class="headerlink" href="#use-presets" title="Permanent link">&para;</a></h3>
 <p>Disables simultaneous conversion of RAW files to apply Darktable presets.</p>
-<p>The equivalent <a href="/getting-started/config-options/">config toggle</a> is <code>PHOTOPRISM_RAW_PRESETS</code>.</p>
+<p>The equivalent <a href="../../../getting-started/config-options/">config toggle</a> is <code>PHOTOPRISM_RAW_PRESETS</code>.</p>
 <h3 id="disable-darktable">Disable Darktable<a class="headerlink" href="#disable-darktable" title="Permanent link">&para;</a></h3>
 <p>When disabled Darktable won't be used for RAW conversion.</p>
-<p>The equivalent <a href="/getting-started/config-options/">config toggle</a> is <code>PHOTOPRISM_DISABLE_DARKTABLE</code>.</p>
+<p>The equivalent <a href="../../../getting-started/config-options/">config toggle</a> is <code>PHOTOPRISM_DISABLE_DARKTABLE</code>.</p>
 <h3 id="disable-rawtherapee">Disable RawTherapee<a class="headerlink" href="#disable-rawtherapee" title="Permanent link">&para;</a></h3>
 <p>When disabled RawTherapee won't be used for RAW conversion.</p>
-<p>The equivalent <a href="/getting-started/config-options/">config toggle</a> is <code>PHOTOPRISM_DISABLE_RAWTHERAPEE</code>.</p>
+<p>The equivalent <a href="../../../getting-started/config-options/">config toggle</a> is <code>PHOTOPRISM_DISABLE_RAWTHERAPEE</code>.</p>
 <h3 id="disable-ffmpeg">Disable FFmpeg<a class="headerlink" href="#disable-ffmpeg" title="Permanent link">&para;</a></h3>
 <p>When disabled FFmpeg won't be used for video transcoding.</p>
-<p>The equivalent <a href="/getting-started/config-options/">config toggle</a> is <code>PHOTOPRISM_DISABLE_FFMPEG</code>.</p>
+<p>The equivalent <a href="../../../getting-started/config-options/">config toggle</a> is <code>PHOTOPRISM_DISABLE_FFMPEG</code>.</p>
                 
               
               
