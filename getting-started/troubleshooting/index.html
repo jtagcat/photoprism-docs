@@ -3213,9 +3213,9 @@ command and restart the <code>mariadb</code> service as described above.</p>
 <h4 id="corrupted-files">Corrupted Files<a class="headerlink" href="#corrupted-files" title="Permanent link">&para;</a></h4>
 <p>If your database files get corrupted frequently, it is usually because they are stored on a shared network drive 
 or other unreliable storage such as USB flash drives. It is also possible that you open the same database files 
-with more than one database instance.</p>
+with more than one server instance.</p>
 <p>To repair your tables after you have moved the files to a local disk, you can start MariaDB 
-<a href="https://mariadb.com/kb/en/innodb-recovery-modes/">with the <code>--innodb-force-recovery=0</code> flag</a>, 
+<a href="https://mariadb.com/kb/en/innodb-recovery-modes/">with the <code>--innodb-force-recovery=1</code> flag</a>, 
 similar to how you recover a lost root password as described above.</p>
 <h3 id="linux-kernel-security">Linux Kernel Security<a class="headerlink" href="#linux-kernel-security" title="Permanent link">&para;</a></h3>
 <p>We recommend disabling kernel security on private servers, especially if you do not have experience
