@@ -2779,7 +2779,7 @@ running system (for Linux/BSD systems): </p>
 filesystem</a> with two pools ("volumes" in
 classical terminology): A pool <em>tank</em> in a raidz2 (RAID6) configuration based on
 hard drives that holds the original pictures, and a pool <em>dozer</em> in a mirrored
-(RAID1) configuration based on SSD or NVMe drives to store the thumbnails. Our
+(RAID1) configuration <a href="../../troubleshooting/#storage">based on SSD or NVMe drives</a> to store the thumbnails. Our
 docker script could be:</p>
 <div class="highlight"><pre><span></span><code>docker run -d \
   --name photoprism \

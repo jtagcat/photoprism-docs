@@ -743,6 +743,33 @@
     Performance Tuning
   </a>
   
+    <nav class="md-nav" aria-label="Performance Tuning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cache" class="md-nav__link">
+    Cache
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storage" class="md-nav__link">
+    Storage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpu" class="md-nav__link">
+    CPU
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -3029,6 +3056,33 @@
     Performance Tuning
   </a>
   
+    <nav class="md-nav" aria-label="Performance Tuning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cache" class="md-nav__link">
+    Cache
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storage" class="md-nav__link">
+    Storage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpu" class="md-nav__link">
+    CPU
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -3233,27 +3287,30 @@ as a USB flash drive or a shared network folder.</p>
 <li>To repair your tables after you have moved the files to a local disk, you can <a href="https://mariadb.com/kb/en/innodb-recovery-modes/">start MariaDB with <code>--innodb-force-recovery=1</code></a>, similar to how you recover a lost root password as described above</li>
 </ul>
 <h4 id="performance-tuning">Performance Tuning<a class="headerlink" href="#performance-tuning" title="Permanent link">&para;</a></h4>
+<h5 id="cache">Cache<a class="headerlink" href="#cache" title="Permanent link">&para;</a></h5>
 <p>The <a href="https://mariadb.com/kb/en/innodb-buffer-pool/">InnoDB buffer pool</a> serves as a cache for data and indexes.
-It is a key component for optimizing MariaDB performance. Its size should be as large as possible to keep frequently 
+It is a key component for optimizing MariaDB performance. Its size should be as large as possible to keep frequently
 used data in memory and reduce disk I/O - typically the biggest bottleneck.</p>
 <p>Our <a href="https://dl.photoprism.org/docker/">docker-compose.yml examples</a> have a default buffer pool size between
-128 MB and 256 MB, depending on the platform. You can change it using the <code>--innodb-buffer-pool-size</code> parameter 
+128 MB and 256 MB, depending on the platform. You can change it using the <code>--innodb-buffer-pool-size</code> parameter
 (<code>M</code> means Megabyte, <code>G</code> stands for Gigabyte). If your server has enough memory, we recommend increasing the size to 1 GB:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
   <span class="nt">mariadb</span><span class="p">:</span>
     <span class="nt">command</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mysqld --innodb-buffer-pool-size=1G ...</span>
 </code></pre></div>
+<h5 id="storage">Storage<a class="headerlink" href="#storage" title="Permanent link">&para;</a></h5>
 <p>Local <a href="https://mariadb.com/de/resources/blog/how-to-tune-mariadb-write-performance/">Solid-State Drives (SSD) are best</a>
 for storing database files:</p>
 <ul>
 <li>SSDs have more predictable performance and can handle more concurrent requests</li>
 <li>Database performance extremely benefits from high throughput which HDDs can't provide</li>
 <li>Due to the HDD seek time, HDDs only support 5% of the reads per second of SSDs</li>
-<li>The cost savings from using slow hard disks are minimal </li>
+<li>The cost savings from using slow hard disks are minimal</li>
 </ul>
-<p>Switching to SSDs usually makes a big difference, especially for write operations and when 
-the read cache is not big enough or can't be used. Never store database files on an unreliable 
+<p>Switching to SSDs usually makes a big difference, especially for write operations and when
+the read cache is not big enough or can't be used. Never store database files on an unreliable
 device such as a USB flash drive or a shared network folder.</p>
+<h5 id="cpu">CPU<a class="headerlink" href="#cpu" title="Permanent link">&para;</a></h5>
 <p>Last but not least, performance can be limited by your server CPU. While consumer NAS devices get faster
 with each generation, their hardware is optimized for low power consumption and, of course, noise.
 <a href="https://www.google.com/search?q=cpu+benchmarks">Benchmarks</a> prove that even 8-year-old standard desktop 

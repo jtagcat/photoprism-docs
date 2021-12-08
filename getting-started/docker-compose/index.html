@@ -3024,7 +3024,7 @@ There is no default in case no password was provided. A minimum length of 4 char
 <h4 id="database">Database<a class="headerlink" href="#database" title="Permanent link">&para;</a></h4>
 <p>Our example includes a pre-configured <a href="https://mariadb.com/">MariaDB</a> database server. If you remove it 
 and provide no other database server credentials, a SQLite database file will be created in the 
-<em>storage</em> folder. Local <a href="../troubleshooting/#performance-tuning">SSD storage is best</a> for databases of any kind.
+<em>storage</em> folder. Local <a href="../troubleshooting/#storage">SSD storage is best</a> for databases of any kind.
 Never <a href="../troubleshooting/#corrupted-files">store</a> database files on an unreliable device such as a USB flash drive 
 or a shared network folder.</p>
 <div class="admonition tldr">
@@ -3056,7 +3056,7 @@ write operations as well.</p>
 <h5 id="photoprismstorage">/photoprism/storage<a class="headerlink" href="#photoprismstorage" title="Permanent link">&para;</a></h5>
 <p>Cache, session, thumbnail, and sidecar files will be created in the <em>storage</em> folder. Never remove the volume from
 your <code>docker-compose.yml</code> file so that you don't lose these files after restarting or upgrading the container.
-We recommend placing the <em>storage</em> folder on a local SSD drive for best performance.</p>
+We recommend placing the <em>storage</em> folder on a <a href="../troubleshooting/#storage">local SSD drive</a> for best performance.</p>
 <h5 id="photoprismimport">/photoprism/import<a class="headerlink" href="#photoprismimport" title="Permanent link">&para;</a></h5>
 <p>You may optionally mount an <em>import</em> folder from which files can be transferred to the <em>originals</em> folder
 in a structured way that avoids duplicates. Imported files receive a canonical filename and will be
