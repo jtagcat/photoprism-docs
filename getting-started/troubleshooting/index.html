@@ -3243,9 +3243,17 @@ used data in memory and reduce disk I/O - typically the biggest bottleneck.</p>
   <span class="nt">mariadb</span><span class="p">:</span>
     <span class="nt">command</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mysqld --innodb-buffer-pool-size=1G ...</span>
 </code></pre></div>
-<p>Local SSD storage is best for database files because it reduces I/O latency and increases bandwidth.
-This can make a big difference, especially if the cache is not large enough or can't be used.
-Never store database files on an unreliable device such as a USB flash drive or a shared network folder.</p>
+<p>Local <a href="https://mariadb.com/de/resources/blog/how-to-tune-mariadb-write-performance/">Solid-State Drives (SSD) are best</a>
+for storing database files:</p>
+<ul>
+<li>SSDs have more predictable performance and can handle more concurrent requests</li>
+<li>Database performance extremely benefits from high throughput which HDDs can't provide</li>
+<li>Due to the HDD seek time, HDDs only support 5% of the reads per second of SSDs</li>
+<li>The cost savings from using slow hard disks are minimal </li>
+</ul>
+<p>Switching to SSDs usually makes a big difference, especially for write operations and when 
+the cache is not big enough or can't be used. Never store database files on an unreliable 
+device such as a USB flash drive or a shared network folder.</p>
 <h3 id="linux-kernel-security">Linux Kernel Security<a class="headerlink" href="#linux-kernel-security" title="Permanent link">&para;</a></h3>
 <p>We recommend disabling kernel security on private servers, especially if you do not have experience
 with the configuration.</p>
