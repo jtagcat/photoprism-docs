@@ -738,6 +738,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#cache-size" class="md-nav__link">
+    Cache Size
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3017,6 +3024,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#cache-size" class="md-nav__link">
+    Cache Size
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3068,7 +3082,7 @@
 <h3 id="docker-compose-logs">Docker Compose Logs<a class="headerlink" href="#docker-compose-logs" title="Permanent link">&para;</a></h3>
 <p>If you cannot connect to the Web UI even after waiting a few minutes, run this command to display 
 the last 100 log messages (omit <code>--tail=100</code> to see all):</p>
-<div class="highlight"><pre><span></span><code>docker-compose logs --tail=100
+<div class="highlight"><pre><span></span><code>docker-compose logs --tail<span class="o">=</span><span class="m">100</span>
 </code></pre></div>
 <p>Search them for messages like <em>disk full</em>, <em>wrong permissions</em>, and <em>database connection failed</em> 
 before reporting a bug.</p>
@@ -3154,10 +3168,10 @@ for errors and warnings. In case the logs don't contain anything helpful:</p>
 <p>Otherwise, run these commands to permanently add 4 GB of swap (or more depending on how much physical memory you have):</p>
 <div class="highlight"><pre><span></span><code>sudo -i
 fallocate -l 4G /swapfile
-chmod 600 /swapfile
+chmod <span class="m">600</span> /swapfile
 mkswap /swapfile
 swapon /swapfile
-echo &#39;/swapfile none swap sw 0 0&#39; | tee -a /etc/fstab
+<span class="nb">echo</span> <span class="s1">&#39;/swapfile none swap sw 0 0&#39;</span> <span class="p">|</span> tee -a /etc/fstab
 </code></pre></div>
 <div class="admonition note">
 <p>You can skip <code>sudo -i</code> if you are already logged in as root. </p>
@@ -3178,7 +3192,7 @@ configure at least 4 GB of swap.</p>
 <h4 id="version-upgrade">Version Upgrade<a class="headerlink" href="#version-upgrade" title="Permanent link">&para;</a></h4>
 <p>If the database doesn't start properly after upgrading from an earlier MySQL or MariaDB version,
 you may need to run this command in a terminal:</p>
-<div class="highlight"><pre><span></span><code>docker-compose exec mariadb mariadb-upgrade -uroot -p
+<div class="highlight"><pre><span></span><code>docker-compose <span class="nb">exec</span> mariadb mariadb-upgrade -uroot -p
 </code></pre></div>
 <p>Enter the MariaDB "root" password specified in your <code>docker-compose.yml</code> when prompted.</p>
 <p>Alternatively, you can downgrade to the previous version, create a database backup using the <code>photoprism backup</code>
@@ -3189,24 +3203,24 @@ the <code>photoprism restore</code> command.</p>
 you can <a href="https://mariadb.com/docs/reference/mdb/cli/mariadbd/skip-grant-tables/">start the server with the <code>--skip-grant-tables</code> flag</a>
 added to the <code>mysqld</code> command in your <code>docker-compose.yml</code>. This will temporarily give full access
 to all users after a restart:</p>
-<div class="highlight"><pre><span></span><code>services:
-  mariadb:
-    command: mysqld --skip-grant-tables
+<div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
+  <span class="nt">mariadb</span><span class="p">:</span>
+    <span class="nt">command</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mysqld --skip-grant-tables</span>
 </code></pre></div>
 <p>Restart the <code>mariadb</code> service for changes to take effect:</p>
 <div class="highlight"><pre><span></span><code>docker-compose stop mariadb
 docker-compose up -d mariadb
 </code></pre></div>
 <p>Now open a database console:</p>
-<div class="highlight"><pre><span></span><code>docker-compose exec mariadb mysql -uroot
+<div class="highlight"><pre><span></span><code>docker-compose <span class="nb">exec</span> mariadb mysql -uroot
 </code></pre></div>
 <p>Enter the following commands to change the password for "root":</p>
-<div class="highlight"><pre><span></span><code>FLUSH PRIVILEGES;
-ALTER USER &#39;root&#39;@&#39;%&#39; IDENTIFIED BY &#39;new_password&#39;;
-ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;new_password&#39;;
-UPDATE mysql.user SET authentication_string = &#39;&#39; WHERE user = &#39;root&#39;;
-UPDATE mysql.user SET plugin = &#39;&#39; WHERE user = &#39;root&#39;;
-exit
+<div class="highlight"><pre><span></span><code><span class="n">FLUSH</span> <span class="k">PRIVILEGES</span><span class="p">;</span>
+<span class="k">ALTER</span> <span class="k">USER</span> <span class="s1">&#39;root&#39;</span><span class="o">@</span><span class="s1">&#39;%&#39;</span> <span class="n">IDENTIFIED</span> <span class="k">BY</span> <span class="s1">&#39;new_password&#39;</span><span class="p">;</span>
+<span class="k">ALTER</span> <span class="k">USER</span> <span class="s1">&#39;root&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span> <span class="n">IDENTIFIED</span> <span class="k">BY</span> <span class="s1">&#39;new_password&#39;</span><span class="p">;</span>
+<span class="k">UPDATE</span> <span class="n">mysql</span><span class="p">.</span><span class="k">user</span> <span class="k">SET</span> <span class="n">authentication_string</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span> <span class="k">WHERE</span> <span class="k">user</span> <span class="o">=</span> <span class="s1">&#39;root&#39;</span><span class="p">;</span>
+<span class="k">UPDATE</span> <span class="n">mysql</span><span class="p">.</span><span class="k">user</span> <span class="k">SET</span> <span class="n">plugin</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span> <span class="k">WHERE</span> <span class="k">user</span> <span class="o">=</span> <span class="s1">&#39;root&#39;</span><span class="p">;</span>
+<span class="n">exit</span>
 </code></pre></div>
 <p>When you are done, remove the <code>--skip-grant-tables</code> flag again to restore the original
 command and restart the <code>mariadb</code> service as described above.</p>
@@ -3218,6 +3232,18 @@ as a USB flash drive or a shared network folder.</p>
 <li>To share a database over a network, run the database server directly on the remote server instead of sharing database files</li>
 <li>To repair your tables after you have moved the files to a local disk, you can <a href="https://mariadb.com/kb/en/innodb-recovery-modes/">start MariaDB with <code>--innodb-force-recovery=1</code></a>, similar to how you recover a lost root password as described above</li>
 </ul>
+<h4 id="cache-size">Cache Size<a class="headerlink" href="#cache-size" title="Permanent link">&para;</a></h4>
+<p>The <a href="https://mariadb.com/kb/en/innodb-buffer-pool/">InnoDB buffer pool</a> serves as a cache for data and indexes.
+It is a key component for optimizing MariaDB performance. Its size should be as large as possible to keep frequently 
+used data in memory and reduce disk I/O - typically the biggest bottleneck.</p>
+<p>The default buffer pool size is between 128 MB and 256 MB in our <a href="https://dl.photoprism.org/docker/">docker-compose.yml examples</a>, 
+depending on the platform. You can change it using the <code>--innodb-buffer-pool-size</code> parameter (<code>M</code> means Megabyte, <code>G</code> stands for Gigabyte).
+If your server has enough memory, we recommend a size of 1 GB:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
+  <span class="nt">mariadb</span><span class="p">:</span>
+    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mariadb:10.6</span>
+    <span class="nt">command</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mysqld --innodb-buffer-pool-size=1G ...</span>
+</code></pre></div>
 <h3 id="linux-kernel-security">Linux Kernel Security<a class="headerlink" href="#linux-kernel-security" title="Permanent link">&para;</a></h3>
 <p>We recommend disabling kernel security on private servers, especially if you do not have experience
 with the configuration.</p>
