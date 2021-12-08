@@ -3234,8 +3234,8 @@ Then <a href="../getting-started/updates/">pull the most recent image</a> and re
 </div>
 <h3 id="december-3-2021">December 3, 2021<a class="headerlink" href="#december-3-2021" title="Permanent link">&para;</a></h3>
 <p><span class="build">Build 211203-fdb6b5e1</span></p>
-<p>Since we did not reach the <a href="https://github.com/sponsors/photoprism">funding goal</a> required to make all features and maps generally available, 
-<em>early-access features</em> have been renamed to <em>sponsor features</em> in this release.
+<p>Since the <a href="https://github.com/sponsors/photoprism">funding goal</a> required to make all features and maps generally
+available has not been reached, <em>early-access features</em> have been renamed to <em>sponsor features</em> in this update.
 Offline and high-resolution street maps remain free for everyone, while hybrid, topographic and outdoor maps are 
 now a sponsor feature. We believe this is fair. A big thank you to all our <a href="https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md">sponsors</a>
 and <a href="https://github.com/photoprism/photoprism/graphs/contributors/">contributors</a>!</p>
@@ -3258,11 +3258,10 @@ and <a href="https://github.com/photoprism/photoprism/graphs/contributors/">cont
 </ul>
 <h3 id="november-28-2021">November 28, 2021<a class="headerlink" href="#november-28-2021" title="Permanent link">&para;</a></h3>
 <p><span class="build">Build 211128-7e8974fd</span></p>
-<p>With this update, official support for MySQL is discontinued as it is not feasible to 
-perform a complete test with MySQL 8 before each release. Since important <a href="https://stackoverflow.com/questions/2480148/how-can-i-employ-if-exists-for-creating-or-dropping-an-index-in-mysql">features</a>
-still haven't been implemented after more than 10 years, it doesn't look like Oracle is actively 
-supporting it anymore. We recommend <a href="https://mariadb.com/kb/en/function-differences-between-mariadb-106-and-mysql-80/">upgrading to MariaDB 10.6</a>.
-PostgreSQL support is <a href="https://github.com/photoprism/photoprism/issues/47">planned for next year</a> without a specific release date.</p>
+<p>Official support for MySQL 8 is discontinued with this update as it's <a href="https://github.com/photoprism/photoprism/issues/1764">not feasible</a> 
+to perform a full test before each release. We recommend <a href="https://docs.photoprism.org/getting-started/troubleshooting/#version-upgrade">upgrading</a>
+to <a href="https://mariadb.com/kb/en/function-differences-between-mariadb-106-and-mysql-80/">MariaDB 10.6</a> or later.
+PostgreSQL support is <a href="https://github.com/photoprism/photoprism/issues/47">planned for 2022</a> without a specific release date yet.</p>
 <ul>
 <li>CLI: <a href="https://github.com/photoprism/photoprism/commit/7e8974fd20fcbf3ec403541125599deaeb1ee353"><code>photoprism migrate --failed</code> will re-run previously failed migrations</a></li>
 </ul>
