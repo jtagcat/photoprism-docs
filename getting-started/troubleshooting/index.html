@@ -3241,7 +3241,6 @@ used data in memory and reduce disk I/O - typically the biggest bottleneck.</p>
 (<code>M</code> means Megabyte, <code>G</code> stands for Gigabyte). If your server has enough memory, we recommend increasing the size to 1 GB:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
   <span class="nt">mariadb</span><span class="p">:</span>
-    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mariadb:10.6</span>
     <span class="nt">command</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mysqld --innodb-buffer-pool-size=1G ...</span>
 </code></pre></div>
 <h3 id="linux-kernel-security">Linux Kernel Security<a class="headerlink" href="#linux-kernel-security" title="Permanent link">&para;</a></h3>
