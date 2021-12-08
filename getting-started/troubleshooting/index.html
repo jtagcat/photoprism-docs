@@ -739,8 +739,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#cache-size" class="md-nav__link">
-    Cache Size
+  <a href="#performance-tuning" class="md-nav__link">
+    Performance Tuning
   </a>
   
 </li>
@@ -3025,8 +3025,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#cache-size" class="md-nav__link">
-    Cache Size
+  <a href="#performance-tuning" class="md-nav__link">
+    Performance Tuning
   </a>
   
 </li>
@@ -3232,7 +3232,7 @@ as a USB flash drive or a shared network folder.</p>
 <li>To share a database over a network, run the database server directly on the remote server instead of sharing database files</li>
 <li>To repair your tables after you have moved the files to a local disk, you can <a href="https://mariadb.com/kb/en/innodb-recovery-modes/">start MariaDB with <code>--innodb-force-recovery=1</code></a>, similar to how you recover a lost root password as described above</li>
 </ul>
-<h4 id="cache-size">Cache Size<a class="headerlink" href="#cache-size" title="Permanent link">&para;</a></h4>
+<h4 id="performance-tuning">Performance Tuning<a class="headerlink" href="#performance-tuning" title="Permanent link">&para;</a></h4>
 <p>The <a href="https://mariadb.com/kb/en/innodb-buffer-pool/">InnoDB buffer pool</a> serves as a cache for data and indexes.
 It is a key component for optimizing MariaDB performance. Its size should be as large as possible to keep frequently 
 used data in memory and reduce disk I/O - typically the biggest bottleneck.</p>
@@ -3243,6 +3243,9 @@ used data in memory and reduce disk I/O - typically the biggest bottleneck.</p>
   <span class="nt">mariadb</span><span class="p">:</span>
     <span class="nt">command</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mysqld --innodb-buffer-pool-size=1G ...</span>
 </code></pre></div>
+<p>Local SSD storage is best for database files because it reduces I/O latency and increases bandwidth.
+This can make a big difference, especially if the cache is not large enough or can't be used.
+Never store database files on an unreliable device such as a USB flash drive or a shared network folder.</p>
 <h3 id="linux-kernel-security">Linux Kernel Security<a class="headerlink" href="#linux-kernel-security" title="Permanent link">&para;</a></h3>
 <p>We recommend disabling kernel security on private servers, especially if you do not have experience
 with the configuration.</p>
