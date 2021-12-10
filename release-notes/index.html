@@ -1839,6 +1839,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#december-10-2021" class="md-nav__link">
+    December 10, 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#december-3-2021" class="md-nav__link">
     December 3, 2021
   </a>
@@ -2994,6 +3001,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#december-10-2021" class="md-nav__link">
+    December 10, 2021
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#december-3-2021" class="md-nav__link">
     December 3, 2021
   </a>
@@ -3223,7 +3237,7 @@
                 <h1 id="release-notes">Release Notes<a class="headerlink" href="#release-notes" title="Permanent link">&para;</a></h1>
 <div class="admonition note">
 <p>Our stable version and development preview now come as a single <a href="https://hub.docker.com/r/photoprism/photoprism">multi-arch image</a>
-for <strong>AMD64, ARM64, and ARMv7</strong>. That means you don't need to pull from different Docker repositories anymore. 
+for <strong>AMD64 and ARM64 (64-bit)</strong>. That means, Raspberry Pi 3 / 4 owners don't need a custom config and can pull from the same repository.
 We recommend updating your existing <code>docker-compose.yml</code> config based on <a href="https://dl.photoprism.org/docker/">our examples</a>.</p>
 </div>
 <h3 id="development-preview">Development Preview<a class="headerlink" href="#development-preview" title="Permanent link">&para;</a></h3>
@@ -3232,11 +3246,18 @@ We recommend updating your existing <code>docker-compose.yml</code> config based
 to <code>photoprism/photoprism:preview</code> in your <a href="https://dl.photoprism.org/docker/"><code>docker-compose.yml</code></a>. 
 Then <a href="../getting-started/updates/">pull the most recent image</a> and restart your instance.</p>
 </div>
+<h3 id="december-10-2021">December 10, 2021<a class="headerlink" href="#december-10-2021" title="Permanent link">&para;</a></h3>
+<p><span class="build">Build 211210-2cb90e7e</span></p>
+<p>Starting with this release, the <a href="https://hub.docker.com/r/photoprism/photoprism/tags?name=latest">regular multi-arch Docker image</a> is 64-bit only. 
+A 32-bit version of our stable release for older Raspberry Pis is offered separately. In the long run, this frees up 
+development resources and saves weeks of upload, compilation, and build time on our infrastructure.</p>
 <ul>
-<li>Places: <a href="https://github.com/photoprism/photoprism/commit/4e358bbfd488eda86efa3265a6c443be0ae8f038">Additional logs to detect invalid GPS coordinates in metadata</a></li>
+<li><a href="https://groups.google.com/g/golang-announce/c/hcmEScgc00k">Based on Go version 1.17.5, which includes important HTTP/2 and network security fixes</a></li>
 <li>People: <a href="https://github.com/photoprism/photoprism/commit/1b583e071e80b68352b1b366d60e010d8f8f9535">Concurrent updates are no longer possible to prevent inconsistencies</a></li>
+<li>Places: <a href="https://github.com/photoprism/photoprism/commit/4e358bbfd488eda86efa3265a6c443be0ae8f038">Additional logs to detect invalid GPS coordinates in metadata</a></li>
 <li>SQLite: <a href="https://github.com/photoprism/photoprism/discussions/1791">Reduced routine maintenance log levels and fixed migration warnings</a></li>
-<li>Thumbnails: <a href="https://github.com/photoprism/photoprism/issues/1798">Convert <em>Display P3</em> to <em>sRGB</em> for more accurate colors</a></li>
+<li>Thumbnails: <a href="https://github.com/photoprism/photoprism/issues/1798"><em>Display P3</em> profile support</a> <a href="https://github.com/photoprism/photoprism/issues/1522">for more accurate colors</a></li>
+<li>Translations: <a href="https://github.com/photoprism/photoprism/pull/1799">Updated French</a></li>
 </ul>
 <h3 id="december-3-2021">December 3, 2021<a class="headerlink" href="#december-3-2021" title="Permanent link">&para;</a></h3>
 <p><span class="build">Build 211203-fdb6b5e1</span></p>

@@ -484,6 +484,47 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#architecture-specific-notes" class="md-nav__link">
+    Architecture Specific Notes
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture Specific Notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modern-arm64-based-devices" class="md-nav__link">
+    Modern ARM64-based Devices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#older-armv7-based-devices" class="md-nav__link">
+    Older ARMv7-based Devices
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-updates" class="md-nav__link">
+    Getting Updates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credits" class="md-nav__link">
+    Credits
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2783,6 +2824,47 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#architecture-specific-notes" class="md-nav__link">
+    Architecture Specific Notes
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture Specific Notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modern-arm64-based-devices" class="md-nav__link">
+    Modern ARM64-based Devices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#older-armv7-based-devices" class="md-nav__link">
+    Older ARMv7-based Devices
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-updates" class="md-nav__link">
+    Getting Updates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credits" class="md-nav__link">
+    Credits
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2801,31 +2883,23 @@
                 
                 
                 <h1 id="running-photoprism-on-a-raspberry-pi">Running PhotoPrism on a Raspberry Pi<a class="headerlink" href="#running-photoprism-on-a-raspberry-pi" title="Permanent link">&para;</a></h1>
-<p>Our <a href="../../release-notes/">stable version</a> and development preview now come as a single
-<a href="https://hub.docker.com/r/photoprism/photoprism">multi-arch image</a> for AMD64, ARM64 (64-bit), and ARMv7 (32-bit).
-If your device meets the system requirements, mostly the same <a href="../docker-compose/">installation instructions</a>
-as for regular Linux servers apply.</p>
-<div class="admonition info">
-<p>Use <code>photoprism/photoprism:latest</code> for the stable release or <code>photoprism/photoprism:preview</code> for testing 
-preview builds. Make sure to <a href="../updates/">pull the most recent image</a> from Docker Hub. Existing users are advised to 
-update their <code>docker-compose.yml</code> config based on our examples for <a href="https://dl.photoprism.org/docker/arm64/docker-compose.yml">ARM64</a>
-and <a href="https://dl.photoprism.org/docker/armv7/docker-compose.yml">ARMv7</a>-based devices.</p>
-</div>
-<div class="admonition missing">
-<p>Owners of <a href="https://dl.photoprism.org/docker/armv7/docker-compose.yml">ARMv7-based devices</a> have to revert to 
-an <a href="https://hub.docker.com/r/linuxserver/mariadb">alternative image</a> if they want to use MariaDB. 
-The <a href="https://hub.docker.com/_/mariadb">official image</a> is available for AMD64 and ARM64 only. 
-Pay close attention to changed directory and environment variable names.</p>
+<p>Our <a href="../../release-notes/">stable version</a> and development preview have been built into a single
+<a href="https://hub.docker.com/r/photoprism/photoprism">multi-arch image</a> for 64-bit AMD, Intel, and ARM processors.
+That means, Raspberry Pi 3 / 4 owners can pull from the same repository, enjoy the exact same functionality,
+and can follow the regular <a href="../docker-compose/">Installation Instructions</a> after going through a short list of
+<a href="#system-requirements">System Requirements</a> and <a href="#architecture-specific-notes">Architecture Specific Notes</a>.</p>
+<p>Existing users are advised to update their <code>docker-compose.yml</code> config based on our examples
+available at <a href="https://dl.photoprism.org/docker/">dl.photoprism.org/docker/</a>.</p>
+<div class="admonition tldr">
+<p>To ensure compatibility with 64-bit Docker images, your Raspberry Pi 3 / 4 must boot with
+the <code>arm_64bit=1</code> flag in <a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md">its config.txt file</a>.
+An "exec format error" will occur otherwise.</p>
 </div>
 <h3 id="system-requirements">System Requirements<a class="headerlink" href="#system-requirements" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Your device should have at least 4 GB of memory. Running PhotoPrism on a server with <a href="../troubleshooting/#adding-swap">less than 4 GB of swap space</a>
   or setting a memory/swap limit can cause unexpected restarts, especially when the indexer temporarily needs more
   memory to process large files.</li>
-<li>It's important to <a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md">boot</a> your 
-  Raspberry Pi 3 / 4 with the parameter <code>arm_64bit=1</code> in <code>config.txt</code> to use our ARM64 (64-bit) image.
-  An "exec format error" will occur otherwise. Alternatively, you may run it on
-  <a href="https://github.com/guysoft/UbuntuDockerPi">UbuntuDockerPi</a>. It's a 64bit Ubuntu Server with Docker pre-installed.</li>
 <li>If you see Docker errors related to "cgroups", it may help to add the following to <code>/boot/firmware/cmdline.txt</code>:
   <div class="highlight"><pre><span></span><code>cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1
 </code></pre></div></li>
@@ -2853,8 +2927,28 @@ videos are very demanding.</p>
 <code>PHOTOPRISM_WORKERS</code> to a reasonably small value in <code>docker-compose.yml</code> (depending on the performance of the server).
 As a measure of last resort, you may disable using TensorFlow for image classification and facial recognition.</p>
 </div>
-<p>Big thank you to <a href="https://github.com/guysoft">Guy Sheffer</a> for
-<a href="https://github.com/photoprism/photoprism/issues/109">building</a> this!</p>
+<h3 id="architecture-specific-notes">Architecture Specific Notes<a class="headerlink" href="#architecture-specific-notes" title="Permanent link">&para;</a></h3>
+<h4 id="modern-arm64-based-devices">Modern ARM64-based Devices<a class="headerlink" href="#modern-arm64-based-devices" title="Permanent link">&para;</a></h4>
+<p>Stable Release: <code>photoprism/photoprism:latest</code><br>
+Development Preview: <code>photoprism/photoprism:preview</code></p>
+<p>To ensure compatibility with 64-bit Docker images, your Raspberry Pi 3 / 4 must boot with
+the <code>arm_64bit=1</code> flag in <a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md">its config.txt file</a>.
+An "exec format error" will occur otherwise.</p>
+<p>Alternatively, you can run your device with <a href="https://github.com/guysoft/UbuntuDockerPi">UbuntuDockerPi</a>.
+It's a 64-bit Ubuntu Server with Docker pre-configured.</p>
+<h4 id="older-armv7-based-devices">Older ARMv7-based Devices<a class="headerlink" href="#older-armv7-based-devices" title="Permanent link">&para;</a></h4>
+<p>Stable Release: <code>photoprism/photoprism:armv7</code><br>
+Development Preview: <code>photoprism/photoprism:armv7-preview</code></p>
+<p>You also have to revert to an alternative image if they want to use <a href="https://hub.docker.com/r/linuxserver/mariadb">MariaDB</a>.
+Their <a href="https://hub.docker.com/_/mariadb">official image</a> is available for AMD64 and ARM64 only.
+Pay close attention to changed directory and environment variable names.</p>
+<h3 id="getting-updates">Getting Updates<a class="headerlink" href="#getting-updates" title="Permanent link">&para;</a></h3>
+<p>If an old version is running on your device and doesn't update, you need to <a href="../updates/">explicitly pull</a>
+the latest image from <a href="https://hub.docker.com/r/photoprism/photoprism">Docker Hub</a>. Assuming that <code>:latest</code> 
+means new versions are automatically downloaded is a common mistake for users new to Docker.</p>
+<h3 id="credits">Credits<a class="headerlink" href="#credits" title="Permanent link">&para;</a></h3>
+<p>A big thank you to <a href="https://github.com/guysoft">Guy Sheffer</a> for helping us <a href="https://github.com/photoprism/photoprism/issues/109">build</a>
+a Raspberry Pi version!</p>
                 
               
               
