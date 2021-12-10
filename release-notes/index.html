@@ -3236,9 +3236,12 @@
                 
                 <h1 id="release-notes">Release Notes<a class="headerlink" href="#release-notes" title="Permanent link">&para;</a></h1>
 <div class="admonition note">
-<p>Our stable version and development preview now come as a single <a href="https://hub.docker.com/r/photoprism/photoprism">multi-arch image</a>
-for <strong>AMD64 and ARM64 (64-bit)</strong>. That means, Raspberry Pi 3 / 4 owners don't need a custom config and can pull from the same repository.
-We recommend updating your existing <code>docker-compose.yml</code> config based on <a href="https://dl.photoprism.org/docker/">our examples</a>.</p>
+<p>Our <a href="https://docs.photoprism.org/release-notes/">stable version</a> and development preview have been built into a single
+<a href="https://hub.docker.com/r/photoprism/photoprism">multi-arch image</a> for 64-bit AMD, Intel,
+and <a href="../getting-started/raspberry-pi/">ARM processors</a>.
+That means, Raspberry Pi 3 / 4 owners can pull from the same repository, enjoy the exact same functionality,
+and can follow the regular <a href="../getting-started/docker-compose/">installation instructions</a> after going through a short list of
+<a href="../getting-started/raspberry-pi/">requirements</a>.</p>
 </div>
 <h3 id="development-preview">Development Preview<a class="headerlink" href="#development-preview" title="Permanent link">&para;</a></h3>
 <div class="admonition tldr">
@@ -3249,8 +3252,9 @@ Then <a href="../getting-started/updates/">pull the most recent image</a> and re
 <h3 id="december-10-2021">December 10, 2021<a class="headerlink" href="#december-10-2021" title="Permanent link">&para;</a></h3>
 <p><span class="build">Build 211210-2cb90e7e</span></p>
 <p>Starting with this release, the <a href="https://hub.docker.com/r/photoprism/photoprism/tags?name=latest">regular multi-arch Docker image</a> is 64-bit only. 
-A 32-bit version of our stable release for older Raspberry Pis is offered separately. In the long run, this frees up 
-development resources and saves weeks of upload, compilation, and build time on our infrastructure.</p>
+A 32-bit version of our stable release for <a href="../getting-started/raspberry-pi/#older-armv7-based-devices">older devices</a> 
+is offered separately. In the long run, this frees up development resources and saves weeks of upload, compilation, 
+and build time on our infrastructure.</p>
 <ul>
 <li><a href="https://groups.google.com/g/golang-announce/c/hcmEScgc00k">Based on Go version 1.17.5, which includes important HTTP/2 and network security fixes</a></li>
 <li>People: <a href="https://github.com/photoprism/photoprism/commit/1b583e071e80b68352b1b366d60e010d8f8f9535">Concurrent updates are no longer possible to prevent inconsistencies</a></li>
