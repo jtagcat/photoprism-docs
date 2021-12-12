@@ -2888,13 +2888,13 @@
 <li>Click <em>Environment</em> in the left menu, then <em>local</em> and under <em>Public IP</em> place your local NAS IP (it should be the same [YOUR-LOCAL-IP] of step 6.</li>
 </ol>
 <h3 id="step-3-install-photoprism-in-your-synology-nas-using-portainer-accessible-over-http-direct-ip">Step 3: install Photoprism in your Synology NAS using Portainer, accessible over http / direct IP<a class="headerlink" href="#step-3-install-photoprism-in-your-synology-nas-using-portainer-accessible-over-http-direct-ip" title="Permanent link">&para;</a></h3>
-<p>With Portainer installed we can use a docker-compose file to deploy a stack composed by Photoprism and MariaDB to quickly get Photoprism running in our NAS. We can use <a href="https://dl.photoprism.org/docker/docker-compose.yml">Photoprism's default docker-compose yml file</a>.</p>
+<p>With Portainer installed we can use a docker-compose file to deploy a stack composed by Photoprism and MariaDB to quickly get Photoprism running in our NAS. We can use <a href="https://dl.photoprism.app/docker/docker-compose.yml">Photoprism's default docker-compose yml file</a>.</p>
 <ol>
 <li>open Synology's File Station app and browse to the <em>docker</em> shared folder;</li>
 <li>create a folder named <em>photoprism</em> inside <em>docker</em>, which will persist relevant Photoprism's data in our local filesystem;</li>
 <li>inside <em>photoprism</em> folder, create three more folders: <em>storage</em>, <em>originals</em> and <em>database</em>.</li>
 <li>Open Portainer by visiting http://[YOUR-LOCAL-IP]:9000/;</li>
-<li>Click <em>Stacks</em> in the left menu, then <em>Add stack</em>, give it a meaningful name (for eg. Photoprism) and in the Web Editor place the content of <a href="https://dl.photoprism.org/docker/docker-compose.yml">Photoprism's default docker-compose yml file</a>.</li>
+<li>Click <em>Stacks</em> in the left menu, then <em>Add stack</em>, give it a meaningful name (for eg. Photoprism) and in the Web Editor place the content of <a href="https://dl.photoprism.app/docker/docker-compose.yml">Photoprism's default docker-compose yml file</a>.</li>
 </ol>
 <p><strong>BE SURE TO USE YOUR OWN PHOTOPRISM_ADMIN_PASSWORD, PHOTOPRISM_DATABASE_PASSWORD, MYSQL_ROOT_PASSWORD, AND MYSQL_PASSWORD BY CHANGING THE VALUES ACCORDINGLY, AND CHECK THE LOCAL VOLUMES PATHS TO MATCH THOSE DEFINED IN STEP 13</strong>.</p>
 <ol>

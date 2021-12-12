@@ -2889,7 +2889,7 @@ That means, Raspberry Pi 3 / 4 owners can pull from the same repository, enjoy t
 and can follow the regular <a href="../docker-compose/">Installation Instructions</a> after going through a short list of
 <a href="#system-requirements">System Requirements</a> and <a href="#architecture-specific-notes">Architecture Specific Notes</a>.</p>
 <p>Existing users are advised to update their <code>docker-compose.yml</code> config based on our examples
-available at <a href="https://dl.photoprism.org/docker/">dl.photoprism.org/docker/</a>.</p>
+available at <a href="https://dl.photoprism.app/docker/">dl.photoprism.app/docker/</a>.</p>
 <div class="admonition tldr">
 <p>To ensure compatibility with 64-bit Docker images, your Raspberry Pi 3 / 4 must boot with
 the <code>arm_64bit=1</code> flag in its <a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md">config.txt file</a>.
@@ -2904,7 +2904,7 @@ An "exec format error" will occur otherwise.</p>
   <div class="highlight"><pre><span></span><code>cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1
 </code></pre></div></li>
 <li>We <a href="../troubleshooting/#linux-kernel-security">recommend</a> disabling Linux kernel security in your 
-  <a href="https://dl.photoprism.org/docker/arm64/docker-compose.yml">docker-compose.yml</a>, especially if you do 
+  <a href="https://dl.photoprism.app/docker/arm64/docker-compose.yml">docker-compose.yml</a>, especially if you do 
   not have experience with the configuration:
   <div class="highlight"><pre><span></span><code><span class="nt">photoprism</span><span class="p">:</span>
   <span class="nt">security_opt</span><span class="p">:</span>

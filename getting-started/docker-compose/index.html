@@ -2971,10 +2971,10 @@ installed on your system. It is available for Mac, Linux, and Windows.</p>
 </div>
 <h3 id="step-1-configure">Step 1: Configure<a class="headerlink" href="#step-1-configure" title="Permanent link">&para;</a></h3>
 <div class="tabbed-set" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Linux</label><div class="tabbed-content">
-<p>Download our <a href="https://dl.photoprism.org/docker/docker-compose.yml">docker-compose.yml</a> example
+<p>Download our <a href="https://dl.photoprism.app/docker/docker-compose.yml">docker-compose.yml</a> example
 (right click and <em>Save Link As...</em> or use <code>wget</code>) to a folder of your choice,
 and change the <a href="../config-options/">configuration</a> as needed:</p>
-<div class="highlight"><pre><span></span><code>wget https://dl.photoprism.org/docker/docker-compose.yml
+<div class="highlight"><pre><span></span><code>wget https://dl.photoprism.app/docker/docker-compose.yml
 </code></pre></div>
 <p>Commands on Linux may have to be prefixed with <code>sudo</code> when not running as root.
 Note that this will point the <abbr title="\user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux">home directory</abbr> placeholder <code>~</code> to <code>/root</code> in volume mounts.
@@ -2982,29 +2982,29 @@ Kernel security modules such as AppArmor and SELinux have been reported to cause
 <a href="../troubleshooting/">issues</a>.</p>
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Raspberry Pi</label><div class="tabbed-content">
-<p>Download our <a href="https://dl.photoprism.org/docker/arm64/docker-compose.yml">docker-compose.yml</a> example for 
+<p>Download our <a href="https://dl.photoprism.app/docker/arm64/docker-compose.yml">docker-compose.yml</a> example for 
 the Raspberry Pi 3 / 4 and modern ARM64-based devices (right click and <em>Save Link As...</em> or use <code>wget</code>) to a folder of your choice,
 and change the <a href="../config-options/">configuration</a> as needed:</p>
-<div class="highlight"><pre><span></span><code>wget https://dl.photoprism.org/docker/arm64/docker-compose.yml
+<div class="highlight"><pre><span></span><code>wget https://dl.photoprism.app/docker/arm64/docker-compose.yml
 </code></pre></div>
 <p>Mostly the same installation instructions as for regular Linux servers apply.
 Commands may have to be prefixed with <code>sudo</code> when not running as root.
 Ensure your device meets the <a href="../raspberry-pi/">requirements</a> before you continue.</p>
 </div>
 <input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">ARMv7</label><div class="tabbed-content">
-<p>Download our <a href="https://dl.photoprism.org/docker/armv7/docker-compose.yml">docker-compose.yml</a> example for 
+<p>Download our <a href="https://dl.photoprism.app/docker/armv7/docker-compose.yml">docker-compose.yml</a> example for 
 older ARMv7-based devices (right click and <em>Save Link As...</em> or use <code>wget</code>) to a folder of your choice,
 and change the <a href="../config-options/">configuration</a> as needed:</p>
-<div class="highlight"><pre><span></span><code>wget https://dl.photoprism.org/docker/armv7/docker-compose.yml
+<div class="highlight"><pre><span></span><code>wget https://dl.photoprism.app/docker/armv7/docker-compose.yml
 </code></pre></div>
 <p>Mostly the same installation instructions as for regular Linux servers apply.
 Commands may have to be prefixed with <code>sudo</code> when not running as root.
 Ensure your device meets the <a href="../raspberry-pi/">requirements</a> before you continue.</p>
 </div>
 <input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><label for="__tabbed_1_4">Windows</label><div class="tabbed-content">
-<p>Download our <a href="https://dl.photoprism.org/docker/windows/docker-compose.yml">docker-compose.yml</a> example for Windows
+<p>Download our <a href="https://dl.photoprism.app/docker/windows/docker-compose.yml">docker-compose.yml</a> example for Windows
 (right click and <em>Save Link As...</em>) to a folder of your choice, and change the <a href="../config-options/">configuration</a> as needed:</p>
-<p><a href="https://dl.photoprism.org/docker/windows/docker-compose.yml">https://dl.photoprism.org/docker/windows/docker-compose.yml</a> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7 7-7z"/></svg></span></p>
+<p><a href="https://dl.photoprism.app/docker/windows/docker-compose.yml">https://dl.photoprism.app/docker/windows/docker-compose.yml</a> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7 7-7z"/></svg></span></p>
 <p>Windows Pro users should <a href="../img/docker-disable-wsl2.jpg">disable</a> the WSL 2 based engine in <em>Docker Settings &gt; General</em> 
 so that they can mount drives other than <code>C:</code>. This will enable Hyper-V, which 
 <a href="https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements">Microsoft doesn't offer</a> 
@@ -3013,9 +3013,9 @@ to explicitly <a href="../img/docker-resources-advanced.jpg">increase the Docker
 Hyper-V. The default of 2 GB may reduce indexing performance and cause unexpected restarts.</p>
 </div>
 <input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><label for="__tabbed_1_5">macOS</label><div class="tabbed-content">
-<p>Download our <a href="https://dl.photoprism.org/docker/macos/docker-compose.yml">docker-compose.yml</a> example for macOS
+<p>Download our <a href="https://dl.photoprism.app/docker/macos/docker-compose.yml">docker-compose.yml</a> example for macOS
 (right click and <em>Save Link As...</em>) to a folder of your choice, and change the <a href="../config-options/">configuration</a> as needed:</p>
-<p><a href="https://dl.photoprism.org/docker/macos/docker-compose.yml">https://dl.photoprism.org/docker/macos/docker-compose.yml</a> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7 7-7z"/></svg></span></p>
+<p><a href="https://dl.photoprism.app/docker/macos/docker-compose.yml">https://dl.photoprism.app/docker/macos/docker-compose.yml</a> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7 7-7z"/></svg></span></p>
 <p>It's important to <a href="../img/docker-resources-advanced.jpg">increase the Docker memory limit</a> to 4 GB or more,
 as the default of 2 GB may reduce indexing performance and cause unexpected restarts.</p>
 </div>
@@ -3111,7 +3111,7 @@ successively become visible in search results and other parts of the user interf
 Open the <em>Logs</em> tab in <em>Library</em> to watch the indexer working.</p>
 <p>Of course, you can continue using your favorite tools for processing <abbr title="RAW files contain image data captured during exposure in an unprocessed format">RAW</abbr> files, editing metadata, 
 or importing new shots. Go to <em>Library</em> and click <em>Start</em> to update the index after files have been 
-changed, added, or removed. This can also be automated using <abbr title="Command-Line Interface">CLI</abbr> commands and a <a href="https://dl.photoprism.org/docker/scheduler/">scheduler</a>.</p>
+changed, added, or removed. This can also be automated using <abbr title="Command-Line Interface">CLI</abbr> commands and a <a href="https://dl.photoprism.app/docker/scheduler/">scheduler</a>.</p>
 <p>Easy, isn't it?</p>
 <div class="admonition info">
 <p>If you're running out of memory - or other system resources - while indexing, try reducing the 
@@ -3140,7 +3140,7 @@ its service name is the same, and you are in the folder in which the <code>docke
 file has been saved.</p>
 </div>
 <p>PhotoPrism's command-line interface is well suited for job automation using a
-<a href="https://dl.photoprism.org/docker/scheduler/">scheduler</a>.</p>
+<a href="https://dl.photoprism.app/docker/scheduler/">scheduler</a>.</p>
 <h4 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
