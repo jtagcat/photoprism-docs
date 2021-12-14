@@ -2957,10 +2957,6 @@ An "exec format" or "no matching manifest" error will occur otherwise.</p>
 <p>Alternatively, you can run your device with <a href="https://github.com/guysoft/UbuntuDockerPi">UbuntuDockerPi</a>.
 It's a 64-bit Ubuntu Server with Docker pre-configured.</p>
 <h4 id="older-armv7-based-devices">Older ARMv7-based Devices<a class="headerlink" href="#older-armv7-based-devices" title="Permanent link">&para;</a></h4>
-<div class="admonition fail">
-<p>The ARMv7 build is currently failing due to an issue in the network stack. We are working on a solution.
-You can use the <a href="https://hub.docker.com/r/photoprism/photoprism/tags">previous multi-arch image</a> <code>photoprism/photoprism:20211203</code> meanwhile.</p>
-</div>
 <p>You have to resort to alternative Docker images to run PhotoPrism and MariaDB on ARMv7-based devices
 and those with a 32-bit operating system:</p>
 <table>
@@ -2972,12 +2968,8 @@ and those with a 32-bit operating system:</p>
 </thead>
 <tbody>
 <tr>
-<td>Stable Release</td>
+<td>ARMv7 Release</td>
 <td><code>photoprism/photoprism:armv7</code></td>
-</tr>
-<tr>
-<td>Development Preview</td>
-<td><code>photoprism/photoprism:armv7-preview</code></td>
 </tr>
 <tr>
 <td>MariaDB</td>
