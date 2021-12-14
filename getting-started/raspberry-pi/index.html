@@ -2893,7 +2893,7 @@ available at <a href="https://dl.photoprism.app/docker/">dl.photoprism.app/docke
 <div class="admonition tldr">
 <p>To ensure compatibility with 64-bit Docker images, your Raspberry Pi 3 / 4 must boot with
 the <code>arm_64bit=1</code> flag in its <a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md">config.txt file</a>.
-An "exec format error" will occur otherwise.</p>
+An "exec format" or "no matching manifest" error will occur otherwise.</p>
 </div>
 <h3 id="system-requirements">System Requirements<a class="headerlink" href="#system-requirements" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2953,10 +2953,14 @@ As a measure of last resort, you may disable using TensorFlow for image classifi
 </table>
 <p>To ensure compatibility with 64-bit Docker images, your Raspberry Pi 3 / 4 must boot with
 the <code>arm_64bit=1</code> flag in its <a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md">config.txt file</a>.
-An "exec format error" will occur otherwise.</p>
+An "exec format" or "no matching manifest" error will occur otherwise.</p>
 <p>Alternatively, you can run your device with <a href="https://github.com/guysoft/UbuntuDockerPi">UbuntuDockerPi</a>.
 It's a 64-bit Ubuntu Server with Docker pre-configured.</p>
 <h4 id="older-armv7-based-devices">Older ARMv7-based Devices<a class="headerlink" href="#older-armv7-based-devices" title="Permanent link">&para;</a></h4>
+<div class="admonition fail">
+<p>The ARMv7 build is currently failing due to an issue in the network stack. We are working on a solution.
+You can use the <a href="https://hub.docker.com/r/photoprism/photoprism/tags">previous multi-arch image</a> <code>photoprism/photoprism:20211203</code> meanwhile.</p>
+</div>
 <p>You have to resort to alternative Docker images to run PhotoPrism and MariaDB on ARMv7-based devices
 and those with a 32-bit operating system:</p>
 <table>
