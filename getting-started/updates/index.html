@@ -2855,19 +2855,25 @@ after going through a short list of <a href="../raspberry-pi/">requirements</a>.
 Your continued support helps us provide services like satellite maps and develop new features. Thank you! 💜</p>
 </div>
 <h3 id="docker-compose">Docker Compose<a class="headerlink" href="#docker-compose" title="Permanent link">&para;</a></h3>
-<p>Open a terminal and change to the folder in which the <code>docker-compose.yml</code> file has been saved.
-Now run the following commands to <strong>pull the most recent image</strong> from Docker Hub and restart your instance in the background:</p>
+<p>Open a terminal and change to the folder where the <code>docker-compose.yml</code> file was saved.
+Now run the following commands to download the most recent image from Docker Hub and
+restart your instance in the background:</p>
 <div class="highlight"><pre><span></span><code>docker-compose pull photoprism
 docker-compose stop photoprism
 docker-compose up -d photoprism
 </code></pre></div>
 <p>Pulling a new version can take several minutes, depending on your internet connection speed.</p>
-<p>Advanced users may put this into a <code>Makefile</code> so that they only need to type a single command.</p>
-<p>See <a href="../docker-compose/">Setup Using Docker Compose</a> for a command reference.</p>
+<p>Advanced users can add these commands to a <code>Makefile</code> so that they only have to type a single 
+command like <code>make update</code>. See <a href="../docker-compose/#command-line-interface">Setup Using Docker Compose</a>
+for a command reference.</p>
+<div class="admonition note">
+<p>Running an image with <code>:latest</code> tag does not cause Docker to automatically download new images.</p>
+</div>
 <div class="admonition tldr">
-<p>You can test our latest features and improvements by changing the image from <code>photoprism/photoprism:latest</code>
+<p>You can test upcoming features and improvements by changing the image from <code>photoprism/photoprism:latest</code>
 to <code>photoprism/photoprism:preview</code> in your <a href="https://dl.photoprism.app/docker/"><code>docker-compose.yml</code></a>.
-Then pull the most recent image and restart your instance.</p>
+Then pull the most recent image and restart your instance as shown above.
+There is no preview available for 32-bit operating systems.</p>
 </div>
 <h3 id="facial-recognition">Facial Recognition<a class="headerlink" href="#facial-recognition" title="Permanent link">&para;</a></h3>
 <p>Existing users may index faces without performing a complete rescan:</p>
@@ -2898,10 +2904,6 @@ Only enable Watchtower if you are comfortable with this.</p>
 <div class="highlight"><pre><span></span><code>docker pull photoprism/photoprism:latest
 </code></pre></div>
 <p>See <a href="../docker/">Running PhotoPrism with Docker</a> for a command reference.</p>
-<div class="admonition tldr">
-<p>You can test our latest features and improvements by using <code>photoprism/photoprism:preview</code> 
-instead of <code>photoprism/photoprism:latest</code>.</p>
-</div>
                 
               
               

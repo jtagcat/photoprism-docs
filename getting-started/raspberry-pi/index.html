@@ -2980,9 +2980,20 @@ and those with a 32-bit operating system:</p>
 <p>If your device meets the <a href="#system-requirements">requirements</a>, mostly the same installation instructions as 
 for regular Linux servers apply. Pay close attention to changed directory and environment variable names.</p>
 <h3 id="getting-updates">Getting Updates<a class="headerlink" href="#getting-updates" title="Permanent link">&para;</a></h3>
-<p>If an old version is running on your device and is not updated, you may need to <a href="../updates/">explicitly</a> 
-pull the latest image from <a href="https://hub.docker.com/r/photoprism/photoprism">Docker Hub</a>. 
-Note that the <code>:latest</code> image tag does not cause Docker to automatically download new images.</p>
+<p>Open a terminal and change to the folder where the <code>docker-compose.yml</code> file was saved.
+Now run the following commands to download the most recent image from Docker Hub and
+restart your instance in the background:</p>
+<div class="highlight"><pre><span></span><code>docker-compose pull photoprism
+docker-compose stop photoprism
+docker-compose up -d photoprism
+</code></pre></div>
+<p>Pulling a new version can take several minutes, depending on your internet connection speed.</p>
+<p>Advanced users can add these commands to a <code>Makefile</code> so that they only have to type a single
+command like <code>make update</code>. See <a href="../docker-compose/#command-line-interface">Setup Using Docker Compose</a>
+for a command reference.</p>
+<div class="admonition note">
+<p>Running an image with <code>:latest</code> tag does not cause Docker to automatically download new images.</p>
+</div>
 <h3 id="credits">Credits<a class="headerlink" href="#credits" title="Permanent link">&para;</a></h3>
 <p>A big thank you to <a href="https://github.com/guysoft">Guy Sheffer</a> for helping us <a href="https://github.com/photoprism/photoprism/issues/109">build</a>
 a Raspberry Pi version!</p>
