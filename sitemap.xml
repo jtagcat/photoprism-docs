@@ -41,6 +41,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.photoprism.app/trademark/</loc>
+         <lastmod>2021-12-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.photoprism.app/developer-guide/</loc>
          <lastmod>2021-12-20</lastmod>
          <changefreq>daily</changefreq>
