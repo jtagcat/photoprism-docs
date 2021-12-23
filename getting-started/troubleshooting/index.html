@@ -3181,16 +3181,18 @@ running <code>sudo apt install docker-compose</code> in a terminal or using a gr
 point the <abbr title="\user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux">home directory</abbr> placeholder <code>~</code> to <code>/root</code> in volume mounts.</p>
 <h3 id="checklists">Checklists<a class="headerlink" href="#checklists" title="Permanent link">&para;</a></h3>
 <h4 id="missing-pictures">Missing Pictures<a class="headerlink" href="#missing-pictures" title="Permanent link">&para;</a></h4>
-<p>If you have indexed your library and some pictures are missing, first check <em>Library &gt; Errors</em>
+<p>If you have indexed your library and some images or videos are missing, first check <em>Library &gt; Errors</em>
 for errors and warnings. In case the logs don't contain anything helpful:</p>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> The pictures are in <a href="../../user-guide/organize/review/">Review</a> due to low quality or incomplete metadata</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> They are in <em>Library &gt; Hidden</em> because a JPEG could not be created:</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> <em>Convert to JPEG</em> is disabled in <em>Settings &gt; Library</em></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> FFmpeg and/or RAW converters are disabled in <em>Settings &gt; Advanced</em></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> The file type is generally unsupported</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Their <a href="../../user-guide/organize/private/">private</a> or <a href="../../user-guide/organize/archive/">archived</a> status was restored from a backup</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> The NSFW (Not Safe For Work) filter is enabled, so they were marked as <a href="../../user-guide/organize/private/">private</a></li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> They are in <em>Library &gt; Hidden</em> because a JPEG could not be created</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> They were stacked based on their metadata or file names</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> The indexer has skipped them because they are exact duplicates</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Their file types are unsupported</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> The files have bad filesystem permissions, so they can't be opened by the indexer</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> You are not signed in as admin, so you can't see everything</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> You try to index a shared drive on a remote server, but the server is offline</li>
