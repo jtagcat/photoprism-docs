@@ -497,6 +497,19 @@
     Modern ARM64-based Devices
   </a>
   
+    <nav class="md-nav" aria-label="Modern ARM64-based Devices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#no-matching-manifest" class="md-nav__link">
+    No Matching Manifest
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -2837,6 +2850,19 @@
     Modern ARM64-based Devices
   </a>
   
+    <nav class="md-nav" aria-label="Modern ARM64-based Devices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#no-matching-manifest" class="md-nav__link">
+    No Matching Manifest
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -2893,7 +2919,7 @@ available at <a href="https://dl.photoprism.app/docker/">dl.photoprism.app/docke
 <div class="admonition tldr">
 <p>To ensure compatibility with 64-bit Docker images, your Raspberry Pi 3 / 4 must boot with
 the <code>arm_64bit=1</code> flag in its <a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md">config.txt file</a>.
-An "exec format" or "no matching manifest" error will occur otherwise.</p>
+An "exec format" error will occur otherwise.</p>
 </div>
 <h3 id="system-requirements">System Requirements<a class="headerlink" href="#system-requirements" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2953,7 +2979,13 @@ As a measure of last resort, you may disable using TensorFlow for image classifi
 </table>
 <p>To ensure compatibility with 64-bit Docker images, your Raspberry Pi 3 / 4 must boot with
 the <code>arm_64bit=1</code> flag in its <a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md">config.txt file</a>.
-An "exec format" or "no matching manifest" error will occur otherwise.</p>
+An "exec format" error will occur otherwise.</p>
+<h5 id="no-matching-manifest">No Matching Manifest<a class="headerlink" href="#no-matching-manifest" title="Permanent link">&para;</a></h5>
+<p>Try explicitly pulling the ARM64 version if you've booted your device with the <code>arm_64bit=1</code> flag 
+and you still see the "no matching manifest" error on Raspberry Pi OS (Raspbian):</p>
+<div class="highlight"><pre><span></span><code>docker pull --platform<span class="o">=</span>arm64 photoprism/photoprism:latest
+</code></pre></div>
+<p>It may also help to set the <code>DOCKER_DEFAULT_PLATFORM</code> environment variable to <code>linux/arm64</code>.</p>
 <p>Alternatively, you can run your device with <a href="https://github.com/guysoft/UbuntuDockerPi">UbuntuDockerPi</a>.
 It's a 64-bit Ubuntu Server with Docker pre-configured.</p>
 <h4 id="older-armv7-based-devices">Older ARMv7-based Devices<a class="headerlink" href="#older-armv7-based-devices" title="Permanent link">&para;</a></h4>
