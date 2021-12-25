@@ -2982,7 +2982,7 @@ the <code>arm_64bit=1</code> flag in its <a href="https://www.raspberrypi.org/do
 An "exec format" error will occur otherwise.</p>
 <h5 id="no-matching-manifest">No Matching Manifest<a class="headerlink" href="#no-matching-manifest" title="Permanent link">&para;</a></h5>
 <p>Try explicitly pulling the ARM64 version if you've booted your device with the <code>arm_64bit=1</code> flag 
-and you still see the "no matching manifest" error on Raspberry Pi OS (Raspbian):</p>
+and you see the "no matching manifest" error on Raspberry Pi OS (Raspbian):</p>
 <div class="highlight"><pre><span></span><code>docker pull --platform<span class="o">=</span>arm64 photoprism/photoprism:latest
 </code></pre></div>
 <p>It may also help to set the <code>DOCKER_DEFAULT_PLATFORM</code> environment variable to <code>linux/arm64</code>.</p>
