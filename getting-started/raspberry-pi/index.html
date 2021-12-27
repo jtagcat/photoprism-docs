@@ -501,8 +501,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#no-matching-manifest" class="md-nav__link">
-    No Matching Manifest
+  <a href="#raspberry-pi-os" class="md-nav__link">
+    Raspberry Pi OS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raspbian-alternatives" class="md-nav__link">
+    Raspbian Alternatives
   </a>
   
 </li>
@@ -2868,8 +2875,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#no-matching-manifest" class="md-nav__link">
-    No Matching Manifest
+  <a href="#raspberry-pi-os" class="md-nav__link">
+    Raspberry Pi OS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raspbian-alternatives" class="md-nav__link">
+    Raspbian Alternatives
   </a>
   
 </li>
@@ -2924,16 +2938,14 @@
                 
                 <h1 id="running-photoprism-on-a-raspberry-pi">Running PhotoPrism on a Raspberry Pi<a class="headerlink" href="#running-photoprism-on-a-raspberry-pi" title="Permanent link">&para;</a></h1>
 <p>Our <a href="../../release-notes/">stable version</a> and development preview have been built into a single
-<a href="https://hub.docker.com/r/photoprism/photoprism">multi-arch image</a> for 64-bit AMD, Intel, and ARM processors.
-That means, Raspberry Pi 3 / 4 owners can pull from the same repository, enjoy the exact same functionality,
-and can follow the regular <a href="../docker-compose/">Installation Instructions</a> after going through a short list of
-<a href="#system-requirements">System Requirements</a> and <a href="#architecture-specific-notes">Architecture Specific Notes</a>.</p>
-<p>Existing users are advised to update their <code>docker-compose.yml</code> config based on our examples
-available at <a href="https://dl.photoprism.app/docker/">dl.photoprism.app/docker</a>.</p>
+<a href="https://hub.docker.com/r/photoprism/photoprism">multi-arch image</a> for 64-bit AMD, Intel, and ARM processors.</p>
+<p>That means, Raspberry Pi 3 / 4, Apple M1, and other ARM64 users can pull from the same repository, 
+enjoy the exact same functionality, and can follow the regular <a href="../docker-compose/">Installation Instructions</a> 
+after going through a short list of <a href="#system-requirements">System Requirements</a> and 
+<a href="#architecture-specific-notes">Architecture Specific Notes</a>.</p>
 <div class="admonition tldr">
-<p>To ensure compatibility with 64-bit Docker images, your Raspberry Pi 3 / 4 must boot with
-the <code>arm_64bit=1</code> flag in its <a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md">config.txt file</a>.
-An "exec format" error will occur otherwise.</p>
+<p>Existing users are advised to keep their <code>docker-compose.yml</code> config updated based on the examples
+available at <a href="https://dl.photoprism.app/docker/">dl.photoprism.app/docker</a>.</p>
 </div>
 <h3 id="system-requirements">System Requirements<a class="headerlink" href="#system-requirements" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2991,17 +3003,23 @@ As a measure of last resort, you may disable using TensorFlow for image classifi
 </tr>
 </tbody>
 </table>
+<h5 id="raspberry-pi-os">Raspberry Pi OS<a class="headerlink" href="#raspberry-pi-os" title="Permanent link">&para;</a></h5>
 <p>To ensure compatibility with 64-bit Docker images, your Raspberry Pi 3 / 4 must boot with
 the <code>arm_64bit=1</code> flag in its <a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md">config.txt file</a>.
 An "exec format" error will occur otherwise.</p>
-<h5 id="no-matching-manifest">No Matching Manifest<a class="headerlink" href="#no-matching-manifest" title="Permanent link">&para;</a></h5>
 <p>Try explicitly pulling the ARM64 version if you've booted your device with the <code>arm_64bit=1</code> flag 
 and you see the "no matching manifest" error on Raspberry Pi OS (Raspbian):</p>
 <div class="highlight"><pre><span></span><code>docker pull --platform<span class="o">=</span>arm64 photoprism/photoprism:latest
 </code></pre></div>
 <p>It may also help to set the <code>DOCKER_DEFAULT_PLATFORM</code> environment variable to <code>linux/arm64</code>.</p>
-<p>Alternatively, you can run your device with <a href="https://github.com/guysoft/UbuntuDockerPi">UbuntuDockerPi</a>.
-It's a 64-bit Ubuntu Server with Docker pre-configured.</p>
+<h5 id="raspbian-alternatives">Raspbian Alternatives<a class="headerlink" href="#raspbian-alternatives" title="Permanent link">&para;</a></h5>
+<p>Raspberry Pi OS is designed to be compatible with older 32-bit applications. We recommend choosing 
+a standard 64-bit Linux distribution to run modern server applications, for example:</p>
+<ul>
+<li><a href="https://github.com/guysoft/UbuntuDockerPi">UbuntuDockerPi</a> is a 64-bit Ubuntu Server with Docker pre-configured</li>
+<li><a href="https://ubuntu.com/raspberry-pi">Ubuntu for Raspberry Pi</a></li>
+<li><a href="https://ubuntu-mate.org/raspberry-pi/">Ubuntu MATE for Raspberry Pi</a></li>
+</ul>
 <h4 id="older-armv7-based-devices">Older ARMv7-based Devices<a class="headerlink" href="#older-armv7-based-devices" title="Permanent link">&para;</a></h4>
 <p>You have to resort to alternative Docker images to run PhotoPrism and MariaDB on ARMv7-based devices
 and those with a 32-bit operating system:</p>
@@ -3025,6 +3043,9 @@ and those with a 32-bit operating system:</p>
 </table>
 <p>If your device meets the <a href="#system-requirements">requirements</a>, mostly the same installation instructions as 
 for regular Linux servers apply. Pay close attention to changed directory and environment variable names.</p>
+<div class="admonition tldr">
+<p>Darktable is not included in the ARMv7 version because it is not 32-bit compatible.</p>
+</div>
 <h3 id="getting-updates">Getting Updates<a class="headerlink" href="#getting-updates" title="Permanent link">&para;</a></h3>
 <p>Open a terminal and change to the folder where the <code>docker-compose.yml</code> file was saved.
 Now run the following commands to download the most recent image from Docker Hub and
