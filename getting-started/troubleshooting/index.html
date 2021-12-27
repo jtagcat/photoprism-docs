@@ -3344,17 +3344,16 @@ used data in memory and reduce disk I/O - typically the biggest bottleneck.</p>
     <span class="nt">command</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mysqld --innodb-buffer-pool-size=1G ...</span>
 </code></pre></div>
 <h5 id="storage">Storage<a class="headerlink" href="#storage" title="Permanent link">&para;</a></h5>
-<p>Local <a href="https://mariadb.com/de/resources/blog/how-to-tune-mariadb-write-performance/">Solid-State Drives (SSD) are best</a>
-for storing database files:</p>
+<p>Local Solid-State Drives (SSD) <a href="https://mariadb.com/de/resources/blog/how-to-tune-mariadb-write-performance/">are generally best</a>:</p>
 <ul>
-<li>SSDs have more predictable performance and can handle more concurrent requests</li>
 <li>Database performance extremely benefits from high throughput which HDDs can't provide</li>
+<li>SSDs have more predictable performance and can handle more concurrent requests</li>
 <li>Due to the HDD seek time, HDDs only support 5% of the reads per second of SSDs</li>
 <li>The cost savings from using slow hard disks are minimal</li>
 </ul>
 <p>Switching to SSDs usually makes a big difference, especially for write operations and when
 the read cache is not big enough or can't be used. Never store database files on an unreliable
-device such as a USB flash drive or a shared network folder.</p>
+device such as a USB flash drive, an SD card, or a shared network folder.</p>
 <h5 id="cpu">CPU<a class="headerlink" href="#cpu" title="Permanent link">&para;</a></h5>
 <p>Last but not least, performance can be limited by your server CPU. While consumer NAS devices get faster
 with each generation, their hardware is optimized for low power consumption and, of course, noise.
