@@ -745,40 +745,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#performance-tuning" class="md-nav__link">
-    Performance Tuning
-  </a>
-  
-    <nav class="md-nav" aria-label="Performance Tuning">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cache" class="md-nav__link">
-    Cache
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#storage" class="md-nav__link">
-    Storage
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cpu" class="md-nav__link">
-    CPU
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -820,6 +786,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../performance/" class="md-nav__link">
+        Performance
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../updates/" class="md-nav__link">
         Getting Updates
       </a>
@@ -837,18 +817,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_12" type="checkbox" id="__nav_1_12" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_13" type="checkbox" id="__nav_1_13" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_1_12">
+        <label class="md-nav__link" for="__nav_1_13">
           Reverse Proxies
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Reverse Proxies" data-md-level="2">
-        <label class="md-nav__title" for="__nav_1_12">
+        <label class="md-nav__title" for="__nav_1_13">
           <span class="md-nav__icon md-icon"></span>
           Reverse Proxies
         </label>
@@ -954,18 +934,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_13" type="checkbox" id="__nav_1_13" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_14" type="checkbox" id="__nav_1_14" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_1_13">
+        <label class="md-nav__link" for="__nav_1_14">
           Advanced
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Advanced" data-md-level="2">
-        <label class="md-nav__title" for="__nav_1_13">
+        <label class="md-nav__title" for="__nav_1_14">
           <span class="md-nav__icon md-icon"></span>
           Advanced
         </label>
@@ -3065,40 +3045,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#performance-tuning" class="md-nav__link">
-    Performance Tuning
-  </a>
-  
-    <nav class="md-nav" aria-label="Performance Tuning">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cache" class="md-nav__link">
-    Cache
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#storage" class="md-nav__link">
-    Storage
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cpu" class="md-nav__link">
-    CPU
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -3152,7 +3098,7 @@
 the last 100 log messages (omit <code>--tail=100</code> to see all):</p>
 <div class="highlight"><pre><span></span><code>docker-compose logs --tail<span class="o">=</span><span class="m">100</span>
 </code></pre></div>
-<p>Search them for messages like <em>disk full</em>, <em>wrong permissions</em>, <em>killed</em>, and <em>database connection failed</em> 
+<p>Check them for messages like <em>disk full</em>, <em>wrong permissions</em>, <em>database connection failed</em>, and <em>killed</em>
 before reporting a bug. If the server was killed, this points to a memory issue.</p>
 <div class="admonition note">
 <p>If you see no errors or no logs at all, you may have started the server on a different <abbr title="A physical computer, cloud server, or virtual machine that runs Docker">host</abbr>
@@ -3247,6 +3193,8 @@ described above. If the server was killed, this points to a memory issue.</p>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> You have accidentally mounted the wrong folders</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> The server is low on memory</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> You didn't configure at least 4 GB of swap</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> The server CPU is overheating</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> The server has an outdated operating system that is not fully compatible</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> The database server is not available, incompatible or incorrectly configured</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> You've upgraded the MariaDB server version without running <code>mariadb-upgrade</code></li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Files are stored on an unreliable device such as a USB flash drive or a shared network folder</li>
@@ -3254,6 +3202,8 @@ described above. If the server was killed, this points to a memory issue.</p>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Kernel security modules such as <a href="https://wiki.ubuntu.com/AppArmor">AppArmor</a> and <a href="https://en.wikipedia.org/wiki/Security-Enhanced_Linux">SELinux</a> are blocking permissions</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> Your Raspberry Pi has not been configured according to our <a href="../raspberry-pi/#system-requirements">recommendations</a></li>
 </ul>
+<p>We recommend checking your Docker logs for messages like <em>disk full</em>, <em>wrong permissions</em>, <em>database connection failed</em>,
+and <em>killed</em> as described above. If the server was killed, this points to a memory issue.</p>
 <h3 id="adding-swap">Adding Swap<a class="headerlink" href="#adding-swap" title="Permanent link">&para;</a></h3>
 <h4 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h4>
 <p>Open a terminal and run this command to check if your server has swap configured.</p>
@@ -3331,36 +3281,6 @@ as a USB flash drive, an SD card, or a shared network folder.</p>
 <li>To share a database over a network, run the database server directly on the remote server instead of sharing database files</li>
 <li>To repair your tables after you have moved the files to a local disk, you can <a href="https://mariadb.com/kb/en/innodb-recovery-modes/">start MariaDB with <code>--innodb-force-recovery=1</code></a>, similar to how you recover a lost root password as described above</li>
 </ul>
-<h4 id="performance-tuning">Performance Tuning<a class="headerlink" href="#performance-tuning" title="Permanent link">&para;</a></h4>
-<h5 id="cache">Cache<a class="headerlink" href="#cache" title="Permanent link">&para;</a></h5>
-<p>The <a href="https://mariadb.com/kb/en/innodb-buffer-pool/">InnoDB buffer pool</a> serves as a cache for data and indexes.
-It is a key component for optimizing MariaDB performance. Its size should be as large as possible to keep frequently
-used data in memory and reduce disk I/O - typically the biggest bottleneck.</p>
-<p>Our <a href="https://dl.photoprism.app/docker/">docker-compose.yml examples</a> have a default buffer pool size between
-128 MB and 256 MB, depending on the platform. You can change it using the <code>--innodb-buffer-pool-size</code> parameter
-(<code>M</code> means Megabyte, <code>G</code> stands for Gigabyte). If your server has enough memory, we recommend increasing the size to 1 GB:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
-  <span class="nt">mariadb</span><span class="p">:</span>
-    <span class="nt">command</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">mysqld --innodb-buffer-pool-size=1G ...</span>
-</code></pre></div>
-<h5 id="storage">Storage<a class="headerlink" href="#storage" title="Permanent link">&para;</a></h5>
-<p>Local Solid-State Drives (SSD) are <a href="https://mariadb.com/de/resources/blog/how-to-tune-mariadb-write-performance/">best for databases</a>
-of any kind:</p>
-<ul>
-<li>Database performance extremely benefits from high throughput which HDDs can't provide</li>
-<li>SSDs have more predictable performance and can handle more concurrent requests</li>
-<li>Due to the HDD seek time, HDDs only support 5% of the reads per second of SSDs</li>
-<li>The cost savings from using slow hard disks are minimal</li>
-</ul>
-<p>Switching to SSDs makes a big difference, especially for write operations and when the read cache is not 
-big enough or can't be used. Never store database files on an unreliable device such as a USB flash drive, 
-an SD card, or a shared network folder.</p>
-<h5 id="cpu">CPU<a class="headerlink" href="#cpu" title="Permanent link">&para;</a></h5>
-<p>Last but not least, performance can be limited by your server CPU. While consumer NAS devices get faster
-with each generation, their hardware is optimized for low power consumption and, of course, noise.
-<a href="https://www.google.com/search?q=cpu+benchmarks">Benchmarks</a> prove that even 8-year-old standard desktop 
-CPUs are often many times faster. If you've tried everything else, then only moving your instance to a more
-powerful server may help.</p>
 <h3 id="linux-kernel-security">Linux Kernel Security<a class="headerlink" href="#linux-kernel-security" title="Permanent link">&para;</a></h3>
 <p>We recommend disabling kernel security on private servers, especially if you do not have experience
 with the configuration.</p>
@@ -3423,9 +3343,9 @@ The size of virtual disks and memory can be increased in Docker and VM settings 
         
         
         <a
-                href="../updates/"
+                href="../performance/"
                 class="md-footer__link md-footer__link--next"
-                aria-label="Next: Getting Updates"
+                aria-label="Next: Performance"
                 rel="next"
         >
             <div class="md-footer__title">
@@ -3433,7 +3353,7 @@ The size of virtual disks and memory can be increased in Docker and VM settings 
               <span class="md-footer__direction">
                 Next
               </span>
-                    Getting Updates
+                    Performance
                 </div>
             </div>
             <div class="md-footer__button md-icon">

@@ -266,6 +266,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.photoprism.app/getting-started/performance/</loc>
+         <lastmod>2021-12-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.photoprism.app/getting-started/raspberry-pi/</loc>
          <lastmod>2021-12-27</lastmod>
          <changefreq>daily</changefreq>
