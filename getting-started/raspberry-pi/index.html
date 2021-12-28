@@ -2966,9 +2966,6 @@ available at <a href="https://dl.photoprism.app/docker/">dl.photoprism.app/docke
 <li>Your device should have at least 4 GB of memory. Running PhotoPrism on a server with <a href="../troubleshooting/#adding-swap">less than 4 GB of swap space</a>
   or setting a memory/swap limit can cause unexpected restarts, especially when the indexer temporarily needs more
   memory to process large files.</li>
-<li>If you see Docker errors related to "cgroups", it may help to add the following to <code>/boot/firmware/cmdline.txt</code>:
-  <div class="highlight"><pre><span></span><code>cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1
-</code></pre></div></li>
 <li>We <a href="../troubleshooting/#linux-kernel-security">recommend</a> disabling Linux kernel security in your 
   <a href="https://dl.photoprism.app/docker/arm64/docker-compose.yml">docker-compose.yml</a>, especially if you do 
   not have experience with the configuration:
@@ -3026,8 +3023,12 @@ and you see the "no matching manifest" error on Raspberry Pi OS (Raspbian):</p>
 <div class="highlight"><pre><span></span><code>docker pull --platform<span class="o">=</span>arm64 photoprism/photoprism:latest
 </code></pre></div>
 <p>It may also help to set the <code>DOCKER_DEFAULT_PLATFORM</code> environment variable to <code>linux/arm64</code>.</p>
+<p>In case you see Docker errors related to "cgroups", try adding the following parameters 
+to <code>/boot/firmware/cmdline.txt</code>:</p>
+<div class="highlight"><pre><span></span><code>cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1
+</code></pre></div>
 <h5 id="raspbian-alternatives">Raspbian Alternatives<a class="headerlink" href="#raspbian-alternatives" title="Permanent link">&para;</a></h5>
-<p>Raspberry Pi OS is designed to be compatible with older 32-bit applications. We recommend choosing 
+<p>Raspberry Pi OS is designed to be compatible with older 32-bit software. We recommend choosing 
 a standard 64-bit Linux distribution to run modern server applications, for example:</p>
 <ul>
 <li><a href="https://github.com/guysoft/UbuntuDockerPi">UbuntuDockerPi</a> is a 64-bit Ubuntu Server with Docker pre-configured</li>
