@@ -3297,29 +3297,8 @@ On the other hand, MariaDB has many optimizations. It is also completely open-so
 JavaScript is disabled in your browser, an ad blocker is blocking requests, or you are using an incompatible browser.
 See <a href="../troubleshooting/">Troubleshooting Guide</a>.</p>
 <h3 id="why-is-photoprism-getting-stuck-in-a-restart-loop">Why is PhotoPrism getting stuck in a restart loop?<a class="headerlink" href="#why-is-photoprism-getting-stuck-in-a-restart-loop" title="Permanent link">&para;</a></h3>
-<p>This happens when Docker was configured to automatically restart the app after failures.
-Fatal errors are often caused by one of the following conditions:</p>
-<ol>
-<li>Your (virtual) server disk is full</li>
-<li>There is disk space left, but the <a href="https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain">inode limit</a> has been reached</li>
-<li>The storage folder is not writable or there are other filesystem permission issues</li>
-<li>You have accidentally mounted the wrong folders</li>
-<li>The server is low on memory</li>
-<li>The database server is not available, incompatible or incorrectly configured</li>
-<li>There are network problems caused by a proxy, firewall or unstable connection</li>
-<li>Kernel security modules such as <a href="https://wiki.ubuntu.com/AppArmor">AppArmor</a> and
-   <a href="https://en.wikipedia.org/wiki/Security-Enhanced_Linux">SELinux</a> may be blocking permissions</li>
-</ol>
-<p>Please search your operating system and server logs for messages like <em>disk full</em>, <em>wrong permissions</em>,
-and <em>database connection failed</em> before reporting a bug. If you are using Docker Compose, run this command
-to display the last 100 log messages:</p>
-<div class="highlight"><pre><span></span><code>docker-compose logs --tail=100
-</code></pre></div>
-<p>Linux kernel security can be disabled on private servers, especially if you do not have experience
-with the configuration. Use a file manager, or the commands <code>chmod</code> and <code>chown</code> on Unix-like operating systems,
-to verify and fix filesystem permissions.
-Available disk space can be displayed with <code>df -h</code>. The size of virtual disks and memory can be
-increased in Docker and VM settings if needed. Please refer to the documentation.</p>
+<p>This happens when Docker was configured to automatically restart services after failures.
+See <a href="../troubleshooting/#fatal-server-errors">Troubleshooting Guide</a>.</p>
 <h3 id="can-i-install-photoprism-in-a-sub-directory-on-a-shared-domain">Can I install PhotoPrism in a sub-directory on a shared domain?<a class="headerlink" href="#can-i-install-photoprism-in-a-sub-directory-on-a-shared-domain" title="Permanent link">&para;</a></h3>
 <p>This is possible with our latest release if you run it behind a proxy.
 Note that for a Progressive Web App (PWA) to work as designed, the service worker should
