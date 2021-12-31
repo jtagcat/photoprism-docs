@@ -13,21 +13,21 @@
         <meta name="author" content="PhotoPrism.org">
       
       
-        <link rel="canonical" href="https://docs.photoprism.app/getting-started/config-options/">
+        <link rel="canonical" href="https://docs.photoprism.app/developer-guide/technologies/yaml/">
       
-      <link rel="icon" href="../../icons/favicon.ico">
+      <link rel="icon" href="../../../icons/favicon.ico">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
-        <title>Config Options - PhotoPrism</title>
+        <title>YAML - PhotoPrism</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.a57b2b03.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.a57b2b03.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
         
           
           
@@ -46,7 +46,7 @@
     
     
     
-      <link rel="stylesheet" href="../../css/custom.css">
+      <link rel="stylesheet" href="../../../css/custom.css">
     
     
       
@@ -59,16 +59,16 @@
     
   
   <meta property="og:type" content="website">
-  <meta property="og:title" content="PhotoPrism - Config Options">
+  <meta property="og:title" content="PhotoPrism - YAML">
   <meta property="og:description" content="User Guide">
-  <meta property="og:url" content="https://docs.photoprism.app/getting-started/config-options/">
-  <meta property="og:image" content="https://i.photoprism.app/?cover=17&title=Config%20Options&description=User%20Guide">
+  <meta property="og:url" content="https://docs.photoprism.app/developer-guide/technologies/yaml/">
+  <meta property="og:image" content="https://i.photoprism.app/?cover=17&title=YAML&description=User%20Guide">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@photoprism_app">
   <meta name="twitter:creator" content="@photoprism_app">
-  <meta name="twitter:title" content="PhotoPrism - Config Options">
+  <meta name="twitter:title" content="PhotoPrism - YAML">
   <meta name="twitter:description" content="User Guide">
-  <meta name="twitter:image" content="https://i.photoprism.app/?cover=17&title=Config%20Options&description=User%20Guide">
+  <meta name="twitter:image" content="https://i.photoprism.app/?cover=17&title=YAML&description=User%20Guide">
   <link rel="shortcut icon" sizes="512x512" type="image/png" href="/icons/logo/512.png">
   <link rel="shortcut icon" sizes="256x256" type="image/png" href="/icons/logo/256.png">
   <link rel="shortcut icon" sizes="196x196" type="image/png" href="/icons/logo/196.png">
@@ -93,7 +93,7 @@
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="amber">
   
     
-    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -101,7 +101,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#config-options" class="md-skip">
+        <a href="#introduction-to-yaml" class="md-skip">
           Skip to content
         </a>
       
@@ -124,7 +124,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="PhotoPrism" class="md-header__button md-logo" aria-label="PhotoPrism" data-md-component="logo">
+    <a href="../../.." title="PhotoPrism" class="md-header__button md-logo" aria-label="PhotoPrism" data-md-component="logo">
       
   
   <svg id="b01a508d-b59d-44f0-8be5-eca2aadd9bc2" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 253.78 224.78"><defs><style>.abae6701-d59a-4183-bf31-f7ca6639fed3,.e9c06423-71c9-47d7-ac4f-57ab05968afa{fill:none;}.e9270bc6-2df5-4c14-bf42-90cfc87d474b{clip-path:url(#ba383851-496a-4a7b-95ff-56b7a97252c7);}.e9c06423-71c9-47d7-ac4f-57ab05968afa{stroke:#000;stroke-miterlimit:10;stroke-width:3px;}</style><clipPath id="ba383851-496a-4a7b-95ff-56b7a97252c7"><rect class="abae6701-d59a-4183-bf31-f7ca6639fed3" x="-47.38" y="5.33" width="370.54" height="215.11"/></clipPath></defs><g class="e9270bc6-2df5-4c14-bf42-90cfc87d474b"><path class="e9c06423-71c9-47d7-ac4f-57ab05968afa" d="M248.26,187.21l-5.79,32m-236.15-31,19.06,18.88M152.54,24.27,25.43,206.59a.13.13,0,0,0,.09.2l216.74,12.43a.13.13,0,0,0,.12-.18L152.76,24.29A.13.13,0,0,0,152.54,24.27ZM126.35,6.64,5.74,188a.16.16,0,0,0,.14.25l241.63-1a.16.16,0,0,0,.14-.25L126.63,6.64A.17.17,0,0,0,126.35,6.64Zm.15-.21,26.17,17.66"/></g></svg>
@@ -143,7 +143,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Config Options
+              YAML
             
           </span>
         </div>
@@ -243,15 +243,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link md-tabs__link--active">
+      <a href="../../.." class="md-tabs__link">
         Getting Started
       </a>
     </li>
@@ -267,7 +265,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../user-guide/" class="md-tabs__link">
+      <a href="../../../user-guide/" class="md-tabs__link">
         User Guide
       </a>
     </li>
@@ -277,13 +275,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../developer-guide/" class="md-tabs__link">
+      <a href="../../" class="md-tabs__link md-tabs__link--active">
         Developer Guide
       </a>
     </li>
@@ -299,7 +299,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../team/" class="md-tabs__link">
+      <a href="../../../team/" class="md-tabs__link">
         About
       </a>
     </li>
@@ -327,7 +327,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="PhotoPrism" class="md-nav__button md-logo" aria-label="PhotoPrism" data-md-component="logo">
+    <a href="../../.." title="PhotoPrism" class="md-nav__button md-logo" aria-label="PhotoPrism" data-md-component="logo">
       
   
   <svg id="b01a508d-b59d-44f0-8be5-eca2aadd9bc2" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 253.78 224.78"><defs><style>.abae6701-d59a-4183-bf31-f7ca6639fed3,.e9c06423-71c9-47d7-ac4f-57ab05968afa{fill:none;}.e9270bc6-2df5-4c14-bf42-90cfc87d474b{clip-path:url(#ba383851-496a-4a7b-95ff-56b7a97252c7);}.e9c06423-71c9-47d7-ac4f-57ab05968afa{stroke:#000;stroke-miterlimit:10;stroke-width:3px;}</style><clipPath id="ba383851-496a-4a7b-95ff-56b7a97252c7"><rect class="abae6701-d59a-4183-bf31-f7ca6639fed3" x="-47.38" y="5.33" width="370.54" height="215.11"/></clipPath></defs><g class="e9270bc6-2df5-4c14-bf42-90cfc87d474b"><path class="e9c06423-71c9-47d7-ac4f-57ab05968afa" d="M248.26,187.21l-5.79,32m-236.15-31,19.06,18.88M152.54,24.27,25.43,206.59a.13.13,0,0,0,.09.2l216.74,12.43a.13.13,0,0,0,.12-.18L152.76,24.29A.13.13,0,0,0,152.54,24.27ZM126.35,6.64,5.74,188a.16.16,0,0,0,.14.25l241.63-1a.16.16,0,0,0,.14-.25L126.63,6.64A.17.17,0,0,0,126.35,6.64Zm.15-.21,26.17,17.66"/></g></svg>
@@ -357,14 +357,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
       
       
       
@@ -387,7 +385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -401,7 +399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../../getting-started/" class="md-nav__link">
         Setup
       </a>
     </li>
@@ -415,7 +413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker-compose/" class="md-nav__link">
+      <a href="../../../getting-started/docker-compose/" class="md-nav__link">
         Docker Compose
       </a>
     </li>
@@ -429,7 +427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker/" class="md-nav__link">
+      <a href="../../../getting-started/docker/" class="md-nav__link">
         Pure Docker
       </a>
     </li>
@@ -443,7 +441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../raspberry-pi/" class="md-nav__link">
+      <a href="../../../getting-started/raspberry-pi/" class="md-nav__link">
         Raspberry Pi
       </a>
     </li>
@@ -457,7 +455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../freebsd/" class="md-nav__link">
+      <a href="../../../getting-started/freebsd/" class="md-nav__link">
         FreeBSD
       </a>
     </li>
@@ -497,7 +495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cloud/digitalocean/" class="md-nav__link">
+      <a href="../../../getting-started/cloud/digitalocean/" class="md-nav__link">
         DigitalOcean
       </a>
     </li>
@@ -544,7 +542,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nas/synology/" class="md-nav__link">
+      <a href="../../../getting-started/nas/synology/" class="md-nav__link">
         Synology NAS
       </a>
     </li>
@@ -558,7 +556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nas/unraid/" class="md-nav__link">
+      <a href="../../../getting-started/nas/unraid/" class="md-nav__link">
         Unraid
       </a>
     </li>
@@ -577,137 +575,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Config Options
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../getting-started/config-options/" class="md-nav__link">
         Config Options
       </a>
-      
-        
-
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#basic-settings" class="md-nav__link">
-    Basic Settings
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#storage-folders" class="md-nav__link">
-    Storage Folders
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#index-workers" class="md-nav__link">
-    Index Workers
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#feature-flags" class="md-nav__link">
-    Feature Flags
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#web-app" class="md-nav__link">
-    Web App
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#site-information" class="md-nav__link">
-    Site Information
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#web-server" class="md-nav__link">
-    Web Server
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#database-connection" class="md-nav__link">
-    Database Connection
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#external-tools" class="md-nav__link">
-    External Tools
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#url-tokens" class="md-nav__link">
-    URL Tokens
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#image-quality" class="md-nav__link">
-    Image Quality
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#facial-recognition" class="md-nav__link">
-    Facial Recognition
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#daemon-mode" class="md-nav__link">
-    Daemon Mode
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -719,7 +591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../performance/" class="md-nav__link">
+      <a href="../../../getting-started/performance/" class="md-nav__link">
         Performance
       </a>
     </li>
@@ -733,7 +605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../troubleshooting/" class="md-nav__link">
+      <a href="../../../getting-started/troubleshooting/" class="md-nav__link">
         Troubleshooting
       </a>
     </li>
@@ -747,7 +619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../updates/" class="md-nav__link">
+      <a href="../../../getting-started/updates/" class="md-nav__link">
         Getting Updates
       </a>
     </li>
@@ -787,7 +659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../proxies/traefik/" class="md-nav__link">
+      <a href="../../../getting-started/proxies/traefik/" class="md-nav__link">
         Traefik
       </a>
     </li>
@@ -801,7 +673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../proxies/caddy-1/" class="md-nav__link">
+      <a href="../../../getting-started/proxies/caddy-1/" class="md-nav__link">
         Caddy 1
       </a>
     </li>
@@ -815,7 +687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../proxies/caddy-2/" class="md-nav__link">
+      <a href="../../../getting-started/proxies/caddy-2/" class="md-nav__link">
         Caddy 2
       </a>
     </li>
@@ -829,7 +701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../proxies/nginx/" class="md-nav__link">
+      <a href="../../../getting-started/proxies/nginx/" class="md-nav__link">
         NGINX
       </a>
     </li>
@@ -843,7 +715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../proxies/apache-2/" class="md-nav__link">
+      <a href="../../../getting-started/proxies/apache-2/" class="md-nav__link">
         Apache 2.4
       </a>
     </li>
@@ -857,7 +729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../proxies/swag/" class="md-nav__link">
+      <a href="../../../getting-started/proxies/swag/" class="md-nav__link">
         SWAG
       </a>
     </li>
@@ -904,7 +776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/transcoding/" class="md-nav__link">
+      <a href="../../../getting-started/advanced/transcoding/" class="md-nav__link">
         Transcoding
       </a>
     </li>
@@ -918,7 +790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/kubernetes/" class="md-nav__link">
+      <a href="../../../getting-started/advanced/kubernetes/" class="md-nav__link">
         Kubernetes
       </a>
     </li>
@@ -932,7 +804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/backups/" class="md-nav__link">
+      <a href="../../../getting-started/advanced/backups/" class="md-nav__link">
         Backups
       </a>
     </li>
@@ -946,7 +818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/databases/" class="md-nav__link">
+      <a href="../../../getting-started/advanced/databases/" class="md-nav__link">
         Databases
       </a>
     </li>
@@ -960,7 +832,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/caching/" class="md-nav__link">
+      <a href="../../../getting-started/advanced/caching/" class="md-nav__link">
         Caching
       </a>
     </li>
@@ -974,7 +846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/nginx-proxy-setup/" class="md-nav__link">
+      <a href="../../../getting-started/advanced/nginx-proxy-setup/" class="md-nav__link">
         NGINX
       </a>
     </li>
@@ -988,7 +860,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/scalability/" class="md-nav__link">
+      <a href="../../../getting-started/advanced/scalability/" class="md-nav__link">
         Scalability
       </a>
     </li>
@@ -1009,7 +881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../faq/" class="md-nav__link">
+      <a href="../../../getting-started/faq/" class="md-nav__link">
         FAQ
       </a>
     </li>
@@ -1057,7 +929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/" class="md-nav__link">
+      <a href="../../../user-guide/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -1097,7 +969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/library/" class="md-nav__link">
+      <a href="../../../user-guide/library/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -1111,7 +983,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/library/originals/" class="md-nav__link">
+      <a href="../../../user-guide/library/originals/" class="md-nav__link">
         Index Originals
       </a>
     </li>
@@ -1125,7 +997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/library/import/" class="md-nav__link">
+      <a href="../../../user-guide/library/import/" class="md-nav__link">
         Import Files
       </a>
     </li>
@@ -1139,7 +1011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/library/upload/" class="md-nav__link">
+      <a href="../../../user-guide/library/upload/" class="md-nav__link">
         Web Upload
       </a>
     </li>
@@ -1153,7 +1025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/library/webdav/" class="md-nav__link">
+      <a href="../../../user-guide/library/webdav/" class="md-nav__link">
         WebDAV Sync
       </a>
     </li>
@@ -1167,7 +1039,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/library/files/" class="md-nav__link">
+      <a href="../../../user-guide/library/files/" class="md-nav__link">
         File Browser
       </a>
     </li>
@@ -1214,7 +1086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/navigate/" class="md-nav__link">
+      <a href="../../../user-guide/navigate/" class="md-nav__link">
         Navigate
       </a>
     </li>
@@ -1228,7 +1100,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/organize/views/" class="md-nav__link">
+      <a href="../../../user-guide/organize/views/" class="md-nav__link">
         Views
       </a>
     </li>
@@ -1242,7 +1114,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/organize/search/" class="md-nav__link">
+      <a href="../../../user-guide/organize/search/" class="md-nav__link">
         Search
       </a>
     </li>
@@ -1256,7 +1128,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/organize/browse/" class="md-nav__link">
+      <a href="../../../user-guide/organize/browse/" class="md-nav__link">
         Sections
       </a>
     </li>
@@ -1303,7 +1175,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/organize/albums/" class="md-nav__link">
+      <a href="../../../user-guide/organize/albums/" class="md-nav__link">
         Albums
       </a>
     </li>
@@ -1317,7 +1189,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/organize/people/" class="md-nav__link">
+      <a href="../../../user-guide/organize/people/" class="md-nav__link">
         People
       </a>
     </li>
@@ -1331,7 +1203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/organize/labels/" class="md-nav__link">
+      <a href="../../../user-guide/organize/labels/" class="md-nav__link">
         Labels
       </a>
     </li>
@@ -1345,7 +1217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/organize/archive/" class="md-nav__link">
+      <a href="../../../user-guide/organize/archive/" class="md-nav__link">
         Archive
       </a>
     </li>
@@ -1359,7 +1231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/organize/delete/" class="md-nav__link">
+      <a href="../../../user-guide/organize/delete/" class="md-nav__link">
         Delete
       </a>
     </li>
@@ -1373,7 +1245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/organize/private/" class="md-nav__link">
+      <a href="../../../user-guide/organize/private/" class="md-nav__link">
         Private
       </a>
     </li>
@@ -1387,7 +1259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/organize/review/" class="md-nav__link">
+      <a href="../../../user-guide/organize/review/" class="md-nav__link">
         Review
       </a>
     </li>
@@ -1401,7 +1273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/organize/stacks/" class="md-nav__link">
+      <a href="../../../user-guide/organize/stacks/" class="md-nav__link">
         Stacks
       </a>
     </li>
@@ -1415,7 +1287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/organize/edit/" class="md-nav__link">
+      <a href="../../../user-guide/organize/edit/" class="md-nav__link">
         Edit Metadata
       </a>
     </li>
@@ -1429,7 +1301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/organize/download/" class="md-nav__link">
+      <a href="../../../user-guide/organize/download/" class="md-nav__link">
         Download
       </a>
     </li>
@@ -1443,7 +1315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/organize/video/" class="md-nav__link">
+      <a href="../../../user-guide/organize/video/" class="md-nav__link">
         Videos
       </a>
     </li>
@@ -1457,7 +1329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/organize/places/" class="md-nav__link">
+      <a href="../../../user-guide/organize/places/" class="md-nav__link">
         Places
       </a>
     </li>
@@ -1471,7 +1343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/organize/moments/" class="md-nav__link">
+      <a href="../../../user-guide/organize/moments/" class="md-nav__link">
         Moments
       </a>
     </li>
@@ -1485,7 +1357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/organize/calendar/" class="md-nav__link">
+      <a href="../../../user-guide/organize/calendar/" class="md-nav__link">
         Calendar
       </a>
     </li>
@@ -1499,7 +1371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/organize/folders/" class="md-nav__link">
+      <a href="../../../user-guide/organize/folders/" class="md-nav__link">
         Folders
       </a>
     </li>
@@ -1513,7 +1385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/organize/panoramas/" class="md-nav__link">
+      <a href="../../../user-guide/organize/panoramas/" class="md-nav__link">
         Panoramas
       </a>
     </li>
@@ -1527,7 +1399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/organize/scans/" class="md-nav__link">
+      <a href="../../../user-guide/organize/scans/" class="md-nav__link">
         Scans
       </a>
     </li>
@@ -1574,7 +1446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/share/share/" class="md-nav__link">
+      <a href="../../../user-guide/share/share/" class="md-nav__link">
         Album Link
       </a>
     </li>
@@ -1621,7 +1493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/sync/webdav/" class="md-nav__link">
+      <a href="../../../user-guide/sync/webdav/" class="md-nav__link">
         WebDAV
       </a>
     </li>
@@ -1635,7 +1507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/sync/mobile-devices/" class="md-nav__link">
+      <a href="../../../user-guide/sync/mobile-devices/" class="md-nav__link">
         Mobile Devices
       </a>
     </li>
@@ -1649,7 +1521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/sync/dropbox/" class="md-nav__link">
+      <a href="../../../user-guide/sync/dropbox/" class="md-nav__link">
         Dropbox
       </a>
     </li>
@@ -1696,7 +1568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/settings/general/" class="md-nav__link">
+      <a href="../../../user-guide/settings/general/" class="md-nav__link">
         General
       </a>
     </li>
@@ -1710,7 +1582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/settings/library/" class="md-nav__link">
+      <a href="../../../user-guide/settings/library/" class="md-nav__link">
         Library
       </a>
     </li>
@@ -1724,7 +1596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/settings/advanced/" class="md-nav__link">
+      <a href="../../../user-guide/settings/advanced/" class="md-nav__link">
         Advanced
       </a>
     </li>
@@ -1738,7 +1610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/settings/sync/" class="md-nav__link">
+      <a href="../../../user-guide/settings/sync/" class="md-nav__link">
         Sync
       </a>
     </li>
@@ -1752,7 +1624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/settings/account/" class="md-nav__link">
+      <a href="../../../user-guide/settings/account/" class="md-nav__link">
         Account
       </a>
     </li>
@@ -1799,7 +1671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/use-cases/google/" class="md-nav__link">
+      <a href="../../../user-guide/use-cases/google/" class="md-nav__link">
         Google Photos
       </a>
     </li>
@@ -1813,7 +1685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/use-cases/apple/" class="md-nav__link">
+      <a href="../../../user-guide/use-cases/apple/" class="md-nav__link">
         Apple Photos
       </a>
     </li>
@@ -1827,7 +1699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/use-cases/flickr/" class="md-nav__link">
+      <a href="../../../user-guide/use-cases/flickr/" class="md-nav__link">
         Flickr
       </a>
     </li>
@@ -1874,7 +1746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/advanced/metadata/" class="md-nav__link">
+      <a href="../../../user-guide/advanced/metadata/" class="md-nav__link">
         Metadata
       </a>
     </li>
@@ -1888,7 +1760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/advanced/backups/" class="md-nav__link">
+      <a href="../../../user-guide/advanced/backups/" class="md-nav__link">
         Backups
       </a>
     </li>
@@ -1902,7 +1774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/advanced/folders/" class="md-nav__link">
+      <a href="../../../user-guide/advanced/folders/" class="md-nav__link">
         Folders
       </a>
     </li>
@@ -1923,7 +1795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/pwa/" class="md-nav__link">
+      <a href="../../../user-guide/pwa/" class="md-nav__link">
         Mobile App (PWA)
       </a>
     </li>
@@ -1937,7 +1809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../release-notes/" class="md-nav__link">
+      <a href="../../../release-notes/" class="md-nav__link">
         Release Notes
       </a>
     </li>
@@ -1951,7 +1823,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../user-guide/faq/" class="md-nav__link">
+      <a href="../../../user-guide/faq/" class="md-nav__link">
         FAQ
       </a>
     </li>
@@ -1971,12 +1843,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -1999,7 +1873,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/" class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -2013,7 +1887,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/setup/" class="md-nav__link">
+      <a href="../../setup/" class="md-nav__link">
         Setup
       </a>
     </li>
@@ -2027,7 +1901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/directories/" class="md-nav__link">
+      <a href="../../directories/" class="md-nav__link">
         Directories
       </a>
     </li>
@@ -2041,7 +1915,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/configuration/" class="md-nav__link">
+      <a href="../../configuration/" class="md-nav__link">
         Configuration
       </a>
     </li>
@@ -2055,7 +1929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/tests/" class="md-nav__link">
+      <a href="../../tests/" class="md-nav__link">
         Tests
       </a>
     </li>
@@ -2069,7 +1943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/issues/" class="md-nav__link">
+      <a href="../../issues/" class="md-nav__link">
         Issues
       </a>
     </li>
@@ -2083,7 +1957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/pull-requests/" class="md-nav__link">
+      <a href="../../pull-requests/" class="md-nav__link">
         Pull Requests
       </a>
     </li>
@@ -2097,7 +1971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/code-quality/" class="md-nav__link">
+      <a href="../../code-quality/" class="md-nav__link">
         Code Quality
       </a>
     </li>
@@ -2111,7 +1985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security-policy/" class="md-nav__link">
+      <a href="../../../security-policy/" class="md-nav__link">
         Security Policy
       </a>
     </li>
@@ -2125,7 +1999,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/documentation/" class="md-nav__link">
+      <a href="../../documentation/" class="md-nav__link">
         Documentation
       </a>
     </li>
@@ -2139,7 +2013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/translations/" class="md-nav__link">
+      <a href="../../translations/" class="md-nav__link">
         Translations
       </a>
     </li>
@@ -2179,7 +2053,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/ui/introduction/" class="md-nav__link">
+      <a href="../../ui/introduction/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -2193,7 +2067,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/ui/screenshots/" class="md-nav__link">
+      <a href="../../ui/screenshots/" class="md-nav__link">
         Screenshots
       </a>
     </li>
@@ -2207,7 +2081,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/ui/components/" class="md-nav__link">
+      <a href="../../ui/components/" class="md-nav__link">
         Components
       </a>
     </li>
@@ -2221,7 +2095,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/ui/design/" class="md-nav__link">
+      <a href="../../ui/design/" class="md-nav__link">
         Design
       </a>
     </li>
@@ -2235,7 +2109,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/ui/rest-api/" class="md-nav__link">
+      <a href="../../ui/rest-api/" class="md-nav__link">
         REST API
       </a>
     </li>
@@ -2249,7 +2123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/ui/browsers/" class="md-nav__link">
+      <a href="../../ui/browsers/" class="md-nav__link">
         Browsers
       </a>
     </li>
@@ -2296,7 +2170,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/media/import/" class="md-nav__link">
+      <a href="../../media/import/" class="md-nav__link">
         Import
       </a>
     </li>
@@ -2310,7 +2184,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/media/abstraction/" class="md-nav__link">
+      <a href="../../media/abstraction/" class="md-nav__link">
         Abstraction
       </a>
     </li>
@@ -2324,7 +2198,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/media/encryption/" class="md-nav__link">
+      <a href="../../media/encryption/" class="md-nav__link">
         Encryption
       </a>
     </li>
@@ -2338,7 +2212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/media/raw/" class="md-nav__link">
+      <a href="../../media/raw/" class="md-nav__link">
         RAW Images
       </a>
     </li>
@@ -2352,7 +2226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/media/heif/" class="md-nav__link">
+      <a href="../../media/heif/" class="md-nav__link">
         HEIF / HEIC
       </a>
     </li>
@@ -2366,7 +2240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/media/videos/" class="md-nav__link">
+      <a href="../../media/videos/" class="md-nav__link">
         Videos
       </a>
     </li>
@@ -2380,7 +2254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/media/thumbnails/" class="md-nav__link">
+      <a href="../../media/thumbnails/" class="md-nav__link">
         Thumbnails
       </a>
     </li>
@@ -2394,7 +2268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/media/samples/" class="md-nav__link">
+      <a href="../../media/samples/" class="md-nav__link">
         Samples
       </a>
     </li>
@@ -2441,7 +2315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/metadata/geocoding/" class="md-nav__link">
+      <a href="../../metadata/geocoding/" class="md-nav__link">
         Geocoding
       </a>
     </li>
@@ -2455,7 +2329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/metadata/colors/" class="md-nav__link">
+      <a href="../../metadata/colors/" class="md-nav__link">
         Color Extraction
       </a>
     </li>
@@ -2469,7 +2343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/metadata/classification/" class="md-nav__link">
+      <a href="../../metadata/classification/" class="md-nav__link">
         Image Classification
       </a>
     </li>
@@ -2483,7 +2357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/metadata/face-recognition/" class="md-nav__link">
+      <a href="../../metadata/face-recognition/" class="md-nav__link">
         Face Recognition
       </a>
     </li>
@@ -2497,7 +2371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/metadata/xmp/" class="md-nav__link">
+      <a href="../../metadata/xmp/" class="md-nav__link">
         XMP
       </a>
     </li>
@@ -2511,7 +2385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/metadata/exif/" class="md-nav__link">
+      <a href="../../metadata/exif/" class="md-nav__link">
         EXIF
       </a>
     </li>
@@ -2525,7 +2399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/metadata/edit-exif/" class="md-nav__link">
+      <a href="../../metadata/edit-exif/" class="md-nav__link">
         Edit EXIF
       </a>
     </li>
@@ -2572,7 +2446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/clients/go/" class="md-nav__link">
+      <a href="../../clients/go/" class="md-nav__link">
         Go
       </a>
     </li>
@@ -2619,7 +2493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/checklists/web-security/" class="md-nav__link">
+      <a href="../../checklists/web-security/" class="md-nav__link">
         Web Security
       </a>
     </li>
@@ -2638,12 +2512,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_17" type="checkbox" id="__nav_3_17" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_17" type="checkbox" id="__nav_3_17" checked>
       
       
       
@@ -2664,11 +2540,67 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../developer-guide/technologies/yaml/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          YAML
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         YAML
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#keys-and-values" class="md-nav__link">
+    Keys and Values
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simple-lists" class="md-nav__link">
+    Simple Lists
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dictionaries" class="md-nav__link">
+    Dictionaries
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2680,7 +2612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/technologies/golang/" class="md-nav__link">
+      <a href="../golang/" class="md-nav__link">
         Golang
       </a>
     </li>
@@ -2694,7 +2626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/technologies/tensorflow/" class="md-nav__link">
+      <a href="../tensorflow/" class="md-nav__link">
         TensorFlow
       </a>
     </li>
@@ -2708,7 +2640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/technologies/docker/" class="md-nav__link">
+      <a href="../docker/" class="md-nav__link">
         Docker
       </a>
     </li>
@@ -2722,7 +2654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/technologies/broadway/" class="md-nav__link">
+      <a href="../broadway/" class="md-nav__link">
         Broadway
       </a>
     </li>
@@ -2736,7 +2668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../developer-guide/technologies/external-apis/" class="md-nav__link">
+      <a href="../external-apis/" class="md-nav__link">
         External APIs
       </a>
     </li>
@@ -2791,7 +2723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../team/" class="md-nav__link">
+      <a href="../../../team/" class="md-nav__link">
         Team
       </a>
     </li>
@@ -2805,7 +2737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../funding/" class="md-nav__link">
+      <a href="../../../funding/" class="md-nav__link">
         Funding
       </a>
     </li>
@@ -2819,7 +2751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../credits/" class="md-nav__link">
+      <a href="../../../credits/" class="md-nav__link">
         Credits
       </a>
     </li>
@@ -2833,7 +2765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../license/" class="md-nav__link">
+      <a href="../../../license/" class="md-nav__link">
         License
       </a>
     </li>
@@ -2847,7 +2779,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contact/" class="md-nav__link">
+      <a href="../../../contact/" class="md-nav__link">
         Contact
       </a>
     </li>
@@ -2889,92 +2821,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#basic-settings" class="md-nav__link">
-    Basic Settings
+  <a href="#keys-and-values" class="md-nav__link">
+    Keys and Values
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#storage-folders" class="md-nav__link">
-    Storage Folders
+  <a href="#simple-lists" class="md-nav__link">
+    Simple Lists
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#index-workers" class="md-nav__link">
-    Index Workers
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#feature-flags" class="md-nav__link">
-    Feature Flags
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#web-app" class="md-nav__link">
-    Web App
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#site-information" class="md-nav__link">
-    Site Information
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#web-server" class="md-nav__link">
-    Web Server
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#database-connection" class="md-nav__link">
-    Database Connection
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#external-tools" class="md-nav__link">
-    External Tools
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#url-tokens" class="md-nav__link">
-    URL Tokens
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#image-quality" class="md-nav__link">
-    Image Quality
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#facial-recognition" class="md-nav__link">
-    Facial Recognition
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#daemon-mode" class="md-nav__link">
-    Daemon Mode
+  <a href="#dictionaries" class="md-nav__link">
+    Dictionaries
   </a>
   
 </li>
@@ -2991,625 +2853,50 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/photoprism/photoprism-docs/tree/master/docs/getting-started/config-options.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/photoprism/photoprism-docs/tree/master/docs/developer-guide/technologies/yaml.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="config-options">Config Options<a class="headerlink" href="#config-options" title="Permanent link">&para;</a></h1>
-<div class="admonition tldr">
-<p>Changing values in <code>docker-compose.yml</code> or on the <a href="../../user-guide/settings/advanced/">advanced settings</a> 
-page <strong>always requires a restart</strong> to take effect. Open a terminal, run <code>docker-compose stop photoprism</code> and then
-<code>docker-compose up -d photoprism</code> to restart the app container.</p>
-</div>
-<h3 id="basic-settings">Basic Settings<a class="headerlink" href="#basic-settings" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th align="left">Variable</th>
-<th align="left">Parameter</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><code>PHOTOPRISM_ADMIN_PASSWORD</code></td>
-<td align="left">--admin-password PASSWORD</td>
-<td align="left">initial admin user PASSWORD, minimum 4 characters</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_LOG_LEVEL</code></td>
-<td align="left">--log-level value, -l value</td>
-<td align="left">trace, debug, info, warning, error, fatal, or panic (default: "info")</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_DEBUG</code></td>
-<td align="left">--debug</td>
-<td align="left">enable debug mode, show additional log messages</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_PUBLIC</code></td>
-<td align="left">--public, -p</td>
-<td align="left">disable password authentication</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_READONLY</code></td>
-<td align="left">--read-only, -r</td>
-<td align="left">disable import, upload, and delete</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_EXPERIMENTAL</code></td>
-<td align="left">--experimental, -e</td>
-<td align="left">enable experimental features</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_CONFIG_FILE</code></td>
-<td align="left">--config-file FILENAME, -c FILENAME</td>
-<td align="left">load config values from FILENAME</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_CONFIG_PATH</code></td>
-<td align="left">--config-path PATH</td>
-<td align="left">config PATH to be searched for additional configuration and settings files</td>
-</tr>
-</tbody>
-</table>
-<h3 id="storage-folders">Storage Folders<a class="headerlink" href="#storage-folders" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th align="left">Variable</th>
-<th align="left">Parameter</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><code>PHOTOPRISM_ORIGINALS_PATH</code></td>
-<td align="left">--originals-path PATH</td>
-<td align="left">original media library PATH containing your photo and video collection</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_ORIGINALS_LIMIT</code></td>
-<td align="left">--originals-limit MB</td>
-<td align="left">original media file size limit in MB (default: 1000)</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_IMPORT_PATH</code></td>
-<td align="left">--import-path PATH</td>
-<td align="left">optional import PATH from which files can be added to originals</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_STORAGE_PATH</code></td>
-<td align="left">--storage-path PATH</td>
-<td align="left">writable storage PATH for cache, database, and sidecar files</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_SIDECAR_PATH</code></td>
-<td align="left">--sidecar-path PATH</td>
-<td align="left">optional custom relative or absolute sidecar PATH</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_CACHE_PATH</code></td>
-<td align="left">--cache-path PATH</td>
-<td align="left">optional custom cache PATH for sessions and thumbnail files</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_TEMP_PATH</code></td>
-<td align="left">--temp-path PATH</td>
-<td align="left">optional custom temporary file PATH</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_BACKUP_PATH</code></td>
-<td align="left">--backup-path PATH</td>
-<td align="left">optional custom backup PATH for index backup files</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_ASSETS_PATH</code></td>
-<td align="left">--assets-path PATH</td>
-<td align="left">assets PATH containing static resources like icons, models, and translations</td>
-</tr>
-</tbody>
-</table>
-<h3 id="index-workers">Index Workers<a class="headerlink" href="#index-workers" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th align="left">Variable</th>
-<th align="left">Parameter</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><code>PHOTOPRISM_WORKERS</code></td>
-<td align="left">--workers NUMBER, -w NUMBER</td>
-<td align="left">maximum NUMBER of indexing workers, default and limit depend on the number of CPU cores</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_WAKEUP_INTERVAL</code></td>
-<td align="left">--wakeup-interval SECONDS</td>
-<td align="left">background worker wakeup interval in SECONDS (default: 900)</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_AUTO_INDEX</code></td>
-<td align="left">--auto-index SECONDS</td>
-<td align="left">WebDAV auto indexing safety delay in SECONDS, disable with -1 (default: 300)</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_AUTO_IMPORT</code></td>
-<td align="left">--auto-import SECONDS</td>
-<td align="left">WebDAV auto import safety delay in SECONDS, disable with -1 (default: 180)</td>
-</tr>
-</tbody>
-</table>
-<h3 id="feature-flags">Feature Flags<a class="headerlink" href="#feature-flags" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th align="left">Variable</th>
-<th align="left">Parameter</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><code>PHOTOPRISM_DISABLE_WEBDAV</code></td>
-<td align="left">--disable-webdav</td>
-<td align="left">disable built-in WebDAV server</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_DISABLE_SETTINGS</code></td>
-<td align="left">--disable-settings</td>
-<td align="left">disable settings UI and API</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_DISABLE_PLACES</code></td>
-<td align="left">--disable-places</td>
-<td align="left">disable reverse geocoding and map</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_DISABLE_BACKUPS</code></td>
-<td align="left">--disable-backups</td>
-<td align="left">disable creating YAML metadata backup files</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_DISABLE_EXIFTOOL</code></td>
-<td align="left">--disable-exiftool</td>
-<td align="left">disable creating JSON metadata sidecar files with ExifTool</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_DISABLE_FFMPEG</code></td>
-<td align="left">--disable-ffmpeg</td>
-<td align="left">disable video transcoding and still image extraction with FFmpeg</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_DISABLE_DARKTABLE</code></td>
-<td align="left">--disable-darktable</td>
-<td align="left">disable converting RAW files with Darktable</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_DISABLE_RAWTHERAPEE</code></td>
-<td align="left">--disable-rawtherapee</td>
-<td align="left">disable converting RAW files with RawTherapee</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_DISABLE_SIPS</code></td>
-<td align="left">--disable-sips</td>
-<td align="left">disable converting RAW files with Sips (macOS only)</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_DISABLE_HEIFCONVERT</code></td>
-<td align="left">--disable-heifconvert</td>
-<td align="left">disable converting HEIC/HEIF files</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_DISABLE_TENSORFLOW</code></td>
-<td align="left">--disable-tensorflow</td>
-<td align="left">disable all features depending on TensorFlow</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_DISABLE_FACES</code></td>
-<td align="left">--disable-faces</td>
-<td align="left">disable facial recognition</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_DISABLE_CLASSIFICATION</code></td>
-<td align="left">--disable-classification</td>
-<td align="left">disable image classification</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_DETECT_NSFW</code></td>
-<td align="left">--detect-nsfw</td>
-<td align="left">flag photos as private that may be offensive (requires TensorFlow)</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_UPLOAD_NSFW</code></td>
-<td align="left">--upload-nsfw</td>
-<td align="left">allow uploads that may be offensive</td>
-</tr>
-</tbody>
-</table>
-<h3 id="web-app">Web App<a class="headerlink" href="#web-app" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th align="left">Variable</th>
-<th align="left">Parameter</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><code>PHOTOPRISM_APP_ICON</code></td>
-<td align="left">--app-icon ICON</td>
-<td align="left">application ICON (logo, app, crisp, mint, bold) (default: "logo")</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_APP_NAME</code></td>
-<td align="left">--app-name NAME</td>
-<td align="left">application NAME when installed on a device (default: "PhotoPrism")</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_APP_MODE</code></td>
-<td align="left">--app-mode MODE</td>
-<td align="left">application MODE (fullscreen, standalone, minimal-ui, browser) (default: "standalone")</td>
-</tr>
-</tbody>
-</table>
-<h3 id="site-information">Site Information<a class="headerlink" href="#site-information" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th align="left">Variable</th>
-<th align="left">Parameter</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><code>PHOTOPRISM_CDN_URL</code></td>
-<td align="left">--cdn-url URL</td>
-<td align="left">optional content delivery network URL</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_SITE_URL</code></td>
-<td align="left">--site-url URL</td>
-<td align="left">public site URL (default: "<a href="http://localhost:2342/">http://localhost:2342/</a>")</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_SITE_AUTHOR</code></td>
-<td align="left">--site-author COPYRIGHT</td>
-<td align="left">site COPYRIGHT, artist, or owner name</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_SITE_TITLE</code></td>
-<td align="left">--site-title TITLE</td>
-<td align="left">site TITLE (default: "PhotoPrism")</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_SITE_CAPTION</code></td>
-<td align="left">--site-caption CAPTION</td>
-<td align="left">site CAPTION (default: "Browse Your Life")</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_SITE_DESCRIPTION</code></td>
-<td align="left">--site-description DESCRIPTION</td>
-<td align="left">optional site DESCRIPTION</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_SITE_PREVIEW</code></td>
-<td align="left">--site-preview URL</td>
-<td align="left">optional preview image URL</td>
-</tr>
-</tbody>
-</table>
-<h3 id="web-server">Web Server<a class="headerlink" href="#web-server" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th align="left">Variable</th>
-<th align="left">Parameter</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><code>PHOTOPRISM_HTTP_PORT</code></td>
-<td align="left">--http-port NUMBER</td>
-<td align="left">http server port NUMBER (default: 2342)</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_HTTP_HOST</code></td>
-<td align="left">--http-host IP</td>
-<td align="left">http server IP address</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_HTTP_MODE</code></td>
-<td align="left">--http-mode MODE, -m MODE</td>
-<td align="left">http server MODE (debug, release, or test)</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_HTTP_COMPRESSION</code></td>
-<td align="left">--http-compression METHOD, -z METHOD</td>
-<td align="left">http server compression METHOD (none or gzip)</td>
-</tr>
-</tbody>
-</table>
-<h3 id="database-connection">Database Connection<a class="headerlink" href="#database-connection" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th align="left">Variable</th>
-<th align="left">Parameter</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><code>PHOTOPRISM_DATABASE_DRIVER</code></td>
-<td align="left">--database-driver NAME</td>
-<td align="left">database DRIVER (sqlite or mysql) (default: "sqlite")</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_DATABASE_DSN</code></td>
-<td align="left">--database-dsn DSN</td>
-<td align="left">sqlite file name, providing a DSN is optional for other drivers</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_DATABASE_SERVER</code></td>
-<td align="left">--database-server HOST</td>
-<td align="left">database server HOST with optional port e.g. mysql:3306</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_DATABASE_NAME</code></td>
-<td align="left">--database-name NAME</td>
-<td align="left">database schema NAME (default: "photoprism")</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_DATABASE_USER</code></td>
-<td align="left">--database-user NAME</td>
-<td align="left">database user NAME (default: "photoprism")</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_DATABASE_PASSWORD</code></td>
-<td align="left">--database-password PASSWORD</td>
-<td align="left">database user PASSWORD</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_DATABASE_CONNS</code></td>
-<td align="left">--database-conns NUMBER</td>
-<td align="left">maximum NUMBER of open database connections</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_DATABASE_CONNS_IDLE</code></td>
-<td align="left">--database-conns-idle NUMBER</td>
-<td align="left">maximum NUMBER of idle database connections</td>
-</tr>
-</tbody>
-</table>
-<h3 id="external-tools">External Tools<a class="headerlink" href="#external-tools" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th align="left">Variable</th>
-<th align="left">Parameter</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><code>PHOTOPRISM_RAW_PRESETS</code></td>
-<td align="left">--raw-presets</td>
-<td align="left">enable RAW file converter presets (may reduce performance)</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_DARKTABLE_BIN</code></td>
-<td align="left">--darktable-bin COMMAND</td>
-<td align="left">Darktable CLI COMMAND for RAW file conversion (default: "darktable-cli")</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_DARKTABLE_BLACKLIST</code></td>
-<td align="left">--darktable-blacklist BLACKLIST</td>
-<td align="left">file EXTENSIONS not to be converted with Darktable (default: "raf,cr3,dng")</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_RAWTHERAPEE_BIN</code></td>
-<td align="left">--rawtherapee-bin COMMAND</td>
-<td align="left">RawTherapee CLI COMMAND for RAW file conversion (default: "rawtherapee-cli")</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_RAWTHERAPEE_BLACKLIST</code></td>
-<td align="left">--rawtherapee-blacklist BLACKLIST</td>
-<td align="left">file EXTENSIONS not to be converted with RawTherapee</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_SIPS_BIN</code></td>
-<td align="left">--sips-bin FILENAME</td>
-<td align="left">Sips COMMAND for RAW file conversion (macOS only) (default: "sips")</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_HEIFCONVERT_BIN</code></td>
-<td align="left">--heifconvert-bin COMMAND</td>
-<td align="left">HEIC/HEIF image convert COMMAND (default: "heif-convert")</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_FFMPEG_BIN</code></td>
-<td align="left">--ffmpeg-bin COMMAND</td>
-<td align="left">FFmpeg COMMAND for video transcoding and still image extraction (default: "ffmpeg")</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_FFMPEG_ENCODER</code></td>
-<td align="left">--ffmpeg-encoder NAME</td>
-<td align="left">maximum FFmpeg encoding BITRATE (Mbit/s) (default: 50)</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_FFMPEG_BITRATE</code></td>
-<td align="left">--ffmpeg-bitrate LIMIT</td>
-<td align="left">FFmpeg encoding bitrate LIMIT in Mbit/s (default: "50")</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_FFMPEG_BUFFERS</code></td>
-<td align="left">--ffmpeg-buffers</td>
-<td align="left">NUMBER of FFmpeg capture buffers (default: 32)</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_EXIFTOOL_BIN</code></td>
-<td align="left">--exiftool-bin COMMAND</td>
-<td align="left">ExifTool COMMAND for extracting metadata (default: "exiftool")</td>
-</tr>
-</tbody>
-</table>
-<h3 id="url-tokens">URL Tokens<a class="headerlink" href="#url-tokens" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th align="left">Variable</th>
-<th align="left">Parameter</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><code>PHOTOPRISM_DOWNLOAD_TOKEN</code></td>
-<td align="left">--download-token TOKEN</td>
-<td align="left">custom download URL TOKEN (default: random)</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_PREVIEW_TOKEN</code></td>
-<td align="left">--preview-token TOKEN</td>
-<td align="left">custom thumbnail and streaming URL TOKEN (default: random)</td>
-</tr>
-</tbody>
-</table>
-<h3 id="image-quality">Image Quality<a class="headerlink" href="#image-quality" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th align="left">Variable</th>
-<th align="left">Parameter</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><code>PHOTOPRISM_THUMB_FILTER</code></td>
-<td align="left">--thumb-filter FILTER, -f FILTER</td>
-<td align="left">thumbnail downscaling FILTER (best to worst: blackman, lanczos, cubic, linear) (default: "lanczos")</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_THUMB_SIZE</code></td>
-<td align="left">--thumb-size PIXELS, -s PIXELS</td>
-<td align="left">maximum pre-cached thumbnail image size in PIXELS (720-7680) (default: 2048)</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_THUMB_UNCACHED</code></td>
-<td align="left">--thumb-uncached, -u</td>
-<td align="left">enable on-demand thumbnail generation (high memory and cpu usage)</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_THUMB_SIZE_UNCACHED</code></td>
-<td align="left">--thumb-size-uncached PIXELS, -x PIXELS</td>
-<td align="left">maximum size of on-demand generated thumbnails in PIXELS (720-7680) (default: 7680)</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_JPEG_SIZE</code></td>
-<td align="left">--jpeg-size PIXELS</td>
-<td align="left">maximum size of generated JPEG images in PIXELS (720-30000) (default: 7680)</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_JPEG_QUALITY</code></td>
-<td align="left">--jpeg-quality QUALITY, -q QUALITY</td>
-<td align="left">QUALITY of generated JPEG images, a higher value reduces compression (25-100) (default: 92)</td>
-</tr>
-</tbody>
-</table>
-<h3 id="facial-recognition">Facial Recognition<a class="headerlink" href="#facial-recognition" title="Permanent link">&para;</a></h3>
-<div class="admonition info">
-<p>To <a href="../../user-guide/organize/people/">recognize faces</a>, PhotoPrism first extracts crops from your images using a 
-<a href="https://github.com/esimov/pigo">library</a> based on <a href="https://arxiv.org/pdf/1305.4537.pdf">pixel intensity comparisons</a>.
-These are then fed into TensorFlow to compute <a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Schroff_FaceNet_A_Unified_2015_CVPR_paper.pdf">512-dimensional vectors</a>
-for characterization. In the final step, the <a href="https://en.wikipedia.org/wiki/DBSCAN">DBSCAN algorithm</a> 
-attempts to cluster these so-called face embeddings, so they can be matched to persons with just a few clicks.
-A reasonable range for the similarity distance between face embeddings is between 0.60 and 0.70, with a higher 
-value being more aggressive and leading to larger clusters with more false positives.
-To cluster a smaller number of faces, you can reduce the core to 3 or 2 similar faces.</p>
-</div>
-<p>We recommend that only advanced users change these parameters:</p>
-<table>
-<thead>
-<tr>
-<th align="left">Variable</th>
-<th align="left">Parameter</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><code>PHOTOPRISM_FACE_SIZE</code></td>
-<td align="left">--face-size PIXELS</td>
-<td align="left">minimum face size in PIXELS (default: 50)</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_FACE_SCORE</code></td>
-<td align="left">--face-score QUALITY</td>
-<td align="left">minimum face QUALITY score (default: 9)</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_FACE_OVERLAP</code></td>
-<td align="left">--face-overlap PERCENT</td>
-<td align="left">face area overlap threshold in PERCENT (default: 42)</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_FACE_CLUSTER_SIZE</code></td>
-<td align="left">--face-cluster-size PIXELS</td>
-<td align="left">minimum size of automatically clustered faces in PIXELS (default: 80)</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_FACE_CLUSTER_SCORE</code></td>
-<td align="left">--face-cluster-score QUALITY</td>
-<td align="left">minimum QUALITY score of automatically clustered faces (default: 15)</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_FACE_CLUSTER_CORE</code></td>
-<td align="left">--face-cluster-core NUMBER</td>
-<td align="left">NUMBER of faces forming a cluster core (default: 4)</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_FACE_CLUSTER_DIST</code></td>
-<td align="left">--face-cluster-dist DISTANCE</td>
-<td align="left">similarity DISTANCE of faces forming a cluster core (default: 0.64)</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_FACE_MATCH_DIST</code></td>
-<td align="left">--face-match-dist OFFSET</td>
-<td align="left">similarity OFFSET for matching faces with existing clusters (default: 0.46)</td>
-</tr>
-</tbody>
-</table>
-<h3 id="daemon-mode">Daemon Mode<a class="headerlink" href="#daemon-mode" title="Permanent link">&para;</a></h3>
-<p>If you start the server in the background (daemon mode), you can additionally specify a log and process id filename:</p>
-<table>
-<thead>
-<tr>
-<th align="left">Variable</th>
-<th align="left">Parameter</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><code>PHOTOPRISM_PID_FILENAME</code></td>
-<td align="left">--pid-filename FILENAME</td>
-<td align="left">process id FILENAME (daemon mode only)</td>
-</tr>
-<tr>
-<td align="left"><code>PHOTOPRISM_LOG_FILENAME</code></td>
-<td align="left">--log-filename FILENAME</td>
-<td align="left">server log FILENAME (daemon mode only)</td>
-</tr>
-</tbody>
-</table>
+                <h1 id="introduction-to-yaml">Introduction to YAML<a class="headerlink" href="#introduction-to-yaml" title="Permanent link">&para;</a></h1>
+<p>YAML is an indentation-based markup language designed to be easy to read and write even for non-developers.
+PhotoPrism uses it for metadata backups and config files because of its simplicity and widespread support 
+in other applications and tools like <a href="https://dl.photoprism.app/docker/docker-compose.yml">Docker Compose</a>.</p>
+<h2 id="keys-and-values">Keys and Values<a class="headerlink" href="#keys-and-values" title="Permanent link">&para;</a></h2>
+<p>Value names, which are referred to as keys, are always case-sensitive. If values contain more than letters and numbers,
+they should be enclosed in single <code>'</code> or double quotes <code>"</code>. You can generally use all <a href="https://home.unicode.org/">Unicode</a>
+characters and <a href="https://home.unicode.org/emoji/about-emoji/">Emojis</a>.</p>
+<p>The difference between single quotes and double quotes is that double quotes support escape sequences 
+like <code>\t</code> for a tab or <code>\n</code> for a new line.</p>
+<p>Related values start at the same indentation level. We recommend using 2 spaces, but e.g. 4 spaces are also
+possible as long as the indentation is consistent in a file:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">Type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">image</span>
+<span class="nt">Title</span><span class="p">:</span> <span class="s">&quot;La</span><span class="nv"> </span><span class="s">Tour</span><span class="nv"> </span><span class="s">Eiffel</span><span class="nv"> </span><span class="s">✨&quot;</span>
+<span class="nt">Year</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2014</span>
+<span class="nt">Details</span><span class="p">:</span>
+  <span class="nt">Notes</span><span class="p">:</span> <span class="s">&quot;Hello\nWorld!&quot;</span>
+  <span class="nt">Keywords</span><span class="p">:</span> <span class="s">&#39;paris,</span><span class="nv"> </span><span class="s">france&#39;</span>
+</code></pre></div>
+<h2 id="simple-lists">Simple Lists<a class="headerlink" href="#simple-lists" title="Permanent link">&para;</a></h2>
+<p>List are lines that start at the same indentation level and begin with a <code>-</code> (a dash and a space):</p>
+<div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
+  <span class="nt">photoprism</span><span class="p">:</span>
+    <span class="nt">depends_on</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">database</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">jobrunner</span>
+    <span class="nt">ports</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="s">&quot;2342:2342&quot;</span>
+</code></pre></div>
+<h2 id="dictionaries">Dictionaries<a class="headerlink" href="#dictionaries" title="Permanent link">&para;</a></h2>
+<p>Dictionaries are collections of key/value pairs and are typically used to set environment variables:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
+  <span class="nt">mariadb</span><span class="p">:</span>
+    <span class="nt">environment</span><span class="p">:</span>
+      <span class="nt">MYSQL_ROOT_PASSWORD</span><span class="p">:</span> <span class="s">&quot;Y(&amp;^UIk34&quot;</span>
+      <span class="nt">MYSQL_DATABASE</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">photoprism</span>
+      <span class="nt">MYSQL_USER</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">photoprism</span>
+      <span class="nt">MYSQL_PASSWORD</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">insecure</span>
+</code></pre></div>
                 
               
               
@@ -3640,9 +2927,9 @@ To cluster a smaller number of faces, you can reduce the core to 3 or 2 similar 
         
         
         <a
-                href="../nas/unraid/"
+                href="../../checklists/web-security/"
                 class="md-footer__link md-footer__link--prev"
-                aria-label="Previous: Unraid"
+                aria-label="Previous: Web Security"
                 rel="prev"
         >
             <div class="md-footer__button md-icon">
@@ -3653,7 +2940,7 @@ To cluster a smaller number of faces, you can reduce the core to 3 or 2 similar 
               <span class="md-footer__direction">
                 Previous
               </span>
-                    Unraid
+                    Web Security
                 </div>
             </div>
         </a>
@@ -3663,9 +2950,9 @@ To cluster a smaller number of faces, you can reduce the core to 3 or 2 similar 
         
         
         <a
-                href="../performance/"
+                href="../golang/"
                 class="md-footer__link md-footer__link--next"
-                aria-label="Next: Performance"
+                aria-label="Next: Golang"
                 rel="next"
         >
             <div class="md-footer__title">
@@ -3673,7 +2960,7 @@ To cluster a smaller number of faces, you can reduce the core to 3 or 2 similar 
               <span class="md-footer__direction">
                 Next
               </span>
-                    Performance
+                    Golang
                 </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -3770,10 +3057,10 @@ To cluster a smaller number of faces, you can reduce the core to 3 or 2 similar 
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.b1047164.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b1047164.min.js"></script>
       
     
   </body>
