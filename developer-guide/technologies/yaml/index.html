@@ -2883,8 +2883,8 @@ as long as the indentation is consistent (tabs are not allowed).</p>
 </code></pre></div>
 <h2 id="simple-lists">Simple Lists<a class="headerlink" href="#simple-lists" title="Permanent link">&para;</a></h2>
 <p>List are lines that start at the same indentation level and begin with a <code>-</code> (a dash and a space).
-They are commonly used to define service dependencies or folders shared between host and container 
-in <code>docker-compose.yml</code> files (volume mounts):</p>
+They are commonly used to define service dependencies, exposed network ports, or folders shared between 
+host and container in <code>docker-compose.yml</code> files (volume mounts):</p>
 <div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
   <span class="nt">photoprism</span><span class="p">:</span>
     <span class="nt">depends_on</span><span class="p">:</span>
