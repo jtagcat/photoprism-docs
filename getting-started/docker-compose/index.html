@@ -3053,6 +3053,12 @@ as the default of 2 GB may reduce indexing performance and cause unexpected rest
 Never use easy-to-guess passwords or default values like <code>insecure</code> on publicly accessible servers.
 There is no default in case no password was provided. A minimum length of 4 characters is required.</p>
 </div>
+<div class="admonition note">
+<p>The Docker Compose <a href="../../developer-guide/technologies/yaml/">YAML config file</a> defines application services, networks,
+and storage volumes. Its default filename is <code>docker-compose.yml</code>. For simplicity, the name doesn't need to be
+specified when running the <code>docker-compose</code> command in the same directory. Config files for other apps or
+instances should be placed in separate folders.</p>
+</div>
 <h4 id="database">Database<a class="headerlink" href="#database" title="Permanent link">&para;</a></h4>
 <p>Our example includes a pre-configured <a href="https://mariadb.com/">MariaDB</a> database server. If you remove it 
 and provide no other database server credentials, a SQLite database file will be created in the 
