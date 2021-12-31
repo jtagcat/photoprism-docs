@@ -2866,8 +2866,8 @@ in other applications and tools like <a href="https://dl.photoprism.app/docker/d
 <p>Value names, which are referred to as keys, are always case-sensitive. If values contain more than letters and numbers,
 they should be enclosed in single <code>'</code> or double quotes <code>"</code>. You can generally use all <a href="https://home.unicode.org/">Unicode</a>
 characters and <a href="https://home.unicode.org/emoji/about-emoji/">Emojis</a>.</p>
-<p>The difference between single quotes and double quotes is that double quotes support escape sequences 
-like <code>\t</code> for a tab or <code>\n</code> for a new line.</p>
+<p>The difference between single and double quotes is that double quotes support escape sequences like <code>\t</code> for a tab
+or <code>\n</code> for a new line.</p>
 <p>Related values start at the same indentation level. We recommend using 2 spaces, but e.g. 4 spaces are also
 possible as long as the indentation is consistent in a file:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">Type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">image</span>
@@ -2888,7 +2888,7 @@ possible as long as the indentation is consistent in a file:</p>
       <span class="p p-Indicator">-</span> <span class="s">&quot;2342:2342&quot;</span>
 </code></pre></div>
 <h2 id="dictionaries">Dictionaries<a class="headerlink" href="#dictionaries" title="Permanent link">&para;</a></h2>
-<p>Dictionaries are collections of key/value pairs and are typically used to set environment variables:</p>
+<p>Dictionaries are collections of key/value pairs and often used to define environment variables in config files:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
   <span class="nt">mariadb</span><span class="p">:</span>
     <span class="nt">environment</span><span class="p">:</span>
