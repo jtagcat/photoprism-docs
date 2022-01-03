@@ -2991,7 +2991,9 @@
                 
                 
                 <h1 id="setup-using-docker-compose">Setup Using Docker Compose<a class="headerlink" href="#setup-using-docker-compose" title="Permanent link">&para;</a></h1>
-<p>Before you start, make sure you have <a href="https://store.docker.com/search?type=edition&amp;offering=community">Docker</a> 
+<p>Docker Compose works with <a href="../../developer-guide/technologies/yaml/">human-readable YAML files</a> that define application 
+services, networks, and storage volumes, so you don't have to remember complicated commands and parameters.
+Before you start, make sure you have <a href="https://store.docker.com/search?type=edition&amp;offering=community">Docker</a>
 installed on your system. It is available for Mac, Linux, and Windows.</p>
 <div class="admonition info">
 <p>You're welcome to ask for help in our <a href="https://gitter.im/browseyourlife/community">community chat</a>.
@@ -3053,12 +3055,6 @@ as the default of 2 GB may reduce indexing performance and cause unexpected rest
 Never use easy-to-guess passwords or default values like <code>insecure</code> on publicly accessible servers.
 There is no default in case no password was provided. A minimum length of 4 characters is required.</p>
 </div>
-<div class="admonition note">
-<p>A Docker Compose <a href="../../developer-guide/technologies/yaml/">YAML file</a> defines application services, networks,
-and storage volumes. Its default filename is <code>docker-compose.yml</code>. For simplicity, it doesn't need to be
-specified when running the <code>docker-compose</code> command in the same directory. Config files for other apps or
-instances should be placed in separate folders.</p>
-</div>
 <h4 id="database">Database<a class="headerlink" href="#database" title="Permanent link">&para;</a></h4>
 <p>Our example includes a pre-configured <a href="https://mariadb.com/">MariaDB</a> database server. If you remove it 
 and provide no other database server credentials, a SQLite database file will be created in the 
@@ -3105,7 +3101,7 @@ and <a href="../../user-guide/sync/webdav/">WebDAV</a> remains possible, unless 
 is enabled or the <a href="../../user-guide/settings/general/">features have been disabled</a>.</p>
 </div>
 <h3 id="step-2-start-the-server">Step 2: Start the server<a class="headerlink" href="#step-2-start-the-server" title="Permanent link">&para;</a></h3>
-<p>Open a terminal and change to the folder in which the <code>docker-compose.yml</code> file has been saved.
+<p>Open a terminal and change to the folder in which the <code>docker-compose.yml</code> file has been saved.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>
 Run this command to start the app and database in the background:</p>
 <div class="highlight"><pre><span></span><code>docker-compose up -d
 </code></pre></div>
@@ -3263,6 +3259,14 @@ file has been saved.</p>
 <p class="admonition-title">Complete Rescan</p>
 <p><code>docker-compose exec photoprism photoprism index -f</code> rescans all originals, including already indexed and unchanged files. 
 This may be necessary after major upgrades.</p>
+</div>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>The default Docker Compose config filename is <code>docker-compose.yml</code>. For simplicity, it doesn't need to be specified when running the <code>docker-compose</code> command in the same directory. Config files for other apps or instances should be placed in separate folders.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
 </div>
                 
               

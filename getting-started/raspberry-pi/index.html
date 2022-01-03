@@ -3082,7 +3082,7 @@ than on standard desktop computers.</p>
 <p>Also keep in mind that the hardware has limited video transcoding capabilities, so the conversion of video
 file formats is not well-supported and software transcoding is generally slow.</p>
 <h3 id="getting-updates">Getting Updates<a class="headerlink" href="#getting-updates" title="Permanent link">&para;</a></h3>
-<p>Open a terminal and change to the folder where the <code>docker-compose.yml</code> file was saved.
+<p>Open a terminal and change to the folder where the <code>docker-compose.yml</code> file is located.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>
 Now run the following commands to download the most recent image from Docker Hub and
 restart your instance in the background:</p>
 <div class="highlight"><pre><span></span><code>docker-compose pull photoprism
@@ -3099,6 +3099,14 @@ to learn more about terminal commands.</p>
 <h3 id="credits">Credits<a class="headerlink" href="#credits" title="Permanent link">&para;</a></h3>
 <p>A big thank you to <a href="https://github.com/guysoft">Guy Sheffer</a> for helping us <a href="https://github.com/photoprism/photoprism/issues/109">build</a>
 a Raspberry Pi version!</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>The default Docker Compose config filename is <code>docker-compose.yml</code>. For simplicity, it doesn't need to be specified when running the <code>docker-compose</code> command in the same directory. Config files for other apps or instances should be placed in separate folders.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
                 
               
               

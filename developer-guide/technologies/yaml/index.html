@@ -2873,12 +2873,12 @@ as long as the indentation is consistent (tabs are not allowed).</p>
 <p>Comments begin with the number sign <code>#</code>, can start anywhere on a line, and continue until the end of the line.</p>
 <div class="highlight"><pre><span></span><code><span class="c1">## EXAMPLE</span>
 <span class="nt">Type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">image</span>
-<span class="nt">Title</span><span class="p">:</span> <span class="s">&quot;La</span><span class="nv"> </span><span class="s">Tour</span><span class="nv"> </span><span class="s">Eiffel</span><span class="nv"> </span><span class="s">✨&quot;</span>
+<span class="nt">Title</span><span class="p">:</span> <span class="s">&quot;La</span><span class="nv"> </span><span class="s">Tour</span><span class="nv"> </span><span class="s">Eiffel</span><span class="nv"> </span><span class="s">🌈&quot;</span>
 <span class="nt">Year</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2014</span>
 <span class="c1"># Collection of key-value pairs:</span>
 <span class="nt">Details</span><span class="p">:</span>
-  <span class="nt">Notes</span><span class="p">:</span> <span class="s">&quot;Hello\nWorld!&quot;</span> <span class="c1"># comment</span>
-  <span class="nt">Keywords</span><span class="p">:</span> <span class="s">&#39;paris,</span><span class="nv"> </span><span class="s">france&#39;</span>
+  <span class="nt">Notes</span><span class="p">:</span> <span class="s">&quot;Bonjour\nla</span><span class="nv"> </span><span class="s">France!&quot;</span> 
+  <span class="nt">Keywords</span><span class="p">:</span> <span class="s">&#39;paris,</span><span class="nv"> </span><span class="s">france&#39;</span> <span class="c1"># Comment</span>
 </code></pre></div>
 <h2 id="lists">Lists<a class="headerlink" href="#lists" title="Permanent link">&para;</a></h2>
 <p>List are lines that start at the same indentation level and begin with a <code>-</code> (a dash and a space).
@@ -2887,16 +2887,17 @@ host and container in <code>docker-compose.yml</code> files (volume mounts):</p>
 <div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
   <span class="nt">photoprism</span><span class="p">:</span>
     <span class="nt">depends_on</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">database</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">jobrunner</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">mariadb</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">nextcloud</span>
     <span class="nt">ports</span><span class="p">:</span>
+      <span class="c1"># &quot;host:container&quot;</span>
       <span class="p p-Indicator">-</span> <span class="s">&quot;2342:2342&quot;</span>
     <span class="nt">volumes</span><span class="p">:</span>
       <span class="c1"># &quot;/host/folder:/container/folder&quot;</span>
       <span class="p p-Indicator">-</span> <span class="s">&quot;/photos:/photoprism/originals&quot;</span>
 </code></pre></div>
 <h2 id="key-value-pairs">Key-Value Pairs<a class="headerlink" href="#key-value-pairs" title="Permanent link">&para;</a></h2>
-<p>Dictionaries are collections of key/value pairs and often used to define environment variables in config files:</p>
+<p>Collections of key/value pairs and often used to define environment variables in config files:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
   <span class="nt">mariadb</span><span class="p">:</span>
     <span class="nt">environment</span><span class="p">:</span>

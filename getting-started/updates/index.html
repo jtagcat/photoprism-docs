@@ -2891,7 +2891,7 @@ Your continued support <a href="../../funding/">helps us</a> provide <a href="ht
 and services like <a href="https://demo.photoprism.app/places">world maps</a>. Thank you! 💜</p>
 </div>
 <h3 id="docker-compose">Docker Compose<a class="headerlink" href="#docker-compose" title="Permanent link">&para;</a></h3>
-<p>Open a terminal and change to the folder where the <code>docker-compose.yml</code> file was saved.
+<p>Open a terminal and change to the folder where the <code>docker-compose.yml</code> file is located.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>
 Now run the following commands to download the most recent image from Docker Hub and
 restart your instance in the background:</p>
 <div class="highlight"><pre><span></span><code>docker-compose pull photoprism
@@ -2958,6 +2958,14 @@ Only enable Watchtower if you are comfortable with this.</p>
 <div class="highlight"><pre><span></span><code>docker pull photoprism/photoprism:latest
 </code></pre></div>
 <p>See <a href="../docker/">Running PhotoPrism with Docker</a> for a command reference.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>The default Docker Compose config filename is <code>docker-compose.yml</code>. For simplicity, it doesn't need to be specified when running the <code>docker-compose</code> command in the same directory. Config files for other apps or instances should be placed in separate folders.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
                 
               
               
