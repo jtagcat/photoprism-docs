@@ -2970,20 +2970,18 @@
 <h2 id="frequently-asked-questions">Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permanent link">&para;</a></h2>
 <h4 id="does-my-device-meet-the-system-requirements">Does my device meet the system requirements?<a class="headerlink" href="#does-my-device-meet-the-system-requirements" title="Permanent link">&para;</a></h4>
 <p>Visit the <a href="https://kb.synology.com/en-us/DSM/tutorial/What_kind_of_CPU_does_my_NAS_have">Synology Knowledge Base</a>
-to learn what kind of CPU and how much memory your device has.
-We <a href="../../#system-requirements">recommend</a> hosting PhotoPrism on a server with <strong>at least 2 cores</strong>
-and <strong>4 GB of memory</strong>. Also verify it has at least 4 GB of swap configured, so that indexing doesn't cause
-restarts when there are memory usage spikes.</p>
-<p>You have to resort to <a href="../../raspberry-pi/#older-armv7-based-devices">alternative Docker images</a> to run 
-PhotoPrism and MariaDB on ARMv7-based devices like the Synology DS218j.</p>
+to learn what <a href="../../performance/#server-cpu">kind of CPU</a> and how much memory your device has.
+We <a href="../../#system-requirements">recommend</a> a 64-bit processor with <strong>at least 2 cores</strong> and <strong>4 GB of memory</strong>. 
+While PhotoPrism has been reported to work on devices with 2 GB of memory, we won't take responsibility for 
+instability or performance issues.</p>
+<p>You will have to resort to <a href="../../raspberry-pi/#older-armv7-based-devices">32-bit Docker images</a> to run 
+PhotoPrism and MariaDB on ARMv7-based entry-level devices like the Synology DS218j.</p>
 <div class="admonition note">
 <p>Indexing large photo and video collections significantly benefits from <a href="../../performance/#storage">local SSD storage</a>
-instead of traditional hard drives commonly used in entry-level NAS devices. Especially the conversion of RAW 
+instead of traditional hard drives commonly used in NAS devices. Especially the conversion of RAW 
 images and the transcoding of videos are very demanding.</p>
 </div>
 <div class="admonition info">
-<p>While PhotoPrism has been reported to work on devices with 2 GB of memory, we won't take responsibility for
-instability or performance issues.</p>
 <p>If you're running out of memory - or other system resources - while indexing, try reducing the
 <a href="https://docs.photoprism.app/getting-started/config-options/">number of workers</a> by setting
 <code>PHOTOPRISM_WORKERS</code> to a reasonably small value in <code>docker-compose.yml</code> (depending on the performance of the server).
