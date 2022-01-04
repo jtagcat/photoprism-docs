@@ -101,7 +101,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#continuous-integration-deployment" class="md-skip">
+        <a href="#why-are-we-using-docker" class="md-skip">
           Skip to content
         </a>
       
@@ -2615,6 +2615,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#why-are-we-using-docker" class="md-nav__link">
+    Why are we using Docker?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#continuous-integration-deployment" class="md-nav__link">
     Continuous Integration / Deployment
   </a>
@@ -2822,6 +2829,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#why-are-we-using-docker" class="md-nav__link">
+    Why are we using Docker?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#continuous-integration-deployment" class="md-nav__link">
     Continuous Integration / Deployment
   </a>
@@ -2868,7 +2882,25 @@
                 
                   <h1>Docker</h1>
                 
-                <p><a href="https://www.docker.com/products/docker-desktop">Docker</a> is an open-source container virtualization application mainly written in Go (like PhotoPrism). It is ideal for running applications on any computer without extensive installation, configuration or performance overhead. All you need to do is download an image and start it. However, Docker is not commonly used by end users and more popular among developers / admins. For that reason, PhotoPrism must also be usable without running in a container, at least on Linux and OS X.</p>
+                <p><a href="https://www.docker.com/">Docker</a> is an Open Source container virtualization tool. It is ideal for running 
+applications on any computer without extensive installation, configuration, or performance overhead.</p>
+<p>We are aware Docker is not widely used by end users despite its many advantages. For this reason, we aim 
+to provide native binaries for common operating systems at a later time.</p>
+<h3 id="why-are-we-using-docker">Why are we using Docker?<a class="headerlink" href="#why-are-we-using-docker" title="Permanent link">&para;</a></h3>
+<p>Containers are nothing new; <a href="https://en.wikipedia.org/wiki/Solaris_Containers">Solaris Zones</a> have been around for
+almost 15 years, first released publicly in 2004. The chroot system call was introduced during
+<a href="https://en.wikipedia.org/wiki/Chroot">development of Version 7 Unix in 1979</a>. It is used ever since for hosting
+applications exposed to the public Internet.</p>
+<p>Modern Linux containers are an incremental improvement. A main advantage of Docker is that application images
+can be easily made available to users via the Internet. It provides a common standard across most operating
+systems and devices, which saves our team a lot of time that we can then spend more effectively, for example,
+providing support and developing one of the many features that users are waiting for.</p>
+<p>Human-readable and versioned Dockerfiles as part of our public source code also help avoid surprises and
+"works for me" moments by enabling us to have the exact same environment everywhere in development and production.</p>
+<p>Last but not least, virtually all file format parsers have vulnerabilities that just haven't been discovered yet.
+This is a known risk that can affect you even if your computer is not directly connected to the Internet.
+Running apps in a container with limited host access is an easy way to improve security without
+compromising performance and usability.</p>
 <h2 id="continuous-integration-deployment">Continuous Integration / Deployment<a class="headerlink" href="#continuous-integration-deployment" title="Permanent link">&para;</a></h2>
 <p>Build and push of an updated container image to <a href="https://hub.docker.com/r/photoprism/photoprism/tags/">Docker Hub</a> is automatically performed by <a href="https://travis-ci.org/photoprism/photoprism">Travis CI</a> whenever develop is merged into master and the tests are all green. For that reason, we don't use semantic versioning for our binaries and container images. A version string might look like <code>181112-edc7c2f-Darwin-i386-DEBUG</code> instead. Travis CI uses the <a href="https://hub.docker.com/r/photoprism/development/">photoprism/development</a> image for running unit and integration tests on all branches and for pull requests, see <a href="https://github.com/photoprism/photoprism/blob/develop/Dockerfile">Dockerfile</a>.</p>
 <h2 id="multi-stage-build">Multi-Stage Build<a class="headerlink" href="#multi-stage-build" title="Permanent link">&para;</a></h2>

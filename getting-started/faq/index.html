@@ -1022,6 +1022,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#why-are-you-using-docker" class="md-nav__link">
+    Why are you using Docker?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#why-is-only-the-logo-displayed-when-i-open-the-app" class="md-nav__link">
     Why is only the logo displayed when I open the app?
   </a>
@@ -3090,6 +3097,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#why-are-you-using-docker" class="md-nav__link">
+    Why are you using Docker?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#why-is-only-the-logo-displayed-when-i-open-the-app" class="md-nav__link">
     Why is only the logo displayed when I open the app?
   </a>
@@ -3343,6 +3357,21 @@ This can be very useful for testing and also works great if you only have a few
 thousand files to index.</p>
 <p>MariaDB lacks some features that <a href="https://www.mysql.com/products/enterprise/">MySQL Enterprise Edition</a> offers.
 On the other hand, MariaDB has many optimizations. It is also completely open-source.</p>
+<h3 id="why-are-you-using-docker">Why are you using Docker?<a class="headerlink" href="#why-are-you-using-docker" title="Permanent link">&para;</a></h3>
+<p>Containers are nothing new; <a href="https://en.wikipedia.org/wiki/Solaris_Containers">Solaris Zones</a> have been around for
+almost 15 years, first released publicly in 2004. The chroot system call was introduced during
+<a href="https://en.wikipedia.org/wiki/Chroot">development of Version 7 Unix in 1979</a>. It is used ever since for hosting
+applications exposed to the public Internet.</p>
+<p>Modern Linux containers are an incremental improvement. A main advantage of Docker is that application images
+can be easily made available to users via the Internet. It provides a common standard across most operating 
+systems and devices, which saves our team a lot of time that we can then spend more effectively, for example, 
+providing support and developing one of the many features that users are waiting for.</p>
+<p>Human-readable and versioned Dockerfiles as part of our public source code also help avoid surprises and
+"works for me" moments by enabling us to have the exact same environment everywhere in development and production.</p>
+<p>Last but not least, virtually all file format parsers have vulnerabilities that just haven't been discovered yet.
+This is a known risk that can affect you even if your computer is not directly connected to the Internet.
+Running apps in a container with limited host access is an easy way to improve security without
+compromising performance and usability.</p>
 <h3 id="why-is-only-the-logo-displayed-when-i-open-the-app">Why is only the logo displayed when I open the app?<a class="headerlink" href="#why-is-only-the-logo-displayed-when-i-open-the-app" title="Permanent link">&para;</a></h3>
 <p>This may happen when the server cannot be reached, for example, because a proxy is misconfigured,
 JavaScript is disabled in your browser, an ad blocker is blocking requests, or you are using an incompatible browser.</p>
