@@ -1788,6 +1788,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../user-guide/advanced/restore/" class="md-nav__link">
+        Restore
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user-guide/advanced/export/" class="md-nav__link">
+        Export
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../user-guide/advanced/folders/" class="md-nav__link">
         Folders
       </a>
@@ -2790,9 +2818,16 @@
 <li>An index database SQL dump</li>
 </ol>
 <p>The best way to create an index backup is to run this command in a terminal:</p>
-<p><code>photoprism backup -a -i [filename]</code></p>
-<p>Use <code>-</code> as filename to write the backup to stdout. If you leave it empty, the backup
-will be written to the default backup folder configured via <code>PHOTOPRISM_BACKUP_PATH</code>.</p>
+<div class="highlight"><pre><span></span><code>photoprism backup -i [filename]
+</code></pre></div>
+<p>Or the following for <a href="../../docker-compose/">docker-compose</a>:</p>
+<div class="highlight"><pre><span></span><code>docker-compose exec -T photoprism photoprism backup -i - &gt; photoprism-db.sql
+</code></pre></div>
+<p>As seen above, you can use <code>-</code> as filename to write the backup to stdout.
+This is done to ensure the backup resides outside of the container environment.</p>
+<p>If you leave the filename empty, the backup will be written to the default backup folder configured via <a href="../../config-options/#storage-folders"><code>PHOTOPRISM_BACKUP_PATH</code></a>.</p>
+<p>If you want, you can also export your cache and thumbnails, but it can also be re-generated after restore.
+It will save you from re-generating thumbnails from scratch however.</p>
 <p>Helpful information can be found on <a href="https://github.com/photoprism/photoprism/discussions/772">GitHub</a> as well.</p>
                 
               

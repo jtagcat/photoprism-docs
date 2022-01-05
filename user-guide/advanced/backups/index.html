@@ -101,7 +101,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#album-backups" class="md-skip">
+        <a href="#backup-command" class="md-skip">
           Skip to content
         </a>
       
@@ -1795,61 +1795,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#album-backups" class="md-nav__link">
-    Album Backups
-  </a>
-  
-    <nav class="md-nav" aria-label="Album Backups">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#album-backups_1" class="md-nav__link">
-    Album Backups
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#folder-backups" class="md-nav__link">
-    Folder Backups
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#month-backups" class="md-nav__link">
-    Month Backups
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#state-backups" class="md-nav__link">
-    State Backups
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#moment-backups" class="md-nav__link">
-    Moment Backups
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#photo-backups" class="md-nav__link">
-    Photo Backups
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#backup-command" class="md-nav__link">
     Backup Command
   </a>
@@ -1860,6 +1805,34 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../restore/" class="md-nav__link">
+        Restore
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../export/" class="md-nav__link">
+        Export
+      </a>
     </li>
   
 
@@ -2856,61 +2829,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#album-backups" class="md-nav__link">
-    Album Backups
-  </a>
-  
-    <nav class="md-nav" aria-label="Album Backups">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#album-backups_1" class="md-nav__link">
-    Album Backups
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#folder-backups" class="md-nav__link">
-    Folder Backups
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#month-backups" class="md-nav__link">
-    Month Backups
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#state-backups" class="md-nav__link">
-    State Backups
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#moment-backups" class="md-nav__link">
-    Moment Backups
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#photo-backups" class="md-nav__link">
-    Photo Backups
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#backup-command" class="md-nav__link">
     Backup Command
   </a>
@@ -2936,45 +2854,7 @@
                 
                   <h1>Backups</h1>
                 
-                <p>In case you have backups enabled in your <a href="../../settings/advanced/">Settings</a>, PhotoPrism automatically creates <a href="../../../developer-guide/technologies/yaml/">YAML</a> backup files for albums and photos.</p>
-<p>We do this to give you full control over your data.</p>
-<h2 id="album-backups">Album Backups<a class="headerlink" href="#album-backups" title="Permanent link">&para;</a></h2>
-<p>Album backups are created for the following album types: album, folder, state, moment and month.
-You find those backups inside of your <code>storage path</code> in <code>/albums</code>.</p>
-<h3 id="album-backups_1">Album Backups<a class="headerlink" href="#album-backups_1" title="Permanent link">&para;</a></h3>
-<p>For each album the following metadata is stored in the YAML file:</p>
-<ul>
-<li>UID, Slug, Type, Title, Location, Category, Description, Sort Order, Country, CreatedAt, UpdatedAt, Photos (UID + date the photo was added to the album)</li>
-</ul>
-<h3 id="folder-backups">Folder Backups<a class="headerlink" href="#folder-backups" title="Permanent link">&para;</a></h3>
-<p>For each folder the following metadata is stored in the YAML file:</p>
-<ul>
-<li>UID, Slug, Type, Title, Location, Category, Description, Filter, Sort order, Country, Year, Month, Day, CreatedAt, UpdatedAt</li>
-</ul>
-<h3 id="month-backups">Month Backups<a class="headerlink" href="#month-backups" title="Permanent link">&para;</a></h3>
-<p>For each month the following metadata is stored in the YAML file:</p>
-<ul>
-<li>UID, Slug, Type, Title, Location, Category, Description, Filter, Sort Order, Country, Year, Month, CreatedAt, UpdatedAt</li>
-</ul>
-<h3 id="state-backups">State Backups<a class="headerlink" href="#state-backups" title="Permanent link">&para;</a></h3>
-<p>For each state the following metadata is stored in the YAML file:</p>
-<ul>
-<li>UID, Slug, Type, Title, Location, Category, Description, Filter, Sort Order, Country, CreatedAt, UpdatedAt</li>
-</ul>
-<h3 id="moment-backups">Moment Backups<a class="headerlink" href="#moment-backups" title="Permanent link">&para;</a></h3>
-<p>For each moment the following metadata is stored in the YAML file:</p>
-<ul>
-<li>UID, Slug, Type, Title, Location, Category, Description, Filter, Sort Order, Country, Year, CreatedAt, UpdatedAt</li>
-</ul>
-<h2 id="photo-backups">Photo Backups<a class="headerlink" href="#photo-backups" title="Permanent link">&para;</a></h2>
-<p>PhotoPrism creates YAML backup files for each photo in your <code>sidecar path</code>.</p>
-<p>The following metadata is stored:</p>
-<ul>
-<li>TakenAt + Source, UID, Type, Title + Source, Description + Source, OriginalName, TimeZone, PlaceSrc, Altitude, 
-  Lat, Lng, Year, Month, Day, Iso, Exposure, FNumber, FocalLength, Quality, Favorite, Private, Keywords + Source, 
-  Notes + Source, Subject + Source, Artist + Source, Copyright + Source, License + Source, CreatedAt, UpdatedAt, EditedAt, DeletedAt (Archived)</li>
-</ul>
-<h2 id="backup-command">Backup Command<a class="headerlink" href="#backup-command" title="Permanent link">&para;</a></h2>
+                <h2 id="backup-command">Backup Command<a class="headerlink" href="#backup-command" title="Permanent link">&para;</a></h2>
 <p>PhotoPrism automatically creates the album and photo backup YAML files.
 If you want to update album backups or create a database backup you can use the backup command:</p>
 <p><code>docker-compose exec photoprism photoprism backup -a --albums-path PATH -i --index-path PATH [FILENAME]</code></p>
@@ -3039,9 +2919,9 @@ If you want to update album backups or create a database backup you can use the 
         
         
         <a
-                href="../folders/"
+                href="../restore/"
                 class="md-footer__link md-footer__link--next"
-                aria-label="Next: Folders"
+                aria-label="Next: Restore"
                 rel="next"
         >
             <div class="md-footer__title">
@@ -3049,7 +2929,7 @@ If you want to update album backups or create a database backup you can use the 
               <span class="md-footer__direction">
                 Next
               </span>
-                    Folders
+                    Restore
                 </div>
             </div>
             <div class="md-footer__button md-icon">
