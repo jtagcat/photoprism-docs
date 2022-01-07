@@ -2818,15 +2818,15 @@ is available.</p>
 <div class="highlight"><pre><span></span><code>git clone https://github.com/huo-ju/photoprism-freebsd-port
 </code></pre></div>
 <p><strong>2. Build TensorFlow and PhotoPrism from source, then install:</strong></p>
-<div class="highlight"><pre><span></span><code>cd photoprism-freebsd-port
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> photoprism-freebsd-port
 make config
-make &amp;&amp; make install
+make <span class="o">&amp;&amp;</span> make install
 </code></pre></div>
 <p>When running the make config command, a CPU feature options dialog will be presented, and the default option is NONE.</p>
 <p><strong>3. Add entries to rc.conf:</strong></p>
-<div class="highlight"><pre><span></span><code>photoprism_enable=&quot;YES&quot;
-photoprism_assetspath=&quot;/var/photoprism/assets&quot;
-photoprism_storagepath=&quot;/var/photoprism/storage&quot;
+<div class="highlight"><pre><span></span><code><span class="nv">photoprism_enable</span><span class="o">=</span><span class="s2">&quot;YES&quot;</span>
+<span class="nv">photoprism_assetspath</span><span class="o">=</span><span class="s2">&quot;/var/photoprism/assets&quot;</span>
+<span class="nv">photoprism_storagepath</span><span class="o">=</span><span class="s2">&quot;/var/photoprism/storage&quot;</span>
 </code></pre></div>
 <p>You can add more command line parameters into photoprism_flags="" in the rc.conf</p>
 <p><code>photoprism config</code> shows all config parameters. </p>

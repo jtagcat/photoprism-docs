@@ -3100,14 +3100,15 @@ PhotoPrism won't be able to see folders that have not been mounted. That's an im
 <h5 id="photoprismoriginals">/photoprism/originals<a class="headerlink" href="#photoprismoriginals" title="Permanent link">&para;</a></h5>
 <p>The <em>originals</em> folder contains your original photo and video files. </p>
 <p><code>~/Pictures</code> will be mounted by default, where <code>~</code> is a placeholder for your <abbr title="\user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux">home directory</abbr>:</p>
-<div class="highlight"><pre><span></span><code>volumes:
-  - &quot;~/Pictures:/photoprism/originals&quot;
+<div class="highlight"><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="s">&quot;~/Pictures:/photoprism/originals&quot;</span>
 </code></pre></div>
 <p>Other folders accessible from the <abbr title="A physical computer, cloud server, or virtual machine that runs Docker">host</abbr> may be <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes">mounted</a> instead, 
-including network drives. Multiple folders can be made accessible by mounting them as subfolders:</p>
-<div class="highlight"><pre><span></span><code>volumes:
-  - &quot;~/friends:/photoprism/originals/friends&quot;
-  - &quot;/media/photos:/photoprism/originals/media&quot;
+including network drives. Multiple folders can be made accessible by mounting them as subfolders
+of <code>/photoprism/originals</code>, for example:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="s">&quot;~/friends:/photoprism/originals/friends&quot;</span>
+  <span class="p p-Indicator">-</span> <span class="s">&quot;/media/photos:/photoprism/originals/media&quot;</span>
 </code></pre></div>
 <div class="admonition tldr">
 <p>When you enable <em>read-only mode</em>, all features that require write permission to the <em>originals</em> folder 
@@ -3187,10 +3188,10 @@ and services like <a href="https://demo.photoprism.app/places">world maps</a>. T
 </div>
 <h3 id="command-line-interface">Command-Line Interface<a class="headerlink" href="#command-line-interface" title="Permanent link">&para;</a></h3>
 <p><code>photoprism help</code> lists all commands and <a href="../config-options/">config options</a> available in the current version:</p>
-<div class="highlight"><pre><span></span><code>docker-compose exec photoprism photoprism help
+<div class="highlight"><pre><span></span><code>docker-compose <span class="nb">exec</span> photoprism photoprism <span class="nb">help</span>
 </code></pre></div>
 <p>Use the <code>--help</code> flag to see a detailed command description, for example:</p>
-<div class="highlight"><pre><span></span><code>docker-compose exec photoprism photoprism backup --help
+<div class="highlight"><pre><span></span><code>docker-compose <span class="nb">exec</span> photoprism photoprism backup --help
 </code></pre></div>
 <div class="admonition info">
 <p>Prefixing commands with <code>docker-compose exec [service name]</code> runs them inside an app container.
