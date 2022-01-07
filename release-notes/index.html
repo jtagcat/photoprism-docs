@@ -3332,13 +3332,13 @@ There is no preview available for 32-bit operating systems.</p>
 </div>
 <h3 id="january-7-2022">January 7, 2022<a class="headerlink" href="#january-7-2022" title="Permanent link">&para;</a></h3>
 <p><span class="build">Build 220107-f5b7ef83</span></p>
-<p>Based on our zero bug policy, this update focuses on bug fixes and UX improvements, especially for search filters and 
-the indexer. In addition, one of the merged pull requests may improve face recognition performance on smaller 
-devices and with large libraries.</p>
+<p>Based on our zero bug policy, this update focuses on bug fixes, security, and UX improvements for search 
+filters, metadata, and the indexer. In addition, one of the merged pull requests may improve face recognition 
+performance on smaller devices and with large libraries.</p>
 <ul>
 <li>People: <a href="https://github.com/photoprism/photoprism/pull/1804">Improved update performance on MariaDB</a></li>
 <li>People: <a href="https://github.com/photoprism/photoprism/issues/1824">Improved contrast of person selection menu</a></li>
-<li>Albums: <a href="https://github.com/photoprism/photoprism/issues/1836">Excluded private pictures from download as zip</a></li>
+<li>Albums: <a href="https://github.com/photoprism/photoprism/issues/1836">Private pictures are excluded from download as zip</a></li>
 <li>Search: <a href="https://github.com/photoprism/photoprism/issues/1814">Improved query parser for additional security</a></li>
 <li>Search: <a href="https://github.com/photoprism/photoprism/issues/1820">Added <code>uid:...</code> search filter to find photos by uid</a></li>
 <li>Search: <a href="https://github.com/photoprism/photoprism/issues/1859"><code>keywords:...</code> filter does not exclude stopwords anymore</a></li>
@@ -3366,8 +3366,7 @@ As a precaution, this release includes additional <a href="https://github.com/ph
 <p><span class="build">Build 211210-2cb90e7e</span></p>
 <p>Starting with this release, the <a href="https://hub.docker.com/r/photoprism/photoprism/tags?name=latest">regular multi-arch Docker image</a> is 64-bit only. 
 A 32-bit version of our stable release for <a href="../getting-started/raspberry-pi/#older-armv7-based-devices">older devices</a> 
-is offered separately. In the long run, this frees up development resources and saves weeks of build, upload, and test 
-time on our infrastructure.</p>
+is offered separately. This frees up development and backend infrastructure resources with minimal impact.</p>
 <ul>
 <li><a href="https://groups.google.com/g/golang-announce/c/hcmEScgc00k">Based on Go version 1.17.5, which includes important HTTP/2 and network security fixes</a></li>
 <li>People: <a href="https://github.com/photoprism/photoprism/commit/1b583e071e80b68352b1b366d60e010d8f8f9535">Concurrent updates are no longer possible to prevent inconsistencies</a></li>
