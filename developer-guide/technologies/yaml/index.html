@@ -2605,22 +2605,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#basics" class="md-nav__link">
-    Basics
+  <a href="#basic-rules" class="md-nav__link">
+    Basic Rules
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#lists" class="md-nav__link">
-    Lists
+  <a href="#multiple-values" class="md-nav__link">
+    Multiple Values
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-value-pairs" class="md-nav__link">
-    Key-Value Pairs
+  <a href="#key-value-collections" class="md-nav__link">
+    Key-Value Collections
   </a>
   
 </li>
@@ -2849,22 +2849,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#basics" class="md-nav__link">
-    Basics
+  <a href="#basic-rules" class="md-nav__link">
+    Basic Rules
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#lists" class="md-nav__link">
-    Lists
+  <a href="#multiple-values" class="md-nav__link">
+    Multiple Values
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-value-pairs" class="md-nav__link">
-    Key-Value Pairs
+  <a href="#key-value-collections" class="md-nav__link">
+    Key-Value Collections
   </a>
   
 </li>
@@ -2887,29 +2887,35 @@
                 
                 
                 <h1 id="introduction-to-yaml">Introduction to YAML<a class="headerlink" href="#introduction-to-yaml" title="Permanent link">&para;</a></h1>
-<p><a href="https://en.wikipedia.org/wiki/YAML">YAML</a> is a human-readable markup language. PhotoPrism uses it for metadata 
-backups and config files because of its simplicity and widespread support.</p>
-<p>Commonly used file extensions are <code>.yml</code> and <code>.yaml</code>, for example <code>docker-compose.yml</code>.</p>
-<h2 id="basics">Basics<a class="headerlink" href="#basics" title="Permanent link">&para;</a></h2>
-<p>Value names, which are referred to as keys, are case-sensitive. If values contain more than letters and numbers, they 
-should be enclosed in single <code>'</code> or double quotes <code>"</code>. You can generally use all <a href="https://home.unicode.org/">Unicode</a>
-characters and <a href="https://home.unicode.org/emoji/about-emoji/">Emojis</a>.</p>
-<p>The difference between single and double quotes is that double quotes support escape sequences like <code>\t</code> for a tab
-or <code>\n</code> for a new line.</p>
-<p>Related values start at the same indentation level. We recommend using 2 spaces, but any number of spaces will work 
-as long as the indentation is consistent (tabs are not allowed).</p>
-<p>Comments begin with the number sign <code>#</code>, can start anywhere on a line, and continue until the end of the line.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">## EXAMPLE</span>
-<span class="nt">Type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">image</span>
+<p><a href="https://en.wikipedia.org/wiki/YAML">YAML</a> is a human-friendly data format. The name originally meant
+<em>Yet Another Markup Language</em>. We use it for metadata exports and config files because of its simplicity and
+widespread support. Common file extensions are <code>.yml</code>and <code>.yaml</code>.</p>
+<p>Values are represented in the form <code>key: value</code> with one entry per line:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">Type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">image</span>
 <span class="nt">Title</span><span class="p">:</span> <span class="s">&quot;La</span><span class="nv"> </span><span class="s">Tour</span><span class="nv"> </span><span class="s">Eiffel</span><span class="nv"> </span><span class="s">🌈&quot;</span>
 <span class="nt">Year</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2014</span>
-<span class="c1"># Collection of key-value pairs:</span>
+<span class="c1"># Key-Value Collection Example:</span>
 <span class="nt">Details</span><span class="p">:</span>
   <span class="nt">Notes</span><span class="p">:</span> <span class="s">&quot;Bonjour\nla</span><span class="nv"> </span><span class="s">France!&quot;</span> 
   <span class="nt">Keywords</span><span class="p">:</span> <span class="s">&#39;paris,</span><span class="nv"> </span><span class="s">france&#39;</span> <span class="c1"># Comment</span>
 </code></pre></div>
-<h2 id="lists">Lists<a class="headerlink" href="#lists" title="Permanent link">&para;</a></h2>
-<p>List are lines that start at the same indentation level and begin with a <code>-</code> (a dash and a space).
+<h2 id="basic-rules">Basic Rules<a class="headerlink" href="#basic-rules" title="Permanent link">&para;</a></h2>
+<ul>
+<li><abbr title="the names of values">Keys</abbr> are case-sensitive</li>
+<li>Related values start at the same indentation level<ul>
+<li>Tabs are not allowed for indentation</li>
+<li>We recommend using 2 spaces, but any number will work as long as it is consistent</li>
+</ul>
+</li>
+<li>You can generally use all <a href="https://home.unicode.org/">Unicode</a> characters and <a href="https://home.unicode.org/emoji/about-emoji/">Emojis</a><ul>
+<li>To avoid ambiguity, it is generally best to enclose values in single <code>'</code> or double quotes <code>"</code> if they contain more than letters and numbers, and especially if they contain a colon <code>:</code></li>
+<li>The difference between single and double quotes is that double quotes support <a href="https://symfony.com/doc/current/components/yaml/yaml_format.html#strings">escape sequences</a> like <code>\t</code> for a <abbr title="a tab advances the cursor to the next tab stop">tab</abbr> or <code>\n</code> for a new line</li>
+</ul>
+</li>
+<li>Comments begin with the <code>#</code> sign, can start anywhere on a line, and continue until the end of the line</li>
+</ul>
+<h2 id="multiple-values">Multiple Values<a class="headerlink" href="#multiple-values" title="Permanent link">&para;</a></h2>
+<p>List are lines that start at the same indentation level and begin with a dash and a space <code>-</code>.
 They are commonly used to define service dependencies, exposed network ports, or folders shared between 
 host and container in <code>docker-compose.yml</code> files (volume mounts):</p>
 <div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
@@ -2924,8 +2930,8 @@ host and container in <code>docker-compose.yml</code> files (volume mounts):</p>
       <span class="c1"># &quot;/host/folder:/container/folder&quot;</span>
       <span class="p p-Indicator">-</span> <span class="s">&quot;/photos:/photoprism/originals&quot;</span>
 </code></pre></div>
-<h2 id="key-value-pairs">Key-Value Pairs<a class="headerlink" href="#key-value-pairs" title="Permanent link">&para;</a></h2>
-<p>Collections of key/value pairs are often used to define environment variables in config files:</p>
+<h2 id="key-value-collections">Key-Value Collections<a class="headerlink" href="#key-value-collections" title="Permanent link">&para;</a></h2>
+<p>Collections of <abbr title="a key-value pair consists of two related data elements">key/value</abbr> pairs are often used to define environment variables in config files:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
   <span class="nt">mariadb</span><span class="p">:</span>
     <span class="nt">environment</span><span class="p">:</span>
