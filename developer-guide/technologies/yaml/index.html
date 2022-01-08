@@ -2915,9 +2915,9 @@ widespread support. Common file extensions are <code>.yml</code>and <code>.yaml<
 <li>Comments begin with the <code>#</code> sign, can start anywhere on a line, and continue until the end of the line</li>
 </ul>
 <h2 id="multiple-values">Multiple Values<a class="headerlink" href="#multiple-values" title="Permanent link">&para;</a></h2>
-<p>List are lines that start at the same indentation level and begin with a dash and a space <code>-</code>.
-They are commonly used to define service dependencies, exposed network ports, or folders shared between 
-host and container in <code>docker-compose.yml</code> files (volume mounts):</p>
+<p>List are lines that start at the same indentation level and begin with a dash and a space as shown in the example below.
+They are commonly used to define service dependencies, exposed network ports, or folders shared between host and
+container in <code>docker-compose.yml</code> files (volume mounts):</p>
 <div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
   <span class="nt">photoprism</span><span class="p">:</span>
     <span class="nt">depends_on</span><span class="p">:</span>
@@ -2931,7 +2931,7 @@ host and container in <code>docker-compose.yml</code> files (volume mounts):</p>
       <span class="p p-Indicator">-</span> <span class="s">&quot;/photos:/photoprism/originals&quot;</span>
 </code></pre></div>
 <h2 id="key-value-collections">Key-Value Collections<a class="headerlink" href="#key-value-collections" title="Permanent link">&para;</a></h2>
-<p>Collections of <abbr title="a key-value pair consists of two related data elements">key/value</abbr> pairs are often used to define environment variables in config files:</p>
+<p>Collections of <abbr title="a key-value pair consists of two related data elements">key-value</abbr> pairs are often used to define environment variables in config files:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">services</span><span class="p">:</span>
   <span class="nt">mariadb</span><span class="p">:</span>
     <span class="nt">environment</span><span class="p">:</span>
