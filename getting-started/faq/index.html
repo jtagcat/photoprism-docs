@@ -922,15 +922,14 @@
     What are sidecar files and where do I find them?
   </a>
   
-    <nav class="md-nav" aria-label="What are sidecar files and where do I find them?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#file-formats" class="md-nav__link">
-    File Formats
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-metadata-file-types-are-supported" class="md-nav__link">
+    Which metadata file types are supported?
   </a>
   
-    <nav class="md-nav" aria-label="File Formats">
+    <nav class="md-nav" aria-label="Which metadata file types are supported?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -958,22 +957,17 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#which-media-file-types-are-supported" class="md-nav__link">
+    Which media file types are supported?
+  </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#which-folder-will-be-indexed" class="md-nav__link">
     Which folder will be indexed?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#which-file-types-are-supported" class="md-nav__link">
-    Which file types are supported?
   </a>
   
 </li>
@@ -3038,15 +3032,14 @@
     What are sidecar files and where do I find them?
   </a>
   
-    <nav class="md-nav" aria-label="What are sidecar files and where do I find them?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#file-formats" class="md-nav__link">
-    File Formats
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-metadata-file-types-are-supported" class="md-nav__link">
+    Which metadata file types are supported?
   </a>
   
-    <nav class="md-nav" aria-label="File Formats">
+    <nav class="md-nav" aria-label="Which metadata file types are supported?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3074,22 +3067,17 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#which-media-file-types-are-supported" class="md-nav__link">
+    Which media file types are supported?
+  </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#which-folder-will-be-indexed" class="md-nav__link">
     Which folder will be indexed?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#which-file-types-are-supported" class="md-nav__link">
-    Which file types are supported?
   </a>
   
 </li>
@@ -3272,9 +3260,9 @@ but a different extension:</p>
 <p>Even if <code>PHOTOPRISM_DISABLE_EXIFTOOL</code> and <code>PHOTOPRISM_DISABLE_BACKUPS</code> are set to <code>true</code>,
 the indexer looks for existing sidecar files and uses them.</p>
 </div>
-<h4 id="file-formats">File Formats<a class="headerlink" href="#file-formats" title="Permanent link">&para;</a></h4>
+<h3 id="which-metadata-file-types-are-supported">Which metadata file types are supported?<a class="headerlink" href="#which-metadata-file-types-are-supported" title="Permanent link">&para;</a></h3>
 <p>Currently, three types of metadata sidecar files are supported:</p>
-<h5 id="json">JSON<a class="headerlink" href="#json" title="Permanent link">&para;</a></h5>
+<h4 id="json">JSON<a class="headerlink" href="#json" title="Permanent link">&para;</a></h4>
 <p>If not disabled via <code>PHOTOPRISM_DISABLE_EXIFTOOL</code> or <code>--disable-exiftool</code>, <a href="https://exiftool.org/">Exiftool</a> is used
 to automatically create a JSON sidecar for each media file. <strong>In this way, embedded XMP and video metadata can also be indexed.</strong>
 Native metadata extraction is limited to common Exif headers. Note that this causes small amount of overhead when
@@ -3284,42 +3272,20 @@ development tools and text editors.</p>
 <div class="admonition info">
 <p>JSON files exported from Google Photos can be read as well. Support for more schemas may be added over time.</p>
 </div>
-<h5 id="yaml">YAML<a class="headerlink" href="#yaml" title="Permanent link">&para;</a></h5>
+<h4 id="yaml">YAML<a class="headerlink" href="#yaml" title="Permanent link">&para;</a></h4>
 <p>Unless disabled via <code>PHOTOPRISM_DISABLE_BACKUPS</code> or <code>--disable-backups</code>, PhotoPrism automatically creates/updates
 <a href="../../developer-guide/technologies/yaml/">YAML</a> sidecar files during indexing and after manual editing of fields 
 such as title, date, or location. They serve as a backup in case the database (index) is lost, or when folders 
 are synchronized with a remote PhotoPrism instance.</p>
 <p>Like JSON, <a href="../../developer-guide/technologies/yaml/">YAML</a> files can be opened with common development tools and 
 text editors. However, changes are not synchronized with the original index, as this could overwrite existing data.</p>
-<h5 id="xmp">XMP<a class="headerlink" href="#xmp" title="Permanent link">&para;</a></h5>
+<h4 id="xmp">XMP<a class="headerlink" href="#xmp" title="Permanent link">&para;</a></h4>
 <p>XMP (Extensible Metadata Platform) is an XML-based metadata container format <a href="https://www.adobe.com/products/xmp.html">developed by Adobe</a>.
 It provides many more fields (as part of embedded models like Dublin Core) than Exif. This also makes it difficult - if not 
 impossible - to provide full support. Reading title, copyright, artist, and description from XMP sidecar files is 
 implemented as a proof-of-concept, <a href="../../developer-guide/metadata/xmp/">contributions are welcome</a>. Indexing of 
 embedded XMP is only possible via Exiftool, see above.</p>
-<h3 id="which-folder-will-be-indexed">Which folder will be indexed?<a class="headerlink" href="#which-folder-will-be-indexed" title="Permanent link">&para;</a></h3>
-<p>This depends on your environment and <a href="../config-options/">configuration</a>. While subfolders can be selected for indexing
-in the UI, changing the <em>originals</em> base folder requires a restart for security reasons.</p>
-<p>If you skip configuration and don't use one of our Docker images, PhotoPrism will attempt to find a photo library
-by searching a list of common <a href="https://github.com/photoprism/photoprism/blob/develop/pkg/fs/dirs.go">folder names</a> 
-such as <code>/photoprism/originals</code> and <code>~/Pictures</code>. It also searches for other resources such as external applications, 
-classification models, and frontend assets.</p>
-<p>If you use our <a href="../docker-compose/">Docker Compose</a> example without modifications, pictures will be 
-mounted from <code>~/Pictures</code> where <code>~</code> is a placeholder for your home directory:</p>
-<ul>
-<li><code>\user\username</code> on Windows</li>
-<li><code>/Users/username</code> on macOS</li>
-<li>and <code>/root</code> or <code>/home/username</code> on Linux</li>
-</ul>
-<p>Since the app is running inside a container, you have to explicitly mount the host folders you want to use.
-PhotoPrism won't be able to see folders that have not been mounted. Multiple folders can be made accessible
-by mounting them as subfolders of <code>/photoprism/originals</code>, for example:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="s">&quot;/home/username/Pictures:/photoprism/originals&quot;</span>
-  <span class="p p-Indicator">-</span> <span class="s">&quot;/mnt/friends:/photoprism/originals/friends&quot;</span>
-  <span class="p p-Indicator">-</span> <span class="s">&quot;/mnt/photos:/photoprism/originals/media&quot;</span>
-</code></pre></div>
-<h3 id="which-file-types-are-supported">Which file types are supported?<a class="headerlink" href="#which-file-types-are-supported" title="Permanent link">&para;</a></h3>
+<h3 id="which-media-file-types-are-supported">Which media file types are supported?<a class="headerlink" href="#which-media-file-types-are-supported" title="Permanent link">&para;</a></h3>
 <p>The primary image format is JPEG. Support for JPEG XL is planned but not available yet. 
 When indexing, a JPEG sidecar file may be created automatically for RAW, HEIF, TIFF, PNG, BMP, GIF, and video files. 
 It is needed for generating thumbnails, image classification, and facial recognition.</p>
@@ -3338,6 +3304,28 @@ Please let us know when there are any issues with a particular camera or file fo
 most videos as well. </p>
 <p>If you have videos, always enable JSON sidecar files so that video metadata such as date, location, codec, 
 and duration can be indexed and searched.</p>
+<h3 id="which-folder-will-be-indexed">Which folder will be indexed?<a class="headerlink" href="#which-folder-will-be-indexed" title="Permanent link">&para;</a></h3>
+<p>This depends on your environment and <a href="../config-options/">configuration</a>. While subfolders can be selected for indexing
+in the UI, changing the <em>originals</em> base folder requires a restart for security reasons.</p>
+<p>If you skip configuration and don't use one of our Docker images, PhotoPrism will attempt to find a photo library
+by searching a list of common <a href="https://github.com/photoprism/photoprism/blob/develop/pkg/fs/dirs.go">folder names</a>
+such as <code>/photoprism/originals</code> and <code>~/Pictures</code>. It also searches for other resources such as external applications,
+classification models, and frontend assets.</p>
+<p>If you use our <a href="../docker-compose/">Docker Compose</a> example without modifications, pictures will be
+mounted from <code>~/Pictures</code> where <code>~</code> is a placeholder for your home directory:</p>
+<ul>
+<li><code>\user\username</code> on Windows</li>
+<li><code>/Users/username</code> on macOS</li>
+<li>and <code>/root</code> or <code>/home/username</code> on Linux</li>
+</ul>
+<p>Since the app is running inside a container, you have to explicitly mount the host folders you want to use.
+PhotoPrism won't be able to see folders that have not been mounted. Multiple folders can be made accessible
+by mounting them as subfolders of <code>/photoprism/originals</code>, for example:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="s">&quot;/home/username/Pictures:/photoprism/originals&quot;</span>
+  <span class="p p-Indicator">-</span> <span class="s">&quot;/mnt/friends:/photoprism/originals/friends&quot;</span>
+  <span class="p p-Indicator">-</span> <span class="s">&quot;/mnt/photos:/photoprism/originals/media&quot;</span>
+</code></pre></div>
 <h3 id="how-to-install-and-use-photoprism-without-docker">How to install and use PhotoPrism without Docker?<a class="headerlink" href="#how-to-install-and-use-photoprism-without-docker" title="Permanent link">&para;</a></h3>
 <p>If your environment doesn't support Docker and there are no <a href="../freebsd/">ports</a> or native packages available, 
 you can build and install PhotoPrism from the publicly available <a href="../../developer-guide/setup/">source code</a>:</p>
