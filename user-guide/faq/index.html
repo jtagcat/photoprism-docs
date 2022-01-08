@@ -1906,6 +1906,33 @@
     Library, Counts &amp; Files
   </a>
   
+    <nav class="md-nav" aria-label="Library, Counts &amp; Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json" class="md-nav__link">
+    JSON
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yaml" class="md-nav__link">
+    YAML
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xmp" class="md-nav__link">
+    XMP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2879,6 +2906,33 @@
     Library, Counts &amp; Files
   </a>
   
+    <nav class="md-nav" aria-label="Library, Counts &amp; Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json" class="md-nav__link">
+    JSON
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yaml" class="md-nav__link">
+    YAML
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xmp" class="md-nav__link">
+    XMP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2978,7 +3032,7 @@ like geodata. Pictures with matching keywords automatically show up in related <
 <details class="question"><summary>Can I use the web interface to permanently delete files?</summary><p>Yes, you can <a href="../organize/delete/">permanently delete</a> files.</p>
 </details>
 <h2 id="library-counts-files">Library, Counts &amp; Files<a class="headerlink" href="#library-counts-files" title="Permanent link">&para;</a></h2>
-<details class="question"><summary>Which file types are supported?</summary><p>The primary image format is JPEG. Support for JPEG XL is planned but not available yet.
+<details class="question"><summary>What media file types are supported?</summary><p>The primary image format is JPEG. Support for JPEG XL is planned but not available yet.
 When indexing, a JPEG sidecar file may be created automatically for RAW, HEIF, TIFF, PNG, BMP, GIF, and video files.
 It is needed for generating thumbnails, image classification, and facial recognition.</p>
 <p>Due to the patent situation and its complexity, <a href="https://github.com/golang/go/issues?q=is%3Aissue+image%2Ftiff+">TIFF is only partially supported</a> at the moment.</p>
@@ -2994,8 +3048,31 @@ Please let us know when there are any issues with a particular camera or file fo
 <p>Video formats supported by <a href="https://en.wikipedia.org/wiki/FFmpeg#Supported_codecs_and_formats">FFmpeg</a> can be transcoded to
 <a href="https://en.wikipedia.org/wiki/Advanced_Video_Coding">MPEG-4 AVC</a>. Still images for generating thumbnails can be extracted from
 most videos as well.</p>
-<p>If you have videos, always enable JSON sidecar files so that video metadata such as date, location, codec,
+<p>If you have videos, always enable JSON <abbr title="additional files that sit next to a main file">sidecar files</abbr> so that video metadata such as date, location, codec,
 and duration can be indexed and searched.</p>
+</details>
+<details class="question"><summary>Which metadata <abbr title="additional files that sit next to a main file">sidecar files</abbr> are supported?</summary><p>Currently, three types of metadata file formats are supported:</p>
+<h4 id="json">JSON<a class="headerlink" href="#json" title="Permanent link">&para;</a></h4>
+<p>If not disabled via <code>PHOTOPRISM_DISABLE_EXIFTOOL</code> or <code>--disable-exiftool</code>, <a href="https://exiftool.org/">Exiftool</a> is used
+to automatically create a JSON sidecar for each media file. <strong>In this way, embedded XMP and video metadata can also be indexed.</strong>
+Native metadata extraction is limited to common Exif headers. Note that this causes small amount of overhead when
+indexing for the first time.</p>
+<p>JSON files can also be useful for debugging, as they contain the full metadata and can be processed with common
+development tools and text editors.</p>
+<p><em>Metadata JSON files exported from Google Photos can be read as well. Support for more schemas may be added over time.</em></p>
+<h4 id="yaml">YAML<a class="headerlink" href="#yaml" title="Permanent link">&para;</a></h4>
+<p>Unless disabled via <code>PHOTOPRISM_DISABLE_BACKUPS</code> or <code>--disable-backups</code>, PhotoPrism automatically creates/updates
+<a href="../../developer-guide/technologies/yaml/">human-friendly YAML <abbr title="additional files that sit next to a main file">sidecar files</abbr></a> during indexing and after manual
+editing of fields such as title, date, or location. They serve as a backup in case the database (index) is lost,
+or when folders are synchronized with a remote instance.</p>
+<p>Like JSON, <a href="../../developer-guide/technologies/yaml/">YAML</a> files can be opened with common development tools and
+text editors. However, changes are not synchronized with the original index, as this could overwrite existing data.</p>
+<h4 id="xmp">XMP<a class="headerlink" href="#xmp" title="Permanent link">&para;</a></h4>
+<p>XMP (Extensible Metadata Platform) is an XML-based metadata container format <a href="https://www.adobe.com/products/xmp.html">developed by Adobe</a>.
+It provides many more fields (as part of embedded models like Dublin Core) than Exif. This also makes it difficult - if not
+impossible - to provide full support. Reading title, copyright, artist, and description from XMP <abbr title="additional files that sit next to a main file">sidecar files</abbr> is
+implemented as a proof-of-concept, <a href="../../developer-guide/metadata/xmp/">contributions are welcome</a>. Indexing of
+embedded XMP is only possible via Exiftool, see above.</p>
 </details>
 <details class="question"><summary>Some files seem hidden, where are they?</summary><p>If the <a href="../organize/review/">quality filter</a> is enabled, you might find them in <em>Photos &gt; Review</em>. Otherwise, their
 format may not be supported, they may be corrupted, or they may be stacked with other files if their name,

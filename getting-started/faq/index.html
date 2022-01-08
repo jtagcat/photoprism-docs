@@ -918,6 +918,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#what-media-file-types-are-supported" class="md-nav__link">
+    What media file types are supported?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#what-are-sidecar-files-and-where-do-i-find-them" class="md-nav__link">
     What are sidecar files and where do I find them?
   </a>
@@ -925,11 +932,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-metadata-file-types-are-supported" class="md-nav__link">
-    What metadata file types are supported?
+  <a href="#which-metadata-sidecar-files-are-supported" class="md-nav__link">
+    Which metadata sidecar files are supported?
   </a>
   
-    <nav class="md-nav" aria-label="What metadata file types are supported?">
+    <nav class="md-nav" aria-label="Which metadata sidecar files are supported?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -955,13 +962,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-media-file-types-are-supported" class="md-nav__link">
-    What media file types are supported?
-  </a>
   
 </li>
       
@@ -3055,6 +3055,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#what-media-file-types-are-supported" class="md-nav__link">
+    What media file types are supported?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#what-are-sidecar-files-and-where-do-i-find-them" class="md-nav__link">
     What are sidecar files and where do I find them?
   </a>
@@ -3062,11 +3069,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-metadata-file-types-are-supported" class="md-nav__link">
-    What metadata file types are supported?
+  <a href="#which-metadata-sidecar-files-are-supported" class="md-nav__link">
+    Which metadata sidecar files are supported?
   </a>
   
-    <nav class="md-nav" aria-label="What metadata file types are supported?">
+    <nav class="md-nav" aria-label="Which metadata sidecar files are supported?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3092,13 +3099,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-media-file-types-are-supported" class="md-nav__link">
-    What media file types are supported?
-  </a>
   
 </li>
       
@@ -3301,6 +3301,25 @@
                 
                 
                 <h1 id="frequently-asked-questions">Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permanent link">&para;</a></h1>
+<h3 id="what-media-file-types-are-supported">What media file types are supported?<a class="headerlink" href="#what-media-file-types-are-supported" title="Permanent link">&para;</a></h3>
+<p>The primary image format is JPEG. Support for JPEG XL is planned but not available yet.
+When indexing, a JPEG sidecar file may be created automatically for RAW, HEIF, TIFF, PNG, BMP, GIF, and video files.
+It is needed for generating thumbnails, image classification, and facial recognition.</p>
+<p>Due to the patent situation and its complexity, <a href="https://github.com/golang/go/issues?q=is%3Aissue+image%2Ftiff+">TIFF is only partially supported</a> at the moment.</p>
+<p>The following RAW converters can be used to generate JPEGs (included in our Docker image,
+otherwise you may need to install them on your system):</p>
+<ul>
+<li><a href="https://www.darktable.org/">Darktable</a> (<a href="https://www.darktable.org/resources/camera-support/">supported cameras</a>)</li>
+<li><a href="https://rawtherapee.com/">RawTherapee</a> (<a href="https://www.libraw.org/supported-cameras">supported cameras</a>)</li>
+</ul>
+<p>If you're running PhotoPrism directly on a Mac, RAW files will be converted with <a href="https://ss64.com/osx/sips.html">Sips</a> (<a href="https://support.apple.com/en-us/HT211241">supported cameras</a>) by default.
+Our goal is to provide top-notch support for all RAW formats, regardless of camera make and model.
+Please let us know when there are any issues with a particular camera or file format.</p>
+<p>Video formats supported by <a href="https://en.wikipedia.org/wiki/FFmpeg#Supported_codecs_and_formats">FFmpeg</a> can be transcoded to
+<a href="https://en.wikipedia.org/wiki/Advanced_Video_Coding">MPEG-4 AVC</a>. Still images for generating thumbnails can be extracted from
+most videos as well.</p>
+<p>If you have videos, always enable JSON sidecar files so that video metadata such as date, location, codec,
+and duration can be indexed and searched.</p>
 <h3 id="what-are-sidecar-files-and-where-do-i-find-them">What are sidecar files and where do I find them?<a class="headerlink" href="#what-are-sidecar-files-and-where-do-i-find-them" title="Permanent link">&para;</a></h3>
 <p>A sidecar is a file that sits next to your main photo or video files and usually has the same name
 but a different extension:</p>
@@ -3314,8 +3333,8 @@ but a different extension:</p>
 <p>Even if <code>PHOTOPRISM_DISABLE_EXIFTOOL</code> and <code>PHOTOPRISM_DISABLE_BACKUPS</code> are set to <code>true</code>,
 the indexer looks for existing sidecar files and uses them.</p>
 </div>
-<h3 id="what-metadata-file-types-are-supported">What metadata file types are supported?<a class="headerlink" href="#what-metadata-file-types-are-supported" title="Permanent link">&para;</a></h3>
-<p>Currently, three types of metadata sidecar files are supported:</p>
+<h3 id="which-metadata-sidecar-files-are-supported">Which metadata sidecar files are supported?<a class="headerlink" href="#which-metadata-sidecar-files-are-supported" title="Permanent link">&para;</a></h3>
+<p>Currently, three types of metadata file formats are supported:</p>
 <h4 id="json">JSON<a class="headerlink" href="#json" title="Permanent link">&para;</a></h4>
 <p>If not disabled via <code>PHOTOPRISM_DISABLE_EXIFTOOL</code> or <code>--disable-exiftool</code>, <a href="https://exiftool.org/">Exiftool</a> is used
 to automatically create a JSON sidecar for each media file. <strong>In this way, embedded XMP and video metadata can also be indexed.</strong>
@@ -3328,9 +3347,9 @@ development tools and text editors.</p>
 </div>
 <h4 id="yaml">YAML<a class="headerlink" href="#yaml" title="Permanent link">&para;</a></h4>
 <p>Unless disabled via <code>PHOTOPRISM_DISABLE_BACKUPS</code> or <code>--disable-backups</code>, PhotoPrism automatically creates/updates
-<a href="../../developer-guide/technologies/yaml/">YAML</a> sidecar files during indexing and after manual editing of fields 
-such as title, date, or location. They serve as a backup in case the database (index) is lost, or when folders 
-are synchronized with a remote PhotoPrism instance.</p>
+<a href="../../developer-guide/technologies/yaml/">human-friendly YAML sidecar files</a> during indexing and after manual editing
+of fields such as title, date, or location. They serve as a backup in case the database (index) is lost, or when
+folders are synchronized with a remote instance.</p>
 <p>Like JSON, <a href="../../developer-guide/technologies/yaml/">YAML</a> files can be opened with common development tools and 
 text editors. However, changes are not synchronized with the original index, as this could overwrite existing data.</p>
 <h4 id="xmp">XMP<a class="headerlink" href="#xmp" title="Permanent link">&para;</a></h4>
@@ -3339,25 +3358,6 @@ It provides many more fields (as part of embedded models like Dublin Core) than 
 impossible - to provide full support. Reading title, copyright, artist, and description from XMP sidecar files is 
 implemented as a proof-of-concept, <a href="../../developer-guide/metadata/xmp/">contributions are welcome</a>. Indexing of 
 embedded XMP is only possible via Exiftool, see above.</p>
-<h3 id="what-media-file-types-are-supported">What media file types are supported?<a class="headerlink" href="#what-media-file-types-are-supported" title="Permanent link">&para;</a></h3>
-<p>The primary image format is JPEG. Support for JPEG XL is planned but not available yet. 
-When indexing, a JPEG sidecar file may be created automatically for RAW, HEIF, TIFF, PNG, BMP, GIF, and video files. 
-It is needed for generating thumbnails, image classification, and facial recognition.</p>
-<p>Due to the patent situation and its complexity, <a href="https://github.com/golang/go/issues?q=is%3Aissue+image%2Ftiff+">TIFF is only partially supported</a> at the moment.</p>
-<p>The following RAW converters can be used to generate JPEGs (included in our Docker image,
-otherwise you may need to install them on your system):</p>
-<ul>
-<li><a href="https://www.darktable.org/">Darktable</a> (<a href="https://www.darktable.org/resources/camera-support/">supported cameras</a>)</li>
-<li><a href="https://rawtherapee.com/">RawTherapee</a> (<a href="https://www.libraw.org/supported-cameras">supported cameras</a>)</li>
-</ul>
-<p>If you're running PhotoPrism directly on a Mac, RAW files will be converted with <a href="https://ss64.com/osx/sips.html">Sips</a> (<a href="https://support.apple.com/en-us/HT211241">supported cameras</a>) by default.
-Our goal is to provide top-notch support for all RAW formats, regardless of camera make and model.
-Please let us know when there are any issues with a particular camera or file format.</p>
-<p>Video formats supported by <a href="https://en.wikipedia.org/wiki/FFmpeg#Supported_codecs_and_formats">FFmpeg</a> can be transcoded to
-<a href="https://en.wikipedia.org/wiki/Advanced_Video_Coding">MPEG-4 AVC</a>. Still images for generating thumbnails can be extracted from 
-most videos as well. </p>
-<p>If you have videos, always enable JSON sidecar files so that video metadata such as date, location, codec, 
-and duration can be indexed and searched.</p>
 <h3 id="which-folder-will-be-indexed">Which folder will be indexed?<a class="headerlink" href="#which-folder-will-be-indexed" title="Permanent link">&para;</a></h3>
 <p>This depends on your environment and <a href="../config-options/">configuration</a>. While subfolders can be selected for indexing
 in the UI, changing the <em>originals</em> base folder requires a restart for security reasons.</p>
