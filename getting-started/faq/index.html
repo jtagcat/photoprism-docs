@@ -977,6 +977,33 @@
     How to install and use PhotoPrism without Docker?
   </a>
   
+    <nav class="md-nav" aria-label="How to install and use PhotoPrism without Docker?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#building-from-source" class="md-nav__link">
+    Building From Source
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation-packages" class="md-nav__link">
+    Installation Packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bsd-ports" class="md-nav__link">
+    BSD Ports
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3087,6 +3114,33 @@
     How to install and use PhotoPrism without Docker?
   </a>
   
+    <nav class="md-nav" aria-label="How to install and use PhotoPrism without Docker?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#building-from-source" class="md-nav__link">
+    Building From Source
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation-packages" class="md-nav__link">
+    Installation Packages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bsd-ports" class="md-nav__link">
+    BSD Ports
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -3327,22 +3381,24 @@ by mounting them as subfolders of <code>/photoprism/originals</code>, for exampl
   <span class="p p-Indicator">-</span> <span class="s">&quot;/mnt/photos:/photoprism/originals/media&quot;</span>
 </code></pre></div>
 <h3 id="how-to-install-and-use-photoprism-without-docker">How to install and use PhotoPrism without Docker?<a class="headerlink" href="#how-to-install-and-use-photoprism-without-docker" title="Permanent link">&para;</a></h3>
-<p>If your environment doesn't support Docker and there are no <a href="../freebsd/">ports</a> or native packages available, 
-you can build and install PhotoPrism from the publicly available <a href="../../developer-guide/setup/">source code</a>:</p>
+<h4 id="building-from-source">Building From Source<a class="headerlink" href="#building-from-source" title="Permanent link">&para;</a></h4>
+<p>You can build and install PhotoPrism from the publicly available <a href="https://docs.photoprism.app/developer-guide/setup/">source code</a>:</p>
 <div class="highlight"><pre><span></span><code>git clone https://github.com/photoprism/photoprism.git
 <span class="nb">cd</span> photoprism
 make all install
 </code></pre></div>
 <p>Missing build dependencies must be installed manually as shown in our human-readable and versioned
-<a href="https://github.com/photoprism/photoprism/blob/develop/docker/develop/Dockerfile">Dockerfile</a>. You often don't 
+<a href="https://github.com/photoprism/photoprism/blob/develop/docker/develop/Dockerfile">Dockerfile</a>. You often don't
 need to use the exact same versions, so it's possible to replace packages with what is available in your environment.</p>
 <p>Note we don't have the resources to provide private users with dependencies and TensorFlow libraries for their personal
 environments. We therefore recommend learning Docker if your operating system supports it. Docker vastly simplifies
 installation and upgrades. It saves our team a lot of time that we can then spend more effectively, see next question.</p>
-<div class="admonition help">
-<p>Everyone is <a href="../../developer-guide/">invited to contribute</a> by building and testing native packages 
+<h4 id="installation-packages">Installation Packages<a class="headerlink" href="#installation-packages" title="Permanent link">&para;</a></h4>
+<p>Everyone is invited to contribute by building and testing installation packages
 for Linux distributions and other operating systems! 💐</p>
-</div>
+<p>Visit <a href="https://docs.photoprism.app/developer-guide/">docs.photoprism.app/developer-guide</a> to learn more.</p>
+<h4 id="bsd-ports">BSD Ports<a class="headerlink" href="#bsd-ports" title="Permanent link">&para;</a></h4>
+<p>An <a href="https://docs.photoprism.app/getting-started/freebsd/">unofficial port</a> is available for FreeBSD / FreeNAS users.</p>
 <h3 id="why-are-you-using-docker">Why are you using Docker?<a class="headerlink" href="#why-are-you-using-docker" title="Permanent link">&para;</a></h3>
 <p>Containers are nothing new; <a href="https://en.wikipedia.org/wiki/Solaris_Containers">Solaris Zones</a> have been around for
 about 15 years, first released publicly in 2004. The chroot system call was introduced during
@@ -3360,8 +3416,8 @@ Running apps in a container with limited host access is an easy way to improve s
 compromising performance and usability.</p>
 <div class="admonition tldr">
 <p>A virtual machine running its own operating system provides more security, but typically has side effects
-such as lower performance and more difficult handling. Note that you can also run Docker in a VM to get the
-best of both worlds. It's essentially what happens when you run Docker on operating systems other than Linux.</p>
+such as lower performance and more difficult handling. You can also run Docker in a VM to get the best of
+both worlds. It's essentially what happens when you run Docker on operating systems other than Linux.</p>
 </div>
 <h3 id="should-i-use-sqlite-mariadb-or-mysql">Should I use SQLite, MariaDB, or MySQL?<a class="headerlink" href="#should-i-use-sqlite-mariadb-or-mysql" title="Permanent link">&para;</a></h3>
 <p>PhotoPrism is compatible with <a href="https://www.sqlite.org/">SQLite 3</a> and <a href="https://mariadb.org/">MariaDB 10.5.12+</a>.
