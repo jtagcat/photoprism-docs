@@ -775,6 +775,20 @@
   
   
     <li class="md-nav__item">
+      <a href="browsers/" class="md-nav__link">
+        Browsers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="performance/" class="md-nav__link">
         Performance
       </a>
@@ -3037,7 +3051,7 @@
 <a href="../../funding/">Sponsors</a> receive direct <a href="https://photoprism.app/contact">technical support</a> via email.</p>
 </div>
 <h3 id="connection-fails">Connection Fails<a class="headerlink" href="#connection-fails" title="Permanent link">&para;</a></h3>
-<p>If your browser cannot connect to the Web UI even after waiting a few minutes, run this command to display
+<p>If <a href="browsers/">your browser</a> cannot connect to the Web UI even after waiting a few minutes, run this command to display
 the last 100 log messages (omit <code>--tail=100</code> to see all):</p>
 <div class="highlight"><pre><span></span><code>docker-compose logs --tail<span class="o">=</span><span class="m">100</span>
 </code></pre></div>
@@ -3061,7 +3075,7 @@ mariadb: mysqld: Shutdown complete
 </div>
 <div class="admonition note">
 <p>If you see no errors or no logs at all, you may have started the server on a different host
-and/or port. There could also be an issue with your browser, ad blocker, or firewall settings.</p>
+and/or port. There could also be an <a href="browsers/">issue with your browser</a>, ad blocker, or firewall settings.</p>
 </div>
 <p>You can also try (re-)starting the app and database without <code>-d</code>. This keeps their containers running
 in the foreground and shows log messages for troubleshooting:</p>
@@ -3106,10 +3120,10 @@ this points to a memory problem.</p>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> JavaScript is disabled in your browser settings (enable it)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> JavaScript was disabled by a browser plugin (disable it or add an exception)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> An ad blocker blocks requests (disable it or add an exception)</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> You are using an <a href="../#browsers">incompatible browser</a> (try another browser)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> You are using an <a href="browsers/">incompatible browser</a> (try another browser)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> There is a problem with your network connection (test if other sites work)</li>
 </ul>
-<p>We also recommend that you check your <a href="https://wordpress.org/support/article/using-your-browser-to-diagnose-javascript-errors/">browser logs</a> for errors and warnings.</p>
+<p>We also recommend that you check your <a href="browsers/">browser logs</a> for errors and warnings.</p>
 <h3 id="missing-pictures">Missing Pictures<a class="headerlink" href="#missing-pictures" title="Permanent link">&para;</a></h3>
 <p>If you have indexed your library and some images or videos are missing, first check <em>Library &gt; Errors</em>
 for errors and warnings. In case the application logs don't contain anything helpful:</p>
@@ -3162,7 +3176,7 @@ described above. If a service has been killed or otherwise automatically termina
 <h3 id="videos-dont-play">Videos Don't Play<a class="headerlink" href="#videos-dont-play" title="Permanent link">&para;</a></h3>
 <p>If videos do not play and/or you only see a white/black area when you open a video:</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> You are using an <a href="../#browsers">incompatible browser</a>, e.g. without AVC support (try another browser)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> You are using an <a href="browsers/">incompatible browser</a>, e.g. without AVC support (try another browser)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> AVC support or related JavaScript features have been disabled in your browser (check the settings and try another browser)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> It is a large non-AVC video that needs to be transcoded first (wait or pre-transcode with the <a href="http://localhost:8000/getting-started/docker-compose/#command-line-interface">convert command</a>)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> An ad blocker blocks requests (disable it or add an exception)</li>
@@ -3170,7 +3184,7 @@ described above. If a service has been killed or otherwise automatically termina
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> There are network problems caused by a proxy, firewall, or unstable connection (try a direct connection)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> You are connected to the wrong server or CDN, or a DNS record has not been updated yet</li>
 </ul>
-<p>We also recommend that you check your <a href="docker/#viewing-logs">Docker</a> and <a href="https://wordpress.org/support/article/using-your-browser-to-diagnose-javascript-errors/">browser logs</a>
+<p>We also recommend that you check your <a href="docker/#viewing-logs">Docker</a> and <a href="browsers/">browser logs</a>
 for messages related to <em>HTTP requests</em>, <em>permissions</em>, <em>security</em>, <em>FFmpeg</em>, <em>videos</em>, and <em>file conversion</em>.</p>
                 
               

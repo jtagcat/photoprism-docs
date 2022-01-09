@@ -366,6 +366,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.photoprism.app/getting-started/troubleshooting/browsers/</loc>
+         <lastmod>2022-01-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.photoprism.app/getting-started/troubleshooting/docker/</loc>
          <lastmod>2022-01-09</lastmod>
          <changefreq>daily</changefreq>
