@@ -3113,7 +3113,7 @@ and change the <a href="../config-options/">configuration</a> as needed:</p>
 Note that this will point the <abbr title="\user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux">home directory</abbr> placeholder <code>~</code> to <code>/root</code> in the <code>volumes:</code> 
 section of your <code>docker-compose.yml</code>. Kernel security modules such as AppArmor and SELinux 
 have been <a href="../troubleshooting/docker/#kernel-security">reported to cause issues</a>.
-Ensure that your server has <a href="../troubleshooting/docker/#adding-swap">at least 4 GB of swap</a> configured so that
+Ensure that your server has <a href="../troubleshooting/docker/#adding-swap">at least 4 GB of <abbr title="substitute for physical memory">swap</abbr></a> configured so that
 indexing doesn't cause restarts when there are memory usage spikes.</p>
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Raspberry Pi</label><div class="tabbed-content">
@@ -3125,7 +3125,7 @@ and change the <a href="../config-options/">configuration</a> as needed:</p>
 <p>Mostly the same installation instructions as for regular Linux servers apply.
 Commands may have to be prefixed with <code>sudo</code> when not running as root.
 Ensure your device meets the <a href="../raspberry-pi/">requirements</a> and has
-<a href="../troubleshooting/docker/#adding-swap">at least 4 GB of swap</a> configured before you continue.</p>
+<a href="../troubleshooting/docker/#adding-swap">at least 4 GB of <abbr title="substitute for physical memory">swap</abbr></a> configured before you continue.</p>
 </div>
 <input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">ARMv7</label><div class="tabbed-content">
 <p>Download our <a href="https://dl.photoprism.app/docker/armv7/docker-compose.yml">docker-compose.yml</a> example for 
@@ -3136,7 +3136,7 @@ and change the <a href="../config-options/">configuration</a> as needed:</p>
 <p>Mostly the same installation instructions as for regular Linux servers apply.
 Commands may have to be prefixed with <code>sudo</code> when not running as root.
 Ensure your device meets the <a href="../raspberry-pi/">requirements</a> and has
-<a href="../troubleshooting/docker/#adding-swap">at least 4 GB of swap</a> configured before you continue.</p>
+<a href="../troubleshooting/docker/#adding-swap">at least 4 GB of <abbr title="substitute for physical memory">swap</abbr></a> configured before you continue.</p>
 </div>
 <input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><label for="__tabbed_1_4">Windows</label><div class="tabbed-content">
 <p>Download our <a href="https://dl.photoprism.app/docker/windows/docker-compose.yml">docker-compose.yml</a> example for Windows
@@ -3148,7 +3148,7 @@ so that they can mount drives other than <code>C:</code>. This will enable Hyper
 to its Windows Home customers. <a href="https://hub.docker.com/editions/community/docker-ce-desktop-windows">Docker Desktop</a>
 uses dynamic memory allocation with WSL 2. It is important to explicitly <a href="../img/docker-resources-advanced.jpg">increase the Docker memory limit to 4 GB</a> or more when using 
 Hyper-V. The default of 2 GB can reduce indexing performance and cause unexpected restarts.
-Also, ensure that you configure at least 4 GB of swap space.</p>
+Also, ensure that you configure at least 4 GB of <abbr title="substitute for physical memory">swap</abbr> space.</p>
 </div>
 <input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><label for="__tabbed_1_5">macOS</label><div class="tabbed-content">
 <p>Download our <a href="https://dl.photoprism.app/docker/macos/docker-compose.yml">docker-compose.yml</a> example for macOS
@@ -3156,7 +3156,7 @@ Also, ensure that you configure at least 4 GB of swap space.</p>
 <p><a href="https://dl.photoprism.app/docker/macos/docker-compose.yml">https://dl.photoprism.app/docker/macos/docker-compose.yml</a> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7 7-7z"/></svg></span></p>
 <p>It is important to <a href="../img/docker-resources-advanced.jpg">increase the Docker memory limit to 4 GB</a> or more,
 as the default of 2 GB can reduce indexing performance and cause unexpected restarts.
-Also, ensure that you configure at least 4 GB of swap space.</p>
+Also, ensure that you configure at least 4 GB of <abbr title="substitute for physical memory">swap</abbr> space.</p>
 </div>
 </div>
 <div class="admonition danger">
@@ -3167,7 +3167,7 @@ There is no default in case no password was provided. A minimum length of 4 char
 <h4 id="database">Database<a class="headerlink" href="#database" title="Permanent link">&para;</a></h4>
 <p>Our example includes a pre-configured <a href="https://mariadb.com/">MariaDB</a> database server. If you remove it 
 and provide no other database server credentials, a SQLite database file will be created in the 
-<em>storage</em> folder. Local <a href="../troubleshooting/performance/#storage">SSD storage is best</a> for databases of any kind.
+<em>storage</em> folder. Local <a href="../troubleshooting/performance/#storage"><abbr title="Solid-State Drive">SSD</abbr> storage is best</a> for databases of any kind.
 Never <a href="../troubleshooting/mariadb/#corrupted-files">store</a> database files on an unreliable device such as a USB flash drive,
 an SD card, or a shared network folder.</p>
 <div class="admonition tldr">
@@ -3176,7 +3176,7 @@ for the first time. Choosing a secure password is not essential if you don't exp
 to other apps and hosts.</p>
 </div>
 <h4 id="volumes">Volumes<a class="headerlink" href="#volumes" title="Permanent link">&para;</a></h4>
-<p>Since the app is running inside a container, you have to explicitly mount the <abbr title="A physical computer, cloud server, or virtual machine that runs Docker">host</abbr> folders you want to use.
+<p>Since the app is running inside a container, you have to explicitly mount the <abbr title="physical computer, cloud server, or virtual machine that runs Docker">host</abbr> folders you want to use.
 PhotoPrism won't be able to see folders that have not been mounted. That's an important security feature.</p>
 <h5 id="photoprismoriginals">/photoprism/originals<a class="headerlink" href="#photoprismoriginals" title="Permanent link">&para;</a></h5>
 <p>The <em>originals</em> folder contains your original photo and video files. </p>
@@ -3184,7 +3184,7 @@ PhotoPrism won't be able to see folders that have not been mounted. That's an im
 <div class="highlight"><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
   <span class="p p-Indicator">-</span> <span class="s">&quot;~/Pictures:/photoprism/originals&quot;</span>
 </code></pre></div>
-<p>Other folders accessible from the <abbr title="A physical computer, cloud server, or virtual machine that runs Docker">host</abbr> may be <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes">mounted</a> instead, 
+<p>Other folders accessible from the <abbr title="physical computer, cloud server, or virtual machine that runs Docker">host</abbr> may be <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes">mounted</a> instead, 
 including network drives. Multiple folders can be made accessible by mounting them as subfolders
 of <code>/photoprism/originals</code>, for example:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
@@ -3201,7 +3201,7 @@ write operations as well.</p>
 <h5 id="photoprismstorage">/photoprism/storage<a class="headerlink" href="#photoprismstorage" title="Permanent link">&para;</a></h5>
 <p>Cache, session, thumbnail, and sidecar files will be created in the <em>storage</em> folder. Never remove the volume from
 your <code>docker-compose.yml</code> file so that you don't lose these files after restarting or upgrading the container.
-We recommend placing the <em>storage</em> folder on a <a href="../troubleshooting/performance/#storage">local SSD drive</a> for best performance.</p>
+We recommend placing the <em>storage</em> folder on a <a href="../troubleshooting/performance/#storage">local <abbr title="Solid-State Drive">SSD</abbr> drive</a> for best performance.</p>
 <h5 id="photoprismimport">/photoprism/import<a class="headerlink" href="#photoprismimport" title="Permanent link">&para;</a></h5>
 <p>You may optionally mount an <em>import</em> folder from which files can be transferred to the <em>originals</em> folder
 in a structured way that avoids duplicates. Imported files receive a canonical filename and will be
@@ -3216,7 +3216,7 @@ is enabled or the <a href="../../user-guide/settings/general/">features have bee
 Run this command to start the app and database in the background:</p>
 <div class="highlight"><pre><span></span><code>docker-compose up -d
 </code></pre></div>
-<p>Now open the <abbr title="A Progressive Web App that can be installed on your home screen and provides a native app-like experience">Web UI</abbr> by navigating to <a href="http://localhost:2342/">http://localhost:2342/</a>. You should see a login screen.
+<p>Now open the Web <abbr title="User Interface">UI</abbr> by navigating to <a href="http://localhost:2342/">http://localhost:2342/</a>. You should see a login screen.
 Sign in with the user <code>admin</code> and the initial password configured via <code>PHOTOPRISM_ADMIN_PASSWORD</code>.
 You may change it on the <a href="../../user-guide/settings/account/">account settings page</a>.
 Enabling <a href="../config-options/">public mode</a> will disable authentication.</p>
@@ -3224,7 +3224,7 @@ Enabling <a href="../config-options/">public mode</a> will disable authenticatio
 <p>If you can't connect, try starting the app without <code>-d</code>: <code>docker-compose up photoprism</code>. 
 This keeps it in the foreground and shows log messages for <a href="../troubleshooting/">troubleshooting</a>.
 Should the server already be running, or you see no errors, you may have started it
-on a different <abbr title="A physical computer, cloud server, or virtual machine that runs Docker">host</abbr> and/or port. There could also be an issue with your browser,
+on a different <abbr title="physical computer, cloud server, or virtual machine that runs Docker">host</abbr> and/or port. There could also be an issue with your browser,
 ad blocker, or firewall settings.</p>
 </div>
 <div class="admonition tldr">
@@ -3243,14 +3243,14 @@ docker-compose up -d photoprism
 before starting to index: Files in the <em>originals</em> folder must be readable, while the <em>storage</em> folder
 including all subdirectories must be readable and writeable.</p>
 </div>
-<p>Open the <abbr title="A Progressive Web App that can be installed on your home screen and provides a native app-like experience">Web UI</abbr>, go to <em>Library</em> and click <em>Start</em> to start indexing your pictures.</p>
-<p>While indexing, JPEG sidecar files may be created for originals in other formats such as <abbr title="RAW files contain image data captured during exposure in an unprocessed format">RAW</abbr> and <abbr title="High Efficiency Image File Format">HEIF</abbr>. 
+<p>Open the Web <abbr title="User Interface">UI</abbr>, go to <em>Library</em> and click <em>Start</em> to start indexing your pictures.</p>
+<p>While indexing, JPEG sidecar files may be created for originals in other formats such as <abbr title="image format that contains unprocessed sensor data">RAW</abbr> and <abbr title="High Efficiency Image File Format">HEIF</abbr>. 
 This is required for image classification, facial recognition, and for displaying them in a Web browser. 
 Sidecar and thumbnail files will be added to the <em>storage</em> folder, so that your <em>originals</em> folder won't be modified.</p>
 <p>Your <a href="../../user-guide/organize/browse/">photos</a> and <a href="../../user-guide/organize/video/">videos</a> will 
 successively become visible in search results and other parts of the user interface. 
 Open the <em>Logs</em> tab in <em>Library</em> to watch the indexer working.</p>
-<p>Of course, you can continue using your favorite tools for processing <abbr title="RAW files contain image data captured during exposure in an unprocessed format">RAW</abbr> files, editing metadata, 
+<p>Of course, you can continue using your favorite tools for processing <abbr title="image format that contains unprocessed sensor data">RAW</abbr> files, editing metadata, 
 or importing new shots. Go to <em>Library</em> and click <em>Start</em> to update the index after files have been 
 changed, added, or removed. This can also be automated using <abbr title="Command-Line Interface">CLI</abbr> commands and a <a href="https://dl.photoprism.app/docker/scheduler/">scheduler</a>.</p>
 <p>Easy, isn't it?</p>
@@ -3258,8 +3258,8 @@ changed, added, or removed. This can also be automated using <abbr title="Comman
 <p>If you're running out of memory - or other system resources - while indexing, try reducing the 
 <a href="https://docs.photoprism.app/getting-started/config-options/">number of workers</a> by setting
 <code>PHOTOPRISM_WORKERS</code> to a reasonably small value in <code>docker-compose.yml</code> (depending on the performance of the server).
-Also, ensure that your server has <a href="../troubleshooting/docker/#adding-swap">at least 4 GB of swap</a> configured so that
-indexing doesn't cause restarts when there are memory usage spikes. Especially the conversion of <abbr title="RAW files contain image data captured during exposure in an unprocessed format">RAW</abbr> images and the
+Also, ensure that your server has <a href="../troubleshooting/docker/#adding-swap">at least 4 GB of <abbr title="substitute for physical memory">swap</abbr></a> configured so that
+indexing doesn't cause restarts when there are memory usage spikes. Especially the conversion of <abbr title="image format that contains unprocessed sensor data">RAW</abbr> images and the
 transcoding of videos are very demanding. As a measure of last resort, you may disable using TensorFlow for image
 classification and facial recognition.</p>
 </div>
@@ -3349,7 +3349,7 @@ file has been saved.</p>
 <td><code>docker-compose exec photoprism photoprism faces reset -f</code></td>
 </tr>
 <tr>
-<td><em>Transcode Videos to <abbr title="MPEG-4 AVC video compression standard, also known as H.264">AVC</abbr></em></td>
+<td><em>Transcode Videos to <abbr title="MPEG-4 / H.264">AVC</abbr></em></td>
 <td><code>docker-compose exec photoprism photoprism convert</code></td>
 </tr>
 <tr>
