@@ -271,17 +271,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.photoprism.app/getting-started/performance/</loc>
-         <lastmod>2022-01-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://docs.photoprism.app/getting-started/raspberry-pi/</loc>
-         <lastmod>2022-01-09</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://docs.photoprism.app/getting-started/troubleshooting/</loc>
          <lastmod>2022-01-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -367,6 +357,26 @@
     </url>
     <url>
          <loc>https://docs.photoprism.app/getting-started/proxies/traefik/</loc>
+         <lastmod>2022-01-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.photoprism.app/getting-started/troubleshooting/</loc>
+         <lastmod>2022-01-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.photoprism.app/getting-started/troubleshooting/docker/</loc>
+         <lastmod>2022-01-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.photoprism.app/getting-started/troubleshooting/mariadb/</loc>
+         <lastmod>2022-01-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.photoprism.app/getting-started/troubleshooting/performance/</loc>
          <lastmod>2022-01-09</lastmod>
          <changefreq>daily</changefreq>
     </url>

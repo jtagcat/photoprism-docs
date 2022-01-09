@@ -703,34 +703,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../performance/" class="md-nav__link">
-        Performance
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../troubleshooting/" class="md-nav__link">
-        Troubleshooting
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../updates/" class="md-nav__link">
         Getting Updates
       </a>
@@ -748,18 +720,107 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_13" type="checkbox" id="__nav_1_13" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_11" type="checkbox" id="__nav_1_11" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_1_13">
+        <label class="md-nav__link" for="__nav_1_11">
+          Troubleshooting
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Troubleshooting" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_11">
+          <span class="md-nav__icon md-icon"></span>
+          Troubleshooting
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        Checklists
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/docker/" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/mariadb/" class="md-nav__link">
+        MariaDB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/performance/" class="md-nav__link">
+        Performance
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_12" type="checkbox" id="__nav_1_12" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_12">
           Reverse Proxies
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Reverse Proxies" data-md-level="2">
-        <label class="md-nav__title" for="__nav_1_13">
+        <label class="md-nav__title" for="__nav_1_12">
           <span class="md-nav__icon md-icon"></span>
           Reverse Proxies
         </label>
@@ -865,18 +926,18 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_14" type="checkbox" id="__nav_1_14" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_13" type="checkbox" id="__nav_1_13" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_1_14">
+        <label class="md-nav__link" for="__nav_1_13">
           Advanced
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Advanced" data-md-level="2">
-        <label class="md-nav__title" for="__nav_1_14">
+        <label class="md-nav__title" for="__nav_1_13">
           <span class="md-nav__icon md-icon"></span>
           Advanced
         </label>
@@ -3005,10 +3066,10 @@ available at <a href="https://dl.photoprism.app/docker/">dl.photoprism.app/docke
 </div>
 <h3 id="system-requirements">System Requirements<a class="headerlink" href="#system-requirements" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Your device should have at least 4 GB of memory. Running PhotoPrism on a server with <a href="../troubleshooting/#adding-swap">less than 4 GB of swap space</a>
+<li>Your device should have at least 4 GB of memory. Running PhotoPrism on a server with <a href="../troubleshooting/docker/#adding-swap">less than 4 GB of swap space</a>
   or setting a memory/swap limit can cause unexpected restarts, especially when the indexer temporarily needs more
   memory to process large files.</li>
-<li>We <a href="../troubleshooting/#linux-kernel-security">recommend</a> disabling Linux kernel security in your 
+<li>We recommend disabling <a href="../troubleshooting/docker/#kernel-security">kernel security</a> in your 
   <a href="https://dl.photoprism.app/docker/arm64/docker-compose.yml">docker-compose.yml</a>, especially if you do 
   not have experience with the configuration:
   <div class="highlight"><pre><span></span><code><span class="nt">photoprism</span><span class="p">:</span>
@@ -3022,7 +3083,7 @@ available at <a href="https://dl.photoprism.app/docker/">dl.photoprism.app/docke
   including your provider, hackers, and governments.</li>
 </ul>
 <div class="admonition note">
-<p>Indexing large photo and video collections significantly benefits from <a href="../performance/#storage">local SSD storage</a>
+<p>Indexing large photo and video collections significantly benefits from <a href="../troubleshooting/performance/#storage">local SSD storage</a>
 and plenty of memory for caching. Especially the conversion of RAW images and the transcoding of
 videos are very demanding.</p>
 </div>
