@@ -3137,7 +3137,7 @@ not running yet. Before you try anything else, it may help to simply restart you
 <p>On many Linux distributions, this command will start the Docker daemon manually if needed:</p>
 <div class="highlight"><pre><span></span><code>sudo systemctl start docker.service
 </code></pre></div>
-<p>On other operating systems, start Docker Desktop and enable the "Start Docker Desktop when you log in"
+<p>On other operating systems, start <em>Docker Desktop</em> and enable the "Start Docker Desktop when you log in"
 option in its settings.</p>
 <h4 id="connection-aborted">Connection Aborted<a class="headerlink" href="#connection-aborted" title="Permanent link">&para;</a></h4>
 <p>If you see the error message "Connection aborted" or "Connection denied", it usually means that your
@@ -3192,7 +3192,8 @@ swapon /swapfile
 <p>Windows Pro users should <a href="../../img/docker-disable-wsl2.jpg">disable</a> the <em>WSL 2</em> based engine in <em>Docker Settings &gt; General</em>
 so that they can mount drives other than <code>C:</code>. This will enable <em>Hyper-V</em>, which
 <a href="https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements">Microsoft doesn't offer</a>
-to its Windows Home customers. Docker Desktop uses dynamic memory allocation with <em>WSL 2</em>.</p>
+to its Windows Home customers. <a href="https://hub.docker.com/editions/community/docker-ce-desktop-windows">Docker Desktop</a>
+uses dynamic memory allocation with <em>WSL 2</em>.</p>
 <p>It is important to explicitly <a href="../../img/docker-resources-advanced.jpg">increase the Docker memory limit</a> to 4 GB or more
 when using <em>Hyper-V</em>. The default of 2 GB can reduce indexing performance and cause unexpected restarts.
 Also, ensure that you configure at least 4 GB of swap space.</p>
@@ -3213,7 +3214,7 @@ so that the app container can access them. If you have configured specific user 
 <h3 id="disk-space">Disk Space<a class="headerlink" href="#disk-space" title="Permanent link">&para;</a></h3>
 <p>On Linux and other Unix-like operating systems, the <a href="https://opensource.com/article/18/7/how-check-free-disk-space-linux">available disk space</a>
 can be viewed by running <code>df -h</code> in a terminal.</p>
-<p>If you use Docker Desktop on operating systems other than Linux and/or a virtual machine, they have their own
+<p>If you use <em>Docker Desktop</em> on operating systems other than Linux and/or a virtual machine, they have their own
 settings to adjust the size of virtual disks and memory. For details, refer to the corresponding documentation.</p>
                 
               

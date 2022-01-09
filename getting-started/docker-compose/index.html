@@ -3145,8 +3145,8 @@ Ensure your device meets the <a href="../raspberry-pi/">requirements</a> and has
 <p>Windows Pro users should <a href="../img/docker-disable-wsl2.jpg">disable</a> the WSL 2 based engine in <em>Docker Settings &gt; General</em> 
 so that they can mount drives other than <code>C:</code>. This will enable Hyper-V, which 
 <a href="https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements">Microsoft doesn't offer</a> 
-to its Windows Home customers. Docker Desktop uses dynamic memory allocation with WSL 2. It is important 
-to explicitly <a href="../img/docker-resources-advanced.jpg">increase the Docker memory limit to 4 GB</a> or more when using 
+to its Windows Home customers. <a href="https://hub.docker.com/editions/community/docker-ce-desktop-windows">Docker Desktop</a>
+uses dynamic memory allocation with WSL 2. It is important to explicitly <a href="../img/docker-resources-advanced.jpg">increase the Docker memory limit to 4 GB</a> or more when using 
 Hyper-V. The default of 2 GB can reduce indexing performance and cause unexpected restarts.
 Also, ensure that you configure at least 4 GB of swap space.</p>
 </div>
